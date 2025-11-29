@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Facebook, Instagram, X, Youtube } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Particles from "@/components/Particles";
 
@@ -11,6 +11,12 @@ export default function Sidebar({ isOpen, onClose }) {
   const router = useRouter();
   const [hoverItem, setHoverItem] = useState("");
   const [activeItem, setActiveItem] = useState("");
+
+  // Prevent background scroll when sidebar is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
+  }, [isOpen]);
 
   const menu = [
     { name: "Home", route: "/" },
@@ -89,16 +95,16 @@ export default function Sidebar({ isOpen, onClose }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-9999 overflow-y-auto"
+          className="fixed inset-0 z-9999 flex"
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ type: "spring", stiffness: 260, damping: 30 }}
         >
-          {/* Particles Background */}
+          {/* Full Background */}
           <div className="absolute inset-0 bg-white">
             <Particles
-              particleColors={['#e5e7eb', '#d1d5db']}
+              particleColors={["#e5e7eb", "#d1d5db"]}
               particleCount={1000}
               particleSpread={10}
               speed={0.08}
@@ -109,9 +115,9 @@ export default function Sidebar({ isOpen, onClose }) {
             />
           </div>
 
-          {/* Content Layer */}
-          <div className="relative z-10">
-            {/* Header */}
+          {/* Scrollable Content */}
+          <div className="relative z-10 w-full h-full overflow-y-auto">
+            {/* HEADER SECTION */}
             <div className="flex justify-between items-center px-8 py-6">
               <div className="flex gap-5 items-center">
                 <Image
@@ -132,7 +138,7 @@ export default function Sidebar({ isOpen, onClose }) {
               <X className="cursor-pointer h-8 w-8 text-gray-700" onClick={onClose} />
             </div>
 
-            {/* Content */}
+            {/* MAIN CONTENT */}
             <div className="px-8 py-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
@@ -141,7 +147,7 @@ export default function Sidebar({ isOpen, onClose }) {
                   {menu.map((item) => (
                     <div key={item.name} className="relative">
 
-                      {/* Parent Row */}
+                      {/* Parent */}
                       <div
                         className="group cursor-pointer flex items-center justify-between pr-4"
                         onMouseEnter={() => item.submenu && setHoverItem(item.name)}
@@ -176,7 +182,7 @@ export default function Sidebar({ isOpen, onClose }) {
                         )}
                       </div>
 
-                      {/* MOBILE SUBMENU */}
+                      {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeItem === item.name &&
                           item.submenu && (
@@ -202,7 +208,7 @@ export default function Sidebar({ isOpen, onClose }) {
                           )}
                       </AnimatePresence>
 
-                      {/* DESKTOP SUBMENU (Right Column) */}
+                      {/* Desktop Submenu */}
                       <AnimatePresence>
                         {(hoverItem === item.name ||
                           activeItem === item.name) &&
@@ -211,11 +217,7 @@ export default function Sidebar({ isOpen, onClose }) {
                               initial={{ opacity: 0, x: -20 }}
                               animate={{ opacity: 1, x: 0 }}
                               exit={{ opacity: 0, x: -20 }}
-                              className="
-                                hidden md:block absolute left-full top-0 
-                                ml-10 pl-8 border-l border-gray-300 
-                                space-y-3 text-[#1a2752] w-64
-                              "
+                              className="hidden md:block absolute left-full top-0 ml-10 pl-8 border-l border-gray-300 space-y-3 text-[#1a2752] w-64"
                             >
                               {item.submenu.map((sub) => (
                                 <div
@@ -232,16 +234,18 @@ export default function Sidebar({ isOpen, onClose }) {
                             </motion.div>
                           )}
                       </AnimatePresence>
+
                     </div>
                   ))}
                 </div>
 
-                {/* MIDDLE EMPTY COLUMN */}
-                <div className="col-span-1 hidden md:block"></div>
+                {/* Middle Spacer */}
+                <div className="col-span-1 hidden md:block" />
 
-                {/* CONTACT SECTION */}
+                {/* RIGHT CONTACT SECTION */}
                 <div className="col-span-1">
                   <h3 className="text-red-600 font-bold mb-3">CONTACT</h3>
+
                   <p className="text-gray-700 mb-6 leading-relaxed">
                     Queen Mira International School<br />
                     Melakkal Road, Kochadai<br />
@@ -264,20 +268,14 @@ export default function Sidebar({ isOpen, onClose }) {
                   <h3 className="text-red-600 font-bold mb-4">CONNECT</h3>
 
                   <div className="flex gap-6 mb-10">
-                    <div className="h-10 w-10 border border-gray-500 rounded-full flex items-center justify-center hover:border-red-600 hover:text-red-600 transition-colors cursor-pointer">
-                      <Youtube />
-                    </div>
-                    <div className="h-10 w-10 border border-gray-500 rounded-full flex items-center justify-center hover:border-red-600 hover:text-red-600 transition-colors cursor-pointer">
-                      <Instagram />
-                    </div>
-                    <div className="h-10 w-10 border border-gray-500 rounded-full flex items-center justify-center hover:border-red-600 hover:text-red-600 transition-colors cursor-pointer">
-                      <Facebook />
-                    </div>
+                    <IconCircle><Youtube /></IconCircle>
+                    <IconCircle><Instagram /></IconCircle>
+                    <IconCircle><Facebook /></IconCircle>
                   </div>
 
                   <Image
                     src="/Blue_Happy Schooling.png"
-                    width={200}
+                    width={220}
                     height={80}
                     alt="Happy Schooling"
                   />
@@ -289,5 +287,13 @@ export default function Sidebar({ isOpen, onClose }) {
         </motion.div>
       )}
     </AnimatePresence>
+  );
+}
+
+function IconCircle({ children }) {
+  return (
+    <div className="h-10 w-10 border border-gray-500 rounded-full flex items-center justify-center hover:border-red-600 hover:text-red-600 transition-colors cursor-pointer">
+      {children}
+    </div>
   );
 }

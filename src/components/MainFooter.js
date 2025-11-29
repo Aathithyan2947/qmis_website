@@ -5,7 +5,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function MainFooter() {
   return (
-    <footer className="bg-[#0f183f] text-white pt-10 pb-4 px-6 md:px-16">
+    <footer className="bg-darkBlue-100 text-white pt-10 pb-4 px-6 md:px-16">
       {/* TOP SECTION */}
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
