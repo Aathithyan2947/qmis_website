@@ -2,7 +2,8 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div style={styles.container}>
+    <div style={styles.page}>
+        <div style={styles.container}>
       {/* ---------- TITLE ---------- */}
       <h1 style={styles.title}>Privacy Policy for QMIS Admissions Website</h1>
       <p style={styles.date}>Effective Date: [11/10/2023]</p>
@@ -165,11 +166,22 @@ const PrivacyPolicy = () => {
         Tamil Nadu 625019
       </p>
     </div>
+    </div>
   );
 };
 
 /* ---------- STYLES ---------- */
 const styles = {
+    page: {
+    width: "100%",
+    
+    backgroundImage:
+      "radial-gradient(#ccc 1px, transparent 1px), radial-gradient(#ccc 1px, transparent 1px)",
+    backgroundSize: "20px 20px",
+    backgroundPosition: "0 0, 10px 10px",
+    padding: "40px",
+    boxSizing: "border-box",
+  },  
   container: {
     maxWidth: "900px",
     margin: "0 auto",

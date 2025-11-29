@@ -47,7 +47,7 @@ export default function MainFooter() {
             <a href="/privacy-policy" className="hover:text-red-400">Privacy Policy</a>
             <a href="/terms-and-conditions" className="hover:text-red-400">Terms and Conditions</a>
             <a href="/shipping-delivery" className="hover:text-red-400">Shipping Delivery</a>
-            <a href="/cancellation-refund" className="hover:text-red-400">Cancellation and Refund</a>
+            <a href="/cancellation-and-refund" className="hover:text-red-400">Cancellation and Refund</a>
           </div>
         </div>
 
