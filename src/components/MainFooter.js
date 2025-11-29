@@ -12,7 +12,7 @@ export default function MainFooter() {
         {/* LOGO + ADDRESS */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <Image
-            src="/QMIS_Logo.png"
+            src="/QMIS_White_Logo.png"
             alt="Queen Mira International School"
             width={180} // smaller
             height={100}

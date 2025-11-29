@@ -1,12 +1,11 @@
 import DotGrid from "@/components/DotGrid";
+import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 
 export default function AboutTribute() {
   return (
     <>
-      <div className="w-full min-h-[20vh] flex justify-center items-center bg-darkBlue-100 text-white">
-        <h1 className="text-3xl font-semibold">Tribute</h1>
-      </div>
+      <PageHeader contentTitle='Tribute' />
 
       <div className="relative w-full py-16">
         <div className="absolute inset-0 -z-10">
