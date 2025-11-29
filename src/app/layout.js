@@ -32,13 +32,13 @@ export default function RootLayout({ children }) {
         <Link
           href="https://api.whatsapp.com/send/?phone=919787570746&text=Hello"
           target="_blank"
-          className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition"
+          className="fixed bottom-5 right-5 flex items-center justify-center "
         >
           <Image
-            src="/whatsapp-icon.png"
+            src="/Whatsapp_Icon.png"
             alt="WhatsApp"
-            width={30}
-            height={30}
+            width={60}
+            height={60}
           />
         </Link>
         <MainFooter />
