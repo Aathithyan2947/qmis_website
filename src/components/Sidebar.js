@@ -36,9 +36,9 @@ export default function Sidebar({ isOpen, onClose }) {
       name: "Message From MD",
       route: "/message-from-md",
       submenu: [
-        { label: "MD Letter", route: "/message-from-md/md-letter" },
-        { label: "QMIS Strategy", route: "/message-from-md/qmis-strategy" },
-        { label: "Promises", route: "/message-from-md/promises" },
+        { label: "MD Letter", route: "/md-letter" },
+        { label: "QMIS Strategy", route: "/qmis-strategy" },
+        { label: "Promises", route: "/promises" },
       ],
     },
     { name: "Journey Of QMIS", route: "/journey-of-qmis" },
