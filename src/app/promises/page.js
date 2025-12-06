@@ -14,7 +14,7 @@ export default function promises() {
         }}
       >
         <h1 className="text-white text-3xl font-semibold">
-          QMIS Strategy
+          Promises
         </h1>
       </div>
 
