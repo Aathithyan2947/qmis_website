@@ -1,157 +1,282 @@
-export default function alumni() {
+export default function Alumni() {
   return (
-    <div className="w-full bg-white text-gray-800">
+    <div className="w-full bg-white text-gray-800 font-sans">
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-20 flex justify-center">
         <h1 className="text-white text-4xl font-semibold">Alumni</h1>
       </header>
 
-    <div className="w-full min-h-screen bg-gray-50 px-4 md:px-10 py-10 font-sans">
-      {/* Top Section */}
-      <div className="grid md:grid-cols-2 gap-10 items-start">
-        
-        {/* Left: Image */}
-        <img
-          src="/student.jpg"   // <-- replace with your image path
-          alt="Student"
-          className="w-full rounded-lg shadow-md"
-        />
 
-        {/* Right: Text */}
-        <div>
-          <h1 className="text-3xl font-semibold text-gray-900">
-            Siva Bhagya S. E{" "}
-            <span className="text-gray-500 text-lg">(Batch of 2022–2023)</span>
-          </h1>
+      {/* ====================================================================== */}
+      {/*                         SECTION 1 – SIVA BHAGYA                       */}
+      {/* ====================================================================== */}
+      <section className="flex justify-center px-4 md:px-10 py-16">
+        <div className="max-w-4xl w-full">
 
-          <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            Final Year, B.Tech – Metallurgical & Materials Engineering <br />
-            National Institute of Technology, Tiruchirappalli (NIT–Trichy)
-          </p>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <img
+                src="/student.jpg"
+                alt="Student"
+                className="w-72 h-80 object-cover rounded-lg shadow-md"
+              />
+            </div>
 
-          <p className="mt-4 text-gray-700 leading-relaxed">
-            QMIS played a transformative role in shaping my academic journey and 
-            guiding me toward pursuing B.Tech at NIT Trichy, an institution ranked 
-            9th in the NIRF. The school not only strengthened my academic foundation 
-            but also provided countless opportunities to grow as an individual and 
-            refine my personality.
-          </p>
+            {/* Text */}
+            <div>
+              <h1 className="text-3xl font-semibold text-gray-900">
+                Siva Bhagya S. E
+                <span className="block text-gray-500 text-lg mt-1">
+                  (Batch of 2022–2023)
+                </span>
+              </h1>
+
+              <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                Final Year, B.Tech – Metallurgical & Materials Engineering<br />
+                National Institute of Technology, Tiruchirappalli (NIT–Trichy)
+              </p>
+
+              <p className="mt-4 text-gray-700 leading-relaxed">
+                QMIS played a transformative role in shaping my academic journey...
+              </p>
+            </div>
+          </div>
+
+          {/* Paragraphs */}
+          <div className="mt-10 space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              The continuous support and mentorship of my teachers...
+            </p>
+
+            <p>
+              During my time at QMIS, I authored a comprehensive book review...
+            </p>
+
+            <p>
+              In college, I continued to follow the path QMIS helped pave...
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Bottom Paragraphs */}
-      <div className="mt-10 space-y-6 text-gray-700 leading-relaxed">
-        <p>
-          The continuous support and mentorship of my teachers, especially Ms. Sujatha 
-          and Mr. Abinath, have been instrumental in helping me become who I am today. 
-          Their confidence in me, along with QMIS’s rich learning atmosphere, resources, 
-          and value-based education, laid the strongest base for my future. For this, 
-          I remain deeply grateful.
-        </p>
 
-        <p>
-          During my time at QMIS, I authored a comprehensive book review on 
-          <i>1 Chisel to Shine</i> by Dr. R. Thirunavukkarasu IPS, interacted with renowned 
-          ISRO scientist Dr. Venkatraman, and interviewed Padma Bhushan awardee and former 
-          ISRO Chairman Dr. K. Kasturirangan. I also served as the Student Sub-Editor of 
-          the school magazine <i>YAGNA</i>. The evening extra classes during board exam 
-          preparation not only helped academically but also created unforgettable memories 
-          with my classmates.
-        </p>
+      {/* ====================================================================== */}
+      {/*                        SECTION – POSITIONS LIST                       */}
+      {/* ====================================================================== */}
+      <section className="flex justify-center px-4 md:px-10 py-16">
+        <div className="max-w-4xl w-full">
 
-        <p>
-          In college, I continued to follow the path QMIS helped pave. I crafted a compelling 
-          TEDx presentation for Mr. K. T. Ravindran, famously known as the “Militant Architect,” 
-          for TEDx NIT Trichy (IX Edition). As an active member of Toastmasters, I took up meeting 
-          roles at the Colossus Toastmasters Meet and was honoured with the ‘Best Speaker’ award 
-          during my Ice Breaker session.
-        </p>
-      </div>
+          <p className="text-gray-700 leading-relaxed">
+            Today, I hold several positions of responsibility at NIT Trichy:
+          </p>
+
+          <ul className="mt-6 space-y-8">
+            {[
+              ["Joint Secretary", "Metallurgical and Materials Engineering Association (MMEA)"],
+              ["Treasurer", "Colossus Toastmasters Club"],
+              ["Media Manager", "Festember Media Relations Team"],
+              ["Speakers’ Liaison", "TEDx NIT Trichy"],
+            ].map(([title, desc], i) => (
+              <li key={i}>
+                <p className="font-semibold text-lg text-gray-900">• {title}</p>
+                <p className="text-gray-700 ml-4">{desc}</p>
+              </li>
+            ))}
+          </ul>
+
+          {/* Closing */}
+          <div className="mt-10 space-y-6 text-gray-700 leading-relaxed">
+            <p>
+              These roles strengthened my leadership, communication...
+            </p>
+
+            <p>
+              I received the <b>Academic Excellence Award – 2022</b>...
+            </p>
+
+            <p>
+              QMIS has truly been the foundation on which I built my aspirations...
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ====================================================================== */}
+      {/*                     SECTION 2 – DAYAKANT KEVIN RAI L                  */}
+      {/* ====================================================================== */}
+      <section className="w-full bg-[#0b1a3d] text-white flex justify-center px-6 py-16 md:px-20">
+        <div className="max-w-4xl w-full">
+
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <img
+                src="/your-image.jpg"
+                alt="Advocate"
+                className="w-72 h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* Text */}
+            <div>
+              <h1 className="text-3xl md:text-4xl font-semibold">
+                Dayakant Kevin Rai L
+              </h1>
+              <p className="text-lg mt-2 opacity-80">(Batch of 2018 – 19)</p>
+              <p className="text-lg mt-4 font-medium">
+                Practicing Advocate, Madras High Court
+              </p>
+            </div>
+          </div>
+
+          {/* Paragraphs */}
+          <div className="mt-10 space-y-8 text-gray-200 leading-relaxed">
+            <p>
+              "QMIS is one of the most prestigious institutions in Madurai...
+            </p>
+
+            <p>
+              One of my fondest memories from school was the QMIS Sports League...
+            </p>
+
+            <h1 className="text-xl font-semibold">QMIS's Impact on My Personal Growth</h1>
+
+            <p>
+              My school played a pivotal role in moulding me...
+            </p>
+
+            <p>
+              I am truly thankful to QMIS...
+            </p>
+          </div>
+
+          {/* School Achievements */}
+          <div className="w-full py-16 flex justify-center">
+            <div className="max-w-4xl w-full">
+              <h2 className="text-2xl font-semibold mb-6">School Achievements:</h2>
+
+              <ul className="space-y-4 text-gray-200 ml-6 list-disc">
+                <li>Participated in the District-Level Under-16 Boys Basketball Tournament</li>
+                <li>Winners – Sahodaya Under-17 Boys Basketball Tournament</li>
+              </ul>
+
+              {/* Red Banner */}
+              <div className="mt-10 bg-[#C0262D] text-white text-center text-xl md:text-2xl font-semibold py-10 px-6 rounded-2xl shadow-lg">
+                QMIS will always remain an integral part of my journey.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ====================================================================== */}
+      {/*                     SECTION 3 – DR. SHRIJAH                           */}
+      {/* ====================================================================== */}
+      <section className="flex justify-center px-4 md:px-10 py-16">
+        <div className="max-w-5xl w-full">
+
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            {/* Image */}
+            <div className="flex justify-center md:justify-start">
+              <img
+                src="/shrijah.jpg"
+                alt="Dr. Shrijah"
+                className="w-72 md:w-96 rounded-lg shadow-lg object-cover"
+              />
+            </div>
+
+            {/* Text */}
+            <div>
+              <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                Dr. Shrijah
+                <span className="block md:inline text-gray-500 text-lg">
+                  (Batch of 2011–2019)
+                </span>
+              </h1>
+
+              <p className="mt-4 text-gray-700 leading-relaxed text-lg">
+                This is Shrijah. I did my schooling at Queen Mira...
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 space-y-8 text-gray-700 leading-relaxed text-lg">
+            <p> I owe every bit of this transformation to my school...</p>
+            <p> Today, I have completed my Medicine degree...</p>
+            <p>Consistent effort and dedication can lead anyone...</p>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ====================================================================== */}
+      {/*                     SECTION 4 – SARVESH                               */}
+      {/* ====================================================================== */}
+      <section className="w-full bg-white py-16 px-6 md:px-16">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-light text-[#1c1c50]">
+            Sarvesh
+            <span className="text-base font-normal ml-1">(Entrepreneur)</span>
+          </h1>
+          <p className="text-gray-600 mt-1 text-lg">(Batch of 2018 - 19)</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="bg-[#b82025] text-white rounded-[80px] p-10 md:p-14">
+            <p className="mb-6 leading-relaxed">
+              My journey at QMIS continues to remain one of the most meaningful...
+            </p>
+            <p>What makes my school truly special...</p>
+          </div>
+
+          <div className="flex justify-center">
+            <img
+              src="/your-image-path.jpg"
+              alt="Speaker"
+              className="rounded-lg shadow-lg w-full md:w-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+
+      {/* ====================================================================== */}
+      {/*                    SECTION 5 – TAMIL MOZHI                             */}
+      {/* ====================================================================== */}
+      <section className="flex justify-center px-4 md:px-10 py-16">
+        <div className="max-w-5xl w-full">
+
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+
+            <div className="flex justify-center md:justify-start">
+              <img
+                src="/shrijah.jpg"
+                alt="Tamil Mozhi"
+                className="w-72 md:w-96 rounded-lg shadow-lg object-cover"
+              />
+            </div>
+
+            <div>
+              <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                Tamil Mozhi .B
+                <span className="block md:inline text-gray-500 text-lg">
+                  (Batch of 2017 -18)
+                </span>
+              </h1>
+
+              <p className="mt-4 text-gray-700 leading-relaxed text-lg">
+                QMIS provides an amazing and safe environment...
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </div>
-    
-    <div className="w-full mt-12 px-4 md:px-10 font-sans">
-      
-      {/* Section Title */}
-      <p className="text-gray-700 leading-relaxed">
-        Today, I hold several positions of responsibility at NIT Trichy:
-      </p>
-
-      {/* Bullet List */}
-      <ul className="mt-6 space-y-8">
-        
-        {/* Item 1 */}
-        <li className="flex flex-col">
-          <span className="font-semibold text-gray-900 text-lg flex items-center gap-2">
-            <span className="text-xl">•</span> Joint Secretary
-          </span>
-          <p className="text-gray-700 ml-5 mt-1">
-            Metallurgical and Materials Engineering Association (MMEA)
-          </p>
-        </li>
-
-        {/* Item 2 */}
-        <li className="flex flex-col">
-          <span className="font-semibold text-gray-900 text-lg flex items-center gap-2">
-            <span className="text-xl">•</span> Treasurer
-          </span>
-          <p className="text-gray-700 ml-5 mt-1">
-            Colossus Toastmasters Club
-          </p>
-        </li>
-
-        {/* Item 3 */}
-        <li className="flex flex-col">
-          <span className="font-semibold text-gray-900 text-lg flex items-center gap-2">
-            <span className="text-xl">•</span> Media Manager
-          </span>
-          <p className="text-gray-700 ml-5 mt-1">
-            Festember Media Relations Team (South India’s largest cultural fest)
-          </p>
-        </li>
-
-        {/* Item 4 */}
-        <li className="flex flex-col">
-          <span className="font-semibold text-gray-900 text-lg flex items-center gap-2">
-            <span className="text-xl">•</span> Speakers’ Liaison
-          </span>
-          <p className="text-gray-700 ml-5 mt-1">
-            TEDx NIT Trichy
-          </p>
-        </li>
-
-      </ul>
-
-      {/* Paragraphs */}
-      <div className="mt-10 space-y-6 text-gray-700 leading-relaxed">
-        <p>
-          These roles have strengthened my leadership, communication, teamwork, and 
-          organisational skills. I have also contributed to various impactful initiatives—
-          creating media marketing strategies, securing sponsorships, raising funds for 
-          flagship events, and participating in donation drives through the Social Council. 
-          Visiting orphanages and old-age homes further deepened my understanding of 
-          service and empathy.
-        </p>
-
-        <p>
-          My academic record includes receiving the 
-          <span className="font-semibold"> Academic Excellence Award – 2022 </span>
-          from Honorable Justice M. S. Ramesh for securing 
-          <span className="font-semibold"> District 3rd Rank </span>
-          and 
-          <span className="font-semibold"> School 1st Rank in Grade 12 (CBSE)</span>, 
-          and placing 
-          <span className="font-semibold"> 13th at the school level in Grade 10 (ICSE)</span>. 
-          I am also a Bharatanatyam dancer and an amateur keyboardist. I currently stand 
-          among the <span className="font-semibold">Top 10%</span> in my department at NITT.
-        </p>
-
-        <p>
-          QMIS has truly been the foundation on which I built my aspirations, confidence, 
-          and character. The values and experiences I gained there continue to guide me 
-          every day.”
-        </p>
-      </div>
-    </div>
-      </div>
-  )}
+  );
+}
