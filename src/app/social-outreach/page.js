@@ -246,25 +246,34 @@ export default function SocialOutreach() {
 
           <div className="text-gray-700 text-lg leading-relaxed space-y-4">
             <p>
-              Queen Mirs, through the visionary production house of Mr. Abinath,
-              created a compelling anthem to raise awareness about drug abuse.
+              Queen Mirs, through the visionary production house of
+Mr. Abinath, created a compelling atlhem to raise
+
+awareness about the dangers of drug abuse. With
+
+soul-stirring music composed by Gerard Feliz and
+thought-provoking lyrics penned by Madhan Karky,
+
+the anthem delivers a strong message of hope,
+courage, and conscious choice.
             </p>
             <p>
-              With music by Gerard Feliz and lyrics by Madhan Karky, the anthem urges
-              society toward safety, awareness, and collective responsibility.
+             It reflects QMIS's unwavering commitment to shaping
+responsible, informed, and resilient young citizens.
             </p>
           </div>
 
-          <div className="relative">
-            
-            <iframe
+                  <div className="w-full aspect-video rounded-xl overflow-hidden shadow-xl border border-white/20">
+
+  <iframe
     className="w-full h-full"
-    src="https://www.youtube.com/watch?v=GYlpQDrQt2Y&list=RDGYlpQDrQt2Y"
+    src="https://www.youtube.com/embed/GYlpQDrQt2Y?list=RDGYlpQDrQt2Y"
     title="Vaanathai Vellaporom"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
   ></iframe>
-          </div>
+</div>
+
 
         </div>
 
@@ -285,13 +294,13 @@ export default function SocialOutreach() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 items-center">
 
           <img
-            src="/images/global-honour-event.jpg"
+            src="/social-outreach/7.png"
             alt="QMIS UNICEF Honour Event"
             className="w-full rounded-lg shadow-lg object-cover"
           />
 
           <img
-            src="/images/unicef-certificate.jpg"
+            src="/social-outreach/8.png"
             alt="UNICEF Certificate"
             className="w-full rounded-lg shadow-lg object-contain border border-yellow-500 p-4"
           />
@@ -299,21 +308,17 @@ export default function SocialOutreach() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 items-center">
 
-          <div className="relative">
-            <img
-              src="/images/student-anthem-video.jpg"
-              alt="Student Anthem Video"
-              className="rounded-lg shadow-lg w-full"
-            />
-            <button className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white/80 w-16 h-16 rounded-full flex items-center justify-center shadow-xl">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     className="h-8 w-8 text-gray-800"
-                     fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl border border-white/20">
+
+            
+            <iframe
+  className="w-full h-full"
+  src="https://www.youtube.com/embed/0VDWMJ_IpQo"
+  title="YouTube video"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
           </div>
 
           <div className="text-gray-700 text-lg leading-relaxed space-y-4">
