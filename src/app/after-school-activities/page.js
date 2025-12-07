@@ -384,7 +384,7 @@ export default function AfterSchoolActivites() {
         </div>
       </div>
       {/* last section */}
-      <ActivitiesCarousel />
+      <ActivitiesCarousel from={5} to={15} picPath={'/after-school-activities/'} picType={'webp'} />
     </>
   )
 }

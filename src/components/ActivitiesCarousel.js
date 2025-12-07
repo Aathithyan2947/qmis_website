@@ -6,13 +6,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 
-export default function ActivitiesCarousel() {
-  // array for images 5 to 15
-  const images = Array.from({ length: 11 }, (_, i) => `/after-school-activities/${i + 5}.webp`);
+export default function ActivitiesCarousel({ picType, picPath, from = 1, to = 10 }) {
+  // Generate an array from provided range
+  const images = Array.from({ length: to - from + 1 }, (_, i) => `${picPath}${i + from}.${picType}`);
 
   return (
     <div className="w-full relative bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 relative">
         <Swiper
           modules={[Navigation]}
           navigation={{
@@ -33,7 +33,7 @@ export default function ActivitiesCarousel() {
               <div className="overflow-hidden rounded-xl">
                 <Image
                   src={src}
-                  alt={`Activity Image ${index + 5}`}
+                  alt={`Activity Image ${index + from}`}
                   width={900}
                   height={600}
                   className="object-cover w-full h-full"
@@ -43,15 +43,16 @@ export default function ActivitiesCarousel() {
           ))}
         </Swiper>
 
-        {/* Custom Arrows */}
-        <button className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10">
-          <svg width="30" height="30" viewBox="0 0 24 24" className="fill-red-600">
+        {/* Custom Prev Button */}
+        <button className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full">
+          <svg width="28" height="28" viewBox="0 0 24 24" className="fill-red-600">
             <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
 
-        <button className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10">
-          <svg width="30" height="30" viewBox="0 0 24 24" className="fill-red-600">
+        {/* Custom Next Button */}
+        <button className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md p-2 rounded-full">
+          <svg width="28" height="28" viewBox="0 0 24 24" className="fill-red-600">
             <path d="M9 6l6 6-6 6" />
           </svg>
         </button>
