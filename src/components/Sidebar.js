@@ -47,10 +47,10 @@ export default function Sidebar({ isOpen, onClose }) {
       route: "/facilities",
       submenu: [
         { label: "Infrastructure", route: "/facilities/infrastructure" },
-        { label: "Badminton", route: "/facilities/Badminton" },
-        { label: "Veeravanam", route: "/facilities/Veeravanam" },
+        { label: "Badminton", route: "/facilities/badminton" },
+        { label: "Veeravanam", route: "/facilities/veeravanam" },
         { label: "Rifle Club", route: "/facilities/rifle-club" },
-        { label: "Kidz Club", route: "/facilities/kidz-club" },
+        { label: "Kidz Gym", route: "/facilities/kidz-gym" },
         { label: "Sports Complex", route: "/facilities/sports-complex" },
         { label: "Vehicles", route: "/facilities/vehicles" },
         { label: "Health Center", route: "/facilities/health-center" },
