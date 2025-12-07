@@ -14,13 +14,13 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-              At Queen Mira, we don’t create toppers. We create leaders who will 
+              At Queen Mira, we don’t create toppers. We create leaders who will
               take the world into a brighter future.
             </p>
 
             <p className="mt-4 text-gray-300 leading-relaxed">
-              For us, education does not mean only academics. It encompasses every 
-              facet of learning for a child that will make them responsible and 
+              For us, education does not mean only academics. It encompasses every
+              facet of learning for a child that will make them responsible and
               well-meaning members of society.
             </p>
 
@@ -86,115 +86,115 @@ export default function Home() {
               <li>• Special needs–friendly curricula</li>
             </ul>
           </div>
-        
+
         </div>
       </section>
 
       {/* ================= FACILITIES SECTION (2 ROWS) ================= */}
-<section className="bg-white text-black py-20 px-6 md:px-20">
+      <section className="bg-white text-black py-20 px-6 md:px-20">
 
-  {/* ---------- ROW 1 ---------- */}
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* ---------- ROW 1 ---------- */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-    {/* LEFT: Middle + Secondary Years */}
-    <div className="text-center md:text-left">
+          {/* LEFT: Middle + Secondary Years */}
+          <div className="text-center md:text-left">
 
-      <h3 className="text-xl font-semibold mb-1">
-        Middle Years Academics Programme
-      </h3>
-      <p className="text-gray-600 mb-2">Grades 6, 7, 8</p>
+            <h3 className="text-xl font-semibold mb-1">
+              Middle Years Academics Programme
+            </h3>
+            <p className="text-gray-600 mb-2">Grades 6, 7, 8</p>
 
-      <p className="text-gray-700 leading-relaxed mb-8">
-        The Middle Years Programme is structured to meet children’s varied 
-        intellectual and developmental needs. It ensures progression and 
-        continuity across the various stages of learning and incorporates 
-        continuous evaluation and review of children’s performance.
-      </p>
+            <p className="text-gray-700 leading-relaxed mb-8">
+              The Middle Years Programme is structured to meet children’s varied
+              intellectual and developmental needs. It ensures progression and
+              continuity across the various stages of learning and incorporates
+              continuous evaluation and review of children’s performance.
+            </p>
 
-      <h3 className="text-xl font-semibold mb-1">
-        Secondary Years Academics Programme
-      </h3>
-      <p className="text-gray-600 mb-2">Grades 9, 10, 11, 12</p>
+            <h3 className="text-xl font-semibold mb-1">
+              Secondary Years Academics Programme
+            </h3>
+            <p className="text-gray-600 mb-2">Grades 9, 10, 11, 12</p>
 
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Graduates of Secondary programmes emerge as confident young minds 
-        ready to take their potential forward in line with the school’s 
-        guiding principles. Students gain both horizontal and vertical 
-        dimensions of core knowledge.
-      </p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Graduates of Secondary programmes emerge as confident young minds
+              ready to take their potential forward in line with the school’s
+              guiding principles. Students gain both horizontal and vertical
+              dimensions of core knowledge.
+            </p>
 
-      <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded shadow transition">
-        DOWNLOAD BROCHURE
-      </button>
-    </div>
+            <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded shadow transition">
+              DOWNLOAD BROCHURE
+            </button>
+          </div>
 
-    {/* RIGHT: Standing student image */}
-    <div className="flex justify-center">
-      <Image
-        src="/standing-student.png"   // add this image to /public
-        alt="Student"
-        width={350}
-        height={500}
-        className="object-contain"
-      />
-    </div>
+          {/* RIGHT: Standing student image */}
+          <div className="flex justify-center">
+            <Image
+              src="/standing-student.png"   // add this image to /public
+              alt="Student"
+              width={350}
+              height={500}
+              className="object-contain"
+            />
+          </div>
 
-  </div>
+        </div>
 
-  {/* ---------- ROW 2 ---------- */}
-  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center mt-24">
+        {/* ---------- ROW 2 ---------- */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center mt-16 md:mt-24">
 
-    {/* LEFT: Kid with microphone + blue circle */}
-    <div className="relative flex justify-center">
-      <div className="absolute w-72 h-72 bg-[#0A1847] rounded-full -z-10 top-10"></div>
+          {/* LEFT: Kid with microphone + blue circle */}
+          <div className="relative flex justify-center py-12 md:py-0">
+            <div className="absolute w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 bg-[#0A1847] rounded-full -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
-      <Image
-        src="/kid.png"     // add your kid PNG cutout here
-        alt="Kid singing"
-        width={420}
-        height={420}
-        className="relative z-10 object-contain"
-      />
-    </div>
+            <Image
+              src="/kid.png"
+              alt="Kid singing"
+              width={420}
+              height={420}
+              className="relative z-10 object-contain w-full max-w-[200px] sm:max-w-[280px] md:max-w-[420px] h-auto"
+            />
+          </div>
 
-    {/* RIGHT: World-class Facilities content */}
-    <div className="md:pl-4">
+          {/* RIGHT: World-class Facilities content */}
+          <div className="md:pl-4">
 
-      <h2 className="text-3xl md:text-4xl font-bold text-red-700 mb-6">
-        World-class Facilities<br/>and Infrastructure
-      </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mb-4 md:mb-6 leading-tight">
+              World-class Facilities and Infrastructure
+            </h2>
 
-      <p className="text-gray-700 leading-relaxed mb-8">
-        Our campus is meticulously crafted as a nurturing educational space that 
-        fosters intellectual, physical, social, and emotional growth.
-      </p>
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6 md:mb-8">
+              Our campus is meticulously crafted as a nurturing educational space that
+              fosters intellectual, physical, social, and emotional growth.
+            </p>
 
-      <ul className="space-y-4 text-gray-800 leading-relaxed">
-        <li>
-          <strong>Ergonomically Designed Furniture:</strong> Built for comfort and efficiency.
-        </li>
-        <li>
-          <strong>Aesthetically Decked Learning Spaces:</strong> Designed to enhance 
-          students’ creativity and curiosity.
-        </li>
-        <li>
-          <strong>Air-Conditioned Classrooms:</strong> A comfortable, conducive environment 
-          for learning.
-        </li>
-        <li>
-          <strong>Real-World Extracurricular Activities:</strong> Focused on practical 
-          learning and real-life application.
-        </li>
-      </ul>
+            <ul className="space-y-3 sm:space-y-4 text-gray-800 text-sm sm:text-base leading-relaxed">
+              <li>
+                <strong>Ergonomically Designed Furniture:</strong> Built for comfort and efficiency.
+              </li>
+              <li>
+                <strong>Aesthetically Decked Learning Spaces:</strong> Designed to enhance
+                students' creativity and curiosity.
+              </li>
+              <li>
+                <strong>Air-Conditioned Classrooms:</strong> A comfortable, conducive environment
+                for learning.
+              </li>
+              <li>
+                <strong>Real-World Extracurricular Activities:</strong> Focused on practical
+                learning and real-life application.
+              </li>
+            </ul>
 
-    </div>
+          </div>
 
-  </div>
+        </div>
 
-</section>
+      </section>
 
     </>
 
-    
+
   );
 }
