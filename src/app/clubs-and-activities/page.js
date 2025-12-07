@@ -180,9 +180,9 @@ export default function ClubsAndActivities() {
             </p>
           </div>
 
-          <div className="order-1 md:order-2 flex justify-center md:justify-end">
+          <div className="order-1 md:order-2 px-5 flex justify-center md:justify-end">
             <Image
-              src="/clubs-activities/creative.png"
+              src="/clubs-activities/6.png"
               width={600}
               height={400}
               alt="Creative Studio"
@@ -208,6 +208,65 @@ export default function ClubsAndActivities() {
       <div className="flex justify-center">
         <Image src="/clubs-activities/7.png" height={500} width={500} alt="not found" />
       </div>
+
+      {/* last section*/}
+      <section className="mt-16 px-4 md:px-20">
+
+        {/* Robotics Club */}
+        <div className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0F1A4F] mb-4">
+            Robotics Club
+          </h2>
+          <p className="text-gray-700 mb-6 max-w-4xl">
+            Equipped with modern tools and kits, our Robotics Lab inspires students to explore
+            the world of robotics. They learn by creating, programming, and solving real-life
+            challenges. A step toward preparing them for a tech-driven future.
+          </p>
+
+          {/* Images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <Image src="/clubs-activities/robo_1.png" width={380} height={250} alt="Robotics Club 1" className="rounded-md object-cover" />
+            <Image src="/clubs-activities/robo_2.png" width={380} height={250} alt="Robotics Club 2" className="rounded-md object-cover" />
+            <Image src="/clubs-activities/robo_3.png" width={380} height={250} alt="Robotics Club 3" className="rounded-md object-cover" />
+          </div>
+        </div>
+
+        {/* Adventure Club */}
+        <div className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0F1A4F] mb-4">
+            Adventure Club
+          </h2>
+          <p className="text-gray-700 mb-6 max-w-4xl">
+            Daring and enduring individuals are fostered with values for life through the
+            adventure club activities.
+          </p>
+
+          {/* Images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <Image src="/clubs-activities/adv_1.png" width={380} height={250} alt="Adventure Club 1" className="rounded-md object-cover" />
+            <Image src="/clubs-activities/adv_2.png" width={380} height={250} alt="Adventure Club 2" className="rounded-md object-cover" />
+            <Image src="/clubs-activities/adv_3.png" width={380} height={250} alt="Adventure Club 3" className="rounded-md object-cover" />
+          </div>
+        </div>
+
+        {/* Sports / Science / Placeholder */}
+        <div className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0F1A4F] mb-4">
+            Science Club
+          </h2>
+          <p className="text-gray-700 mb-6 max-w-4xl">
+            A place to nurture the curious, young and innovative learners.
+          </p>
+
+          {/* Images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <Image src="/clubs-activities/sports_1.png" width={380} height={250} alt="Science Club 1" className="rounded-md object-cover" />
+            <Image src="/clubs-activities/sports_2.png" width={380} height={250} alt="Science Club 2" className="rounded-md object-cover" />
+            <Image src="/clubs-activities/sports_3.png" width={380} height={250} alt="Science Club 3" className="rounded-md object-cover" />
+          </div>
+        </div>
+
+      </section>
     </>
   )
 }
