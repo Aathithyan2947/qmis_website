@@ -93,6 +93,7 @@ export default function Sidebar({ isOpen, onClose }) {
     { name: "MelBourne", route: "/melbourne" },
     { name: "Admissions", route: "/admissions" },
     { name: "After School Activities", route: "/after-school-activities" },
+    { name: "Clubs & Activities", route: "/clubs-and-activities" },
     {
       name: "Careers",
       route: "/careers",
