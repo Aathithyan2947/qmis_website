@@ -4,7 +4,7 @@ export default function mindActivities() {
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-8 flex justify-center">
-        <h1 className="text-white text-3xl font-semibold">Body</h1>
+        <h1 className="text-white text-3xl font-semibold">Mind</h1>
       </header>
 
       {/* ===================== MAIN CONTENT ===================== */}
@@ -60,7 +60,76 @@ study skills, and boost student's confidence and motivation to learn ..
           </div>
         </div>
       </section>
+ 
+    <div className="w-full font-sans">
 
+      {/* 🔴 Top Red Bar */}
+      <div className="bg-red-600 text-white text-center py-2 text-sm md:text-base font-medium">
+        Student Driven Classes for a refined classroom
+      </div>
+
+      {/* 🔹 Top Images Section */}
+      <div className="container mx-auto px-4 py-10">
+        <div className="flex flex-col items-center gap-10">
+
+          {/* Two Images Row */}
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="w-[250px] h-[180px] bg-gray-300 rounded"></div>
+            <div className="w-[250px] h-[180px] bg-gray-300 rounded"></div>
+          </div>
+
+          {/* Large Image + Rounded Text Bar */}
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
+            <div className="w-[250px] h-[220px] bg-gray-300 rounded"></div>
+
+            <div className="bg-[#0E1A4B] text-white px-6 py-4 rounded-r-full w-full md:w-auto md:ml-[-20px]">
+              Model United Nations Session to display our communication and diplomacy
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* 🔵 Skills & Values Section */}
+      <div className="bg-[#0E1A4B] text-white py-14">
+  <div className="max-w-4xl mx-auto px-6">
+
+    {/* Section Title */}
+    <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
+      Skills and Values Mapping
+    </h2>
+
+    {/* Left Image + Right Text */}
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+      <div className="w-[260px] h-[220px] bg-gray-300 rounded flex-shrink-0"></div>
+
+      <div className="md:max-w-lg text-center md:text-left">
+        <h3 className="text-xl font-bold mb-2">STEAM</h3>
+        <p className="text-gray-300 leading-relaxed">
+          STEAM encourages hands-on learning, resilience, and innovation,
+          preparing students for future challenges and careers with confidence
+          and adaptability.
+        </p>
+      </div>
+    </div>
+
+    {/* Skills It Develops + Right Image */}
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mt-14">
+      <div className="md:max-w-sm text-center md:text-left">
+        <h3 className="text-xl font-semibold mb-3">Skills It Develops</h3>
+        <p className="text-gray-300">
+          Critical thinking, creativity, collaboration, and problem-solving skills.
+        </p>
+      </div>
+
+      <div className="w-[260px] h-[200px] bg-gray-300 rounded flex-shrink-0"></div>
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
     </div>
   );
 }

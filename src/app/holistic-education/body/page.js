@@ -11,7 +11,7 @@ export default function BodyActivities() {
       <section className="w-full bg-white relative">
 
         {/* dotted background */}
-        <div className="absolute inset-0 bg-[url('/dots.png')] opacity-20 pointer-events-none"></div>
+        <div className="absolute inset-0 "></div>
 
         <div className="relative max-w-6xl mx-auto px-6 md:px-12 py-16">
 
@@ -60,6 +60,60 @@ export default function BodyActivities() {
 
           </div>
         </div>
+    <div className="bg-white font-sans">
+      {/* Activities Section */}
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-semibold text-gray-800">Activities</h2>
+          <p className="mt-2 text-gray-600">After school activities foster mastery by building confidence in a supportive environment.</p>
+          <div className="mt-8 flex justify-center gap-6">
+            {/* Empty boxes for images (replace with actual images) */}
+            <div className="w-40 h-40 bg-gray-300"></div>
+            <div className="w-40 h-40 bg-gray-300"></div>
+            <div className="w-40 h-40 bg-gray-300"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Aadukalam Section */}
+      <section className="bg-indigo-700 text-white py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-semibold">Aadukalam</h2>
+          <p className="mt-2">The Annual Athletic Meet is a fun-filled day where students showcase their talents and skills.</p>
+          <div className="mt-8 flex justify-center gap-6">
+            <div className="w-40 h-40 bg-gray-300"></div>
+            <div className="w-40 h-40 bg-gray-300"></div>
+            <div className="w-40 h-40 bg-gray-300"></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 flex flex-col items-center gap-12">
+  {/* First Section: Box Left, Text Right */}
+  <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
+    <div className="w-40 h-40 bg-gray-300 flex-shrink-0"></div>
+    <div className="text-center md:text-left">
+      <h2 className="text-3xl font-semibold text-gray-800">BFIT</h2>
+      <p className="mt-2 text-gray-600">
+        The activity that stems out of taking care of well-being of body, mind, and soul.
+      </p>
+    </div>
+  </div>
+
+  {/* Second Section: Text Left, Box Right */}
+  <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
+    <div className="text-center md:text-left md:order-1">
+      <h2 className="text-3xl font-semibold text-gray-800">Skills It Develops</h2>
+      <p className="mt-2 text-gray-600">
+        Resilience, Self-confidence, Self-discipline, Independence, Endurance, Collaboration,
+        Adaptability, Conflict resolution and Management, Problem solving, Decision making, and so on...
+      </p>
+    </div>
+    <div className="w-40 h-40 bg-gray-300 flex-shrink-0 md:order-2"></div>
+  </div>
+</section>
+
+    </div>
       </section>
 
     </div>
