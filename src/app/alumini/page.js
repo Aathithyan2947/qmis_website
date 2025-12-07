@@ -17,7 +17,7 @@ export default function Alumni() {
             {/* Image */}
             <div className="flex justify-center md:justify-center">
               <img
-                src="/student.jpg"
+                src="/alumini/1.png"
                 alt="Student"
                 className="w-72 h-80 object-cover rounded-lg shadow-md"
               />
@@ -48,7 +48,7 @@ export default function Alumni() {
           </div>
 
           {/* Paragraphs */}
-          <div className="mt-10 space-y-6 text-gray-700 leading-relaxed text-center md:text-left">
+          <div className="mt-3 space-y-6 text-gray-700 leading-relaxed text-center md:text-left">
             <p>
               The continuous support and mentorship of my teachers, especially Ms. Sujatha 
               and Mr. Abinath, have been instrumental in helping me become who I am today. 
@@ -72,13 +72,7 @@ export default function Alumni() {
               with the ‘Best Speaker’ award during my Ice Breaker session.
             </p>
           </div>
-        </div>
-      </div>
-
-
-      {/* ===================== POSITIONS SECTION ===================== */}
-      <div className="w-full flex justify-center px-4 md:px-10 py-16">
-        <div className="max-w-4xl w-full text-center md:text-left">
+          <div className="max-w-4xl w-full text-center md:text-left">
 
           <p className="text-gray-700 leading-relaxed">
             Today, I hold several positions of responsibility at NIT Trichy:
@@ -133,7 +127,11 @@ export default function Alumni() {
           </div>
 
         </div>
+        </div>
       </div>
+
+
+      
 
 
       {/* ===================== SECTION 2 (Blue Section) ===================== */}
@@ -145,7 +143,7 @@ export default function Alumni() {
             {/* Image */}
             <div className="flex justify-center md:justify-center">
               <img
-                src="/your-image.jpg"
+                src="/alumini/2.png"
                 alt="Advocate"
                 className="w-72 h-80 object-cover rounded-lg shadow-lg"
               />
@@ -225,16 +223,17 @@ committed to its vision of nurturing the leaders of tomorrow, and I am proud to 
         <div className="max-w-5xl w-full">
 
           {/* Top Section */}
-          <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="grid md:grid-cols-2 gap-4 items-start">
 
             {/* Left: Image */}
             <div className="flex justify-center md:justify-start">
-              <img
-                src="/shrijah.jpg"
-                alt="Dr. Shrijah"
-                className="w-72 md:w-96 rounded-lg shadow-lg object-cover"
-              />
-            </div>
+  <img
+    src="/alumini/3.png"
+    alt="Dr. Shrijah"
+    className="w-72 md:w-96 h-48 sm:h-52 md:h-60 lg:h-100 rounded-lg shadow-lg object-cover"
+  />
+</div>
+
 
             {/* Right: Text */}
             <div>
@@ -246,11 +245,7 @@ committed to its vision of nurturing the leaders of tomorrow, and I am proud to 
               </h1>
 
               <p className="mt-4 text-gray-700 leading-relaxed text-lg">
-                This is Shrijah. I did my schooling at Queen Mira International
-                School from 2011 to 2019. I stepped into QMIS as a shy and
-                withdrawn Grade 5 student and walked out in Grade 12 as the
-                school topper—wearing many hats as a singer, writer, student
-                council member, and more.
+                This is Shrijah. I did my schooling at Queen Mira International School from 2011 to 2019. I stepped into QMIS as a shy and withdrawn Grade 5 student and walked out in Grade 12 as the school topper—wearing many hats as a singer, writer, student council member, and more.
               </p>
             </div>
           </div>
@@ -297,33 +292,27 @@ committed to its vision of nurturing the leaders of tomorrow, and I am proud to 
       </div>
 
       {/* Main Layout */}
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Red Box */}
-        <div className="bg-[#b82025] text-white rounded-[80px] p-10 md:p-14">
-          <p className="mb-6 leading-relaxed">
-            My journey at QMIS continues to remain one of the most meaningful
-            chapters of my life. QMIS has never been just a place of learning
-            for me—it has been a foundation where my character was shaped and my
-            ambitions were encouraged.
-          </p>
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 p-6 md:p-12">
+  {/* Left Red Box */}
+  <div className="bg-[#b82025] text-white rounded-[80px] p-8 md:p-14">
+    <p className="mb-6 leading-relaxed text-base md:text-lg">
+      My journey at QMIS continues to remain one of the most meaningful chapters of my life. QMIS has never been just a place of learning for me—it has been a foundation where my character was shaped and my ambitions were encouraged.
+    </p>
+    <p className="leading-relaxed text-base md:text-lg">
+      What makes my school truly special is the long-lasting bond it creates with its students. Even today, I feel welcomed, remembered, and valued whenever I visit. That feeling of belonging speaks volumes about the culture and heart of QMIS.
+    </p>
+  </div>
 
-          <p className="leading-relaxed">
-            What makes my school truly special is the long-lasting bond it
-            creates with its students. Even today, I feel welcomed, remembered,
-            and valued whenever I visit. That feeling of belonging speaks volumes
-            about the culture and heart of QMIS.
-          </p>
-        </div>
+  {/* Right Image */}
+  <div className="flex justify-center items-center">
+    <img
+      src="/alumini/4.png"
+      alt="Speaker"
+      className="w-72 md:w-96 h-48 sm:h-52 md:h-60 lg:h-100 rounded-lg shadow-lg object-cover"
+    />
+  </div>
+</div>
 
-        {/* Right Image */}
-        <div className="flex justify-center">
-          <img
-            src="/your-image-path.jpg"
-            alt="Speaker"
-            className="rounded-lg shadow-lg w-full md:w-auto"
-          />
-        </div>
-      </div>
     </div>
 <div className="w-full bg-white text-gray-800 font-sans">
       {/* ===================== MAIN CONTENT ===================== */}
@@ -336,7 +325,7 @@ committed to its vision of nurturing the leaders of tomorrow, and I am proud to 
             {/* Left: Image */}
             <div className="flex justify-center md:justify-start">
               <img
-                src="/shrijah.jpg"
+                src="/alumini/5.png"
                 alt="Dr. Shrijah"
                 className="w-72 md:w-96 rounded-lg shadow-lg object-cover"
               />
@@ -390,7 +379,7 @@ creates in every learner.
           {/* RIGHT IMAGE */}
           <div className="flex justify-center md:justify-end">
             <img
-              src="/your-image-path.jpg"
+              src="/alumini/6.png"
               alt="Pranitha Senthil"
               className="w-72 md:w-96 rounded-lg object-cover shadow-xl"
             />
