@@ -39,7 +39,7 @@ export default function SocialOutreach() {
 
           <div className="grid md:grid-cols-2 gap-10">
             <Image
-              src="/images/isro-group.jpg"
+              src="/social-outreach/1.png"
               width={900}
               height={600}
               alt="ISRO Visit Group"
@@ -92,14 +92,15 @@ export default function SocialOutreach() {
           </div>
 
           <div className="w-full aspect-video rounded-xl overflow-hidden shadow-xl border border-white/20">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-              title="Vaanathai Vellaporom"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
+  <iframe
+    className="w-full h-full"
+    src="https://www.youtube.com/embed/wysPQ3DPkmE"
+    title="Vaanathai Vellaporom"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
 
         </div>
       </section>
@@ -122,7 +123,7 @@ export default function SocialOutreach() {
 
           <div className="grid md:grid-cols-2 gap-12 mb-12 items-start">
             <Image
-              src="/your-image.jpg"
+              src="/social-outreach/2.png"
               width={900}
               height={600}
               alt="KARKO Program"
@@ -162,7 +163,7 @@ export default function SocialOutreach() {
 
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 mb-12">
           <Image
-            src="/images/event-left.png"
+            src="/social-outreach/3.png"
             width={800}
             height={600}
             alt="Left Event"
@@ -170,7 +171,7 @@ export default function SocialOutreach() {
           />
 
           <Image
-            src="/images/event-right.png"
+            src="/social-outreach/4.png"
             width={800}
             height={600}
             alt="Right Event"
@@ -204,7 +205,7 @@ export default function SocialOutreach() {
           <div className="flex justify-center">
             <div className="border border-blue-300 bg-white p-4 rounded-md shadow-md">
               <img
-                src="/images/igca-award.png"
+                src="/social-outreach/5.png"
                 alt="IGCA Award"
                 className="max-h-40 object-contain"
               />
@@ -235,7 +236,7 @@ export default function SocialOutreach() {
 
         <div className="flex justify-center mb-12">
           <img
-            src="/images/drug-awareness-banner.jpg"
+            src="/social-outreach/6.png"
             alt="Drug Awareness Event"
             className="w-full max-w-5xl rounded-lg shadow-md object-cover"
           />
@@ -255,20 +256,14 @@ export default function SocialOutreach() {
           </div>
 
           <div className="relative">
-            <img
-              src="/images/drug-video-thumbnail.jpg"
-              alt="Drug Abuse Video"
-              className="rounded-lg shadow-lg w-full"
-            />
-            <button className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white/80 w-16 h-16 rounded-full flex items-center justify-center shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     className="w-8 h-8 text-gray-800"
-                     viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
+            
+            <iframe
+    className="w-full h-full"
+    src="https://www.youtube.com/watch?v=GYlpQDrQt2Y&list=RDGYlpQDrQt2Y"
+    title="Vaanathai Vellaporom"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
           </div>
 
         </div>
