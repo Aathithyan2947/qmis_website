@@ -1,27 +1,12 @@
-import DotGrid from "@/components/DotGrid";
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 
 export default function AboutTribute() {
   return (
     <>
-      <PageHeader contentTitle='Tribute' />
+      <PageHeader contentTitle="Tribute" />
 
-      <div className="relative w-full py-16">
-        <div className="absolute inset-0 -z-10">
-          <DotGrid
-            dotSize={5}
-            gap={22}
-            baseColor="#e5e5e5"
-            activeColor="#0f183f"
-            proximity={90}
-            shockRadius={180}
-            shockStrength={3.5}
-            resistance={900}
-            returnDuration={2}
-          />
-        </div>
-
+      <div className="relative w-full py-16 bg-grid-dots">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 max-w-6xl mx-auto px-6">
           <div className="flex flex-col items-center text-center">
             <Image
@@ -63,25 +48,8 @@ export default function AboutTribute() {
         <p className="mt-4 text-lg font-semibold opacity-90">குறள் - 983</p>
       </div>
 
-
-      <div className="relative w-full py-20">
-        {/* DotGrid Background */}
-        <div className="absolute inset-0 -z-10">
-          <DotGrid
-            dotSize={5}
-            gap={20}
-            baseColor="#e5e5e5"
-            activeColor="#0f183f"
-            proximity={100}
-            shockRadius={200}
-            shockStrength={4}
-            resistance={950}
-            returnDuration={1.3}
-          />
-        </div>
-
+      <div className="relative w-full py-20 bg-grid-dots">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-
           <div className="flex justify-center md:justify-end">
             <Image
               src="/jansi_rani.jpg"
