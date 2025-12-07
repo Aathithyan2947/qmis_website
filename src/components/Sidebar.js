@@ -99,7 +99,7 @@ export default function Sidebar({ isOpen, onClose }) {
       route: "/careers",
       submenu: [
         { label: "Career Guidance", route: "/careers/career-guidance" },
-        { label: "Eligibility", route: "/careers/career-at-qmis" },
+        { label: "Career @QMIS", route: "/careers/career-at-qmis" },
       ],
     },
     { name: "Alumini", route: "/alumini" },
