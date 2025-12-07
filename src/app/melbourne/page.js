@@ -4,7 +4,7 @@ export default function melbourne() {
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-20 flex justify-center">
-        <h1 className="text-white text-4xl font-semibold">Melbourne</h1>
+        <h1 className="text-white text-4xl font-semibold">The University of Melbourne</h1>
       </header>
 
         <div className="w-full flex justify-center mt-10">
@@ -17,7 +17,14 @@ export default function melbourne() {
 
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
         {/* Placeholder Image Box */}
-        <div className="w-full h-80 bg-gray-300 rounded-md"></div>
+        <div className="w-full h-80 bg-gray-300 rounded-md overflow-hidden">
+  <img
+    src="/melbourne/1.png"
+    alt="Descriptive Alt Text"
+    className="w-full h-full object-cover"
+  />
+</div>
+
 
         {/* Text Content */}
         <div>
@@ -75,7 +82,13 @@ export default function melbourne() {
         </div>
 
         {/* Image Placeholder */}
-        <div className="w-full h-80 bg-gray-300 rounded-md"></div>
+        <div className="w-full h-100 bg-gray-300 rounded-md">
+            <img
+    src="/melbourne/2.png"
+    alt="Descriptive Alt Text"
+    className="w-full h-full object-cover"
+  />
+        </div>
       </div>
     </section>
 
@@ -98,7 +111,13 @@ export default function melbourne() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
 
         {/* Left Grey Placeholder */}
-        <div className="w-full h-80 bg-gray-300 rounded-md"></div>
+        <div className="w-full h-80 bg-gray-300 rounded-md">
+           <img
+    src="/melbourne/3.png"
+    alt="Descriptive Alt Text"
+    className="w-full h-full object-cover"
+  />
+        </div>
 
         {/* Right Content */}
         <div>
@@ -120,7 +139,10 @@ export default function melbourne() {
 
    
     <section className="max-w-6xl mx-auto px-6 py-20 text-gray-700">
-
+  <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-12">
+    
+    {/* Left: Text Content */}
+    <div>
       {/* Intro Paragraph */}
       <p className="leading-relaxed mb-8">
         To strengthen this work with scientific rigor and world-class expertise, we chose to 
@@ -138,7 +160,6 @@ export default function melbourne() {
 
       {/* Bullet List */}
       <ul className="space-y-6 leading-relaxed">
-
         <li className="flex items-start gap-3">
           <span className="text-gray-500 text-xl">•</span>
           <span>
@@ -178,8 +199,20 @@ export default function melbourne() {
             directly by the University of Melbourne.
           </span>
         </li>
-
       </ul>
-    </section>
+    </div>
+
+    {/* Right: Image */}
+    <div className="flex justify-center md:justify-end">
+      <img
+        src="/melbourne/4.png"
+        alt="New Metrics Program"
+        className="rounded-lg shadow-lg w-full max-w-md md:max-w-lg h-auto object-cover"
+      />
+    </div>
+    
+  </div>
+</section>
+
 
       </div>)}

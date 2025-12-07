@@ -4,11 +4,11 @@ export default function CISPage() {
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-20 flex justify-center">
-        <h1 className="text-white text-4xl font-semibold">CIS</h1>
+        <h1 className="text-white text-4xl font-semibold">Council of International Schools (CIS)</h1>
       </header>
 
       {/* ===================== INTRO SECTION ===================== */}
-      <section className="py-20 px-6 bg-[url('/dots.png')] bg-repeat">
+      <section className="py-20 px-6 ">
         <div className="max-w-7xl mx-auto">
 
           <h2 className="text-3xl md:text-5xl font-semibold text-[#0E1A47] mb-8">
@@ -31,8 +31,15 @@ export default function CISPage() {
               QMIS is committed to sustained growth, global standards, and continuous improvement.
             </span>
           </p>
+          <div className="w-full h-full rounded-lg overflow-hidden">
+  <img
+    src="/cis/1.png"
+    alt="New Metrics Program"
+    className="w-full h-full object-cover"
+  />
+  </div>
 
-          <h2 className="text-3xl md:text-5xl font-semibold text-[#0E1A47] mb-8">
+          <h2 className="text-3xl mt-2 md:text-5xl font-semibold text-[#0E1A47] mb-8">
             Global Standards. Real Opportunities
           </h2>
 
@@ -54,17 +61,7 @@ export default function CISPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
 
-          <h2 className="text-xl font-semibold mb-4">
-            Our accreditation is transforming student outcomes:
-          </h2>
-
-          <ul className="list-disc ml-6 space-y-2 text-lg mb-16">
-            <li>Nearly 10% of our graduates now study in leading universities worldwide.</li>
-            <li>
-              Many receive distinct admission advantage as global institutions recognise the
-              quality, rigor, and reliability of a CIS-accredited education.
-            </li>
-          </ul>
+         
 
           <h1 className="text-4xl font-semibold mb-10">
             Success stories that speak for themselves
@@ -74,7 +71,7 @@ export default function CISPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="/page.jpg"
+                src="/cis/2.png"
                 alt="Student"
                 className="w-full max-w-md rounded-lg shadow-md object-cover"
               />
@@ -120,7 +117,7 @@ export default function CISPage() {
 
             <div className="flex justify-center">
               <img
-                src="/k.jpg"
+                src="/cis/3.png"
                 alt="Student"
                 className="w-full max-w-md rounded-lg shadow-md object-cover"
               />
@@ -131,7 +128,7 @@ export default function CISPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="/k.jpg"
+                src="/cis/4.png"
                 alt="Student"
                 className="w-full max-w-md rounded-lg shadow-md object-cover"
               />
@@ -152,38 +149,27 @@ export default function CISPage() {
               </p>
             </div>
           </div>
+
+           <h2 className="text-xl font-semibold mb-4">
+            Our accreditation is transforming student outcomes:
+          </h2>
+
+          <ul className="list-disc ml-6 space-y-2 text-lg">
+            <li>Nearly 10% of our graduates now study in leading universities worldwide.</li>
+            <li>
+              Many receive distinct admission advantage as global institutions recognise the
+              quality, rigor, and reliability of a CIS-accredited education.
+            </li>
+          </ul>
         </div>
       </section>
-
-      {/* ===================== CIS ACCREDITED BLOCK ===================== */}
-      <section className="w-full grid md:grid-cols-2">
-        <div className="flex justify-center p-10">
-          <img
-            src="/k.jpg"
-            alt="Certificate"
-            className="w-full max-w-md rounded-lg shadow-lg object-cover"
-          />
-        </div>
-
-        <div className="bg-[#0C1A4B] text-white p-16 flex flex-col justify-center">
-          <h2 className="text-4xl font-semibold mb-6">CIS Accredited School</h2>
-
-          <p className="text-lg leading-relaxed mb-6">
-            Leading universities across the world accord priority to students from
-            CIS-accredited schools—opening doors to global education opportunities.
-          </p>
-
-          <a href="#" className="underline text-sm tracking-wide">
-            VISIT WWW.COIS.ORG
-          </a>
-        </div>
-      </section>
+    
 
       {/* ===================== HEALTH & SAFETY ===================== */}
       <section className="w-full py-20 px-6 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(#ccc_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+        <div className="absolute inset-0"></div>
 
-        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-5 items-center">
 
           <div>
             <h2 className="text-4xl font-semibold mb-6">Health And Safety Committee</h2>
@@ -202,7 +188,7 @@ export default function CISPage() {
 
           <div className="flex justify-center">
             <img
-              src="/k.jpg"
+              src="/cis/5.png"
               alt="Safety"
               className="w-full max-w-lg h-80 object-cover rounded-lg shadow-md"
             />
@@ -215,7 +201,14 @@ export default function CISPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
 
-          <div className="md:w-1/2 bg-gray-300 h-[380px] rounded-lg shadow-md"></div>
+          <div className="md:w-1/2 h-[380px] rounded-lg shadow-md overflow-hidden">
+  <img
+    src="/cis/6.png"
+    alt="Safety"
+    className="w-full h-full object-cover"
+  />
+</div>
+
 
           <div className="md:w-1/2 space-y-6">
             <h2 className="text-3xl md:text-4xl font-semibold text-[#0E1A47]">
@@ -270,7 +263,13 @@ export default function CISPage() {
             </p>
           </div>
 
-          <div className="md:w-1/2 bg-gray-300 h-[380px] rounded-lg shadow-md"></div>
+           <div className="md:w-1/2 h-[380px] rounded-lg shadow-md overflow-hidden">
+  <img
+    src="/cis/7.png"
+    alt="Safety"
+    className="w-full h-full object-cover"
+  />
+</div>
 
         </div>
       </section>
