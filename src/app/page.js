@@ -3,7 +3,7 @@ import ChromaGrid from "@/components/ChromaGrid";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { IoChevronDown } from "react-icons/io5";
 import { FileText } from 'lucide-react';
 
@@ -169,6 +169,8 @@ export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null); // Added state for FAQ accordion
   const [currentPage, setCurrentPage] = useState(0); // For pagination
   const [itemsPerPage, setItemsPerPage] = useState(4); // Default for desktop
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true); // Auto-slide state
+  const autoSlideIntervalRef = useRef(null); // Ref for interval
 
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -194,8 +196,38 @@ export default function Home() {
     updateItemsPerPage();
     window.addEventListener('resize', updateItemsPerPage);
 
-    return () => window.removeEventListener('resize', updateItemsPerPage);
+    return () => {
+      window.removeEventListener('resize', updateItemsPerPage);
+      stopAutoSlide();
+    };
   }, []);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (isAutoPlaying) {
+      startAutoSlide();
+    } else {
+      stopAutoSlide();
+    }
+
+    return () => {
+      stopAutoSlide();
+    };
+  }, [isAutoPlaying, currentPage]);
+
+  const startAutoSlide = () => {
+    stopAutoSlide(); // Clear any existing interval
+    autoSlideIntervalRef.current = setInterval(() => {
+      setCurrentPage((prev) => (prev + 1) % totalPages);
+    }, 2000); // 2 seconds interval
+  };
+
+  const stopAutoSlide = () => {
+    if (autoSlideIntervalRef.current) {
+      clearInterval(autoSlideIntervalRef.current);
+      autoSlideIntervalRef.current = null;
+    }
+  };
 
   const handleApplyNow = () => {
     window.open(APPLY_NOW_URL, "_blank", "noopener,noreferrer");
@@ -213,16 +245,71 @@ export default function Home() {
   const currentCards = cards.slice(startIndex, endIndex);
 
   const nextPage = () => {
+    setIsAutoPlaying(false); // Stop auto-slide on manual interaction
     setCurrentPage((prev) => (prev + 1) % totalPages);
   };
 
   const prevPage = () => {
+    setIsAutoPlaying(false); // Stop auto-slide on manual interaction
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
   const goToPage = (pageIndex) => {
+    setIsAutoPlaying(false); // Stop auto-slide on manual interaction
     setCurrentPage(pageIndex);
   };
+
+  // Handle hover to pause auto-slide
+  const handleMouseEnter = () => {
+    setIsAutoPlaying(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsAutoPlaying(true);
+  };
+
+  // Calculate visible page numbers for pagination
+  const getVisiblePages = () => {
+    const visiblePages = [];
+    const maxVisiblePages = 5;
+
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages if total pages is small
+      for (let i = 0; i < totalPages; i++) {
+        visiblePages.push(i);
+      }
+    } else {
+      // Show limited pages with ellipsis
+      if (currentPage <= 2) {
+        // Near the start
+        for (let i = 0; i < 4; i++) {
+          visiblePages.push(i);
+        }
+        visiblePages.push('ellipsis');
+        visiblePages.push(totalPages - 1);
+      } else if (currentPage >= totalPages - 3) {
+        // Near the end
+        visiblePages.push(0);
+        visiblePages.push('ellipsis');
+        for (let i = totalPages - 4; i < totalPages; i++) {
+          visiblePages.push(i);
+        }
+      } else {
+        // In the middle
+        visiblePages.push(0);
+        visiblePages.push('ellipsis');
+        visiblePages.push(currentPage - 1);
+        visiblePages.push(currentPage);
+        visiblePages.push(currentPage + 1);
+        visiblePages.push('ellipsis');
+        visiblePages.push(totalPages - 1);
+      }
+    }
+
+    return visiblePages;
+  };
+
+  const visiblePages = getVisiblePages();
 
   return (
     <>
@@ -664,115 +751,70 @@ export default function Home() {
       </section>
 
       {/* ================= FOOTER CARDS WITH PAGINATION ================= */}
-      <section className="bg-[#0A0F3D] py-20 px-6 md:px-20">
+      <section
+        className="bg-[#0A0F3D] py-20 px-4 sm:px-6 md:px-20 overflow-hidden"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-8 md:mb-12">
             School Policies & Information
           </h2>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 md:mb-12">
             {currentCards.map((card, idx) => (
               <div
                 key={idx}
                 onClick={() => window.open(card.pdf, '_blank')}
-                className="bg-[#0A2847] h-56 p-8 rounded-lg text-white cursor-pointer 
+                className="bg-[#0A2847] h-56 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
                          hover:bg-[#0D3159] transition-all duration-300 
                          flex flex-col justify-between transform hover:-translate-y-1"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-full border border-white 
-                              flex items-center justify-center mb-6">
-                  <FileText size={22} />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white 
+                              flex items-center justify-center mb-4 sm:mb-6">
+                  <FileText size={18} className="sm:text-lg" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold leading-snug">
+                <h3 className="text-base sm:text-lg font-semibold leading-snug">
                   {card.title}
                 </h3>
 
                 {/* Divider */}
-                <span className="w-12 h-[2px] bg-white my-4 block" />
+                <span className="w-8 sm:w-12 h-[2px] bg-white my-3 sm:my-4 block" />
 
                 {/* CTA */}
-                <p className="text-sm text-gray-300 flex items-center">
+                <p className="text-xs sm:text-sm text-gray-300 flex items-center">
                   View now
-                  <ChevronRight size={16} className="ml-1" />
+                  <ChevronRight size={14} className="sm:w-4 sm:h-4 ml-1" />
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Pagination Controls */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            {/* Page Info */}
-            <div className="text-white text-sm">
-              Showing <span className="font-semibold">{startIndex + 1}-{Math.min(endIndex, cards.length)}</span> of <span className="font-semibold">{cards.length}</span> policies
-            </div>
-
-            {/* Pagination Navigation */}
-            <div className="flex items-center gap-4">
-              {/* Previous Button */}
-              <button
-                onClick={prevPage}
-                disabled={currentPage === 0}
-                className={`p-2 rounded-full ${currentPage === 0
-                  ? 'bg-gray-700 cursor-not-allowed text-gray-400'
-                  : 'bg-[#0A2847] hover:bg-[#0D3159] text-white'
-                  } transition-all duration-300`}
-                aria-label="Previous page"
-              >
-                <ChevronLeft size={20} />
-              </button>
-
-              {/* Page Dots/Buttons */}
-              <div className="flex items-center gap-2">
-                {Array.from({ length: totalPages }).map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => goToPage(idx)}
-                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-all duration-300 ${currentPage === idx
-                      ? 'bg-red-600 text-white'
-                      : 'bg-[#0A2847] text-white hover:bg-[#0D3159]'
-                      }`}
-                    aria-label={`Go to page ${idx + 1}`}
-                  >
-                    {idx + 1}
-                  </button>
-                ))}
-              </div>
-
-              {/* Next Button */}
-              <button
-                onClick={nextPage}
-                disabled={currentPage === totalPages - 1}
-                className={`p-2 rounded-full ${currentPage === totalPages - 1
-                  ? 'bg-gray-700 cursor-not-allowed text-gray-400'
-                  : 'bg-[#0A2847] hover:bg-[#0D3159] text-white'
-                  } transition-all duration-300`}
-                aria-label="Next page"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
-
-            {/* Mobile Page Info */}
-            <div className="text-white text-sm sm:hidden">
+          {/* Pagination Controls - Responsive Layout */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
+            <div className="xs:hidden text-white text-xs text-center w-full mb-2">
               Page <span className="font-semibold">{currentPage + 1}</span> of <span className="font-semibold">{totalPages}</span>
             </div>
           </div>
 
-          {/* Pagination Dots (Mobile Only) */}
-          <div className="sm:hidden flex justify-center gap-2 mt-6">
-            {Array.from({ length: totalPages }).map((_, idx) => (
+          {/* Pagination Dots for very small screens */}
+          <div className="xs:hidden flex justify-center gap-1.5 mt-4">
+            {Array.from({ length: Math.min(totalPages, 8) }).map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => goToPage(idx)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${currentPage === idx ? 'bg-red-600 w-6' : 'bg-gray-600'}`}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${currentPage === idx ? 'bg-red-600 w-4' : 'bg-gray-600'}`}
                 aria-label={`Go to page ${idx + 1}`}
               />
             ))}
+            {totalPages > 8 && (
+              <span className="text-xs text-gray-400 ml-1">+{totalPages - 8}</span>
+            )}
           </div>
         </div>
       </section>
