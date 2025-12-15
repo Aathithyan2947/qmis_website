@@ -13,62 +13,62 @@ const facilities = [
   {
     image: '/home/1.png',
     title: 'LIBRARY',
-    description: 'Extensive collection of books and digital resources',
+    description: 'Where learning goes beyond the clasroom.',
   },
   {
     image: '/home/2.png',
     title: 'MUSIC ROOM',
-    description: 'State-of-the-art instruments and sound system',
+    description: 'For Unleashing the budding musician in you!',
   },
   {
     image: '/home/3.png',
     title: 'DANCE STUDIO',
-    description: 'Professional dance studio with mirrored walls',
+    description: 'To stay on the better side of the health.',
   },
   {
     image: '/home/4.png',
     title: 'CLASS ROOMS',
-    description: 'Air-conditioned, tech-enabled learning spaces',
+    description: 'A state-of-the-art place for holistic learning & discovery',
   },
   {
     image: '/home/5.png',
     title: 'FOOTBALL FIELD',
-    description: 'FIFA-standard turf football field',
+    description: 'For building muscle and promoting team work from a young age.',
   },
   {
     image: '/home/6.png',
     title: 'ATHLETICS TRACK',
-    description: 'Professional running track for athletic training',
+    description: 'For a healthy balance between body and mind',
   },
   {
     image: '/home/7.png',
     title: 'OUTDOOR GYM',
-    description: 'Open-air fitness equipment for all ages',
+    description: 'For improved energy levels and focus!',
   },
   {
     image: '/home/8.png',
     title: 'INDOOR BASKETBALL COURT',
-    description: 'Full-sized indoor basketball court',
+    description: 'A secure and safe place area for a healthy and active lifestyle.',
   },
   {
     image: '/home/9.png',
     title: 'COMPUTER LAB',
-    description: 'Modern computer lab with latest technology',
+    description: 'To prepare mind for a world dominated by technology.',
   },
   {
     image: '/home/10.png',
     title: 'RIFLE ZONE',
-    description: 'Professional shooting range for training',
+    description: 'The area that guarantees enhanced vision and stamina.',
   },
   {
     image: '/home/11.png',
     title: 'BFIT CLASSES',
-    description: 'Specialized fitness classes for students',
+    description: 'A wellness program to keep both students and teachers active.',
   },
   {
     image: '/home/12.png',
     title: 'ENHANCED SAFETY',
-    description: 'Comprehensive safety and security measures',
+    description: 'To mitigate potential risks and overcome emergency situation.',
   },
 ];
 
@@ -211,17 +211,17 @@ function FacilitiesGrid() {
                 }`} />
 
               {/* Hover Content */}
-              {/* <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0' */}
-              {/*   }`}> */}
-              {/*   <div className="text-center p-6"> */}
-              {/*     <h3 className="text-white text-2xl font-bold mb-3 tracking-wider"> */}
-              {/*       {facility.title} */}
-              {/*     </h3> */}
-              {/*     <p className="text-gray-200 text-sm leading-relaxed"> */}
-              {/*       {facility.description} */}
-              {/*     </p> */}
-              {/*   </div> */}
-              {/* </div> */}
+              <div className={`absolute inset-0 flex items-end justify-center transition-all duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'
+                }`}>
+                <div className="text-center px-6 py-1">
+                  <h3 className="text-white text-2xl font-bold tracking-wider">
+                    {facility.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm ">
+                    {facility.description}
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         ))}
@@ -235,7 +235,9 @@ function CardsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [itemsPerPage, setItemsPerPage] = useState(4);
+  const [isAnimating, setIsAnimating] = useState(false);
   const autoSlideIntervalRef = useRef(null);
+  const containerRef = useRef(null);
 
   // Calculate visible items based on screen size
   useEffect(() => {
@@ -277,7 +279,7 @@ function CardsCarousel() {
     stopAutoSlide();
     autoSlideIntervalRef.current = setInterval(() => {
       handleNext();
-    }, 3000);
+    }, 2000); // Changed to 2 seconds
   };
 
   const stopAutoSlide = () => {
@@ -287,16 +289,39 @@ function CardsCarousel() {
     }
   };
 
-  const totalPages = Math.ceil(cards.length / itemsPerPage);
+  // Calculate total items needed for infinite scroll
+  const totalItems = cards.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  // Create an extended array for smooth infinite scrolling
+  const extendedCards = [...cards, ...cards, ...cards];
 
   const handlePrev = () => {
+    if (isAnimating) return;
+
     setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+    setIsAnimating(true);
+
+    setCurrentIndex((prev) => {
+      const newIndex = prev - 1;
+      return newIndex < 0 ? totalItems - itemsPerPage : newIndex;
+    });
+
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
   const handleNext = () => {
+    if (isAnimating) return;
+
     setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev + 1) % totalPages);
+    setIsAnimating(true);
+
+    setCurrentIndex((prev) => {
+      const newIndex = prev + 1;
+      return newIndex > totalItems - itemsPerPage ? 0 : newIndex;
+    });
+
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
   const handleMouseEnter = () => {
@@ -307,9 +332,14 @@ function CardsCarousel() {
     setIsAutoPlaying(true);
   };
 
-  const startIndex = currentIndex * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const visibleCards = [...cards, ...cards].slice(startIndex, startIndex + itemsPerPage);
+  // Calculate which cards to show
+  const getVisibleCards = () => {
+    const startIndex = currentIndex;
+    const endIndex = startIndex + itemsPerPage;
+    return extendedCards.slice(startIndex, startIndex + itemsPerPage * 2).slice(0, itemsPerPage);
+  };
+
+  const visibleCards = getVisibleCards();
 
   return (
     <div
@@ -320,22 +350,30 @@ function CardsCarousel() {
       {/* Left Arrow */}
       <button
         onClick={handlePrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-14 z-10
                    w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm
                    border border-white/30 flex items-center justify-center
                    hover:bg-white/20 hover:scale-110 transition-all duration-300
-                   focus:outline-none focus:ring-2 focus:ring-white/50"
+                   focus:outline-none focus:ring-2 focus:ring-white/50
+                   disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Previous policies"
+        disabled={isAnimating}
       >
         <ChevronLeft size={24} className="text-white" />
       </button>
 
       {/* Cards Container */}
-      <div className="overflow-hidden px-8">
-        <div className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out">
-          {visibleCards.map((card, idx) => (
+      <div className="overflow-hidden px-8" ref={containerRef}>
+        <div
+          className={`flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out ${isAnimating ? 'transition-all duration-500' : ''
+            }`}
+          style={{
+            transform: `translateX(-${(currentIndex % totalItems) * (100 / itemsPerPage)}%)`,
+          }}
+        >
+          {extendedCards.map((card, idx) => (
             <div
-              key={`${currentIndex}-${idx}`}
+              key={`${card.id}-${idx}`}
               onClick={() => window.open(card.pdf, '_blank')}
               className="bg-[#0A2847] h-56 w-72 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
                        hover:bg-red-500 transition-all duration-300 
@@ -365,30 +403,17 @@ function CardsCarousel() {
       {/* Right Arrow */}
       <button
         onClick={handleNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-14 z-10
                    w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm
                    border border-white/30 flex items-center justify-center
                    hover:bg-white/20 hover:scale-110 transition-all duration-300
-                   focus:outline-none focus:ring-2 focus:ring-white/50"
+                   focus:outline-none focus:ring-2 focus:ring-white/50
+                   disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Next policies"
+        disabled={isAnimating}
       >
         <ChevronRight size={24} className="text-white" />
       </button>
-
-      {/* Progress Indicator */}
-      <div className="flex justify-center items-center gap-3 mt-12">
-        {/* <span className="text-white text-sm font-medium"> */}
-        {/*   {currentIndex + 1} / {totalPages} */}
-        {/* </span> */}
-
-        {/* Progress Bar */}
-        {/* <div className="w-32 h-1.5 bg-white/20 rounded-full overflow-hidden"> */}
-        {/*   <div */}
-        {/*     className="h-full bg-red-500 transition-all duration-500 rounded-full" */}
-        {/*     style={{ width: `${((currentIndex + 1) / totalPages) * 100}%` }} */}
-        {/*   /> */}
-        {/* </div> */}
-      </div>
     </div>
   );
 }
@@ -447,7 +472,7 @@ export default function Home() {
             <div className="flex justify-center mt-4 md:mt-6">
               <button
                 onClick={handleApplyNow}
-                className="bg-red-600 cursor-pointer hover:bg-red-700 duration-200 text-white px-6 py-3 md:px-8 md:py-3 rounded-lg font-semibold transition w-full md:w-auto"
+                className="bg-maroon-100 cursor-pointer duration-200 text-white px-6 py-3 md:px-8 md:py-3 rounded-lg font-semibold transition w-full md:w-auto"
               >
                 Apply Now
               </button>
@@ -477,7 +502,7 @@ export default function Home() {
 
             <button
               onClick={handleApplyNow}
-              className="mt-6 md:mt-8 bg-red-600 hover:bg-red-700 px-6 py-3 rounded text-white font-semibold transition w-full md:w-auto"
+              className="mt-6 md:mt-8 bg-maroon-100 hover:scale-105 px-6 py-3 rounded text-white font-semibold transition cursor-pointer w-full md:w-auto"
             >
               APPLY NOW
             </button>
@@ -502,10 +527,10 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 150, damping: 15 }}
             >
               <Image
-                src="/home/Pic_1.webp"
+                src="/home/Pic_1.png"
                 alt="Students"
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </motion.div>
@@ -655,7 +680,7 @@ export default function Home() {
       </motion.section>
 
       {/* ================= WORLD-CLASS FACILITIES ================= */}
-      <section className="bg-white pt-8 md:pt-10 px-4 md:px-20">
+      <section className="bg-grid-dots pt-8 md:pt-10 px-4 md:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 md:mb-12">
             <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mb-4 md:mb-6">
@@ -725,12 +750,12 @@ export default function Home() {
       </section>
 
       {/* ================= NEW FACILITIES GRID ================= */}
-      <section className="bg-white pb-12 md:pb-24">
+      <section className="bg-grid-dots pb-12 md:pb-20">
         <FacilitiesGrid />
       </section>
 
       {/* ================= UNLOCK POTENTIAL ================= */}
-      <section className="bg-white py-12 md:py-16 px-4 md:px-20">
+      <section className="bg-grid-dots px-4 pb-10 md:pb-16">
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Unlock Your Child&apos;s Full Potential With Us
@@ -739,7 +764,7 @@ export default function Home() {
           <p className="text-gray-700 mb-6">Every child is one-of-a-kind. One size does NOT fit all.</p>
           <button
             onClick={handleApplyNow}
-            className="bg-red-600 hover:bg-red-700 text-white px-6 md:px-8 py-3 rounded font-semibold transition w-full md:w-auto"
+            className="bg-maroon-100 hover:scale-105 cursor-pointer text-white px-6 md:px-8 py-3 rounded font-semibold transition w-full md:w-auto"
           >
             APPLY NOW
           </button>
@@ -789,9 +814,9 @@ export default function Home() {
       </section>
 
       {/* ================= FAQs ================= */}
-      <section className="bg-white py-12 md:py-16 px-4 md:px-20">
+      <section className="bg-grid-dots py-12 md:py-16 px-4 md:px-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl md:text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">FAQs</h2>
+          <h2 className="text-xl md:text-4xl font-bold text-center mb-8 md:mb-12">FAQs</h2>
 
           <div className="space-y-4">
             {homeFaqData.map((item, index) => (
@@ -801,7 +826,7 @@ export default function Home() {
                 className="border-b border-gray-300 py-4 md:py-5 cursor-pointer"
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-sm md:text-base font-medium text-darkBlue-900 pr-4">
+                  <h3 className={`text-sm md:text-base font-semibold text-darkBlue-900 pr-4 ${openFaqIndex === index ? 'text-red-600' : 'text-darkBlue-100'}`}>
                     {item.question}
                   </h3>
 
@@ -824,10 +849,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* ================= FOOTER CARDS WITH CAROUSEL ================= */}
-      <section className="bg-darkBlue-100 py-12 md:py-20 px-4 md:px-20 overflow-hidden">
+      < section className="bg-darkBlue-100 py-12 md:py-20 px-4 md:px-20 overflow-hidden" >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl md:text-2xl md:text-3xl font-bold text-center text-white mb-8 md:mb-12">
             School Policies & Information
@@ -835,7 +860,7 @@ export default function Home() {
 
           <CardsCarousel />
         </div>
-      </section>
+      </section >
     </>
   );
 }

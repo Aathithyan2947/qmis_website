@@ -40,12 +40,14 @@ export default function AboutTribute() {
         </div>
       </div>
 
-      <div className="w-full min-h-[30vh] flex flex-col justify-center items-start bg-darkBlue-100 text-white px-6 md:px-36 py-16">
-        <h3 className="text-2xl md:text-4xl font-semibold leading-relaxed md:leading-[1.6]">
-          அன்புநாண் ஒப்புரவுகண்ணோட்டம் வாய்மையொடு <br />
-          ஐந்துசால் ஊன்றிய தூண்
-        </h3>
-        <p className="mt-4 text-lg font-semibold opacity-90">குறள் - 983</p>
+      <div className="w-full min-h-[30vh] flex flex-col justify-center items-center bg-darkBlue-100 text-white px-6 md:px-36 py-16">
+        <div>
+          <h3 className="text-lg md:text-2xl font-semibold leading-relaxed md:leading-[1.6]">
+            அன்புநாண் ஒப்புரவுகண்ணோட்டம் வாய்மையொடு <br />
+            ஐந்துசால் ஊன்றிய தூண்
+          </h3>
+          <p className="mt-4 text-lg font-semibold opacity-90">குறள் - 983</p>
+        </div>
       </div>
 
       <div className="relative w-full py-20 bg-grid-dots">

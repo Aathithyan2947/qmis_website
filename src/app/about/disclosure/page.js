@@ -57,7 +57,7 @@ export default function Disclosure() {
     <>
       <PageHeader contentTitle={"Disclosure"} />
 
-      <div className="bg-grid-dots px-10 py-10 text-gray-700">
+      <div className="bg-grid-dots mx-auto w-full md:max-w-6xl px-10 py-10 text-gray-700">
 
         {sections.map((section, index) => (
           <div key={index} className="mb-12">

@@ -6,8 +6,8 @@ export default function AboutQmis() {
     <div>
       <PageHeader contentTitle="About QMIS" />
 
-      <div className="bg-grid-dots px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-10 text-gray-700 leading-relaxed text-base sm:text-[16px] md:text-[17px]">
-        <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-[17px]">
+      <div className="bg-grid-dots px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-10 text-gray-500 leading-loose text-base sm:text-[16px] md:text-[17px]">
+        <div className="max-w-6xl mx-auto text-gray-500 leading-loose text-[17px]">
 
           <p className="mb-6">
             Queen Mira International School (QMIS) stands as a symbol of progressive, value-driven education,
@@ -16,16 +16,18 @@ export default function AboutQmis() {
             in joy, inquiry, and competency-based practices.
           </p>
 
-          <p className="mb-6">
-            A significant milestone in this journey is QMIS becoming the first and only CBSE school globally
-            to receive the prestigious CIS (Council of International Schools) accreditation. This recognition
-            not only validates the school’s world-class standards but has also accelerated its growth,
-            strengthened its learning culture, and elevated its global visibility. The rigorous CIS framework
-            continues to influence QMIS’s curriculum, pedagogy, safety norms, leadership practices,
-            and student well-being standards.
-          </p>
-
-          <p className="mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
+            <p className="mb-6">
+              A significant milestone in this journey is QMIS becoming the first and only CBSE school globally
+              to receive the prestigious CIS (Council of International Schools) accreditation. This recognition
+              not only validates the school’s world-class standards but has also accelerated its growth,
+              strengthened its learning culture, and elevated its global visibility. The rigorous CIS framework
+              continues to influence QMIS’s curriculum, pedagogy, safety norms, leadership practices,
+              and student well-being standards.
+            </p>
+            <Image src='/qmis-strategy/1.png' height={800} width={600} alt="image not found" />
+          </div>
+          <p className="my-6">
             Furthering its commitment to global best practices, QMIS was recently selected—among 60 schools
             worldwide and the only CBSE school—for a collaboration with the University of Melbourne to pilot
             innovative skill-assessment practices. This partnership marks another proud accomplishment,
@@ -33,56 +35,15 @@ export default function AboutQmis() {
             needed for an evolving world.
           </p>
 
-          <p className="mb-10">
+          <p className="my-10">
             Driven by a passionate team of educators and leaders, QMIS proudly celebrates 15 years of
             transformation—shaping futures, inspiring excellence, and redefining quality education.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
-
-          {/* VISION */}
-          <div className="relative">
-            <div className="bg-[#BA2025] text-white text-xl md:text-3xl font-semibold rounded-t-[50px] py-6 text-center">
-              Vision
-            </div>
-
-            <div className="bg-white rounded-[50px] shadow-xl px-8 py-10 flex flex-col sm:flex-row gap-6 items-center">
-              <div className="w-24 h-24 md:w-28 md:h-28 flex-shrink-0">
-                {/* Simple SVG */}
-                <svg viewBox="0 0 24 24" className="w-full h-full" stroke="#000" strokeWidth="1.5" fill="none">
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" fill="#F4C430" stroke="none" />
-                </svg>
-              </div>
-
-              <div className="sm:border-l border-gray-400 sm:pl-6 text-gray-600 text-lg">
-                To empower every learner to become a thoughtful leader...
-              </div>
-            </div>
-          </div>
-
-          {/* MISSION */}
-          <div className="relative">
-            <div className="bg-[#1A234B] text-white text-xl md:text-3xl font-semibold rounded-t-[50px] py-6 text-center">
-              Mission
-            </div>
-
-            <div className="bg-white rounded-[50px] shadow-xl px-8 py-10 flex flex-col sm:flex-row gap-6 items-center">
-              <div className="w-24 h-24 md:w-28 md:h-28 flex-shrink-0">
-                {/* Simple SVG */}
-                <svg viewBox="0 0 24 24" className="w-full h-full" stroke="#000" strokeWidth="1.5" fill="none">
-                  <circle cx="12" cy="9" r="3" fill="#F4C430" stroke="none" />
-                  <path d="M12 2a7 7 0 0 1 7 7c0 4-3 6-3 6H8s-3-2-3-6a7 7 0 0 1 7-7Z" />
-                </svg>
-              </div>
-
-              <div className="sm:border-l border-gray-400 sm:pl-6 text-gray-600 text-lg">
-                Promoting personal growth and well-being through holistic development...
-              </div>
-            </div>
-          </div>
+        <div className="max-w-6xl mx-auto text-gray-500 leading-loose text-[17px]">
+          <p className="text-gray-500 text-xl font-bold mb-5">School's philosophy</p>
+          <p className="text-gray-500 text-md mb-5">"We at QMIS believe in ensuring the well being of the body, mind and soul of the individual by instilling a steady growth mindset, who learn and unlearn to emerge as makers."</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-center mt-20">
@@ -99,7 +60,7 @@ export default function AboutQmis() {
           </div>
 
           {/* RIGHT SIDE BULLET LIST */}
-          <div className="space-y-6 text-gray-700 text-[17px] leading-relaxed">
+          <div className="space-y-6 text-gray-500 text-[17px] leading-relaxed">
 
             <p className="flex items-start gap-3">
               <span className="text-yellow-500 text-xl mt-1">☀️</span>
@@ -219,7 +180,7 @@ export default function AboutQmis() {
                   {item.no}
                 </h3>
 
-                <p className="text-gray-700 leading-relaxed text-[15.5px]">
+                <p className="text-gray-500 leading-relaxed text-[15.5px]">
                   {item.text}
                 </p>
               </div>
@@ -228,7 +189,7 @@ export default function AboutQmis() {
         </div>
       </div>
       <div className="flex justify-center bg-grid-dots">
-        <Image src='/about_admission.jpg' height={600} width={800} alt="image not found" />
+        <Image src='/about_admission.jpg' height={1000} width={900} alt="image not found" />
       </div>
     </div>
   );

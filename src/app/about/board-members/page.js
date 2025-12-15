@@ -95,7 +95,7 @@ const boardMembers = [
     ],
   },
   {
-    img: "/12_bm.jpg", name: "Dr. Pathmarani K. Naidu",
+    img: "/13_bm.jpg", name: "Dr. Pathmarani K. Naidu",
     desc: [
       "Former Head of Well-being, Pathways World",
       "School, Gurgaon Ambassador, International",
@@ -114,7 +114,7 @@ export default function BoardMembers() {
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 px-6 md:px-10 py-8 md:py-12 max-w-7xl mx-auto">
         <div className="relative w-full h-[400px] md:h-[500px]">
           <Image
-            src="/grp_bm.jpg"
+            src="/grp_bm.JPG"
             alt="Group Image"
             fill
             className="object-cover rounded-lg"
@@ -124,7 +124,7 @@ export default function BoardMembers() {
         </div>
 
         <div className="space-y-4">
-          <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+          <p className="text-gray-500 leading-loose text-base md:text-lg">
             Our Board of Governors comprising eminent personalities from diverse
             fields of expertise collectively creates a multifarious and
             all-encompassing mix of competence and perspective that enhances the
@@ -167,15 +167,15 @@ export default function BoardMembers() {
                 </div>
 
                 {/* Hover Overlay with Details (Desktop Only) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:flex flex-col justify-end p-4 md:p-6">
+                <div className="text-sm absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:flex flex-col justify-end p-2">
                   <div className="space-y-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-white font-bold">{member.name}</h3>
-                    <div className="space-y-1">
+                    <div className="">
                       {member.desc.map((line, i) => (
                         line && (
                           <p
                             key={i}
-                            className="text-gray-200 md:text-base leading-relaxed"
+                            className="text-gray-200 "
                           >
                             {line}
                           </p>
