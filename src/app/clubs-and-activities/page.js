@@ -262,7 +262,6 @@ export default function ClubsAndActivities() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <Image src="/clubs-activities/sports_1.png" width={380} height={250} alt="Science Club 1" className="rounded-md object-cover" />
             <Image src="/clubs-activities/sports_2.png" width={380} height={250} alt="Science Club 2" className="rounded-md object-cover" />
-            <Image src="/clubs-activities/sports_3.png" width={380} height={250} alt="Science Club 3" className="rounded-md object-cover" />
           </div>
         </div>
 

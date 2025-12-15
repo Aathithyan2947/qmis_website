@@ -8,13 +8,20 @@ export default function WhyHowWhat() {
 
       <div className="relative w-full py-16 bg-grid-dots">
         <div className="max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24">
-          <div className="flex justify-center mb-20">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 mb-20">
             <Image
-              src="/Golden_Circle.png"
+              src="/why-what-how/1.png"
               height={700}
               width={700}
               alt="Golden Circle"
-              className="w-full max-w-[650px]"
+              className="w-full max-w-[650px] col-span-1"
+            />
+            <Image
+              src="/why-what-how/2.jpg"
+              height={900}
+              width={900}
+              alt="Golden Circle"
+              className="w-full col-span-2"
             />
           </div>
 

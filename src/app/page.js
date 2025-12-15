@@ -1,79 +1,78 @@
 'use client';
-import ChromaGrid from "@/components/ChromaGrid";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, FileText } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { IoChevronDown } from "react-icons/io5";
-import { FileText } from 'lucide-react';
 
 const APPLY_NOW_URL =
   "https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw";
 
+// Updated facilities data to match your screenshot
 const facilities = [
   {
     image: '/home/1.png',
     title: 'LIBRARY',
-    gradient: 'linear-gradient(145deg, #111827, #000)',
+    description: 'Extensive collection of books and digital resources',
   },
   {
     image: '/home/2.png',
     title: 'MUSIC ROOM',
-    gradient: 'linear-gradient(145deg, #1F2937, #000)',
+    description: 'State-of-the-art instruments and sound system',
   },
   {
     image: '/home/3.png',
     title: 'DANCE STUDIO',
-    gradient: 'linear-gradient(145deg, #111827, #000)',
+    description: 'Professional dance studio with mirrored walls',
   },
   {
     image: '/home/4.png',
     title: 'CLASS ROOMS',
-    gradient: 'linear-gradient(145deg, #1F2937, #000)',
+    description: 'Air-conditioned, tech-enabled learning spaces',
   },
   {
     image: '/home/5.png',
     title: 'FOOTBALL FIELD',
-    gradient: 'linear-gradient(145deg, #111827, #000)',
+    description: 'FIFA-standard turf football field',
   },
   {
     image: '/home/6.png',
     title: 'ATHLETICS TRACK',
-    gradient: 'linear-gradient(145deg, #1F2937, #000)',
+    description: 'Professional running track for athletic training',
   },
   {
     image: '/home/7.png',
     title: 'OUTDOOR GYM',
-    gradient: 'linear-gradient(145deg, #111827, #000)',
+    description: 'Open-air fitness equipment for all ages',
   },
   {
     image: '/home/8.png',
     title: 'INDOOR BASKETBALL COURT',
-    gradient: 'linear-gradient(145deg, #1F2937, #000)',
+    description: 'Full-sized indoor basketball court',
   },
   {
     image: '/home/9.png',
     title: 'COMPUTER LAB',
-    gradient: 'linear-gradient(145deg, #111827, #000)',
+    description: 'Modern computer lab with latest technology',
   },
   {
     image: '/home/10.png',
     title: 'RIFLE ZONE',
-    gradient: 'linear-gradient(145deg, #1F2937, #000)',
+    description: 'Professional shooting range for training',
   },
   {
     image: '/home/11.png',
     title: 'BFIT CLASSES',
-    gradient: 'linear-gradient(145deg, #111827, #000)',
+    description: 'Specialized fitness classes for students',
   },
   {
     image: '/home/12.png',
-    title: 'ENHANCED SAFETY MEASURES',
-    gradient: 'linear-gradient(145deg, #1F2937, #000)',
+    title: 'ENHANCED SAFETY',
+    description: 'Comprehensive safety and security measures',
   },
 ];
 
-// Homepage FAQ Data - Added this array
+// Homepage FAQ Data
 const homeFaqData = [
   {
     question: "Are there after-school programs, such as art, clubs, film, music/performance, and sports?",
@@ -164,32 +163,91 @@ const cards = [
   },
 ];
 
-export default function Home() {
-  const [showModal, setShowModal] = useState(false);
-  const [openFaqIndex, setOpenFaqIndex] = useState(null); // Added state for FAQ accordion
-  const [currentPage, setCurrentPage] = useState(0); // For pagination
-  const [itemsPerPage, setItemsPerPage] = useState(4); // Default for desktop
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true); // Auto-slide state
-  const autoSlideIntervalRef = useRef(null); // Ref for interval
+// New Facilities Grid Component
+function FacilitiesGrid() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-  const images = [
-    '/home/Pic_8.webp',
-    '/home/Pic_9.webp',
-    '/home/Pic_10.webp',
-  ];
+  return (
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {facilities.map((facility, index) => (
+          <motion.div
+            key={index}
+            className="relative h-64 overflow-hidden cursor-pointer group"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            {/* Image Container */}
+            <div className="relative w-full h-full">
+              <Image
+                src={facility.image}
+                alt={facility.title}
+                fill
+                className={`object-cover transition-all duration-700 ${hoveredIndex === index ? 'grayscale-0 scale-105' : 'grayscale'
+                  }`}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              />
 
+              {/* Black & White Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
+                             transition-all duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'
+                }`} />
+
+              {/* Title Overlay */}
+              <div className={`absolute bottom-0 left-0 right-0 p-4 transition-all duration-500 ${hoveredIndex === index ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+                }`}>
+                <h3 className="text-white text-lg font-bold tracking-wider text-center">
+                  {facility.title}
+                </h3>
+              </div>
+
+              {/* Color Overlay on Hover */}
+              <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent 
+                             transition-all duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'
+                }`} />
+
+              {/* Hover Content */}
+              {/* <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0' */}
+              {/*   }`}> */}
+              {/*   <div className="text-center p-6"> */}
+              {/*     <h3 className="text-white text-2xl font-bold mb-3 tracking-wider"> */}
+              {/*       {facility.title} */}
+              {/*     </h3> */}
+              {/*     <p className="text-gray-200 text-sm leading-relaxed"> */}
+              {/*       {facility.description} */}
+              {/*     </p> */}
+              {/*   </div> */}
+              {/* </div> */}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Carousel Component
+function CardsCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const autoSlideIntervalRef = useRef(null);
+
+  // Calculate visible items based on screen size
   useEffect(() => {
-    setShowModal(true);
-    // Update items per page based on screen size
     const updateItemsPerPage = () => {
       if (window.innerWidth >= 1024) {
-        setItemsPerPage(4); // Desktop
+        setItemsPerPage(4);
+      } else if (window.innerWidth >= 768) {
+        setItemsPerPage(3);
       } else if (window.innerWidth >= 640) {
-        setItemsPerPage(2); // Tablet
+        setItemsPerPage(2);
       } else {
-        setItemsPerPage(1); // Mobile
+        setItemsPerPage(1);
       }
     };
 
@@ -213,13 +271,13 @@ export default function Home() {
     return () => {
       stopAutoSlide();
     };
-  }, [isAutoPlaying, currentPage]);
+  }, [isAutoPlaying, currentIndex]);
 
   const startAutoSlide = () => {
-    stopAutoSlide(); // Clear any existing interval
+    stopAutoSlide();
     autoSlideIntervalRef.current = setInterval(() => {
-      setCurrentPage((prev) => (prev + 1) % totalPages);
-    }, 2000); // 2 seconds interval
+      handleNext();
+    }, 3000);
   };
 
   const stopAutoSlide = () => {
@@ -229,37 +287,18 @@ export default function Home() {
     }
   };
 
-  const handleApplyNow = () => {
-    window.open(APPLY_NOW_URL, "_blank", "noopener,noreferrer");
-  };
-
-  // Added FAQ toggle handler
-  const handleFaqToggle = (index) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
-
-  // Pagination logic
   const totalPages = Math.ceil(cards.length / itemsPerPage);
-  const startIndex = currentPage * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentCards = cards.slice(startIndex, endIndex);
 
-  const nextPage = () => {
-    setIsAutoPlaying(false); // Stop auto-slide on manual interaction
-    setCurrentPage((prev) => (prev + 1) % totalPages);
+  const handlePrev = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
-  const prevPage = () => {
-    setIsAutoPlaying(false); // Stop auto-slide on manual interaction
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  const handleNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
   };
 
-  const goToPage = (pageIndex) => {
-    setIsAutoPlaying(false); // Stop auto-slide on manual interaction
-    setCurrentPage(pageIndex);
-  };
-
-  // Handle hover to pause auto-slide
   const handleMouseEnter = () => {
     setIsAutoPlaying(false);
   };
@@ -268,75 +307,147 @@ export default function Home() {
     setIsAutoPlaying(true);
   };
 
-  // Calculate visible page numbers for pagination
-  const getVisiblePages = () => {
-    const visiblePages = [];
-    const maxVisiblePages = 5;
+  const startIndex = currentIndex * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const visibleCards = [...cards, ...cards].slice(startIndex, startIndex + itemsPerPage);
 
-    if (totalPages <= maxVisiblePages) {
-      // Show all pages if total pages is small
-      for (let i = 0; i < totalPages; i++) {
-        visiblePages.push(i);
-      }
-    } else {
-      // Show limited pages with ellipsis
-      if (currentPage <= 2) {
-        // Near the start
-        for (let i = 0; i < 4; i++) {
-          visiblePages.push(i);
-        }
-        visiblePages.push('ellipsis');
-        visiblePages.push(totalPages - 1);
-      } else if (currentPage >= totalPages - 3) {
-        // Near the end
-        visiblePages.push(0);
-        visiblePages.push('ellipsis');
-        for (let i = totalPages - 4; i < totalPages; i++) {
-          visiblePages.push(i);
-        }
-      } else {
-        // In the middle
-        visiblePages.push(0);
-        visiblePages.push('ellipsis');
-        visiblePages.push(currentPage - 1);
-        visiblePages.push(currentPage);
-        visiblePages.push(currentPage + 1);
-        visiblePages.push('ellipsis');
-        visiblePages.push(totalPages - 1);
-      }
-    }
+  return (
+    <div
+      className="relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Left Arrow */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10
+                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm
+                   border border-white/30 flex items-center justify-center
+                   hover:bg-white/20 hover:scale-110 transition-all duration-300
+                   focus:outline-none focus:ring-2 focus:ring-white/50"
+        aria-label="Previous policies"
+      >
+        <ChevronLeft size={24} className="text-white" />
+      </button>
 
-    return visiblePages;
+      {/* Cards Container */}
+      <div className="overflow-hidden px-8">
+        <div className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out">
+          {visibleCards.map((card, idx) => (
+            <div
+              key={`${currentIndex}-${idx}`}
+              onClick={() => window.open(card.pdf, '_blank')}
+              className="bg-[#0A2847] h-56 w-72 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
+                       hover:bg-red-500 transition-all duration-300 
+                       flex flex-col justify-between transform hover:-translate-y-1
+                       min-w-[250px] flex-shrink-0"
+            >
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white 
+                            flex items-center justify-center mb-4 sm:mb-6">
+                <FileText size={18} className="sm:text-lg" />
+              </div>
+
+              <h3 className="text-base sm:text-lg font-semibold leading-snug">
+                {card.title}
+              </h3>
+
+              <span className="w-8 sm:w-12 h-[2px] bg-white my-3 sm:my-4 block" />
+
+              <p className="text-xs sm:text-sm text-gray-300 flex items-center">
+                View now
+                <ChevronRight size={14} className="sm:w-4 sm:h-4 ml-1" />
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right Arrow */}
+      <button
+        onClick={handleNext}
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10
+                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm
+                   border border-white/30 flex items-center justify-center
+                   hover:bg-white/20 hover:scale-110 transition-all duration-300
+                   focus:outline-none focus:ring-2 focus:ring-white/50"
+        aria-label="Next policies"
+      >
+        <ChevronRight size={24} className="text-white" />
+      </button>
+
+      {/* Progress Indicator */}
+      <div className="flex justify-center items-center gap-3 mt-12">
+        {/* <span className="text-white text-sm font-medium"> */}
+        {/*   {currentIndex + 1} / {totalPages} */}
+        {/* </span> */}
+
+        {/* Progress Bar */}
+        {/* <div className="w-32 h-1.5 bg-white/20 rounded-full overflow-hidden"> */}
+        {/*   <div */}
+        {/*     className="h-full bg-red-500 transition-all duration-500 rounded-full" */}
+        {/*     style={{ width: `${((currentIndex + 1) / totalPages) * 100}%` }} */}
+        {/*   /> */}
+        {/* </div> */}
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+  const images = [
+    '/home/Pic_8.webp',
+    '/home/Pic_9.webp',
+    '/home/Pic_10.webp',
+  ];
+
+  useEffect(() => {
+    setShowModal(true);
+  }, []);
+
+  const handleApplyNow = () => {
+    window.open(APPLY_NOW_URL, "_blank", "noopener,noreferrer");
   };
 
-  const visiblePages = getVisiblePages();
+  const handleFaqToggle = (index) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
 
   return (
     <>
+      {/* Fixed Mobile Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
-          <div className="relative bg-[#1B235A] rounded-2xl w-full max-w-xl shadow-2xl p-6 md:p-8">
+        <div className="fixed inset-0 z-50 hidden md:flex items-center justify-center bg-black/70 backdrop-blur-sm">
+          <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:p-12 max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-2 right-2 cursor-pointer hover:scale-110 transition-all duration-200 text-white text-2xl font-bold"
+              className="absolute top-1 right-1 md:top-4 md:right-4 cursor-pointer hover:scale-110 transition-all duration-200 text-white text-2xl font-bold z-10"
               aria-label="Close"
             >
-              <X />
+              <X size={24} className="md:w-8 md:h-8" />
             </button>
 
-            {/* Modal Content */}
             <div className="rounded-xl overflow-hidden bg-[#0F1B4C]">
-              <div className="w-full h-80 bg-gray-400 flex items-center justify-center text-white">
-                <Image src="/home/qmisad.webp" height={500} width={800} alt="no image found" />
+              <div className="w-full h-48 md:h-80 bg-gray-400 flex items-center justify-center text-white">
+                <Image
+                  src="/home/qmisad.webp"
+                  height={500}
+                  width={800}
+                  alt="Apply Now"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center mt-4 md:mt-6">
               <button
                 onClick={handleApplyNow}
-                className="bg-red-600 cursor-pointer hover:bg-red-700 duration-200 text-white px-8 py-3 rounded font-semibold transition"
+                className="bg-red-600 cursor-pointer hover:bg-red-700 duration-200 text-white px-6 py-3 md:px-8 md:py-3 rounded-lg font-semibold transition w-full md:w-auto"
               >
                 Apply Now
               </button>
@@ -346,16 +457,15 @@ export default function Home() {
       )}
 
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-[#0A0F3D] text-white px-6 md:px-20 py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 items-center">
-          {/* LEFT CONTENT */}
+      <section className="bg-[#0A0F3D] text-white px-4 md:px-20 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 items-center gap-8 md:gap-0">
           <div className="md:col-span-1">
             <h1 className="text-2xl md:text-4xl font-bold leading-snug">
               Looking for a school that has a 360-degree approach to education?
             </h1>
 
-            <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-              At Queen Mira, we don't create toppers. We create leaders who will
+            <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
+              At Queen Mira, we don&apos;t create toppers. We create leaders who will
               take the world into a brighter future.
             </p>
 
@@ -367,16 +477,15 @@ export default function Home() {
 
             <button
               onClick={handleApplyNow}
-              className="mt-8 bg-red-600 hover:bg-red-700 px-6 py-3 rounded text-white font-semibold transition"
+              className="mt-6 md:mt-8 bg-red-600 hover:bg-red-700 px-6 py-3 rounded text-white font-semibold transition w-full md:w-auto"
             >
               APPLY NOW
             </button>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="md:col-span-2 flex justify-center items-end">
             <motion.div
-              className="relative w-[85vw] h-[65vh] md:w-[50vw] md:h-[60vh]"
+              className="relative w-full h-64 md:w-[50vw] md:h-[60vh]"
               onMouseMove={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -410,30 +519,28 @@ export default function Home() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-grid-dots text-gray-500 py-20 px-6 md:px-20 overflow-hidden"
+        className="bg-grid-dots text-gray-500 py-12 md:py-20 px-4 md:px-20 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* LEFT: LOGO GRID */}
-          <div className="grid grid-cols-2 gap-6 order-2 md:order-1">
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-6 flex justify-center items-center h-32">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 order-2 md:order-1">
+            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
               <Image src="/home/Pic_2.webp" height={500} width={600} alt="image not found" />
             </div>
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-6 flex justify-center items-center h-32">
+            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
               <Image src="/home/Pic_3.webp" height={500} width={600} alt="image not found" />
             </div>
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-6 flex justify-center items-center h-32">
+            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
               <Image src="/home/Pic_4.webp" height={500} width={600} alt="image not found" />
             </div>
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-6 flex justify-center items-center h-32">
+            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
               <Image src="/home/Pic_5.webp" height={500} width={600} alt="image not found" />
             </div>
           </div>
 
-          {/* RIGHT: TEXT CONTENT */}
           <div className="text-center font-semibold order-1 md:order-2">
-            <h2 className="text-3xl font-bold mb-6 text-black">Welcome to QMIS</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-black">Welcome to QMIS</h2>
 
-            <div className="space-y-2 mb-10">
+            <div className="space-y-2 mb-6 md:mb-10">
               <p className="leading-relaxed">
                 Queen Mira International School is one of Tamil Nadu&apos;s leading CBSE schools.
               </p>
@@ -446,11 +553,11 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="my-10">
+            <p className="my-6 md:my-10">
               This is the greatest gift you could give your child.
             </p>
 
-            <ul className="space-y-2 text-left">
+            <ul className="space-y-2 text-left text-sm md:text-base">
               <li>• Pre-KG to Grade 12 with fully integrated curricula</li>
               <li>• 14+ year legacy</li>
               <li>• Sprawling campus over 2 acres of land</li>
@@ -471,23 +578,21 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-[#B62020] text-white py-16 px-6 md:px-20 overflow-hidden"
+        className="bg-[#B62020] text-white py-12 md:py-16 px-4 md:px-20 overflow-hidden"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             Curriculum
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center items-center">
-
-            {/* LEFT: TEXT CONTENT */}
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-center items-center">
+            <div className="space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg md:text-xl font-semibold mb-2">
                   Early Childhood Education Program
                 </h3>
-                <p className="text-sm font-semibold mb-2">Pre-KG, LKG, UKG</p>
-                <p className="text-gray-100 leading-relaxed">
+                <p className="text-xs md:text-sm font-semibold mb-2">Pre-KG, LKG, UKG</p>
+                <p className="text-gray-100 leading-relaxed text-sm md:text-base">
                   Our ECEP programme provides a conducive, stimulating environment
                   that encourages exploration, creativity, and holistic development,
                   laying a strong foundation for lifelong learning.
@@ -495,40 +600,39 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg md:text-xl font-semibold mb-2">
                   Primary Years Academics Programme
                 </h3>
-                <p className="font-semibold text-sm mb-2">Grades 1, 2, 3, 4, 5</p>
-                <p className="text-gray-100 leading-relaxed">
+                <p className="font-semibold text-xs md:text-sm mb-2">Grades 1, 2, 3, 4, 5</p>
+                <p className="text-gray-100 leading-relaxed text-sm md:text-base">
                   QMIS strives to balance knowledge, skills, creativity, and innovation
                   while emphasizing 21st-century skills for future-ready learners.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg md:text-xl font-semibold mb-2">
                   Middle Years Academics Programme
                 </h3>
-                <p className="font-semibold text-sm mb-2">Grades 6, 7, 8</p>
-                <p className="text-gray-100 leading-relaxed">
+                <p className="font-semibold text-xs md:text-sm mb-2">Grades 6, 7, 8</p>
+                <p className="text-gray-100 leading-relaxed text-sm md:text-base">
                   Structured to meet varied intellectual needs, ensuring progression,
                   continuity, and continuous evaluation of student performance.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg md:text-xl font-semibold mb-2">
                   Secondary Years Academics Programme
                 </h3>
-                <p className="font-semibold text-sm mb-2">Grades 9, 10, 11, 12</p>
-                <p className="text-gray-100 leading-relaxed">
+                <p className="font-semibold text-xs md:text-sm mb-2">Grades 9, 10, 11, 12</p>
+                <p className="text-gray-100 leading-relaxed text-sm md:text-base">
                   Graduates emerge confident and capable, gaining horizontal and
                   vertical dimensions of core knowledge aligned with school principles.
                 </p>
               </div>
             </div>
 
-            {/* RIGHT: IMAGE (SLIDE UP) */}
             <motion.div
               initial={{ y: 120, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -536,7 +640,7 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex justify-center"
             >
-              <div className="relative w-[70vw] h-[80vh] sm:w-[280px]">
+              <div className="relative w-[60vw] h-[60vh] md:w-[70vw] md:h-[80vh] sm:w-[280px]">
                 <Image
                   src="/home/Pic_6.webp"
                   alt="Standing student"
@@ -546,34 +650,28 @@ export default function Home() {
                 />
               </div>
             </motion.div>
-
           </div>
         </div>
       </motion.section>
 
       {/* ================= WORLD-CLASS FACILITIES ================= */}
-      <section className="bg-white pt-10 px-6 md:px-20">
+      <section className="bg-white pt-8 md:pt-10 px-4 md:px-20">
         <div className="max-w-7xl mx-auto">
-
-          {/* TOP CONTENT */}
-          <div className="mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mb-6">
+          <div className="mb-8 md:mb-12">
+            <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mb-4 md:mb-6">
               World-class Facilities and Infrastructure
             </h2>
 
-            <p className="text-gray-500 font-semibold leading-relaxed max-w-4xl">
+            <p className="text-gray-500 font-semibold leading-relaxed max-w-4xl text-sm md:text-base">
               Our campus has been crafted as a nurturing educational setting to foster
               the intellectual, physical, social, and emotional growth of our students.
               Here are some of the features our campus proudly offers:
             </p>
           </div>
 
-          {/* GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-
-            {/* LEFT IMAGE */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div className="flex justify-center md:justify-start items-end">
-              <div className="relative z-10 w-[60vw]">
+              <div className="relative z-10 w-[70vw] md:w-[60vw]">
                 <Image
                   src="/home/Pic_7.webp"
                   alt="Child exploring"
@@ -585,8 +683,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* RIGHT CONTENT */}
-            <div className="space-y-10 text-center text-gray-500 font-semibold leading-relaxed">
+            <div className="space-y-6 md:space-y-10 text-center text-gray-500 font-semibold leading-relaxed text-sm md:text-base">
               <div>
                 <h4 className="font-semibold text-gray-800 mb-1">
                   Ergonomically Designed Furniture
@@ -599,7 +696,7 @@ export default function Home() {
                   Aesthetically Decked Learning Spaces
                 </h4>
                 <p>
-                  Learning spaces are thoughtfully adorned to cater to students' various
+                  Learning spaces are thoughtfully adorned to cater to students&apos; various
                   levels and requirements, stimulating and enhancing their young minds.
                 </p>
               </div>
@@ -623,45 +720,26 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* ================= FACILITIES GRID ================= */}
-      <section className="bg-gray-100 py-24 px-6 md:px-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            World-class Facilities
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            A holistic learning environment supported by thoughtfully designed infrastructure.
-          </p>
-        </div>
-
-        {/* CHROMA GRID */}
-        <div className="relative">
-          <ChromaGrid
-            items={facilities}
-            radius={320}
-            damping={0.45}
-            fadeOut={0.6}
-            ease="power3.out"
-          />
-        </div>
+      {/* ================= NEW FACILITIES GRID ================= */}
+      <section className="bg-white pb-12 md:pb-24">
+        <FacilitiesGrid />
       </section>
 
       {/* ================= UNLOCK POTENTIAL ================= */}
-      <section className="bg-white py-16 px-6 md:px-20">
+      <section className="bg-white py-12 md:py-16 px-4 md:px-20">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Unlock Your Child's Full Potential With Us
+          <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Unlock Your Child&apos;s Full Potential With Us
           </h2>
           <p className="text-gray-700 mb-2">Enroll them in the QMIS family.</p>
           <p className="text-gray-700 mb-6">Every child is one-of-a-kind. One size does NOT fit all.</p>
           <button
             onClick={handleApplyNow}
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-semibold transition"
+            className="bg-red-600 hover:bg-red-700 text-white px-6 md:px-8 py-3 rounded font-semibold transition w-full md:w-auto"
           >
             APPLY NOW
           </button>
@@ -669,7 +747,7 @@ export default function Home() {
       </section>
 
       {/* ================= EDUCATION BEYOND CLASSROOM ================= */}
-      <section className="bg-[#0A0F3D] text-white py-16 px-6 md:px-20 overflow-hidden">
+      <section className="bg-[#0A0F3D] text-white py-12 md:py-16 px-4 md:px-20 overflow-hidden">
         <motion.div
           className="max-w-6xl mx-auto"
           initial={{ x: 120, opacity: 0 }}
@@ -677,20 +755,20 @@ export default function Home() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
             Education beyond the classroom
           </h2>
 
-          <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">
             We believe in expanding knowledge and skills beyond the limitations of
             textbooks and exams.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {images.map((src, index) => (
               <motion.div
                 key={index}
-                className="relative h-64 rounded-lg overflow-hidden"
+                className="relative h-48 md:h-64 rounded-lg overflow-hidden"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -710,21 +788,20 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ================= FAQs (UPDATED WITH ACCORDION) ================= */}
-      <section className="bg-white py-16 px-6 md:px-20">
+      {/* ================= FAQs ================= */}
+      <section className="bg-white py-12 md:py-16 px-4 md:px-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">FAQs</h2>
+          <h2 className="text-xl md:text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">FAQs</h2>
 
           <div className="space-y-4">
             {homeFaqData.map((item, index) => (
               <div
                 key={index}
                 onClick={() => handleFaqToggle(index)}
-                className="border-b border-gray-300 py-5 cursor-pointer"
+                className="border-b border-gray-300 py-4 md:py-5 cursor-pointer"
               >
-                {/* Question Row */}
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-medium text-darkBlue-900 pr-4">
+                  <h3 className="text-sm md:text-base font-medium text-darkBlue-900 pr-4">
                     {item.question}
                   </h3>
 
@@ -735,12 +812,11 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Answer Dropdown */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ${openFaqIndex === index ? "max-h-96 mt-3" : "max-h-0"
                     }`}
                 >
-                  <p className="text-base md:text-md text-gray-700 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                     {item.answer}
                   </p>
                 </div>
@@ -750,72 +826,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= FOOTER CARDS WITH PAGINATION ================= */}
-      <section
-        className="bg-[#0A0F3D] py-20 px-4 sm:px-6 md:px-20 overflow-hidden"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+      {/* ================= FOOTER CARDS WITH CAROUSEL ================= */}
+      <section className="bg-darkBlue-100 py-12 md:py-20 px-4 md:px-20 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          {/* Section Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-8 md:mb-12">
+          <h2 className="text-xl md:text-2xl md:text-3xl font-bold text-center text-white mb-8 md:mb-12">
             School Policies & Information
           </h2>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 md:mb-12">
-            {currentCards.map((card, idx) => (
-              <div
-                key={idx}
-                onClick={() => window.open(card.pdf, '_blank')}
-                className="bg-[#0A2847] h-56 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
-                         hover:bg-[#0D3159] transition-all duration-300 
-                         flex flex-col justify-between transform hover:-translate-y-1"
-              >
-                {/* Icon */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white 
-                              flex items-center justify-center mb-4 sm:mb-6">
-                  <FileText size={18} className="sm:text-lg" />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-base sm:text-lg font-semibold leading-snug">
-                  {card.title}
-                </h3>
-
-                {/* Divider */}
-                <span className="w-8 sm:w-12 h-[2px] bg-white my-3 sm:my-4 block" />
-
-                {/* CTA */}
-                <p className="text-xs sm:text-sm text-gray-300 flex items-center">
-                  View now
-                  <ChevronRight size={14} className="sm:w-4 sm:h-4 ml-1" />
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination Controls - Responsive Layout */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
-            <div className="xs:hidden text-white text-xs text-center w-full mb-2">
-              Page <span className="font-semibold">{currentPage + 1}</span> of <span className="font-semibold">{totalPages}</span>
-            </div>
-          </div>
-
-          {/* Pagination Dots for very small screens */}
-          <div className="xs:hidden flex justify-center gap-1.5 mt-4">
-            {Array.from({ length: Math.min(totalPages, 8) }).map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => goToPage(idx)}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${currentPage === idx ? 'bg-red-600 w-4' : 'bg-gray-600'}`}
-                aria-label={`Go to page ${idx + 1}`}
-              />
-            ))}
-            {totalPages > 8 && (
-              <span className="text-xs text-gray-400 ml-1">+{totalPages - 8}</span>
-            )}
-          </div>
+          <CardsCarousel />
         </div>
       </section>
     </>
