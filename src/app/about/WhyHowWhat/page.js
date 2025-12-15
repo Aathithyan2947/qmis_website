@@ -68,7 +68,7 @@ export default function WhyHowWhat() {
 
             <div className="flex justify-center md:justify-end">
               <Image
-                src="/question.png"
+                src="/Question.png"
                 height={450}
                 width={450}
                 alt="question"
