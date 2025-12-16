@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function Veeravanam() {
   const nccCarouselImages = [
-    '/facility/veeravanam/8.png',
-    '/facility/veeravanam/Pic_13.png',
-    '/facility/veeravanam/Pic_14.png',
+    '/facility/Veeravanam/8.png',
+    '/facility/Veeravanam/Pic_13.png',
+    '/facility/Veeravanam/Pic_14.png',
   ]
   return (
     <>
@@ -52,9 +52,9 @@ export default function Veeravanam() {
             <div className="flex justify-center overflow-hidden">
               <HoverExpandGallery
                 images={[
-                  '/facility/veeravanam/1.png',
-                  '/facility/veeravanam/2.png',
-                  '/facility/veeravanam/3.png',
+                  '/facility/Veeravanam/1.png',
+                  '/facility/Veeravanam/2.png',
+                  '/facility/Veeravanam/3.png',
                 ]}
               />
             </div>
@@ -69,7 +69,7 @@ export default function Veeravanam() {
           {/* Left Image */}
           <div className="relative w-full h-[350px] md:h-[420px] rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="/facility/veeravanam/4.png"
+              src="/facility/Veeravanam/4.png"
               alt="Silambam Ground"
               fill
               className="object-cover"
@@ -105,7 +105,7 @@ export default function Veeravanam() {
           {/* Left Image */}
           <div className="relative w-[250px] md:w-[320px] h-[350px] md:h-[430px] rounded-xl overflow-hidden shadow-lg -mr-10 z-10">
             <Image
-              src="/facility/veeravanam/5.png"
+              src="/facility/Veeravanam/5.png"
               alt="Multipurpose Hall Side Image 1"
               fill
               className="object-cover"
@@ -116,7 +116,7 @@ export default function Veeravanam() {
           {/* Center Image */}
           <div className="relative w-[380px] md:w-[500px] h-[450px] md:h-[550px] rounded-xl overflow-hidden shadow-xl z-20">
             <Image
-              src="/facility/veeravanam/6.png"
+              src="/facility/Veeravanam/6.png"
               alt="Multipurpose Hall Center Image"
               fill
               className="object-cover"
@@ -127,7 +127,7 @@ export default function Veeravanam() {
           {/* Right Image */}
           <div className="relative w-[250px] md:w-[320px] h-[350px] md:h-[430px] rounded-xl overflow-hidden shadow-lg -ml-10 z-10">
             <Image
-              src="/facility/veeravanam/7.png"
+              src="/facility/Veeravanam/7.png"
               alt="Multipurpose Hall Side Image 2"
               fill
               className="object-cover"
@@ -154,7 +154,7 @@ export default function Veeravanam() {
           <div className="flex justify-center order-1 md:order-2">
             <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/facility/veeravanam/3.png"
+                src="/facility/Veeravanam/3.png"
                 alt="Classical Studio"
                 fill
                 className="object-cover"
@@ -171,7 +171,7 @@ export default function Veeravanam() {
           <div className="flex justify-center order-1 md:order-1">
             <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/facility/veeravanam/7.png"
+                src="/facility/Veeravanam/7.png"
                 alt="Kung Fu training area"
                 fill
                 priority
