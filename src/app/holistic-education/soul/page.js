@@ -1,6 +1,6 @@
 export default function soulActivities() {
   return (
-    <div className="w-full font-sans bg-white">
+    <div className="w-full bg-white">
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-8 flex justify-center">

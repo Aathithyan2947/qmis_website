@@ -1,6 +1,6 @@
 export default function mindActivities() {
   return (
-    <div className="w-full font-sans bg-white">
+    <div className="w-full  bg-white">
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-8 flex justify-center">
@@ -9,9 +9,6 @@ export default function mindActivities() {
 
       {/* ===================== MAIN CONTENT ===================== */}
       <section className="w-full bg-white relative">
-
-        {/* dotted background */}
-        <div className="absolute inset-0 bg-[url('/dots.png')] opacity-20 pointer-events-none"></div>
 
         <div className="relative max-w-6xl mx-auto px-6 md:px-12 py-16">
 

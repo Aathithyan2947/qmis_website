@@ -45,13 +45,20 @@ export default function BodyActivities() {
 
             {/* Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="w-full h-60 bg-gray-300 rounded-lg"
-                ></div>
-              ))}
-            </div>
+  {[1, 2, 3].map((i) => (
+    <div
+      key={i}
+      className="w-full h-60 rounded-lg overflow-hidden  flex items-center justify-center"
+    >
+      <img
+        src={`/body/${i}.png`}
+        alt={`Image ${i}`}
+        className="max-w-full max-h-full object-contain"
+      />
+    </div>
+  ))}
+</div>
+
 
             {/* RIGHT ARROW */}
             <button className="absolute -right-6 md:-right-10 top-1/2 -translate-y-1/2 text-[#0E1A47] text-3xl font-bold">
@@ -67,10 +74,21 @@ export default function BodyActivities() {
           <h2 className="text-3xl font-semibold text-gray-800">Activities</h2>
           <p className="mt-2 text-gray-600">After school activities foster mastery by building confidence in a supportive environment.</p>
           <div className="mt-8 flex justify-center gap-6">
-            {/* Empty boxes for images (replace with actual images) */}
-            <div className="w-40 h-40 bg-gray-300"></div>
-            <div className="w-40 h-40 bg-gray-300"></div>
-            <div className="w-40 h-40 bg-gray-300"></div>
+            <div className="w-40 h-40 "><img
+    src="/body/4.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
+            <div className="w-40 h-40 "><img
+    src="/body/5.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
+            <div className="w-40 h-40 "><img
+    src="/body/6.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
           </div>
         </div>
       </section>
@@ -81,9 +99,21 @@ export default function BodyActivities() {
           <h2 className="text-3xl font-semibold">Aadukalam</h2>
           <p className="mt-2">The Annual Athletic Meet is a fun-filled day where students showcase their talents and skills.</p>
           <div className="mt-8 flex justify-center gap-6">
-            <div className="w-40 h-40 bg-gray-300"></div>
-            <div className="w-40 h-40 bg-gray-300"></div>
-            <div className="w-40 h-40 bg-gray-300"></div>
+            <div className="w-40 h-40 "><img
+    src="/body/7.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
+            <div className="w-40 h-40 "><img
+    src="/body/8.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
+            <div className="w-40 h-40 "><img
+    src="/body/9.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
           </div>
         </div>
       </section>
@@ -91,7 +121,11 @@ export default function BodyActivities() {
       <section className="py-12 flex flex-col items-center gap-12">
   {/* First Section: Box Left, Text Right */}
   <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
-    <div className="w-40 h-40 bg-gray-300 flex-shrink-0"></div>
+    <div className="w-40 h-40 flex-shrink-0">  <img
+    src="/body/10.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
     <div className="text-center md:text-left">
       <h2 className="text-3xl font-semibold text-gray-800">BFIT</h2>
       <p className="mt-2 text-gray-600">
