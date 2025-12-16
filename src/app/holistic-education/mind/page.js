@@ -40,14 +40,21 @@ study skills, and boost student's confidence and motivation to learn ..
             </button>
 
             {/* Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="w-full h-60 bg-gray-300 rounded-lg"
-                ></div>
-              ))}
-            </div>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {[1, 2, 3].map((i) => (
+    <div
+      key={i}
+      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center"
+    >
+      <img
+        src={`/mind/${i}.png`}
+        alt={`Image ${i}`}
+        className="max-w-full max-h-full object-contain"
+      />
+    </div>
+  ))}
+</div>
+
 
             {/* RIGHT ARROW */}
             <button className="absolute -right-6 md:-right-10 top-1/2 -translate-y-1/2 text-[#0E1A47] text-3xl font-bold">
@@ -69,15 +76,15 @@ study skills, and boost student's confidence and motivation to learn ..
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col items-center gap-10">
 
-          {/* Two Images Row */}
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="w-[250px] h-[180px] bg-gray-300 rounded"></div>
-            <div className="w-[250px] h-[180px] bg-gray-300 rounded"></div>
-          </div>
+         
 
           {/* Large Image + Rounded Text Bar */}
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
-            <div className="w-[250px] h-[220px] bg-gray-300 rounded"></div>
+            <div className="w-[250px] h-[220px] bg-gray-300 rounded"><img
+  src="/mind/3.png"
+  alt="Card image"
+  className="w-full h-full rounded object-cover"
+/></div>
 
             <div className="bg-[#0E1A4B] text-white px-6 py-4 rounded-r-full w-full md:w-auto md:ml-[-20px]">
               Model United Nations Session to display our communication and diplomacy
@@ -98,7 +105,11 @@ study skills, and boost student's confidence and motivation to learn ..
 
     {/* Left Image + Right Text */}
     <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-      <div className="w-[260px] h-[220px] bg-gray-300 rounded flex-shrink-0"></div>
+      <div className="w-[260px] h-[220px] bg-gray-300 rounded flex-shrink-0"><img
+  src="/mind/4.png"
+  alt="Card image"
+  className="w-full h-full rounded object-cover"
+/></div>
 
       <div className="md:max-w-lg text-center md:text-left">
         <h3 className="text-xl font-bold mb-2">STEAM</h3>
@@ -119,7 +130,11 @@ study skills, and boost student's confidence and motivation to learn ..
         </p>
       </div>
 
-      <div className="w-[260px] h-[200px] bg-gray-300 rounded flex-shrink-0"></div>
+      <div className="w-[260px] h-[200px] bg-gray-300 rounded flex-shrink-0"><img
+  src="/mind/5.png"
+  alt="Card image"
+  className="w-full h-full rounded object-cover"
+/></div>
     </div>
 
   </div>
