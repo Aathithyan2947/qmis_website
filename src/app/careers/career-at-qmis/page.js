@@ -1,25 +1,22 @@
 import PageHeader from "@/components/PageHeader";
 
 export default function careerAtQmis() {
-    const sections = [
-    { title: "Academics", icon: "🎓" },
-    { title: "Sports", icon: "🏀" },
-    { title: "Performance Arts", icon: "🎭" },
-    
-  ];
-  const sec=[{ title: "Martial Arts", icon: "🥋" },
-    { title: "Non - Academics Department", icon: "👥" },]
+   
+  const sec=[
+    { img: "/career-guidance/8.png", title: "Martial Arts" },
+    { img: "/career-guidance/9.png", title: "Non - Academics Department" },
+  ]
 
   return (
     <>
       <PageHeader contentTitle={"Career At Qmis"} />
-    <div className="w-full bg-gray-50 text-gray-800 p-6 md:p-12">
+    <div className="w-full bg-gray-50 text-gray-800 leading-loose p-6 md:p-12">
       {/* Header */}
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto text-left">
         <h1 className="text-3xl md:text-4xl font-semibold">
           Join a Community That Values Your Impact
         </h1>
-        <p className="mt-4 text-gray-600 leading-relaxed">
+        <p className="mt-4 text-gray-600 leading-loose">
           At Queen Mira International School (QMIS), every role—within and beyond the
           classroom—contributes to advancing a globally competitive educational environment. 
           We welcome passionate Educational and Institutional Professionals who embody 
@@ -29,7 +26,7 @@ export default function careerAtQmis() {
 
       {/* QMIS Advantage */}
       <div className="max-w-5xl mx-auto mt-16">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold text-left">
           The QMIS Advantage
         </h2>
 
@@ -50,40 +47,63 @@ export default function careerAtQmis() {
       </div>
 
       {/* Functional Areas */}
-      <div className="max-w-6xl mx-auto mt-20">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center">
+      <div className="max-w-5xl mx-auto mt-20">
+        <h2 className="text-2xl md:text-3xl font-semibold text-left">
           Join Us Across Various Functional Areas
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
-          {sections.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center justify-center bg-white shadow-md 
-                         rounded-xl p-8 hover:shadow-xl transition"
-            >
-              <div className="text-5xl mb-4">{item.icon}</div>
-              <p className="text-lg font-semibold">{item.title}</p>
-            </div>
-          ))}
-        </div>
+       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+  {[
+    { img: "/career-guidance/5.png", title: "Academics" },
+    { img: "/career-guidance/6.png", title: "Sports" },
+    { img: "/career-guidance/7.png", title: "Performance Arts" },
+  ].map((card, index) => (
+    <div
+      key={index}
+      className="flex flex-col items-center justify-center bg-gray-50 rounded-xl shadow-sm px-6 py-10 text-center"
+    >
+      <img
+        src={card.img}
+        alt={card.title}
+        className="w-24 h-24 object-contain mb-6"
+      />
+
+      <h3 className="text-lg font-semibold text-indigo-900">
+        {card.title}
+      </h3>
+    </div>
+  ))}
+
+</div>
+
       </div>
 
-      <div className="max-w-6xl mx-auto mt-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 mt-10">
-          {sec.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center justify-center bg-white shadow-md 
-                         rounded-xl p-4 hover:shadow-xl transition"
-            >
-              <div className="text-5xl mb-4">{item.icon}</div>
-              <p className="text-lg font-semibold">{item.title}</p>
-            </div>
-          ))}
-        </div>
+     <div className="max-w-6xl mx-auto mt-20">
+  <div className="grid grid-cols-2 gap-12 justify-center">
+    {sec.slice(0, 2).map((item, idx) => (
+      <div
+        key={idx}
+        className="flex flex-col items-center justify-center
+                   bg-gray-50 rounded-xl
+                   px-6 py-10 text-center
+                   shadow-sm hover:shadow-md
+                   transition-shadow duration-300"
+      >
+        <img
+          src={item.img}
+          alt={item.title}
+          className="w-24 h-24 object-contain mb-6"
+        />
+        <p className="text-lg font-semibold text-indigo-900">{item.title}</p>
       </div>
+    ))}
+  </div>
+</div>
+
     </div>
+
+
 
     <div className="w-full bg-gray-50 p-6 md:p-12">
       <form className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
