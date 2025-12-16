@@ -6,7 +6,7 @@ export default function ClubsAndActivities() {
     <>
       <PageHeader contentTitle={'Clubs & Activities'} />
       {/* 1st section */}
-      <div className="flex justify-center p-5">
+      <div className="flex justify-center bg-grid-dots p-5">
         <Image src='/clubs-activities/8.png' height={1000} width={1000} alt="image not found" />
       </div>
       <div className="flex justify-center p-5">

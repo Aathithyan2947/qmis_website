@@ -1,6 +1,6 @@
 export default function Alumni() {
   return (
-    <div className="w-full bg-white text-gray-800 font-sans">
+    <div className="w-full bg-white bg-grid-dots text-gray-800">
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-20 flex justify-center">

@@ -11,7 +11,7 @@ export default function careerAtQmis() {
   return (
     <>
       <PageHeader contentTitle={"Career At Qmis"} />
-      <div className="w-full bg-gray-50 text-gray-800 leading-loose p-6 md:p-12">
+      <div className="w-full bg-gray-50 text-gray-800 bg-grid-dots p-6 md:p-12">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-left">
           <h1 className="text-3xl md:text-4xl font-semibold">

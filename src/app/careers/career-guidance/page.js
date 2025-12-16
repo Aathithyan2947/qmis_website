@@ -12,7 +12,7 @@ export default function CareerGuidance() {
     <>
       <PageHeader contentTitle={"Career Guidance"} />
 
-      <div className="bg-grid-dots bg-gray-50 min-h-screen px-6 lg:px-24 py-16 flex justify-center">
+      <div className="bg-grid-dots bg-gray-50 bg-grid-dots min-h-screen px-6 lg:px-24 py-16 flex justify-center">
         <div className="max-w-5xl w-full">
           {/* Title */}
           <h1 className="text-3xl lg:text-4xl font-semibold text-left mb-12 text-gray-800">

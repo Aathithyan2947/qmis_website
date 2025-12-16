@@ -1,5 +1,5 @@
 'use client';
-
+import PageHeader from "@/components/PageHeader";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -28,12 +28,9 @@ export default function CISPage() {
   }, [isModalOpen]);
 
   return (
-    <div className="w-full bg-white text-gray-800">
+    <div className="w-full bg-white bg-grid-dots text-gray-800">
       {/* ===================== HEADER ===================== */}
-      <header className="bg-[#0E1A47] py-20 flex justify-center">
-        <h1 className="text-white text-4xl font-semibold">Council of International Schools (CIS)</h1>
-      </header>
-
+       <PageHeader contentTitle={"Career At Qmis"} />
       {/* ===================== INTRO SECTION ===================== */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -96,7 +93,7 @@ export default function CISPage() {
                 CIS Accredited School
               </h2>
 
-              <p className="text-sm md:text-base text-white/80 leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-white/80 leading-loose mb-6">
                 Leading universities including University of Cambridge – UK, Imperial
                 College – London, NUS – Singapore, University of Chicago and many other
                 CIS accredited universities across the world accord priority to students
@@ -114,12 +111,12 @@ export default function CISPage() {
             Global Standards. Real Opportunities
           </h2>
 
-          <p className="text-lg leading-8 mb-8">
+          <p className="text-lg leading leading-loose-8 mb-8">
             Recognized in Leiden, Netherlands as a model school, QMIS continues to influence
             international best practices — even prompting CIS to introduce Tamil as a survey language.
           </p>
 
-          <p className="text-lg leading-8">
+          <p className="text-lg leading-loose leading-8">
             Universities abroad consistently regard QMIS students as high-calibre applicants —
             confident, well-prepared, and aligned with international learning standards.
             Admissions teams often note that graduates from CIS-accredited schools demonstrate
@@ -177,7 +174,7 @@ export default function CISPage() {
 
               <p className="text-xl mt-2">BSc Neuroscience, University of Toronto</p>
 
-              <p className="mt-6 text-lg italic leading-relaxed">
+              <p className="mt-6 text-lg italic leading-loose">
                 “Being from a CIS-accredited school strengthened my application instantly.
                 On campus, I stood out — confident, disciplined, globally ready.
                 QMIS didn't just help me get in; it helped me thrive.”
@@ -215,7 +212,7 @@ export default function CISPage() {
 
               <p className="text-xl mt-2">MBChB Medicine, University of Aberdeen, UK</p>
 
-              <p className="mt-6 text-lg italic leading-relaxed">
+              <p className="mt-6 text-lg italic leading-loose">
                 “Applying to Medicine in the UK is known to be tough. But coming from QMIS —
                 a CIS-accredited school — changed everything. My application carried weight,
                 my preparation stood out, and the entire process felt far smoother than I expected.”
@@ -243,12 +240,12 @@ export default function CISPage() {
           <div>
             <h2 className="text-4xl font-semibold mb-6">Health And Safety Committee</h2>
 
-            <p className="text-lg leading-8 mb-4">
+            <p className="text-lg leading-loose leading-8 mb-4">
               The committee ensures safety for all through Health & Safety and Child Protection policies.
               They regularly review and upgrade safety measures.
             </p>
 
-            <p className="text-lg leading-8">
+            <p className="text-lg leading-loose leading-8">
               We ensure physical, emotional, and social wellbeing—working with experts to provide
               child safety orientation. Health camps and safety programmes ensure wellbeing across
               classrooms, campus, and outdoor learning.

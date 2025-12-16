@@ -29,16 +29,26 @@ export default function soulActivities() {
 
       {/* 🔹 Top Section */}
       <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-10">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-2">
 
           {/* Text */}
-          <p className="text-gray-700 max-w-lg leading-relaxed text-center md:text-left">
+          <p className="text-gray-700 max-w-lg leading-loose text-center md:text-left">
             Community outreach projects through IDCA International Global Citizens Award, 
             Kairo develop student's empathy.
           </p>
 
           {/* Image */}
-          <div className="w-[260px] h-[200px] bg-gray-300 rounded"></div>
+ <div className="w-32 h-32 ">
+  <img
+    src="/soul/01.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  />
+</div>
+
+
+
+
         </div>
       </div>
 
@@ -53,7 +63,13 @@ export default function soulActivities() {
               <p className="max-w-xs mb-6">
                 Sibling Care creates a space of belongingness
               </p>
-              <div className="w-[150px] h-[130px] bg-gray-300 rounded"></div>
+              <div className="w-[150px] h-[130px] rounded">
+  <img
+    src="/soul/1.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  />
+</div>
             </div>
 
             {/* Divider Line (only on desktop) */}
@@ -64,7 +80,11 @@ export default function soulActivities() {
               <p className="max-w-xs mb-6">
                 Aayulu, a life skill game with a transformative approach to life education
               </p>
-              <div className="w-[150px] h-[130px] bg-gray-300 rounded"></div>
+              <div className="w-[150px] h-[130px] rounded"> <img
+    src="/soul/2.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  /></div>
             </div>
 
           </div>
@@ -82,7 +102,13 @@ export default function soulActivities() {
 
           {/* Left Image + Right Text */}
           <div className="flex flex-col md:flex-row items-start justify-between gap-10">
-            <div className="w-[260px] h-[230px] bg-gray-300 rounded"></div>
+            <div className="w-[260px] h-[230px]  rounded">
+               <img
+    src="/soul/5.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  />
+            </div>
 
             <div className="md:max-w-lg">
               <h3 className="text-xl font-semibold mb-2">Sibling Care</h3>
@@ -104,7 +130,14 @@ export default function soulActivities() {
               </p>
             </div>
 
-            <div className="w-[260px] h-[200px] bg-gray-300 rounded"></div>
+            <div className="w-[260px] h-[200px] rounded"> <div className="w-[260px] h-[230px]  rounded">
+               <img
+    src="/soul/4.png"
+    alt="Card image"
+    className="w-full h-full object-contain"
+  />
+            </div>
+</div>
 
           </div>
         </div>
