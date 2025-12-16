@@ -27,7 +27,7 @@ export default function Veeravanam() {
             />
           </div>
 
-          <p className="text-center md:text-left text-gray-500 text-xl leading-loose font-normal">
+          <p className="text-center md:text-left text-gray-500 text-lg leading-loose font-normal">
             Veeravanam is a purpose-built enclave honoring bravery, creativity, and
             discipline. Designed around the philosophy of “Feel & Do,” it invites
             students to internalize and live their art, rather than merely watch it.
