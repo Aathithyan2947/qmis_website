@@ -16,20 +16,20 @@ export default function MdLetter() {
           </h3>
 
           {/* IMAGE + TEXT */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center">
 
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center">
               <Image
                 src="/md-message/1.png"
                 alt="MD speaking"
-                width={420}
+                width={320}
                 height={520}
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </div>
 
-            <div className="space-y-6 text-gray-500 leading-relaxed text-sm md:text-base">
+            <div className="space-y-6 text-gray-500 leading-loose text-sm md:text-base">
               <p>
                 We are one among the islands of excellence floating in a sea of
                 mediocrity. We don't sell education; we cultivate transformation.
@@ -49,17 +49,21 @@ export default function MdLetter() {
           </div>
 
           {/* LETTER */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="mx-auto max-w-4xl space-y-6 leading-loose text-gray-500 ">
+            <h2 className="text-4xl font-bold text-gray-700">
+              Dear Parents,
+            </h2>
 
-            <div className="space-y-6 text-gray-500 leading-relaxed text-sm md:text-base">
-              <h2 className="text-2xl font-bold text-gray-700">
-                Dear Parents,
-              </h2>
+            <p>
+              Thank you for visiting Queen Mira International School and taking
+              the time to explore Queen Mira's learning world.
+              We understand that selecting a school is a one of the most defining decisions you will make
+              for your child's future. At QMIS, we want to help you make this choice with clarity and confidence.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 mx-auto max-w-4xl md:grid-cols-2 gap-10 items-center">
 
-              <p>
-                Thank you for visiting Queen Mira International School and taking
-                the time to explore Queen Mira's learning world.
-              </p>
+            <div className="space-y-6 text-gray-500 leading-loose text-sm md:text-base">
 
               <p>
                 Selecting a school is one of the most defining decisions you will
@@ -73,7 +77,7 @@ export default function MdLetter() {
               </p>
             </div>
 
-            <div className="flex justify-center md:justify-end">
+            <div className="flex justify-center">
               <Image
                 src="/md-message/2.png"
                 alt="MD at QMIS"
@@ -88,18 +92,15 @@ export default function MdLetter() {
 
       {/* ================= SECTION 2 ================= */}
       <section className="bg-darkBlue-100 py-16 px-6 md:px-20">
-        <div className="flex justify-center mb-12 text-center">
-          <p className="text-white text-3xl md:text-4xl font-bold leading-snug">
+        <div className="flex justify-center mb-12 max-w-4xl mx-auto text-center">
+          <p className="text-white text-xl md:text-3xl font-bold leading-relaxed">
             Breaking the Myth:
-            <br className="hidden sm:block" />
             “If We Play, We Cannot Study”
-            <span className="block text-base sm:text-lg font-medium mt-2">
-              (Those who play don’t study)
-            </span>
+            (Those who play don’t study)
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center max-w-4xl mx-auto">
 
           <div className="flex justify-center ">
             <Image
@@ -111,10 +112,10 @@ export default function MdLetter() {
             />
           </div>
 
-          <div className="space-y-6 text-white text-base sm:text-lg md:text-xl font-medium leading-relaxed text-center md:text-left">
+          <div className="space-y-6 text-white text-base text-md md:text-lg leading-loose text-center md:text-left">
             <p>
               Life requires more than academics. That is why QMIS insists on 35+
-              <span className="font-semibold"> 40-minute BFit session</span> daily —
+              40-minute BFit session daily
               strengthening both body and mind.
             </p>
 
@@ -128,7 +129,7 @@ export default function MdLetter() {
 
       {/* ================= SECTION 3 ================= */}
       <section className="bg-grid-dots py-16 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-4xl mx-auto space-y-12">
 
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-700 text-center">
@@ -136,10 +137,10 @@ export default function MdLetter() {
           </h2>
 
           {/* Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 mx-auto max-w-4xl md:grid-cols-2 gap-10 items-center">
 
             {/* LEFT TEXT */}
-            <div className="space-y-6 text-gray-500 leading-relaxed text-sm md:text-base">
+            <div className="space-y-6 text-gray-500 leading-loose text-sm md:text-base">
               <p>
                 Many institutions chase NEET / IIT-focused foundational courses.
                 At QMIS, we focus on something deeper—solid conceptual understanding
@@ -179,7 +180,7 @@ export default function MdLetter() {
 
       {/* ================= SECTION 4 ================= */}
       <section className="bg-darkBlue-100 py-20 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto space-y-14">
+        <div className="max-w-4xl mx-auto space-y-14">
 
           {/* Heading */}
           <h2 className="text-center text-white text-3xl md:text-4xl font-light tracking-wide">
@@ -201,7 +202,7 @@ export default function MdLetter() {
             </div>
 
             {/* RIGHT: TEXT */}
-            <div className="space-y-8 text-white text-base sm:text-lg leading-relaxed text-center md:text-left">
+            <div className="space-y-8 text-white text-base sm:text-lg leading-loose text-center md:text-left">
 
               <p>
                 Life requires more than academics. That is why QMIS insists on
@@ -221,17 +222,17 @@ export default function MdLetter() {
         </div>
       </section>
       {/* ================= SECTION 5 ================= */}
-      <section className="bg-white py-20 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-grid-dots py-20 px-6 md:px-20">
+        <div className="max-w-4xl mx-auto">
 
           {/* QUOTE IMAGE WITH TEXT OVERLAY */}
           <div className="relative flex justify-center mb-20">
             <Image
               src="/md-message/Image.png"
               alt="Education Equation"
-              width={800}
+              width={500}
               height={260}
-              className="w-full max-w-xl object-contain"
+              className="object-contain"
             />
 
             {/* Overlay Text */}
@@ -244,7 +245,7 @@ export default function MdLetter() {
           </div>
 
           {/* CONTENT GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
 
             {/* LEFT CONTENT */}
             <div className="md:col-span-2 space-y-6">
@@ -252,7 +253,7 @@ export default function MdLetter() {
                 AI With Values – A Balanced Approach
               </h3>
 
-              <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+              <p className="text-gray-700 text-base md:text-lg leading-loose">
                 AI has both pros and cons. Yet, it is the future. We integrate AI
                 thoughtfully—not to replace learning but to enhance knowledge,
                 build skills, and prepare students for the world ahead. While
@@ -266,9 +267,9 @@ export default function MdLetter() {
               <Image
                 src="/md-message/5.png"
                 alt="Signature"
-                width={380}
-                height={80}
-                className="object-contain"
+                width={580}
+                height={180}
+                className="object-cover"
               />
             </div>
           </div>

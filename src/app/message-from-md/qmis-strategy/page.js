@@ -3,23 +3,37 @@ import Image from "next/image";
 
 export default function MdLetter() {
   return (
-    <div>
+    <div className="bg-grid-dots">
       <PageHeader contentTitle={'QMIS Strategy'} />
       {/* 1st section */}
-      <section className="max-w-8xl">
-        <Image src='/qmis-strategy/1.png' height={1000} width={2000} alt="image not found" />
+      <section className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-1 mt-5">
+        <Image
+          src="/qmis-strategy/new_1.png"
+          alt="image not found"
+          width={350}
+          height={400}
+          className="h-[50vh] w-auto object-cover mx-auto col-span-1"
+        />
+
+        <Image
+          src="/qmis-strategy/new_2.png"
+          alt="image not found"
+          width={2000}
+          height={1000}
+          className="h-[50vh] w-auto object-cover mx-auto col-span-2"
+        />
       </section>
       {/* ================= SECTION 2 ================= */}
-      <section className="bg-white py-20 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 md:px-20">
+        <div className="max-w-4xl mx-auto">
 
           {/* Heading */}
           <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-center text-darkBlue-100 text-3xl md:text-4xl font-medium mb-6">
+            <h2 className="text-start text-darkBlue-100 text-3xl md:text-4xl font-medium mb-6">
               QMIS Strategy: Blue Ocean Strategy
             </h2>
 
-            <p className="text-gray-500 text-base md:text-lg leading-relaxed">
+            <p className="text-gray-500 text-base md:text-lg leading-loose">
               QMIS functions under the Blue Ocean Strategy — we do not compete in the
               overcrowded “red ocean” of conventional schooling; instead, we create
               new spaces, new ideas, and new possibilities, standing incomparable.
@@ -27,11 +41,11 @@ export default function MdLetter() {
           </div>
 
           {/* Strategy Card */}
-          <div className="bg-gray-100 rounded-3xl px-6 py-12 md:px-12 md:py-16">
+          <div className="bg-gray-100 rounded-3xl px-3 py-12  md:py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
 
               {/* LEFT – Red Ocean */}
-              <div className="text-center md:text-right space-y-4 text-gray-600 font-medium">
+              <div className="text-center text-xl  space-y-4 text-gray-500 font-bold">
                 <p>Competition</p>
                 <p>Saturated</p>
                 <p>Limited</p>
@@ -42,16 +56,16 @@ export default function MdLetter() {
               {/* CENTER – Image */}
               <div className="flex justify-center">
                 <Image
-                  src="/qmis-strategy/2.png"
+                  src="/qmis-strategy/new_3.jpg"
                   alt="Blue Ocean vs Red Ocean Strategy"
-                  width={420}
-                  height={300}
-                  className="w-full max-w-[320px] md:max-w-[420px] h-auto object-contain"
+                  width={820}
+                  height={600}
+                  className="object-cover"
                 />
               </div>
 
               {/* RIGHT – Blue Ocean */}
-              <div className="text-center md:text-left space-y-4 text-gray-600 font-medium">
+              <div className="text-center text-xl font-bold space-y-4 text-gray-500 ">
                 <p>Innovation</p>
                 <p>Uncontested</p>
                 <p>Expansive</p>
@@ -66,7 +80,7 @@ export default function MdLetter() {
               The "Why" of QMIS - Inspired by Simon Sinek
             </h2>
 
-            <p className="text-gray-500 text-start text-base md:text-lg leading-relaxed">
+            <p className="text-gray-500 text-start text-base md:text-lg leading-loose">
               Simon Sinek says that great institutions starts with WHY-a purpose bigger than themselves. And we are deeply
               moved by the philosophy of starting with the "WHY" of anything and everything at our school.
             </p>
@@ -74,8 +88,8 @@ export default function MdLetter() {
         </div>
       </section>
       {/* ================= SECTION 3 ================= */}
-      <section className="bg-white pb-10 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="pb-10 px-6 md:px-20">
+        <div className="max-w-4xl mx-auto">
 
           {/* Top Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">

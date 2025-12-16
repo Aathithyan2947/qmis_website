@@ -6,34 +6,33 @@ export default function Promises() {
     <div>
       <PageHeader contentTitle={'promises'} />
       {/* ================= SECTION 1 ================= */}
-      <section className="bg-white py-20 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-grid-dots py-20 px-6 md:px-20">
+        <div className="max-w-4xl mx-auto">
           {/* Main Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
             {/* LEFT IMAGE */}
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center col-span-3">
               <Image
                 src="/promises/1.png"
                 alt="MD Promise"
-                width={520}
-                height={620}
-                className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] h-auto object-contain"
+                width={1020}
+                height={820}
                 priority
               />
             </div>
             {/* RIGHT QUOTE BOX */}
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-center col-span-2">
               {/* Quote Box Image */}
               <Image
                 src="/promises/2.png"
                 alt="Promise Quote Box"
-                width={420}
+                width={620}
                 height={520}
-                className="w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] h-auto object-contain"
+                className="w-full max-w-[180px] sm:max-w-[260px] md:max-w-[350px] h-auto object-contain"
               />
               {/* Overlay Text - Now Centered */}
               <div className="absolute inset-0 flex items-center justify-center pt-8">
-                <p className="text-[#0A0F3D] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center">
+                <p className="text-[#0A0F3D] text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-left">
                   A <br />
                   PROMISE <br />
                   NO ONE <br />
@@ -44,15 +43,15 @@ export default function Promises() {
             </div>
           </div>
           {/* Bottom Caption */}
-          <div className="mt-5 text-center">
-            <p className="text-gray-500 text-sm md:text-base">
+          <div className="mt-5 mx-auto max-w-3xl text-start">
+            <p className="text-gray-500 text-lg md:text-base">
               Life has successes and failures.
             </p>
           </div>
         </div>
       </section>
       {/* 2nd section */}
-      <section className="w-full pb-20 px-4 md:px-10 bg-white">
+      <section className="w-full pb-20 px-4 md:px-10 bg-grid-dots">
 
         {/* TOP RED QUOTE */}
         <div className="relative flex justify-center mb-16">

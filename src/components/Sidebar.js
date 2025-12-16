@@ -72,7 +72,7 @@ export default function Sidebar({ isOpen, onClose }) {
       name: "Message From MD",
       route: "/message-from-md",
       submenu: [
-        { label: "MD Letter", route: "/message-from-md/md-letter" },
+        { label: "MD Speaks", route: "/message-from-md/md-letter" },
         { label: "QMIS Strategy", route: "/message-from-md/qmis-strategy" },
         { label: "Promises", route: "/message-from-md/promises" },
       ],
@@ -228,8 +228,8 @@ export default function Sidebar({ isOpen, onClose }) {
                       >
                         <span
                           className={`font-semibold transition-colors ${hoverItem === item.name || activeItem === item.name
-                              ? "text-red-600"
-                              : "text-[#1a2752]"
+                            ? "text-red-600"
+                            : "text-[#1a2752]"
                             }`}
                         >
                           {item.name}
@@ -238,8 +238,8 @@ export default function Sidebar({ isOpen, onClose }) {
                         {item.submenu && (
                           <span
                             className={`ml-2 transition-colors ${hoverItem === item.name || activeItem === item.name
-                                ? "text-red-600"
-                                : "text-[#1a2752]"
+                              ? "text-red-600"
+                              : "text-[#1a2752]"
                               }`}
                           >
                             ›

@@ -97,8 +97,8 @@ export default function JourneyOfQMIS() {
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row items-center ${item.position === "top"
-                    ? "md:flex-row-reverse"
-                    : ""
+                  ? "md:flex-row-reverse"
+                  : ""
                   }`}
               >
                 {/* Content */}
