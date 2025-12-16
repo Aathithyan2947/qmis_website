@@ -10,7 +10,7 @@ export default function HoverExpandGallery({ images = [] }) {
 
   return (
     <div className="w-full">
-      <div className="flex gap-2 aspect-[1.77/1] w-full">
+      <div className="flex gap-2 aspect-square w-full">
         {images.map((src, index) => {
           const isActive = index === activeIndex;
 
@@ -19,7 +19,7 @@ export default function HoverExpandGallery({ images = [] }) {
               key={index}
               onMouseEnter={() => setActiveIndex(index)}
               className={`
-                relative overflow-hidden rounded-3xl cursor-pointer
+                relative overflow-hidden cursor-pointer
                 transition-all duration-500 ease-in-out
                 ${isActive ? 'flex-[4]' : 'flex-[1]'}
               `}

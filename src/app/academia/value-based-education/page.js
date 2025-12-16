@@ -4,39 +4,58 @@ import Image from "next/image";
 export default function ValueBasedEducation() {
   return (
     <>
-      <PageHeader contentTitle={'Value Based Education'} />
-      <Image className="object-cover h-[60vh] w-full" src='/value-based-education/1.png' height={500} width={500} alt="Image not found" />
-      <div className="w-full py-36 bg-grid-dots">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <PageHeader contentTitle="Value Based Education" />
 
-          {/* MOBILE → stacked
-        DESKTOP → 3 columns with vertical dividers */}
-          <div className="flex flex-col md:flex-row md:divide-x md:divide-gray-500 gap-8 md:gap-10">
+      {/* Hero Image */}
+      <Image
+        src="/value-based-education/1.png"
+        alt="Value Based Education"
+        width={1920}
+        height={800}
+        className="w-full h-[60vh] object-cover"
+        priority
+      />
 
-            {/* Column 1 */}
-            <div className="text-gray-700 leading-relaxed text-lg space-y-4 md:px-6">
-              <p>
-                Values education is integrated through structured practices such as Circle Time, promoting reflection and character development.
-              </p>
+      <section className="py-24 bg-grid-dots">
+        <div className="max-w-5xl mx-auto px-6">
+
+          {/* Top Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
+            <div className="bg-gray-100 rounded-3xl p-10 text-center text-gray-500 leading-loose">
+              Thirukkural is recited and its meanings explained daily, fostering moral
+              understanding and cultural grounding.
             </div>
 
-            {/* Column 2 */}
-            <div className="text-gray-700 leading-relaxed text-lg space-y-4 md:px-6">
-              <p>
-                Thirukkural is recited and its meanings explained daily, fostering moral understanding and cultural grounding.
-              </p>
+            <div className="bg-gray-100 rounded-3xl p-10 text-center text-gray-500 leading-loose">
+              Core values are consistently woven into classroom learning, ensuring
+              holistic and responsible student development.
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+            {/* YouTube Shorts */}
+            <div className="flex justify-center">
+              <div className="relative aspect-square w-full max-w-sm rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/NcrcdHYhI0w"
+                  className="absolute inset-0 w-full h-full"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
 
-            {/* Column 3 */}
-            <div className="text-gray-700 leading-relaxed text-lg space-y-4 md:px-6">
-              <p>
-                Core values are consistently woven into classroom learning, ensuring holistic and responsible student development.
-              </p>
+            {/* Right Text */}
+            <div className="text-center text-gray-500 leading-loose text-lg px-4">
+              Values education is integrated through structured practices such as
+              Circle Time, promoting reflection and character development.
             </div>
 
           </div>
         </div>
-      </div>
+      </section>
     </>
-  )
+  );
 }
