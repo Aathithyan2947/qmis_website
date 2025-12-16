@@ -351,9 +351,9 @@ function CardsCarousel() {
       <button
         onClick={handlePrev}
         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-14 z-10
-                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm
-                   border border-white/30 flex items-center justify-center
-                   hover:bg-white/20 hover:scale-110 transition-all duration-300
+                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100 backdrop-blur-sm
+                   border border-darkBlue-100 flex items-center justify-center
+                   hover:bg-darkBlue-100 hover:scale-110 transition-all duration-300
                    focus:outline-none focus:ring-2 focus:ring-white/50
                    disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Previous policies"
@@ -375,7 +375,7 @@ function CardsCarousel() {
             <div
               key={`${card.id}-${idx}`}
               onClick={() => window.open(card.pdf, '_blank')}
-              className="bg-[#0A2847] h-56 w-72 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
+              className="bg-darkBlue-100 h-56 w-72 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
                        hover:bg-red-500 transition-all duration-300 
                        flex flex-col justify-between transform hover:-translate-y-1
                        min-w-[250px] flex-shrink-0"
@@ -404,9 +404,9 @@ function CardsCarousel() {
       <button
         onClick={handleNext}
         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-14 z-10
-                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-sm
-                   border border-white/30 flex items-center justify-center
-                   hover:bg-white/20 hover:scale-110 transition-all duration-300
+                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100 backdrop-blur-sm
+                   border border-darkBlue-100 flex items-center justify-center
+                   hover:bg-darkBlue-100 hover:scale-110 transition-all duration-300
                    focus:outline-none focus:ring-2 focus:ring-white/50
                    disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Next policies"
@@ -852,9 +852,9 @@ export default function Home() {
       </section >
 
       {/* ================= FOOTER CARDS WITH CAROUSEL ================= */}
-      < section className="bg-darkBlue-100 py-12 md:py-20 px-4 md:px-20 overflow-hidden" >
+      < section className="py-12 md:py-20 px-4 md:px-20 overflow-hidden" >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl md:text-2xl md:text-3xl font-bold text-center text-white mb-8 md:mb-12">
+          <h2 className="text-xl md:text-3xl font-bold text-center text-darkBlue-100 mb-8 md:mb-12">
             School Policies & Information
           </h2>
 

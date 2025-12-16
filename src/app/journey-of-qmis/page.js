@@ -1,5 +1,8 @@
+'use client'
+import { useState } from 'react';
 import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
+import { X } from 'lucide-react';
 
 const journeyData = [
   {
@@ -69,6 +72,16 @@ const journeyData = [
 ];
 
 export default function JourneyOfQMIS() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <PageHeader contentTitle="Journey of QMIS" />
@@ -110,7 +123,7 @@ export default function JourneyOfQMIS() {
                     <p className="text-sm text-gray-500 mt-1">
                       {item.year}
                     </p>
-                    <p className="text-gray-600 mt-3 leading-relaxed">
+                    <p className="text-gray-500 mt-3 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -121,21 +134,64 @@ export default function JourneyOfQMIS() {
                   <div className="w-5 h-5 bg-darkBlue-100 rounded-full border-4 border-white" />
                 </div>
 
-                {/* Image */}
-                <div className="md:w-1/2 px-6 mt-8 md:mt-0 flex justify-center">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={220}
-                    height={160}
-                    className="rounded-lg shadow-md object-contain"
-                  />
+                {/* Image - Clickable */}
+                <div
+                  className={`md:w-1/2 mt-8 md:mt-0 flex ${index % 2 === 0
+                    ? "md:justify-start md:pl-2"
+                    : "md:justify-end md:pr-2"
+                    }`}
+                >
+                  <button
+                    onClick={() => openModal(item.image)}
+                    className="focus:outline-none cursor-pointer hover:opacity-90 transition-opacity"
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={220}
+                      height={160}
+                      className="object-contain"
+                    />
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          {/* Close Button */}
+          <button
+            onClick={closeModal}
+            className="absolute top-6 right-6 text-white hover:scale-110 transition-transform z-10"
+          >
+            <X size={32} />
+          </button>
+
+          {/* Image Container - Fills most of the screen */}
+          <div
+            className="relative w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative w-full h-full max-w-[80vw] max-h-[80vh] flex items-center justify-center">
+              <Image
+                src={selectedImage}
+                alt="Enlarged view"
+                fill
+                className="object-contain p-4"
+                sizes="80vw"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
