@@ -1,6 +1,6 @@
 export default function BodyActivities() {
   return (
-    <div className="w-full font-sans bg-white">
+    <div className="w-full font-sans bg-grid-dots">
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-8 flex justify-center">
@@ -8,7 +8,7 @@ export default function BodyActivities() {
       </header>
 
       {/* ===================== MAIN CONTENT ===================== */}
-      <section className="w-full bg-white relative">
+      <section className="w-full  relative">
 
         {/* dotted background */}
         <div className="absolute inset-0 "></div>

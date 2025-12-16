@@ -97,7 +97,12 @@ export default function ContactPage() {
 
           {/* RIGHT IMAGE + APPLY BUTTON */}
           <div className="flex flex-col items-center justify-start">
-            <div className="w-full h-64 bg-gray-300 rounded"></div>
+            <div className="w-full h-64 "><img
+  src="/contact.png"
+  alt="Card image"
+  className="w-full h-full rounded object-contain"
+/>
+</div>
 
             <button className="mt-6 bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800">
               Apply Now

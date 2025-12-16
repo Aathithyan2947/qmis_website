@@ -81,7 +81,7 @@ export default function profile() {
   return (
     <>
       <PageHeader contentTitle={'Holistic Profile'} />
-    <div className="bg-gray-50 py-12 px-4 md:px-12 lg:px-24 text-gray-800">
+    <div className="bg-gray-50 py-12 px-4 bg-grid-dots md:px-12 lg:px-24 text-gray-800">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-6">
         Holistic Learner Profile of QMIS Students
       </h1>

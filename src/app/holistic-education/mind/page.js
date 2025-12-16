@@ -1,6 +1,6 @@
 export default function mindActivities() {
   return (
-    <div className="w-full  bg-white">
+    <div className="w-full  bg-grid-dots">
 
       {/* ===================== HEADER ===================== */}
       <header className="bg-[#0E1A47] py-8 flex justify-center">
@@ -8,7 +8,7 @@ export default function mindActivities() {
       </header>
 
       {/* ===================== MAIN CONTENT ===================== */}
-      <section className="w-full bg-white relative">
+      <section className="w-full  relative">
 
         <div className="relative max-w-6xl mx-auto px-6 md:px-12 py-16">
 
@@ -65,20 +65,16 @@ study skills, and boost student's confidence and motivation to learn ..
         </div>
       </section>
  
-    <div className="w-full font-sans">
+    <div className="w-full ">
 
-      {/* 🔴 Top Red Bar */}
       <div className="bg-red-600 text-white text-center py-2 text-sm md:text-base font-medium">
         Student Driven Classes for a refined classroom
       </div>
 
-      {/* 🔹 Top Images Section */}
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col items-center gap-10">
 
          
-
-          {/* Large Image + Rounded Text Bar */}
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
             <div className="w-[250px] h-[220px] bg-gray-300 rounded"><img
   src="/mind/3.png"

@@ -8,7 +8,7 @@ export default function soulActivities() {
       </header>
 
       {/* ===================== MAIN CONTENT ===================== */}
-      <section className="w-full bg-white relative">
+      <section className="w-full bg-grid-dots relative">
 
         {/* dotted background */}
         <div className="absolute inset-0 "></div>
