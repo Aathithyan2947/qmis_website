@@ -22,7 +22,7 @@ const journeyData = [
     year: "2017",
     title: "Academic Excellence Recognized",
     description:
-      "Consistent academic performance with 84% average and 100% pass percentage.",
+      "First batch to begin its journey towards Academic Excellence and continues with a weighted average of 84% and 100% pass percentage. Celebrating scholastic brilliance and consistent performance.",
     image: "/journey-of-qmis/3.png",
     position: "bottom",
   },
@@ -30,7 +30,7 @@ const journeyData = [
     year: "2021",
     title: "International Accreditation",
     description:
-      "CIS Accreditation endorsed for world-class standards in learning, leadership, and well-being.",
+      "CIS Accreditation Endorsed for world-class standards in learning, Leadership and well-being.",
     image: "/journey-of-qmis/4.png",
     position: "top",
   },
@@ -38,7 +38,7 @@ const journeyData = [
     year: "2022",
     title: "A Step Towards Fitness",
     description:
-      "BFIT program introduced — first school to mandate daily fitness as holistic education.",
+      "BFIT program introduced — first school to introduce daily fitness as holistic education.",
     image: "/journey-of-qmis/5.png",
     position: "bottom",
   },
@@ -46,7 +46,7 @@ const journeyData = [
     year: "2023",
     title: "Marksmanship & Leadership",
     description:
-      "State ranks achieved in Grade X & XII. Discipline and precision nurtured alongside academics.",
+      "Inauguration of Rifle Club State Rank Achieved in Grade X & Xll cultivating precision, discipline, and academic excellence side by side. ",
     image: "/journey-of-qmis/6.png",
     position: "top",
   },
@@ -54,7 +54,7 @@ const journeyData = [
     year: "2024",
     title: "Strengthening Skills & Sports",
     description:
-      "Tie-up with Celebrate Sports Foundation and Pullela Gopichand Academy.",
+      "Tie-up with Celebrate Sports Foundation and Mentored by Pullela Gopichand for badminton academy. State Achievement in Rifle Expanding horizons through sports and mentorship.",
     image: "/journey-of-qmis/7.png",
     position: "bottom",
   },
@@ -62,7 +62,7 @@ const journeyData = [
     year: "2025",
     title: "Global Collaboration & Recognition",
     description:
-      "Collaboration with University of Melbourne. National & international recognition.",
+      "Collaboration with Melbourne University, Australia, for Skill-Based Learning project amongst one of the 60 schools across the global and one of the two schools in India. State representation of Throwball and rifle - Stepping onto the national and International stage. ",
     image: "/journey-of-qmis/8.png",
     position: "top",
   },
@@ -73,16 +73,16 @@ export default function JourneyOfQMIS() {
     <>
       <PageHeader contentTitle="Journey of QMIS" />
 
-      <section className="py-20 px-4 md:px-10 bg-white">
+      <section className="py-20 px-4 md:px-10 bg-grid-dots">
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-darkBlue-100">
             The Queen Mira Journey
           </h2>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-500 text-lg md:text-3xl font-semibold mt-4">
             From Vision to Vanguard (2010–2026)
           </p>
-          <p className="mt-6 text-gray-500">
+          <p className="mt-6 border-4 px-6 py-4 rounded-4xl border-gray-300 text-lg md:text-2xl text-gray-500">
             A chronicle of milestones that shaped excellence, innovation, and global learning.
           </p>
         </div>
