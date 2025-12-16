@@ -7,10 +7,10 @@ export default function ImageCarousel({
   images = [],
   autoPlay = true,
   interval = 2000,
+  dotColor = '#0E1A47', // default primary
 }) {
   const [current, setCurrent] = useState(0);
 
-  // Optional autoplay
   useEffect(() => {
     if (!autoPlay || images.length <= 1) return;
 
@@ -38,17 +38,25 @@ export default function ImageCarousel({
 
       {/* Dots */}
       <div className="flex gap-3 mt-6">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full border transition-all ${current === index
-              ? 'bg-[#0E1A47] border-[#0E1A47]'
-              : 'border-[#0E1A47] bg-transparent'
-              }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+        {images.map((_, index) => {
+          const isActive = current === index;
+
+          return (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              style={{
+                borderColor: dotColor,
+                backgroundColor: isActive ? dotColor : 'transparent',
+              }}
+              className="
+                w-3 h-3 rounded-full border
+                transition-all duration-300
+              "
+            />
+          );
+        })}
       </div>
     </div>
   );

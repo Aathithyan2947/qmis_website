@@ -1,15 +1,21 @@
 'use client';
-import CardSwap, { Card } from "@/components/CardSwap";
+import HoverExpandGallery from "@/components/HoverExpandGallery";
+import ImageCarousel from "@/components/ImageCarousel";
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 
 export default function Veeravanam() {
+  const nccCarouselImages = [
+    '/facility/veeravanam/8.png',
+    '/facility/veeravanam/Pic_13.png',
+    '/facility/veeravanam/Pic_14.png',
+  ]
   return (
     <>
       <PageHeader contentTitle={"Veeravanam"} />
 
       <div className="bg-grid-dots py-16 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center">
             <iframe
               className="rounded-lg w-full max-w-2xl aspect-video"
@@ -21,7 +27,7 @@ export default function Veeravanam() {
             />
           </div>
 
-          <p className="text-center md:text-left text-[#8D8D8D] text-xl leading-relaxed font-normal">
+          <p className="text-center md:text-left text-gray-500 text-xl leading-loose font-normal">
             Veeravanam is a purpose-built enclave honoring bravery, creativity, and
             discipline. Designed around the philosophy of “Feel & Do,” it invites
             students to internalize and live their art, rather than merely watch it.
@@ -30,62 +36,29 @@ export default function Veeravanam() {
       </div>
       {/* 2nd section */}
       <div className="bg-darkBlue-100 py-10 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto px-6 md:px-16 py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-          {/* Left Text Section */}
-          <div className="text-left">
-            <p className="text-white text-xl leading-relaxed font-normal max-w-2xl">
-              The name <span className="font-semibold">“Veeravanam”</span> itself evokes valour and fearlessness.
-              <br /><br />
-              More than just a facility, Veeravanam is a vibrant space where students feel the art in their
-              bodies and practice discipline with heart — cultivating mastery, character, and lifelong confidence.
-            </p>
-          </div>
-
-          {/* Right CardSwap Section */}
-          <div className="flex justify-center overflow-hidden">
-            <div
-              className="relative"
-              style={{
-                height: "600px",
-                width: "100%",
-                maxWidth: "480px", // LIMIT WIDTH TO STOP HORIZONTAL SHIFTING
-              }}
-            >
-              <CardSwap
-                cardDistance={40}
-                verticalDistance={60}
-                delay={5000}
-                pauseOnHover={false}
-              >
-                <Card className="rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/facility/veeravanam/1.png"
-                    alt="Veeravanam Image 1"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-
-                <Card className="rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/facility/veeravanam/2.png"
-                    alt="Veeravanam Image 2"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-
-                <Card className="rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/facility/veeravanam/3.png"
-                    alt="Veeravanam Image 3"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-              </CardSwap>
+            {/* Left Text Section */}
+            <div className="text-left">
+              <p className="text-white text-md md:text-lg leading-loose font-normal max-w-2xl">
+                The name Veeravanam itself evokes valour and fearlessness.
+                More than just a facility, Veeravanam is a vibrant space where students feel the art in their
+                bodies and practice discipline with heart — cultivating mastery, character, and lifelong confidence.
+              </p>
             </div>
+
+            {/* Right Hover Expand Gallery */}
+            <div className="flex justify-center overflow-hidden">
+              <HoverExpandGallery
+                images={[
+                  '/facility/veeravanam/1.png',
+                  '/facility/veeravanam/2.png',
+                  '/facility/veeravanam/3.png',
+                ]}
+              />
+            </div>
+
           </div>
         </div>
       </div>
@@ -94,7 +67,7 @@ export default function Veeravanam() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
           {/* Left Image */}
-          <div className="relative w-full h-[450px] md:h-[520px] rounded-xl overflow-hidden shadow-xl">
+          <div className="relative w-full h-[350px] md:h-[420px] rounded-xl overflow-hidden shadow-xl">
             <Image
               src="/facility/veeravanam/4.png"
               alt="Silambam Ground"
@@ -105,9 +78,9 @@ export default function Veeravanam() {
           </div>
 
           {/* Right Text */}
-          <div className="text-center md:text-left">
-            <p className="text-black text-lg md:text-xl leading-relaxed font-normal max-w-xl mx-auto md:mx-0">
-              A <span className="font-semibold">Silambam ground</span>, set on a soft sand area, lets students
+          <div className="text-center ">
+            <p className="text-black  text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
+              A <span className="font-bold text-2xl">Silambam ground</span>, set on a soft sand area, lets students
               train in the traditional Tamil martial art with barefoot agility
               enhancing balance and rooted strength.
             </p>
@@ -115,13 +88,13 @@ export default function Veeravanam() {
 
         </div>
       </section>
-      <div className="bg-red-600 h-12 w-full"></div>
-      <section className="bg-dot-pattern py-20 px-6 md:px-16 overflow-hidden">
+      <div className="bg-maroon-100 h-12 w-full"></div>
+      <section className="bg-grid-dots py-20 px-6 md:px-16 overflow-hidden">
 
         {/* Top Text */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <p className="text-black text-lg md:text-xl leading-relaxed font-normal">
-            The <span className="font-semibold">Multi Purpose Hall</span>, designed for Karate, yoga, and martial
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <p className="text-black text-md md:text-lg leading-relaxed font-normal">
+            The <span className="font-bold text-2xl">Multi Purpose Hall</span>, designed for Karate, yoga, and martial
             arts conditioning, provides a spacious, flexible arena for growth.
           </p>
         </div>
@@ -164,13 +137,13 @@ export default function Veeravanam() {
 
         </div>
       </section>
-      <section className="bg-red-600 py-20 px-6 md:px-16">
+      <section className="bg-maroon-100 py-20 px-6 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
           {/* Text Section */}
           <div className="text-center md:text-left text-white order-2 md:order-1">
-            <p className="text-lg md:text-xl leading-relaxed font-normal max-w-xl mx-auto md:mx-0">
-              A dedicated <span className="font-semibold">Classical Studio</span>, with Aathangudi-tiles
+            <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
+              A dedicated <span className="font-bold text-2xl">Classical Studio</span>, with Aathangudi-tiles
               flooring and stone pillars handcrafted by local artisans, celebrates heritage as students
               learn classical dance and Carnatic music. Athangudi tiles are a 500-year-old locally
               made craft known for their eco-friendly, handcrafted beauty.
@@ -209,8 +182,8 @@ export default function Veeravanam() {
 
           {/* Text Section */}
           <div className="text-center md:text-left text-black order-2 md:order-2 max-w-xl mx-auto md:mx-0">
-            <p className="text-lg md:text-xl leading-relaxed font-normal">
-              In the <span className="font-semibold">Kung Fu area</span>, an elegant arch made
+            <p className="text-md md:text-lg leading-loose font-normal">
+              In the <span className="font-bold text-2xl">Kung Fu area</span>, an elegant arch made
               of stone and sculpted by regional artisans sets a powerful, serene tone,
               embodying tradition and strength.
             </p>
@@ -223,23 +196,15 @@ export default function Veeravanam() {
 
           {/* Text Section */}
           <div className="text-center md:text-left text-white order-2 md:order-1">
-            <p className="text-lg md:text-xl leading-relaxed font-normal max-w-xl mx-auto md:mx-0">
-              The<span className="font-bold">Rifle Club & NCC Wing</span>, within Veeravanam is a calm,
+            <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
+              The <span className="font-bold text-2xl">Rifle Club & NCC Wing</span>, within Veeravanam is a calm,
               focused range where discipline meets concentration.
             </p>
           </div>
 
           {/* Image Section */}
           <div className="flex justify-center order-1 md:order-2">
-            <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/facility/veeravanam/8.png"
-                alt="Classical Studio"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            <ImageCarousel images={nccCarouselImages} dotColor="#ffffff" />
           </div>
         </div>
       </section>
