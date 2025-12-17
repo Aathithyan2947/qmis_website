@@ -57,7 +57,7 @@ export default function careerAtQmis() {
 
             {[
               { img: "/career-guidance/5.png", title: "Academics" },
-              { img: "/career-guidance/6.png", title: "Sports" },
+              { img: "/career-guidance/Pic_11.png", title: "Sports" },
               { img: "/career-guidance/7.png", title: "Performance Arts" },
               { img: "/career-guidance/8.png", title: "Martial Arts" },
               { img: "/career-guidance/9.png", title: "Non - Academics Department" },

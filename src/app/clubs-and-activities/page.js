@@ -25,7 +25,7 @@ export default function ClubsAndActivities() {
 
             {/* Top Red Quote Box */}
             <div className="w-full flex justify-center">
-              <p className="bg-red-700 text-white text-center text-lg font-semibold py-3 px-6 rounded-xl max-w-3xl">
+              <p className="bg-maroon-100 text-white text-center text-lg font-semibold py-3 px-6 rounded-xl max-w-3xl">
                 "Without money, there is nothing; money is not everything".
               </p>
             </div>
