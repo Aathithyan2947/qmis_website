@@ -1,8 +1,8 @@
-import React from "react";
+import { PhoneCall } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-grid-dots">
       {/* MAIN SECTION */}
       <div className="max-w-6xl mx-auto px-4 py-10">
         <h2 className="text-2xl font-bold text-red-700 mb-6">General Enquiry</h2>
@@ -40,12 +40,16 @@ export default function ContactPage() {
                 <label className="block text-sm font-semibold mb-1">
                   Mobile Number <span className="text-red-600">*</span>
                 </label>
-                <div className="flex border rounded overflow-hidden">
-                  <span className="px-3 bg-gray-100 flex items-center">🇮🇳 +91</span>
+
+                <div className="flex border rounded-md overflow-hidden focus-within:ring-1 focus-within:ring-gray-300">
+                  <span className="px-4 bg-gray-100 flex items-center text-sm font-medium text-gray-700 border-r">
+                    +91
+                  </span>
+
                   <input
-                    type="text"
-                    className="p-2 w-full outline-none"
-                    placeholder="Enter Number Here"
+                    type="tel"
+                    className="p-2 w-full outline-none text-sm"
+                    placeholder="Enter number here"
                   />
                 </div>
               </div>
@@ -89,7 +93,7 @@ export default function ContactPage() {
             {/* Submit */}
             <button
               type="submit"
-              className="bg-blue-900 text-white px-6 py-2 rounded shadow hover:bg-blue-800"
+              className="bg-darkBlue-100 text-white px-6 py-2 rounded shadow hover:bg-blue-800"
             >
               SUBMIT
             </button>
@@ -97,14 +101,14 @@ export default function ContactPage() {
 
           {/* RIGHT IMAGE + APPLY BUTTON */}
           <div className="flex flex-col items-center justify-start">
-            <div className="w-full h-64 "><img
-  src="/contact.png"
-  alt="Card image"
-  className="w-full h-full rounded object-contain"
-/>
-</div>
+            <div className="w-full h-96 "><img
+              src="/contact.png"
+              alt="Card image"
+              className="w-full h-full rounded object-contain"
+            />
+            </div>
 
-            <button className="mt-6 bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800">
+            <button className="mt-6 bg-maroon-100 text-white px-6 py-2 rounded hover:bg-red-800">
               Apply Now
             </button>
           </div>
@@ -113,9 +117,11 @@ export default function ContactPage() {
 
 
       {/* FOOTER */}
-      <div className="bg-blue-900 text-white py-10 mt-10">
+      <div className="bg-darkBlue-100 text-white py-10 mt-10">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="text-3xl mb-4">📞</div>
+          <div className="flex justify-center text-3xl mb-4">
+            <PhoneCall />
+          </div>
           <p className="text-lg font-semibold">+91 96557 77000</p>
           <p className="text-lg font-semibold mb-6">+91 97875 70746</p>
 
@@ -139,7 +145,7 @@ export default function ContactPage() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-       </div>
+      </div>
 
     </div>
   );
