@@ -1,12 +1,11 @@
+import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
+
 export default function BodyActivities() {
   return (
     <div className="w-full font-sans bg-grid-dots">
 
-      {/* ===================== HEADER ===================== */}
-      <header className="bg-[#0E1A47] py-8 flex justify-center">
-        <h1 className="text-white text-3xl font-semibold">Body</h1>
-      </header>
-
+      <PageHeader contentTitle={'Body'} />
       {/* ===================== MAIN CONTENT ===================== */}
       <section className="w-full  relative">
 
@@ -16,138 +15,185 @@ export default function BodyActivities() {
         <div className="relative max-w-6xl mx-auto px-6 md:px-12 py-16">
 
           {/* Title */}
-          <h1 className="text-4xl font-light text-[#0E1A47]">
-            Activities for the Body
-          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-16">
+            <div className=" col-span-2">
+              <h1 className="text-4xl font-light text-[#0E1A47]">
+                Activities for the Body
+              </h1>
 
-          {/* Description */}
-          <p className="mt-6 text-gray-600 max-w-3xl leading-relaxed">
-            According to WHO, children who get 60 minutes of daily physical activity have 
-            better concentration and reduced anxiety. Active students also experience 
-            improved fitness and lower risks of obesity. Students build discipline, 
-            strength, teamwork, through
-          </p>
-
+              {/* Description */}
+              <p className="mt-6 text-gray-600 leading-loose">
+                According to WHO, children who get 60 minutes of daily physical activity have
+                better concentration and reduced anxiety. Active students also experience
+                improved fitness and lower risks of obesity. Students build discipline,
+                strength, teamwork, through
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Image src='/body/01.png' height={200} width={200} alt='no image found' />
+            </div>
+          </div>
           {/* B-Fit */}
-          <h2 className="mt-10 text-2xl font-semibold text-[#B82025]">B-Fit</h2>
+          <h2 className="mt-10 text-2xl px-2 font-semibold text-[#B82025]">B-Fit</h2>
 
-          <p className="mt-2 text-gray-700 font-medium">
+          <p className="mt-2 text-gray-500 font-medium">
             Everyday B-fit classes using an exclusive curriculum.
           </p>
 
           {/* ===================== CARDS SECTION ===================== */}
-          <div className="mt-12 relative">
-
-            {/* LEFT ARROW */}
-            <button className="absolute -left-6 md:-left-10 top-1/2 -translate-y-1/2 text-[#0E1A47] text-3xl font-bold">
-              ‹
-            </button>
-
+          <div className="mt-12 relative ">
             {/* Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-  {[1, 2, 3].map((i) => (
-    <div
-      key={i}
-      className="w-full h-60 rounded-lg overflow-hidden  flex items-center justify-center"
-    >
-      <img
-        src={`/body/${i}.png`}
-        alt={`Image ${i}`}
-        className="max-w-full max-h-full object-contain"
-      />
-    </div>
-  ))}
-</div>
-
-
-            {/* RIGHT ARROW */}
-            <button className="absolute -right-6 md:-right-10 top-1/2 -translate-y-1/2 text-[#0E1A47] text-3xl font-bold">
-              ›
-            </button>
-
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="w-full h-60 rounded-lg overflow-hidden  flex items-center justify-center"
+                >
+                  <img
+                    src={`/body/${i}.png`}
+                    alt={`Image ${i}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-    <div className="bg-white font-sans">
-      {/* Activities Section */}
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-gray-800">Activities</h2>
-          <p className="mt-2 text-gray-600">After school activities foster mastery by building confidence in a supportive environment.</p>
-          <div className="mt-8 flex justify-center gap-6">
-            <div className="w-40 h-40 "><img
-    src="/body/4.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-            <div className="w-40 h-40 "><img
-    src="/body/5.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-            <div className="w-40 h-40 "><img
-    src="/body/6.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-          </div>
+        <div className="">
+          {/* Activities Section */}
+          <section className="py-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-semibold text-[#B82025]">Activities</h2>
+
+              <p className="mt-2 text-gray-500 font-medium">
+                After school activities foster mastery by building confidence in a supportive environment.
+              </p>
+
+              <div className="mt-8 relative">
+                {/* Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {[4, 5, 6].map((i) => (
+                    <div
+                      key={i}
+                      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center"
+                    >
+                      <Image
+                        src={`/body/${i}.png`}
+                        alt={`Activity ${i}`}
+                        width={400}
+                        height={240}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Aadukalam Section */}
+          <section className="bg-darkBlue-100 text-white py-12 px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-semibold">Aadukalam</h2>
+
+              <p className="mt-2 text-white font-medium">
+                The Annual Athletic Meet is a fun-filled day where students showcase their talents and skills.
+              </p>
+
+              {/* ===================== CARDS SECTION ===================== */}
+              <div className="mt-8 relative">
+                {/* Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {[7, 8, 9].map((i) => (
+                    <div
+                      key={i}
+                      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center"
+                    >
+                      <Image
+                        src={`/body/${i}.png`}
+                        alt={`Aadukalam ${i}`}
+                        width={400}
+                        height={240}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="py-20 ">
+            <div className="max-w-5xl mx-auto px-6">
+
+              {/* Section Title */}
+              <h2 className="text-4xl font-medium text-center text-[#1c1c50] mb-20">
+                Skills and values Mapping
+              </h2>
+
+              {/* Row 1 : Image Left | Text Right */}
+              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16 mb-32">
+
+                {/* Image */}
+                <div className="flex justify-center">
+                  <img
+                    src="/body/10.png"
+                    alt="B-Fit Activity"
+                    className="w-full max-w-md object-cover"
+                  />
+                </div>
+
+                {/* Text */}
+                <div>
+                  <h3 className="text-3xl font-medium text-[#1c1c50] mb-4">
+                    B-Fit
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+                    The activity that stem out of taking care of well being of
+                    body, mind and soul.
+                  </p>
+                </div>
+              </div>
+
+              {/* Row 2 : Text Left | Image Right */}
+              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+
+                {/* Text */}
+                <div>
+                  <h3 className="text-3xl font-medium text-[#1c1c50] mb-4">
+                    Skills it develops
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed max-w-md">
+                    Resilience, Self confidence, Self discipline, Independence,
+                    Endurance, Collaboration, Adaptability, Conflict resolution
+                    and Management, Problem solving, Decision making and so on..
+                  </p>
+                </div>
+
+                {/* Image / Video Thumbnail */}
+                <div className="flex justify-center">
+                  <div className="relative w-full max-w-md">
+                    {/* Play Button */}
+                    <div className="w-full flex justify-center">
+                      <div className="w-full max-w-md">
+                        <iframe
+                          src="https://www.instagram.com/reel/DPYyrOKCXkD/embed"
+                          className="w-full h-72 md:h-96 rounded-lg border-0"
+                          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                          allowFullScreen
+                          loading="lazy"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
         </div>
-      </section>
-
-      {/* Aadukalam Section */}
-      <section className="bg-indigo-700 text-white py-12">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-semibold">Aadukalam</h2>
-          <p className="mt-2">The Annual Athletic Meet is a fun-filled day where students showcase their talents and skills.</p>
-          <div className="mt-8 flex justify-center gap-6">
-            <div className="w-40 h-40 "><img
-    src="/body/7.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-            <div className="w-40 h-40 "><img
-    src="/body/8.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-            <div className="w-40 h-40 "><img
-    src="/body/9.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 flex flex-col items-center gap-12">
-  {/* First Section: Box Left, Text Right */}
-  <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
-    <div className="w-40 h-40 flex-shrink-0">  <img
-    src="/body/10.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
-    <div className="text-center md:text-left">
-      <h2 className="text-3xl font-semibold text-gray-800">BFIT</h2>
-      <p className="mt-2 text-gray-600">
-        The activity that stems out of taking care of well-being of body, mind, and soul.
-      </p>
-    </div>
-  </div>
-
-  {/* Second Section: Text Left, Box Right */}
-  <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
-    <div className="text-center md:text-left md:order-1">
-      <h2 className="text-3xl font-semibold text-gray-800">Skills It Develops</h2>
-      <p className="mt-2 text-gray-600">
-        Resilience, Self-confidence, Self-discipline, Independence, Endurance, Collaboration,
-        Adaptability, Conflict resolution and Management, Problem solving, Decision making, and so on...
-      </p>
-    </div>
-    <div className="w-40 h-40 bg-gray-300 flex-shrink-0 md:order-2"></div>
-  </div>
-</section>
-
-    </div>
       </section>
 
     </div>
