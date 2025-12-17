@@ -3,9 +3,19 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import PageHeader from "@/components/PageHeader";
+import ActivitiesCarousel from "@/components/ActivitiesCarousel";
+import Image from "next/image";
 
 export default function SportsPage() {
   // Images for the carousel
+  const sportsImages = [
+    "/sports/Pic 5.png",
+    "/sports/Pic 6.png",
+    "/sports/Pic 7.png",
+    "/sports/Pic 8.png",
+    "/sports/Pic 9.png",
+  ];
   const images = [
     "/sports/6.png",
     "/sports/5.png",
@@ -18,13 +28,10 @@ export default function SportsPage() {
     <div className="min-h-screen bg-white flex flex-col">
 
       {/* ======================= HEADER ======================= */}
-      <div className="bg-[#0E1A47] w-full py-16 flex justify-center">
-        <h1 className="text-white text-4xl font-semibold">Sports</h1>
-      </div>
-
+      <PageHeader contentTitle={'Sports'} />
       {/* ======================= MAIN QUOTE ======================= */}
       <div className="bg-white py-16 px-6 flex justify-center">
-        <div className="bg-[#C32228] text-white rounded-xl p-8 max-w-5xl text-center">
+        <div className="bg-maroon-100 text-white rounded-xl p-8 max-w-5xl text-center">
           <p className="text-2xl font-semibold">
             “Sport is the one place where your limits speak—and you get to answer back.”
           </p>
@@ -34,20 +41,20 @@ export default function SportsPage() {
       {/* ======================= INTRO PARAGRAPH ======================= */}
       <div className="px-6 pb-20 flex justify-center">
         <p className="text-gray-600 max-w-4xl leading-8 text-lg text-center">
-         Sports matter because they shape us far beyond the court or field. They build discipline, strengthen resilience, sharpen focus, and teach us how to grow through pressure. When we train our body, we influence our mind; when our mind strengthens, our spirit follows. That is why sports are more than activity—they are a powerful path to becoming a complete, balanced individual.
+          Sports matter because they shape us far beyond the court or field. They build discipline, strengthen resilience, sharpen focus, and teach us how to grow through pressure. When we train our body, we influence our mind; when our mind strengthens, our spirit follows. That is why sports are more than activity—they are a powerful path to becoming a complete, balanced individual.
         </p>
       </div>
 
       {/* ======================= IMAGE + WELL-BEING QUOTE ======================= */}
-      <div className="bg-[#0E1A47] w-full py-24 px-6 flex justify-center">
-        <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-12">
+      <div className="bg-darkBlue-100 w-full py-24 px-6 flex justify-center">
+        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
 
           <div className="bg-gray-300 w-full md:w-1/2 h-[350px] md:h-[420px] rounded-lg">
-           <img
-    src="/sports/1.png"
-    alt="Description"
-    className="w-full h-full object-cover rounded-lg"
-  /></div>
+            <img
+              src="/sports/1.png"
+              alt="Description"
+              className="w-full h-full object-cover rounded-lg"
+            /></div>
 
           <p className="text-white text-xl md:text-2xl font-medium text-center md:text-left leading-relaxed md:w-1/2">
             “Sports strengthen the body, sharpen the mind, and awaken the soul—creating a complete sense of well-being.”
@@ -57,14 +64,14 @@ export default function SportsPage() {
       </div>
 
       {/* ======================= BODY / MIND / SOUL ======================= */}
-      <div className="w-full bg-white py-20 px-6 flex justify-center">
+      <div className="w-full bg-grid-dots py-20 px-6 flex justify-center">
         <div className="max-w-6xl w-full relative">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 relative">
 
             <div className="flex flex-col items-center px-6 text-center">
               <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Body</h2>
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-600 leading-loose">
                 Through training, movement, and discipline, sports build strength, stamina, coordination, and overall physical health. Every practice session pushes the body to grow stronger and more capable.
               </p>
             </div>
@@ -73,7 +80,7 @@ export default function SportsPage() {
 
             <div className="flex flex-col items-center px-6 text-center">
               <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Mind</h2>
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-600 leading-loose">
                 Through training, movement, and discipline, sports build strength, stamina, coordination, and overall physical health. Every practice session pushes the body to grow stronger and more capable.
               </p>
             </div>
@@ -82,113 +89,140 @@ export default function SportsPage() {
 
             <div className="flex flex-col items-center px-6 text-center">
               <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Soul</h2>
-              <p className="text-gray-600 leading-7">
-               At the soul level, sports ignite passion, purpose, and joy. The thrill of improvement, the spirit of teamwork, and the drive to compete connect athletes deeply to their inner motivation and identity.
+              <p className="text-gray-600 leading-loose">
+                At the soul level, sports ignite passion, purpose, and joy. The thrill of improvement, the spirit of teamwork, and the drive to compete connect athletes deeply to their inner motivation and identity.
               </p>
             </div>
 
           </div>
 
-         <div className="flex flex-col md:flex-row items-start gap-10 mt-16">
-          <div className="flex-1">
-              <p className="text-center text-gray-500 mt-16 mb-6">
-            Together, sports become a pathway to holistic well-being
-          </p>
-         <ul className="text-gray-600 text-lg mb-16 mx-auto w-fit flex space-x-6 list-disc">
-  <li>A fit body</li>
-  <li>A steady mind</li>
-  <li>A fulfilled soul</li>
-</ul>
-          <div className="space-y-10 text-gray-600 leading-8 text-lg max-w-4xl mx-auto">
-            <p>
-              Sports shape the way we think and handle challenges. When you play, you learn to stay positive because every practice, win, and mistake teaches you something. You see that effort leads to improvement, so you naturally build a stronger mindset.
+          <div className="flex flex-col md:flex-row items-start gap-10 mt-16">
+            <div className="flex-1">
+              <p className="text-center text-xl text-gray-600 font-semibold mt-10 mb-6">
+                Together, sports become a pathway to holistic well-being
+              </p>
+              <ul className="text-gray-600 text-lg mb-16 mx-auto w-fit list-disc list-inside flex space-x-10">
+                <li className="whitespace-nowrap">A fit body</li>
+                <li className="whitespace-nowrap">A steady mind</li>
+                <li className="whitespace-nowrap">A fulfilled soul</li>
+              </ul>
+              <div className="space-y-10 text-gray-500 leading-loose text-lg max-w-4xl mx-auto">
+                <p>
+                  Sports shape the way we think and handle challenges. When you play, you learn to stay positive because every practice, win, and mistake teaches you something. You see that effort leads to improvement, so you naturally build a stronger mindset.
 
-Sports also help you deal with failure. Missing a point or losing a game shows you that failure is normal and temporary. You learn to accept it, correct it, and move forward. This attitude carries into daily life—whether you face a tough exam, a bad day, or a setback, you handle it with more confidence and patience.
+                  Sports also help you deal with failure. Missing a point or losing a game shows you that failure is normal and temporary. You learn to accept it, correct it, and move forward. This attitude carries into daily life—whether you face a tough exam, a bad day, or a setback, you handle it with more confidence and patience.
 
-In short, sports train your body, but they also train your mind to stay strong, calm, and ready to try again.
-            </p>
-            <p>
-              In 2025, obesity rates are predicted to continue rising globally...
-            </p>
+                  In short, sports train your body, but they also train your mind to stay strong, calm, and ready to try again.
+                </p>
+                <p>
+                  In 2025, obesity rates are predicted to continue rising globally...
+                </p>
+              </div>
+            </div>
+            <div className="flex-1">
+              <img
+                src="/sports/2.png"
+                alt="Sports Wellbeing"
+                className="w-full h-[600px] object-cover rounded-lg shadow"
+              />
+            </div>
+
           </div>
-          </div>
-         <div className="flex-1">
-    <img
-      src="/sports/2.png"
-      alt="Sports Wellbeing"
-      className="w-full h-[600px] object-cover rounded-lg shadow"
-    />
-  </div>
-
-         </div>
         </div>
       </div>
 
       {/* ======================= CHILD OBESITY SECTION ======================= */}
-      <div className="w-full bg-white py-20 px-6 flex justify-center">
-        <div className="max-w-5xl w-full">
-        <img
-      src="/sports/3.png"
-      alt="Sports Wellbeing"
-      className="w-full h-[400px] object-cover rounded-lg shadow"
-    />
-         <div className="flex flex-col md:flex-row items-start gap-10 mt-10">
-          <div className="flex-1">
-    <img
-      src="/sports/4.png"
-      alt="Child Obesity Illustration"
-      className="w-full h-[350px] object-cover rounded-xl shadow"
-    />
-  </div>
-           <div className="flex-1">
-            <h3 className="text-2xl md:text-3xl font-semibold text-[#0E1A47] mb-8">
-            Child and Adolescent Obesity
-          </h3>
+      <div className="w-full bg-grid-dots py-16 px-6 flex justify-center">
+        <div className="max-w-6xl w-full">
+          <ActivitiesCarousel images={sportsImages} />
+          <section className="mt-16 px-4 md:px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          <div className="space-y-4 text-gray-700 text-lg leading-7">
-            
-            <p className="flex gap-2">
-              <span className="text-2xl leading-none">•</span>
-              Obesity has become the most common form of malnutrition among school-aged children and adolescents worldwide, surpassing underweight.
-            </p>
-            <p className="flex gap-2">
-              <span className="text-2xl leading-none">•</span>
-             The prevalence of underweight children has decreased globally, but the prevalence of obesity has tripled since 2000. 
-            </p>
-          </div>
-           </div>
-         </div>
+              {/* LEFT – Quote Image */}
+              <div className="flex justify-center">
+                <div className="relative w-[500px] max-w-full">
+                  <Image
+                    src="/facility/KidzGym/Pic_1.png"
+                    alt="Quote Box"
+                    width={900}
+                    height={450}
+                    className="w-full h-auto"
+                    priority
+                  />
 
-          <h3 className="text-2xl md:text-3xl font-semibold text-[#0E1A47] mt-12 mb-6">
+                  {/* Overlay Quote */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
+                    <p className="text-white text-md md:text-lg leading-loose max-w-xl">
+                      Globally, one in the ten children aged 5-19, or 188 million, live with obesity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT – Content */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-semibold text-[#0E1A47] mb-8">
+                  Child and Adolescent Obesity
+                </h3>
+
+                <div className="space-y-6 text-gray-500 text-lg leading-7">
+                  <p className="flex gap-3">
+                    <span className="text-2xl leading-loose">•</span>
+                    Obesity has become the most common form of malnutrition among
+                    school-aged children and adolescents worldwide, surpassing
+                    underweight.
+                  </p>
+
+                  <p className="flex gap-3">
+                    <span className="text-2xl leading-loose">•</span>
+                    The prevalence of underweight children has decreased globally,
+                    but the prevalence of obesity has tripled since 2000.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <h3 className="text-2xl md:text-3xl font-semibold text-darkBlue-100 mt-12 mb-5">
             Consequences
           </h3>
 
-          <ul className="text-gray-700 text-lg leading-8 space-y-3">
+          <ul className="text-gray-500 text-lg leading-loose">
             <li>• Obesity is linked to a higher risk of non-communicable diseases such as diabetes, cardiovascular disease, and certain cancers.`</li>
             <li>• The economic impact of obesity is also substantial, with the global cost projected to exceed $4 trillion annually by 2035</li>
           </ul>
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 items-center">
 
-  {/* LEFT - TEXT */}
-  <div className="flex-1">
-    <p className="mt-4 text-gray-600">
-     The rates of obesity and overweight among children and adolescents in India are increasing rapidly, driven primarily by changing diets, sedentary lifestyles, and socioeconomic shifts. India is projected to account for 11% of the global burden of childhood obesity by 2030, which equates to over 27 million children and adolescents aged 5 to 19 living with obesity. 
+            {/* LEFT – TEXT */}
+            <div>
+              <p className="mt-4 text-gray-500 leading-loose">
+                The rates of obesity and overweight among children and adolescents in India
+                are increasing rapidly, driven primarily by changing diets, sedentary
+                lifestyles, and socioeconomic shifts. India is projected to account for
+                11% of the global burden of childhood obesity by 2030, which equates to over
+                27 million children and adolescents aged 5 to 19 living with obesity.
+                <br />
+                <br />
+                After-school sports directly combat obesity by increasing{" "}
+                <span className="font-medium text-gray-700">energy expenditure</span> and
+                reducing{" "}
+                <span className="font-medium text-gray-700">sedentary time</span> (screen
+                time).
+              </p>
+            </div>
 
-After-school sports directly combat obesity by increasing energy expenditure and reducing sedentary time (screen time).
-    </p>
-  </div>
+            {/* RIGHT – IMAGE */}
+            <div className="flex justify-center">
+              <img
+                src="/sports/5.png"
+                alt="Sports activity"
+                className="w-full max-w-lg h-[320px] object-cover rounded-lg"
+              />
+            </div>
 
-  {/* RIGHT - IMAGE */}
-  <div className="flex-1">
-    <img
-      src="/sports/5.png"
-      alt="Image"
-      className="w-full h-[350px] object-cover rounded-lg"
-    />
-  </div>
-
-</div>
+          </div>
 
         </div>
       </div>
@@ -200,7 +234,7 @@ After-school sports directly combat obesity by increasing energy expenditure a
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
 
           {/* CAROUSEL */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-[35vw]">
             <Swiper spaceBetween={20} slidesPerView={1}>
               {images.map((img, i) => (
                 <SwiperSlide key={i}>
@@ -216,7 +250,7 @@ After-school sports directly combat obesity by increasing energy expenditure a
           </div>
 
           {/* TEXT */}
-          <div className="md:w-1/2 text-white text-lg leading-8">
+          <div className="md:w-1/2 text-white text-lg leading-loose">
             Our school makes fitness a part of everyday life through exciting
             after-school activities like gym, rifle club, football, basketball,
             badminton, and many more. These programs help students stay active,
@@ -239,97 +273,105 @@ After-school sports directly combat obesity by increasing energy expenditure a
           </div>
         )}
       </div>
-   <div className="w-full bg-white py-20 px-6">
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
+      <div className="w-full bg-grid-dots py-20 px-6">
+        <div className="mx-auto max-w-6xl mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-darkBlue-100">
+            How our after-school sports help students
+          </h2>
 
-    {/* LEFT SIDE — TEXT */}
-    <div className="flex-1">
-
-      {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-semibold text-[#0E1A47] mb-14">
-        How our after-school sports help students
-      </h1>
-
-      {/* Bullet Section */}
-      <div className="space-y-12 text-lg">
-
-        {/* 1 */}
-        <div>
-          <p className="font-semibold text-[#0E1A47] flex items-start gap-3">
-            <span className="text-2xl leading-none">•</span>
-            Beat obesity the healthy way
-          </p>
-          <p className="text-gray-600 pl-8 mt-2">
-            Regular movement keeps weight in check and builds stamina.
-          </p>
         </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-        {/* 2 */}
-        <div>
-          <p className="font-semibold text-[#0E1A47] flex items-start gap-3">
-            <span className="text-2xl leading-none">•</span>
-            Build strong habits early
-          </p>
-          <p className="text-gray-600 pl-8 mt-2">
-            Kids learn to choose activity over screen time.
-          </p>
+          {/* LEFT — TEXT CONTENT */}
+          <div>
+
+            {/* Heading */}
+
+            {/* Bullet Points */}
+            <div className="space-y-4 text-lg">
+
+              {/* Item 1 */}
+              <div>
+                <p className="font-semibold text-gray-700 flex items-start gap-4">
+                  <span className="text-xl leading-none mt-1">•</span>
+                  Beat obesity the healthy way
+                </p>
+                <p className="text-gray-500 pl-7 mt-2">
+                  Regular movement keeps weight in check and builds stamina.
+                </p>
+              </div>
+
+              {/* Item 2 */}
+              <div>
+                <p className="font-semibold text-gray-700 flex items-start gap-4">
+                  <span className="text-xl leading-none mt-1">•</span>
+                  Build strong habits early
+                </p>
+                <p className="text-gray-500 pl-7 mt-2">
+                  Kids learn to choose activity over screen time.
+                </p>
+              </div>
+
+              {/* Item 3 */}
+              <div>
+                <p className="font-semibold text-gray-700 flex items-start gap-4">
+                  <span className="text-xl leading-none mt-1">•</span>
+                  Boost confidence
+                </p>
+                <p className="text-gray-500 pl-7 mt-2">
+                  Mastering a sport makes students feel proud and motivated.
+                </p>
+              </div>
+
+              {/* Item 4 */}
+              <div>
+                <p className="font-semibold text-gray-700 flex items-start gap-4">
+                  <span className="text-xl leading-none mt-1">•</span>
+                  Improve focus in class
+                </p>
+                <p className="text-gray-500 pl-7 mt-2">
+                  Active bodies help create sharp, alert minds.
+                </p>
+              </div>
+
+              {/* Item 5 */}
+              <div>
+                <p className="font-semibold text-gray-700 flex items-start gap-4">
+                  <span className="text-xl leading-none mt-1">•</span>
+                  Encourage teamwork and discipline
+                </p>
+                <p className="text-gray-500 pl-7 mt-2">
+                  Essential life skills learned through play.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Footer Line */}
+
+          </div>
+
+          {/* RIGHT — IMAGE */}
+          <div className="w-full">
+            <img
+              src="/sports/7.png"
+              alt="After-school sports"
+              className="w-full h-[420px] object-cover rounded-xl"
+            />
+          </div>
         </div>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-gray-600 text-lg mt-8 leading-loose ">
+            Together, we are{" "}
+            <span className="font-semibold text-gray-800">
+              change makers
+            </span>
+            , creating a school community that stays active, beats obesity,
+            and leads the way toward a healthier future.
+          </p>
 
-        {/* 3 */}
-        <div>
-          <p className="font-semibold text-[#0E1A47] flex items-start gap-3">
-            <span className="text-2xl leading-none">•</span>
-            Boost confidence
-          </p>
-          <p className="text-gray-600 pl-8 mt-2">
-            Mastering a sport makes students feel proud and motivated.
-          </p>
         </div>
-
-        {/* 4 */}
-        <div>
-          <p className="font-semibold text-[#0E1A47] flex items-start gap-3">
-            <span className="text-2xl leading-none">•</span>
-            Improve focus in class
-          </p>
-          <p className="text-gray-600 pl-8 mt-2">
-            Active bodies help create sharp, alert minds.
-          </p>
-        </div>
-
-        {/* 5 */}
-        <div>
-          <p className="font-semibold text-[#0E1A47] flex items-start gap-3">
-            <span className="text-2xl leading-none">•</span>
-            Encourage teamwork and discipline
-          </p>
-          <p className="text-gray-600 pl-8 mt-2">
-            Essential life skills learned through play.
-          </p>
-        </div>
-
       </div>
-
-      {/* Footer Sentence */}
-      <p className="text-gray-700 text-lg mt-16 leading-relaxed">
-        Together, we are <span className="font-semibold text-[#0E1A47]">change makers</span>, 
-        creating a school community that stays active, beats obesity, and leads the way 
-        toward a healthier future.
-      </p>
-
-    </div>
-
-    {/* RIGHT SIDE — IMAGE */}
-    <div className="flex-1">
-      <img
-        src="/sports/7.png"
-        alt="Sports Help Students"
-        className="w-full h-[550px] object-cover rounded-xl shadow-lg"
-      />
-    </div>
-
-  </div>
-</div>
 
     </div>
   );

@@ -41,67 +41,20 @@ export default function AboutQmis() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto text-gray-500 leading-loose text-[17px]">
+        <div className="max-w-6xl mx-auto mb-5 text-gray-500 leading-loose text-[17px]">
           <p className="text-gray-500 text-xl font-bold mb-5">School's philosophy</p>
           <p className="text-gray-500 text-md mb-5">"We at QMIS believe in ensuring the well being of the body, mind and soul of the individual by instilling a steady growth mindset, who learn and unlearn to emerge as makers."</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-center mt-20">
-
-          {/* LEFT IMAGE */}
-          <div>
-            <Image
-              src="/main_image.jpeg"
-              width={900}
-              height={600}
-              alt="QMIS Placeholder"
-              className="rounded-xl w-full shadow-md object-cover"
-            />
-          </div>
-
-          {/* RIGHT SIDE BULLET LIST */}
-          <div className="space-y-6 text-gray-500 text-[17px] leading-relaxed">
-
-            <p className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl mt-1">☀️</span>
-              Fostering environmental awareness and stewardship by nurturing respect
-              for nature and promoting sustainable living, conservation, and mindful resource use.
-            </p>
-
-            <p className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl mt-1">☀️</span>
-              Cultivating community and social harmony by fostering inclusivity, empathy,
-              and mutual respect, while inspiring collaboration to address shared challenges.
-            </p>
-
-            <p className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl mt-1">☀️</span>
-              Fostering global and digital citizenship by promoting compassion,
-              ethical awareness, critical thinking, and responsible use of technology.
-            </p>
-
-            <p className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl mt-1">☀️</span>
-              Empowering individuals through balanced living—integrating academics,
-              athletics, and personal growth while cultivating discipline and life skills.
-            </p>
-
-            <p className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl mt-1">☀️</span>
-              Inspiring innovation and lifelong learning by embracing change, advancing skills,
-              and cultivating an agile mindset for navigating the world.
-            </p>
-
-            <p className="flex items-start gap-3">
-              <span className="text-yellow-500 text-xl mt-1">☀️</span>
-              Building resilience and courage by empowering individuals to face challenges
-              with confidence, adaptability, and a growth mindset.
-            </p>
-          </div>
-        </div>
-        {/* qmis core value */}
-        <div className="flex justify-center mt-10">
-          <Image src="/Core_values.png" height={800} width={1000} alt="image not found" />
+        <div className="mx-auto max-w-6xl mt-16 flex justify-center">
+          <Image
+            src="/about-qmis/new.png"
+            alt="not found"
+            width={900}
+            height={600}
+            className="w-full max-w-5xl h-auto"
+            priority
+          />
         </div>
       </div>
       {/* thirukural */}

@@ -8,7 +8,7 @@ export default function AcademicEnrichmentProgram() {
       <div className="bg-grid-dots">
         <div className="flex justify-center">
           <Image
-            src="/academic-enrichment-program/1.png"
+            src="/academic-enrichment-program/new_1.png"
             height={1000}
             width={1000}
             alt="Academic enrichment program banner"
