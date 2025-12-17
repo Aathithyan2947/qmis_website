@@ -118,17 +118,17 @@ export default function AfterSchoolActivites() {
 
           {/* Tilted Image */}
           <div className="flex justify-center">
-            <div className="transform rotate-2">
+            <div className="">
               <Image
                 src="/after-school-activities/17.webp"
                 width={520}
                 height={680}
                 alt="Badminton Academy"
-                className="object-cover"
+                className="object-contain transform -rotate-7"
               />
 
-              <h2 className="transform -rotate-2 text-white text-3xl font-extrabold text-center mt-10 tracking-wide">
-                BADMINTON<br />ACADEMY
+              <h2 className="text-white text-3xl font-extrabold text-center mt-3 tracking-wide">
+                BADMINTON ACADEMY
               </h2>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function AfterSchoolActivites() {
               Unlocking Potentials with World-class Training & Guidance!
             </p>
 
-            <p className="text-sm leading-relaxed text-gray-200">
+            <p className="text-md leading-loose text-gray-200">
               This yet another exclusive feature of Queen Mira aims to foster a love for badminton among
               students and sports enthusiasts of all ages. QMIS is going to open a state-of-the-art
               badminton court in collaboration with ‘Celebrate Sports Foundation’s – Badminton Academy’
@@ -159,43 +159,43 @@ export default function AfterSchoolActivites() {
         </div>
       </div>
       {/* SECTION 4 - KIDZ GYM */}
-      <div className="bg-white">
-        <div className="max-w-7xl p-10 mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+      <div className="bg-grid-dots">
+        <div className="max-w-6xl p-10 mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-16">
 
           {/* LEFT CONTENT */}
           <div className="order-2 md:order-1 space-y-6">
-            <h3 className="text-3xl font-extrabold text-red-600 tracking-wide">
+            <h3 className="text-3xl font-extrabold text-darkBlue-100 tracking-wide">
               Kidz Gym
             </h3>
 
-            <p className="font-semibold text-red-600 leading-snug">
+            <p className="font-semibold text-maroon-100 leading-snug">
               From Screentime to Dumbbells: Enhancing<br />
               Physical & Mental Well-being from a Tender Age!
             </p>
 
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-md leading-loose text-gray-600">
               To address screen time and combat obesity from a young age, QMIS has proposed
               launching a kids' gym for children aged 6 months to 12 years, emphasizing
               strength, flexibility, and agility during early development.
             </p>
 
-            <button className="text-red-600 font-semibold hover:underline">
+            <button className="text-maroon-100 font-semibold hover:underline">
               Apply Now &gt;
             </button>
           </div>
 
           {/* RIGHT IMAGE TILTED */}
           <div className="flex justify-center order-1 md:order-2">
-            <div className="transform -rotate-2">
+            <div className="">
               <Image
-                src="/after-school-activities/20.webp"
+                src="/after-school-activities/Pic 6.png"
                 width={520}
                 height={680}
                 alt="Kidz Gym"
                 className="object-cover rounded-none"
               />
 
-              <h2 className="transform rotate-2 text-red-700 text-3xl font-extrabold text-center mt-10 tracking-wide">
+              <h2 className="text-red-700 text-3xl font-extrabold text-center mt-2 tracking-wide">
                 KIDZ GYM
               </h2>
             </div>
@@ -221,31 +221,31 @@ export default function AfterSchoolActivites() {
 
           {/* LEFT CONTENT */}
           <div className="space-y-6 order-2 md:order-1">
-            <h3 className="text-2xl font-extrabold text-darkBlue-800 leading-snug">
+            <h3 className="text-2xl font-extrabold text-darkBlue-100 leading-snug">
               WISH TO ENROL FOR THE<br /> AFTER SCHOOL ACTIVITIES
             </h3>
 
             <div className="space-y-5 text-gray-800 text-sm md:text-base">
               <p className="flex gap-3">
-                <span className="text-xl font-bold text-darkBlue-800">›</span>
+                <span className="text-xl font-bold text-darkBlue-100">›</span>
                 Open to all children OF 4 years and above<br />
                 <span className="text-gray-500">(Contact the Program Coordinator for more details regarding the age eligibility for the various activities)</span>
               </p>
 
               <p className="flex gap-3">
-                <span className="text-xl font-bold text-darkBlue-800">›</span>
+                <span className="text-xl font-bold text-gray-500">›</span>
                 Currently available to Queen Mira's students.<br />
                 Will be open to the public from 15th October 2024
               </p>
 
               <p className="flex gap-3">
-                <span className="text-xl font-bold text-darkBlue-800">›</span>
+                <span className="text-xl font-bold text-gray-500">›</span>
                 Open on Monday - Friday<br />
                 Timing 3.30 PM - 5.30 PM
               </p>
 
               <p className="flex gap-3">
-                <span className="text-xl font-bold text-darkBlue-800">›</span>
+                <span className="text-xl font-bold text-gray-500">›</span>
                 Special offer on after-school activities<br />
                 starting at Rs. 3000
               </p>
@@ -254,11 +254,11 @@ export default function AfterSchoolActivites() {
 
           {/* RIGHT CONTENT */}
           <div className="space-y-6 order-3 md:order-3">
-            <h3 className="text-2xl font-extrabold text-darkBlue-800 leading-snug">
+            <h3 className="text-2xl font-extrabold text-darkBlue-100 leading-snug">
               WHY CHOOSE THE AFTER-SCHOOL<br /> ACTIVITIES AT QMIS?
             </h3>
 
-            <div className="space-y-5 text-gray-800 text-sm md:text-base">
+            <div className="space-y-5 text-gray-600 text-sm md:text-base">
               <p><span className="font-bold">Expert training & coaching</span> for the chosen field of interest.</p>
 
               <p><span className="font-bold">A tailored learning environment</span> for each activity, to set the right tone and for effective learning.</p>
@@ -280,29 +280,29 @@ export default function AfterSchoolActivites() {
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-16 relative overflow-hidden">
           <div className="flex justify-center order-1 md:order-1 relative">
-            <div className="transform -rotate-2">
+            <div className="">
               <Image
                 src="/after-school-activities/18.webp" // Replace with actual image path
                 width={520}
                 height={680}
                 alt="After School Activities Shooting Practice"
-                className="object-cover"
+                className="object-cover transform -rotate-7"
               />
             </div>
           </div>
 
           {/* Right Text Content */}
           <div className="space-y-5 order-2 md:order-2 relative z-10">
-            <h3 className="text-3xl font-extrabold text-darkBlue-800 tracking-wide">
+            <h3 className="text-3xl font-extrabold text-darkBlue-100 tracking-wide">
               After school activities
             </h3>
 
-            <p className="text-red-600 font-semibold leading-snug">
+            <p className="text-maroon-100 font-semibold leading-snug">
               Empowering Future Scholars, Athletic Icons, and<br />
               Rising Intellects through After-school Activities!
             </p>
 
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-500 text-md leading-loose">
               This At QMIS, kindergarteners and students are encouraged to explore beyond Rhymes,
               Science, and classrooms through extra-curricular activities and sports like Skating,
               Rifle Shooting, Keyboard, Bharathanatyam, Music, Karate, Taekwondo, Yoga, Silambam,
@@ -311,7 +311,7 @@ export default function AfterSchoolActivites() {
               germinating stage.
             </p>
 
-            <button className="text-red-600 font-semibold hover:underline text-sm">
+            <button className="text-maroon-100 font-semibold hover:underline text-sm">
               Apply Now &gt;
             </button>
           </div>
