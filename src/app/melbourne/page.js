@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Melbourne() {
   return (
@@ -16,15 +17,42 @@ export default function Melbourne() {
 
       <section className="max-w-5xl mx-auto px-6 pt-16 grid md:grid-cols-2 gap-12 items-center">
         {/* Image */}
-        <div className="w-full h-80 overflow-hidden relative">
-          <Image
-            src="/melbourne/1.png"
-            alt="Global studies skill gap visualization"
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
+        <Link
+          href="https://drive.google.com/file/d/1I4ITHV9aUQin7zialwYgEK0xgzkEjjMS/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <div className="relative w-full h-80 overflow-hidden rounded-lg cursor-pointer group">
+
+            {/* Background Image */}
+            <Image
+              src="/melbourne/1.png"
+              alt="Global studies skill gap visualization"
+              fill
+              className="object-cover blur-md scale-105"
+              sizes="100vw"
+            />
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/10" />
+
+            {/* Play Button */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 bg-black/60 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                  className="w-8 h-8 ml-1"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </Link>
 
         {/* Text Content */}
         <div>

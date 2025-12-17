@@ -31,7 +31,7 @@ export default function CISPage() {
   return (
     <div className="w-full bg-grid-dots bg-grid-dots text-gray-800">
       {/* ===================== HEADER ===================== */}
-      <PageHeader contentTitle={"Career At Qmis"} />
+      <PageHeader contentTitle={"Council of International Schools (CIS)"} />
       {/* ===================== INTRO SECTION ===================== */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
@@ -58,7 +58,6 @@ export default function CISPage() {
 
           {/* First Image with Modal Trigger */}
           <div
-            onClick={openModal}
             className="
     w-full
     max-w-6xl
@@ -77,7 +76,8 @@ export default function CISPage() {
   "
           >
             {/* Left – Certificate Image */}
-            <div className="bg-white flex items-center justify-center p-8">
+            <div onClick={openModal}
+              className="bg-white flex items-center justify-center p-8">
               <Image
                 src="/cis/1-v2.png"
                 alt="CIS Accreditation Certificate"

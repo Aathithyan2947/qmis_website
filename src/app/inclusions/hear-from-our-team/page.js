@@ -283,7 +283,7 @@ export default function HearFromOurTeam() {
           </div>
 
         </section>
-        <div className="py-20 px-6 md:px-16 bg-grid-dots">
+        <div className="py-20 px-6 md:px-16 ">
           <div className="mx-auto max-w-5xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
 
