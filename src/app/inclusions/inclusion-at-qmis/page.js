@@ -11,9 +11,9 @@ export default function InclusionAtQmis() {
         <section className="max-w-6xl mx-auto px-4 py-16 space-y-20">
 
           {/* === Top Section === */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text */}
-            <div className="order-2 md:order-1 space-y-6 text-gray-600 leading-relaxed">
+            <div className="order-2 md:order-1 space-y-6 text-gray-500 leading-loose">
               <p>
                 Across the world today, nearly 240 million children live with some form
                 of disability. UNESCO and UNICEF remind us that many of these children
@@ -49,24 +49,24 @@ export default function InclusionAtQmis() {
 
           {/* === What Makes QMIS Different === */}
           <div className="space-y-12">
-            <h2 className="text-3xl font-semibold text-indigo-900">
+            <h2 className="text-3xl font-semibold text-darkBlue-100">
               What Makes QMIS Different
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Image */}
-              <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="rounded-xl overflow-hidden">
                 <Image
                   src="/inclusions/inclusions-at-qmis/2.png"
                   alt="Learning Support"
                   width={500}
                   height={400}
-                  className="w-full h-auto object-cover"
+                  className="object-cntain"
                 />
               </div>
 
               {/* Text */}
-              <div className="space-y-6 text-gray-600 leading-relaxed">
+              <div className="space-y-6 text-gray-500 leading-loose">
                 <p>
                   At Queen Mira International School, we believe that every child is
                   unique, and every child deserves to feel safe, understood, and supported.
@@ -88,16 +88,29 @@ export default function InclusionAtQmis() {
           </div>
 
           {/* === Feature Pills === */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
             {[
               "Motor and sensory development",
               "Thinking and learning skills",
               "Language and communication",
-              "Emotional and behavioural wellbeing"
+              "Emotional and behavioural wellbeing",
             ].map((text, i) => (
               <div
                 key={i}
-                className="bg-gray-100 rounded-2xl py-4 px-6 text-center text-sm font-medium text-gray-600 shadow-sm"
+                className="
+        w-[260px]
+        h-[120px]
+        bg-gray-100
+        rounded-[28px]
+        flex
+        items-center
+        justify-center
+        text-center
+        text-gray-500
+        text-base
+        font-medium
+        px-6
+      "
               >
                 {text}
               </div>
@@ -105,43 +118,44 @@ export default function InclusionAtQmis() {
           </div>
 
           {/* === Supporting Text === */}
-          <p className="text-center text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-center text-gray-500 leading-loose max-w-3xl mx-auto">
             But the journey doesn’t happen alone—parents, teachers, and the support
             team move together, celebrating every milestone, every improvement, every
             moment of confidence gained.
           </p>
 
           {/* === The Heart of Our Inclusion Story === */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Title + text */}
-            <div className="space-y-6">
-              <h2 className="text-3xl font-semibold text-indigo-900">
-                The Heart of Our Inclusion Story
-              </h2>
+          <div className="mx-auto max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Title + text */}
+              <div className="space-y-6 text-center">
+                <h2 className="text-3xl font-semibold text-darkBlue-100">
+                  The Heart of Our Inclusion Story
+                </h2>
 
-              <p className="text-gray-600 leading-relaxed max-w-md">
-                Today, about 10% of our students receive specialised support,
-                and each of them is progressing with greater assurance, joy,
-                and independence.
-              </p>
-            </div>
+                <p className="text-gray-500 leading-loose max-w-md">
+                  Today, about 10% of our students receive specialised support,
+                  and each of them is progressing with greater assurance, joy,
+                  and independence.
+                </p>
+              </div>
 
-            {/* Image */}
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/inclusions/inclusions-at-qmis/3.png"
-                alt="Inclusion"
-                width={500}
-                height={400}
-                className="w-full h-auto object-cover"
-              />
+              {/* Image */}
+              <div className="rounded-xl overflow-hidden ">
+                <Image
+                  src="/inclusions/inclusions-at-qmis/3.png"
+                  alt="Inclusion"
+                  width={400}
+                  height={400}
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
-
           {/* === Tree Structure (NOT an Image) === */}
           <div className="flex flex-col items-center pt-16">
             {/* Root Text */}
-            <p className="text-sm font-medium text-gray-700 text-center">
+            <p className="text-lg font-medium text-gray-500 text-center">
               At Queen Mira, inclusion is not an initiative
             </p>
 
@@ -160,7 +174,7 @@ export default function InclusionAtQmis() {
                 {/* Branch 1 */}
                 <div className="flex flex-col items-center">
                   <div className="w-px h-10 bg-gray-300"></div>
-                  <div className="px-6 py-3 bg-white rounded-full shadow text-sm text-gray-700">
+                  <div className="px-6 py-3 bg-white text-lg text-gray-500">
                     It is a culture
                   </div>
                 </div>
@@ -168,7 +182,7 @@ export default function InclusionAtQmis() {
                 {/* Branch 2 */}
                 <div className="flex flex-col items-center">
                   <div className="w-px h-10 bg-gray-300"></div>
-                  <div className="px-6 py-3 bg-white rounded-full shadow text-sm text-gray-700">
+                  <div className="px-6 py-3 bg-white text-lg text-gray-500">
                     A promise
                   </div>
                 </div>
@@ -176,7 +190,7 @@ export default function InclusionAtQmis() {
                 {/* Branch 3 */}
                 <div className="flex flex-col items-center">
                   <div className="w-px h-10 bg-gray-300"></div>
-                  <div className="px-6 py-3 bg-white rounded-full shadow text-sm text-gray-700 max-w-xs text-center">
+                  <div className="px-6 py-3 bg-white text-lg text-gray-500 max-w-xs text-center">
                     A belief that every child has a place, a voice, and a future worth nurturing.
                   </div>
                 </div>
