@@ -282,7 +282,9 @@ export default function HearFromOurTeam() {
             </div>
           </div>
 
-          <div className="py-20 px-6 md:px-16 bg-grid-dots">
+        </section>
+        <div className="py-20 px-6 md:px-16 bg-grid-dots">
+          <div className="mx-auto max-w-5xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-center">
 
               {/* Image */}
@@ -290,7 +292,7 @@ export default function HearFromOurTeam() {
                 <Image
                   src="/inclusions/hear-from-our-team/6.png"
                   alt="Hear From Our Team"
-                  width={920}
+                  width={620}
                   height={720}
                   className="object-contain"
                 />
@@ -314,8 +316,9 @@ export default function HearFromOurTeam() {
               </div>
 
             </div>
+
           </div>
-        </section>
+        </div>
       </div >
     </>
   );
