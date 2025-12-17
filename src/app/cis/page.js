@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CISPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,12 +29,12 @@ export default function CISPage() {
   }, [isModalOpen]);
 
   return (
-    <div className="w-full bg-white bg-grid-dots text-gray-800">
+    <div className="w-full bg-grid-dots bg-grid-dots text-gray-800">
       {/* ===================== HEADER ===================== */}
-       <PageHeader contentTitle={"Career At Qmis"} />
+      <PageHeader contentTitle={"Career At Qmis"} />
       {/* ===================== INTRO SECTION ===================== */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-semibold text-[#0E1A47] mb-8">
             QMIS: Innovating Education. Inspiring Futures
           </h2>
@@ -101,9 +102,14 @@ export default function CISPage() {
                 experience international higher education of quality.
               </p>
 
-              <span className="text-sm font-semibold underline tracking-wide">
+              <Link
+                href="https://www.cois.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold underline tracking-wide hover:text-blue-600 transition"
+              >
                 VISIT WWW.COIS.ORG
-              </span>
+              </Link>
             </div>
           </div>
 
@@ -111,12 +117,12 @@ export default function CISPage() {
             Global Standards. Real Opportunities
           </h2>
 
-          <p className="text-lg leading leading-loose-8 mb-8">
+          <p className="text-lg leading leading-loose mb-8">
             Recognized in Leiden, Netherlands as a model school, QMIS continues to influence
             international best practices — even prompting CIS to introduce Tamil as a survey language.
           </p>
 
-          <p className="text-lg leading-loose leading-8">
+          <p className="text-lg leading-loose ">
             Universities abroad consistently regard QMIS students as high-calibre applicants —
             confident, well-prepared, and aligned with international learning standards.
             Admissions teams often note that graduates from CIS-accredited schools demonstrate
@@ -127,7 +133,7 @@ export default function CISPage() {
 
       {/* ===================== STUDENT OUTCOMES ===================== */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl font-semibold mb-10">
             Success stories that speak for themselves
           </h1>
@@ -138,21 +144,21 @@ export default function CISPage() {
               <Image
                 src="/cis/2.png"
                 alt="Student Karnish"
-                width={500}
+                width={350}
                 height={400}
-                className="w-full max-w-md rounded-lg shadow-md object-cover"
+                className="rounded-lg object-contain"
               />
             </div>
 
             <div>
               <h2 className="text-3xl font-medium">
                 Karnish
-                <span className="text-gray-600 text-xl ml-2">(Batch of 2020–2021)</span>
+                <span className="text-gray-500 text-xl ml-2">(Batch of 2020–2021)</span>
               </h2>
 
               <p className="text-xl mt-2">Studying at the University of Austin</p>
 
-              <p className="mt-6 text-lg italic leading-relaxed">
+              <p className="mt-6 text-lg text-gray-600 leading-relaxed">
                 “QMIS gave me a global edge. CIS accreditation made universities
                 look at my profile with confidence.”
               </p>
@@ -162,19 +168,19 @@ export default function CISPage() {
       </section>
 
       {/* ===================== STUDENT STORIES 2 ===================== */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto space-y-24">
+      <section className="py-5 px-6">
+        <div className="max-w-4xl mx-auto space-y-24">
           {/* Rehma */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-semibold">
                 Rehma
-                <span className="text-gray-600 text-xl ml-2">(Batch of 2020–2021)</span>
+                <span className="text-gray-500 text-xl ml-2">(Batch of 2020–2021)</span>
               </h2>
 
               <p className="text-xl mt-2">BSc Neuroscience, University of Toronto</p>
 
-              <p className="mt-6 text-lg italic leading-loose">
+              <p className="mt-6 text-lg leading-loose text-gray-600">
                 “Being from a CIS-accredited school strengthened my application instantly.
                 On campus, I stood out — confident, disciplined, globally ready.
                 QMIS didn't just help me get in; it helped me thrive.”
@@ -185,9 +191,9 @@ export default function CISPage() {
               <Image
                 src="/cis/3.png"
                 alt="Student Rehma"
-                width={500}
+                width={350}
                 height={400}
-                className="w-full max-w-md rounded-lg shadow-md object-cover"
+                className="rounded-lg object-contain"
               />
             </div>
           </div>
@@ -198,21 +204,21 @@ export default function CISPage() {
               <Image
                 src="/cis/4.png"
                 alt="Student Aravind"
-                width={500}
+                width={350}
                 height={400}
-                className="w-full max-w-md rounded-lg shadow-md object-cover"
+                className="rounded-lg object-contain"
               />
             </div>
 
             <div>
               <h2 className="text-4xl font-semibold">
                 Aravind Regu Subramanian
-                <span className="text-gray-600 text-xl ml-2">(Batch of 2019–2020)</span>
+                <span className="text-gray-500 text-xl ml-2">(Batch of 2019–2020)</span>
               </h2>
 
               <p className="text-xl mt-2">MBChB Medicine, University of Aberdeen, UK</p>
 
-              <p className="mt-6 text-lg italic leading-loose">
+              <p className="mt-6 text-lg text-gray-600 leading-loose">
                 “Applying to Medicine in the UK is known to be tough. But coming from QMIS —
                 a CIS-accredited school — changed everything. My application carried weight,
                 my preparation stood out, and the entire process felt far smoother than I expected.”
@@ -224,7 +230,7 @@ export default function CISPage() {
             Our accreditation is transforming student outcomes:
           </h2>
 
-          <ul className="list-disc ml-6 space-y-2 text-lg">
+          <ul className="list-disc ml-6 space-y-2 text-lg text-gray-500">
             <li>Nearly 10% of our graduates now study in leading universities worldwide.</li>
             <li>
               Many receive distinct admission advantage as global institutions recognise the
@@ -236,16 +242,16 @@ export default function CISPage() {
 
       {/* ===================== HEALTH & SAFETY ===================== */}
       <section className="w-full py-20 px-6 relative">
-        <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-5 items-center">
+        <div className="relative max-w-5xl mx-auto grid md:grid-cols-2 gap-5 items-center">
           <div>
             <h2 className="text-4xl font-semibold mb-6">Health And Safety Committee</h2>
 
-            <p className="text-lg leading-loose leading-8 mb-4">
+            <p className="text-lg leading-loose text-gray-500 mb-4">
               The committee ensures safety for all through Health & Safety and Child Protection policies.
               They regularly review and upgrade safety measures.
             </p>
 
-            <p className="text-lg leading-loose leading-8">
+            <p className="text-lg text-gray-500 leading-loose ">
               We ensure physical, emotional, and social wellbeing—working with experts to provide
               child safety orientation. Health camps and safety programmes ensure wellbeing across
               classrooms, campus, and outdoor learning.
@@ -266,7 +272,7 @@ export default function CISPage() {
 
       {/* ===================== DIGITAL CITIZENSHIP ===================== */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 h-[380px] rounded-lg shadow-md overflow-hidden">
             <Image
               src="/cis/6.png"
@@ -277,8 +283,8 @@ export default function CISPage() {
             />
           </div>
 
-          <div className="md:w-1/2 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#0E1A47]">
+          <div className="md:w-1/2 space-y-6 text-gray-500">
+            <h2 className="text-3xl md:text-4xl font-semibold text-darkBlue-100">
               Digital Citizenship Committee
             </h2>
 
@@ -299,47 +305,63 @@ export default function CISPage() {
       </section>
 
       {/* ===================== GLOBAL CITIZENSHIP ===================== */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-          <div className="md:w-1/2 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#0E1A47]">
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+          {/* LEFT CONTENT */}
+          <div className="space-y-6 leading-relaxed text-gray-700">
+            <h2 className="text-3xl md:text-4xl font-semibold text-darkBlue-100">
               Global Citizenship Committee
             </h2>
 
-            <p className="leading-8">
-              At Queen Mira, we define Global Citizenship as:
-              <span className="italic font-medium">
-                "Understanding and embracing diversity to foster a peaceful, just and sustainable world."
-              </span>
+            <p>
+              At Queen Mira, we define Global citizenship as:
+              <span className="font-medium">
+                {" "}“Internationally-minded by understanding and embracing diversity in all forms and by respecting and celebrating this diversity in order to foster a peaceful, just and sustainable world”
+              </span>{" "}
+              through
             </p>
 
-            <ul className="space-y-4 leading-7">
-              <li className="flex gap-3"><span>•</span> Learning about and understanding the world we share.</li>
-              <li className="flex gap-3"><span>•</span> Showing compassion, respect and acceptance for diverse people.</li>
-              <li className="flex gap-3"><span>•</span> Taking responsibility to create sustainable global solutions.</li>
+            <ul className="space-y-3 pl-4">
+              <li className="flex gap-3">
+                <span className="text-xl leading-none">•</span>
+                Being aware of learning about and understanding the world beyond ourselves, our planet and all people with whom we share it.
+              </li>
+
+              <li className="flex gap-3">
+                <span className="text-xl leading-none">•</span>
+                Demonstrating and promoting values of compassion, respect and acceptance for all people, diverse cultures and beliefs. Embracing cultural differences and commonalities.
+              </li>
+
+              <li className="flex gap-3">
+                <span className="text-xl leading-none">•</span>
+                Taking personal responsibility and working interdependently to create local and global sustainable solutions for a more peaceful, inclusive and united world.
+              </li>
             </ul>
 
-            <p className="leading-8">
-              Our Global Citizenship Programme empowers students to engage with global issues through leadership and collaboration.
+            <p>
+              With this in mind, we have developed a unique Global Citizenship programme at QMIS which empowers learners to assume active roles to face and resolve global challenges taking proactive, personal responsibility for creating a more peaceful and sustainable world.
             </p>
 
-            <p className="leading-8">
-              Guided by CIS and UN SDGs, we integrate global citizenship across our curriculum.
+            <p>
+              Guided by the Council of International Schools and UN’s Sustainable Development Goals, we have created a framework for the Global Citizenship Programme that is linked to the curriculum as well. It gives the students a great opportunity to acquire and develop leadership experiences through meaningful collaborations.
             </p>
           </div>
 
-          <div className="md:w-1/2 h-[380px] rounded-lg shadow-md overflow-hidden">
+          {/* RIGHT IMAGE */}
+          <div className="w-full h-[420px] rounded-lg overflow-hidden shadow-md">
             <Image
               src="/cis/7.png"
               alt="Global Citizenship"
-              width={600}
-              height={380}
+              width={700}
+              height={420}
               className="w-full h-full object-cover"
+              priority
             />
           </div>
+
         </div>
       </section>
-
       {/* Modal for First Image */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">

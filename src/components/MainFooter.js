@@ -79,9 +79,9 @@ export default function MainFooter() {
             <p className="text-sm md:text-base">+91 97875 70746</p>
 
             {/* QUICK LINKS */}
-            <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-lg mt-5 text-sm md:text-base transition">
-              Quick Links
-            </button>
+            {/* <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-lg mt-5 text-sm md:text-base transition"> */}
+            {/*   Quick Links */}
+            {/* </button> */}
           </div>
         </div>
 
