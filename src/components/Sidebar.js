@@ -31,9 +31,17 @@ export default function Sidebar({ isOpen, onClose }) {
     }
 
     if (hasSubmenu) {
+      // Close active item if it's different from hovered item
+      if (activeItem && activeItem !== itemName) {
+        setActiveItem("");
+      }
       setHoverItem(itemName);
     } else {
       setHoverItem("");
+      // If hovering a non-submenu item, close any active submenu
+      if (activeItem) {
+        setActiveItem("");
+      }
     }
   };
 
@@ -52,6 +60,23 @@ export default function Sidebar({ isOpen, onClose }) {
 
   const handleSubmenuLeave = () => {
     setHoverItem("");
+  };
+
+  const handleParentClick = (itemName, hasSubmenu, route) => {
+    if (hasSubmenu) {
+      // Toggle the active item
+      if (activeItem === itemName) {
+        setActiveItem("");
+      } else {
+        setActiveItem(itemName);
+      }
+      // Close hover state when clicking
+      setHoverItem("");
+    } else {
+      // Navigate to route if no submenu
+      router.push(route);
+      onClose();
+    }
   };
 
   const menu = [
@@ -118,6 +143,7 @@ export default function Sidebar({ isOpen, onClose }) {
       name: "Holistic Education",
       route: "/holistic-education",
       submenu: [
+        { label: "Holistic Journey", route: "/holistic-education/holistic-journey" },
         { label: "Body", route: "/holistic-education/body" },
         { label: "Mind", route: "/holistic-education/mind" },
         { label: "Soul", route: "/holistic-education/soul" },
@@ -208,101 +234,100 @@ export default function Sidebar({ isOpen, onClose }) {
 
                 {/* LEFT MENU */}
                 <div ref={menuRef} className="space-y-6 text-[18px] tracking-wide col-span-1 md:pl-12">
-                  {menu.map((item) => (
-                    <div key={item.name} className="relative">
+                  {menu.map((item) => {
+                    const hasSubmenu = !!item.submenu;
+                    const isActive = activeItem === item.name;
+                    const isHovered = hoverItem === item.name;
+                    const showSubmenu = isActive || isHovered;
 
-                      {/* Parent */}
-                      <div
-                        className="group cursor-pointer flex items-center justify-between pr-4"
-                        onMouseEnter={() => handleMouseEnter(item.name, !!item.submenu)}
-                        onMouseLeave={handleMouseLeave}
-                        onClick={() => {
-                          if (item.submenu) {
-                            // On mobile, toggle the active state
-                            setActiveItem(activeItem === item.name ? "" : item.name);
-                          } else {
-                            router.push(item.route);
-                            onClose();
-                          }
-                        }}
-                      >
-                        <span
-                          className={`font-semibold transition-colors ${hoverItem === item.name || activeItem === item.name
-                            ? "text-red-600"
-                            : "text-[#1a2752]"
-                            }`}
+                    return (
+                      <div key={item.name} className="relative">
+
+                        {/* Parent */}
+                        <div
+                          className="group cursor-pointer flex items-center justify-between pr-4"
+                          onMouseEnter={() => handleMouseEnter(item.name, hasSubmenu)}
+                          onMouseLeave={handleMouseLeave}
+                          onClick={() => handleParentClick(item.name, hasSubmenu, item.route)}
                         >
-                          {item.name}
-                        </span>
-
-                        {item.submenu && (
                           <span
-                            className={`ml-2 transition-colors ${hoverItem === item.name || activeItem === item.name
+                            className={`font-semibold transition-colors ${showSubmenu
                               ? "text-red-600"
                               : "text-[#1a2752]"
                               }`}
                           >
-                            ›
+                            {item.name}
                           </span>
-                        )}
+
+                          {hasSubmenu && (
+                            <span
+                              className={`ml-2 transition-colors ${showSubmenu
+                                ? "text-red-600"
+                                : "text-[#1a2752]"
+                                }`}
+                            >
+                              ›
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Mobile Submenu */}
+                        <AnimatePresence>
+                          {isActive && hasSubmenu && (
+                            <motion.div
+                              className="md:hidden pl-4 mt-2 space-y-2 text-[#1a2752]"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              {item.submenu.map((sub) => (
+                                <div
+                                  key={sub.label}
+                                  onClick={() => {
+                                    router.push(sub.route);
+                                    onClose();
+                                  }}
+                                  className="cursor-pointer hover:text-red-600 transition-colors"
+                                >
+                                  {sub.label}
+                                </div>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+
+                        {/* Desktop Submenu */}
+                        <AnimatePresence>
+                          {showSubmenu && hasSubmenu && (
+                            <motion.div
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              exit={{ opacity: 0, x: -20 }}
+                              transition={{ duration: 0.2 }}
+                              onMouseEnter={handleSubmenuEnter}
+                              onMouseLeave={handleSubmenuLeave}
+                              className="hidden md:block absolute left-full top-0 ml-10 pl-8 border-l border-gray-300 space-y-3 text-[#1a2752] w-64"
+                            >
+                              {item.submenu.map((sub) => (
+                                <div
+                                  key={sub.label}
+                                  onClick={() => {
+                                    router.push(sub.route);
+                                    onClose();
+                                  }}
+                                  className="cursor-pointer hover:text-red-600 whitespace-nowrap transition-colors"
+                                >
+                                  {sub.label}
+                                </div>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+
                       </div>
-
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>
-                        {activeItem === item.name && item.submenu && (
-                          <motion.div
-                            className="md:hidden pl-4 mt-2 space-y-2 text-[#1a2752]"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            {item.submenu.map((sub) => (
-                              <div
-                                key={sub.label}
-                                onClick={() => {
-                                  router.push(sub.route);
-                                  onClose();
-                                }}
-                                className="cursor-pointer hover:text-red-600 transition-colors"
-                              >
-                                {sub.label}
-                              </div>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-
-                      {/* Desktop Submenu */}
-                      <AnimatePresence>
-                        {hoverItem === item.name && item.submenu && (
-                          <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -20 }}
-                            transition={{ duration: 0.2 }}
-                            onMouseEnter={handleSubmenuEnter}
-                            onMouseLeave={handleSubmenuLeave}
-                            className="hidden md:block absolute left-full top-0 ml-10 pl-8 border-l border-gray-300 space-y-3 text-[#1a2752] w-64"
-                          >
-                            {item.submenu.map((sub) => (
-                              <div
-                                key={sub.label}
-                                onClick={() => {
-                                  router.push(sub.route);
-                                  onClose();
-                                }}
-                                className="cursor-pointer hover:text-red-600 whitespace-nowrap transition-colors"
-                              >
-                                {sub.label}
-                              </div>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {/* Middle Spacer */}

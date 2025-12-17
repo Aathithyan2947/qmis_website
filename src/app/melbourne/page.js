@@ -1,23 +1,20 @@
+import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 
 export default function Melbourne() {
   return (
     <div className="w-full bg-white text-gray-800">
 
-      {/* ===================== HEADER ===================== */}
-      <header className="bg-[#0E1A47] py-20 flex justify-center">
-        <h1 className="text-white text-4xl font-semibold">The University of Melbourne</h1>
-      </header>
-
+      <PageHeader contentTitle={'The University of Melbourne'} />
       <div className="w-full flex justify-center mt-10">
-        <div className="bg-red-700 text-white px-8 py-6 rounded-2xl shadow-md inline-block">
+        <div className="bg-maroon-100 text-white px-8 py-6 rounded-2xl shadow-md inline-block">
           <h1 className="text-xl md:text-3xl font-semibold text-center">
             Reimagining learning with the University of Melbourne
           </h1>
         </div>
       </div>
 
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-5xl mx-auto px-6 pt-16 grid md:grid-cols-2 gap-12 items-center">
         {/* Image */}
         <div className="w-full h-80 overflow-hidden relative">
           <Image
@@ -31,20 +28,20 @@ export default function Melbourne() {
 
         {/* Text Content */}
         <div>
-          <h2 className="text-3xl font-semibold text-[#0e1b47] mb-4">
+          <h2 className="text-3xl font-semibold text-darkBlue-100 mb-4">
             Global studies show a clear skill gap
           </h2>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-500 leading-loose">
             According to the World Economic Forum (WEF), creativity ranks among the top 3 skills needed for the future, yet over 70% of schools worldwide still rely heavily on rote learning and traditional assessments.
           </p>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-5xl mx-auto px-6 py-16">
 
         {/* Bullet Points */}
-        <ul className="space-y-6 text-gray-700 leading-relaxed">
+        <ul className="space-y-3 text-gray-500 leading-loose">
           <li className="flex items-start gap-3">
             <span className="text-gray-500 text-xl">•</span>
             <span>
@@ -63,7 +60,7 @@ export default function Melbourne() {
         </ul>
 
         {/* Section Title */}
-        <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#0e1b47] mt-20 mb-12">
+        <h2 className="text-center text-3xl md:text-4xl font-semibold text-darkBlue-100 mt-14 mb-12">
           QMIS' Principal's perspective:
         </h2>
 
@@ -71,8 +68,8 @@ export default function Melbourne() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           {/* Left Text Block */}
-          <div className="text-gray-700 leading-relaxed">
-            <h3 className="font-semibold text-lg mb-4">
+          <div className="text-gray-500 leading-loose">
+            <h3 className="font-semibold text-gray-700 text-lg mb-4">
               Why QMIS chose this Future-Ready Path
             </h3>
 
@@ -98,25 +95,25 @@ export default function Melbourne() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-5xl mx-auto px-6 ">
 
         {/* Paragraphs */}
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <p className="text-gray-500 text-md leading-loose mb-6">
           Our collaboration with the University of Melbourne positions QMIS among fewer than
           60 pioneering schools worldwide transforming how student growth is measured. Only
           2 Indian Schools have collaborated with the University of Melbourne. QMIS is the
           only CBSE school in the country — to be part of this prestigious global initiative.
         </p>
 
-        <p className="text-gray-700 leading-relaxed mb-16">
+        <p className="text-gray-500 leading-loose mb-16">
           At QMIS, every activity is intentionally mapped to a structured skill framework,
           ensuring students develop these essential future skills.
         </p>
 
         {/* Two-Column Layout */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-14 items-center">
 
-          {/* Left Image */}
+          {/* LEFT IMAGE */}
           <div className="w-full h-[50vh] relative">
             <Image
               src="/melbourne/3.png"
@@ -124,49 +121,51 @@ export default function Melbourne() {
               fill
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
+              priority
             />
           </div>
 
-          {/* Right Content */}
-          <div>
-            <h2 className="text-3xl font-semibold text-[#0e1b47] mb-2">
+          {/* RIGHT CONTENT */}
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-darkBlue-100">
               Dr. Sudha Govindaswamy
             </h2>
 
-            <p className="text-gray-500 mb-6">
+            <p className="text-gray-600 text-lg">
               Associate Director for Middle Eastern Countries (CIS)
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
-              "QMIS is now under the CIS research radar for its unique ability to integrate
-              global competency-based practices within a national curriculum framework."
+            <p className="text-gray-500 leading-loose text-lg">
+              “QMIS is now under the CIS research radar for its unique ability to integrate
+              global competency-based practices within a national curriculum framework.”
+            </p>
+
+            <p className="text-gray-500 leading-loose text-lg">
+              To strengthen this work with scientific rigor and world-class expertise, we
+              chose to partner with the University of Melbourne — a global leader in
+              educational innovation.
             </p>
           </div>
+
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-20 text-gray-700">
+      <section className="max-w-5xl mx-auto px-6 py-20 text-gray-700">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
           {/* Left: Text Content */}
           <div>
-            {/* Intro Paragraph */}
-            <p className="leading-relaxed mb-8">
-              To strengthen this work with scientific rigor and world-class expertise, we chose to
-              partner with the University of Melbourne — a global leader in educational innovation.
-            </p>
-
             {/* Section Headings */}
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#0e1b47] mt-10 mb-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-darkBlue-100 mt-6">
               Why the New Metrics Program matters?
             </h2>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#0e1b47] mt-6 mb-10">
+            <h2 className="text-xl md:text-2xl font-semibold text-darkBlue-100 mt-3 mb-10">
               What This Means for Our Students?
             </h2>
 
             {/* Bullet List */}
-            <ul className="space-y-6 leading-relaxed">
+            <ul className="space-y-6 leading-loose">
               <li className="flex items-start gap-3">
                 <span className="text-gray-500 text-xl">•</span>
                 <span>
@@ -210,10 +209,10 @@ export default function Melbourne() {
           </div>
 
           {/* Right: Image */}
-          <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-md md:max-w-lg h-96 relative rounded-lg shadow-lg overflow-hidden">
+          <div className="flex justify-center items-center">
+            <div className="w-full max-w-md md:max-w-lg h-[70vh] relative rounded-lg overflow-hidden">
               <Image
-                src="/melbourne/4.png"
+                src="/melbourne/Pic 3.png"
                 alt="New Metrics Program"
                 fill
                 className="object-contain"
