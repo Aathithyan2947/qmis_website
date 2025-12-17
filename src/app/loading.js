@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
-import loadingAnimation from '../../public/loader.json';
+import loadingAnimation from '../../public/Flip_Book_Loader.json';
 
 export default function LoadingPage() {
   const [show, setShow] = useState(false);

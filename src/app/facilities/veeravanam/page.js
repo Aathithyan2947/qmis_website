@@ -36,7 +36,7 @@ export default function Veeravanam() {
       </div>
       {/* 2nd section */}
       <div className="bg-darkBlue-100 py-10 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 md:px-16 py-20">
+        <div className="max-w-5xl mx-auto px-6 md:px-16 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
             {/* Left Text Section */}
@@ -64,26 +64,29 @@ export default function Veeravanam() {
       </div>
       {/* 3rd section */}
       <section className="bg-grid-dots py-20 px-6 md:px-16 overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-          {/* Left Image */}
-          <div className="relative w-full h-[350px] md:h-[420px] rounded-xl overflow-hidden shadow-xl">
-            <Image
-              src="/facility/Veeravanam/4.png"
-              alt="Silambam Ground"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+            {/* Left Image */}
+            <div className="relative w-full h-[280px] md:h-[340px] rounded-xl overflow-hidden shadow-xl">
+              <Image
+                src="/facility/Veeravanam/4.png"
+                alt="Silambam Ground"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
 
-          {/* Right Text */}
-          <div className="text-center ">
-            <p className="text-black  text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
-              A <span className="font-bold text-2xl">Silambam ground</span>, set on a soft sand area, lets students
-              train in the traditional Tamil martial art with barefoot agility
-              enhancing balance and rooted strength.
-            </p>
+            {/* Right Text */}
+            <div className="text-center ">
+              <p className="text-black  text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
+                A <span className="font-bold text-2xl">Silambam ground</span>, set on a soft sand area, lets students
+                train in the traditional Tamil martial art with barefoot agility
+                enhancing balance and rooted strength.
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -138,73 +141,79 @@ export default function Veeravanam() {
         </div>
       </section>
       <section className="bg-maroon-100 py-20 px-6 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-          {/* Text Section */}
-          <div className="text-center md:text-left text-white order-2 md:order-1">
-            <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
-              A dedicated <span className="font-bold text-2xl">Classical Studio</span>, with Aathangudi-tiles
-              flooring and stone pillars handcrafted by local artisans, celebrates heritage as students
-              learn classical dance and Carnatic music. Athangudi tiles are a 500-year-old locally
-              made craft known for their eco-friendly, handcrafted beauty.
-            </p>
-          </div>
+            {/* Text Section */}
+            <div className="text-center md:text-left text-white order-2 md:order-1">
+              <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
+                A dedicated <span className="font-bold text-2xl">Classical Studio</span>, with Aathangudi-tiles
+                flooring and stone pillars handcrafted by local artisans, celebrates heritage as students
+                learn classical dance and Carnatic music. Athangudi tiles are a 500-year-old locally
+                made craft known for their eco-friendly, handcrafted beauty.
+              </p>
+            </div>
 
-          {/* Image Section */}
-          <div className="flex justify-center order-1 md:order-2">
-            <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/facility/Veeravanam/3.png"
-                alt="Classical Studio"
-                fill
-                className="object-cover"
-                priority
-              />
+            {/* Image Section */}
+            <div className="flex justify-center order-1 md:order-2">
+              <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/facility/Veeravanam/3.png"
+                  alt="Classical Studio"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="bg-grid-dots py-24 px-6 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-          {/* Image Section */}
-          <div className="flex justify-center order-1 md:order-1">
-            <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src="/facility/Veeravanam/7.png"
-                alt="Kung Fu training area"
-                fill
-                priority
-                className="object-cover"
-              />
+            {/* Image Section */}
+            <div className="flex justify-center order-1 md:order-1">
+              <div className="relative w-[90%] md:w-[600px] h-[300px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/facility/Veeravanam/7.png"
+                  alt="Kung Fu training area"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Text Section */}
-          <div className="text-center md:text-left text-black order-2 md:order-2 max-w-xl mx-auto md:mx-0">
-            <p className="text-md md:text-lg leading-loose font-normal">
-              In the <span className="font-bold text-2xl">Kung Fu area</span>, an elegant arch made
-              of stone and sculpted by regional artisans sets a powerful, serene tone,
-              embodying tradition and strength.
-            </p>
-          </div>
+            {/* Text Section */}
+            <div className="text-center md:text-left text-black order-2 md:order-2 max-w-xl mx-auto md:mx-0">
+              <p className="text-md md:text-lg leading-loose font-normal">
+                In the <span className="font-bold text-2xl">Kung Fu area</span>, an elegant arch made
+                of stone and sculpted by regional artisans sets a powerful, serene tone,
+                embodying tradition and strength.
+              </p>
+            </div>
 
+          </div>
         </div>
       </section>
       <section className="bg-darkBlue-100 py-20 px-6 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-          {/* Text Section */}
-          <div className="text-center md:text-left text-white order-2 md:order-1">
-            <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
-              The <span className="font-bold text-2xl">Rifle Club & NCC Wing</span>, within Veeravanam is a calm,
-              focused range where discipline meets concentration.
-            </p>
-          </div>
+            {/* Text Section */}
+            <div className="text-center md:text-left text-white order-2 md:order-1">
+              <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
+                The <span className="font-bold text-2xl">Rifle Club & NCC Wing</span>, within Veeravanam is a calm,
+                focused range where discipline meets concentration.
+              </p>
+            </div>
 
-          {/* Image Section */}
-          <div className="flex justify-center order-1 md:order-2">
-            <ImageCarousel images={nccCarouselImages} dotColor="#ffffff" />
+            {/* Image Section */}
+            <div className="flex justify-center order-1 md:order-2">
+              <ImageCarousel images={nccCarouselImages} dotColor="#ffffff" />
+            </div>
           </div>
         </div>
       </section>
