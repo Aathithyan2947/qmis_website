@@ -1,160 +1,149 @@
-export default function soulActivities() {
+import PageHeader from "@/components/PageHeader";
+
+export default function SoulActivities() {
   return (
     <div className="w-full bg-white">
 
-      {/* ===================== HEADER ===================== */}
-      <header className="bg-[#0E1A47] py-8 flex justify-center">
-        <h1 className="text-white text-3xl font-semibold">Soul</h1>
-      </header>
+      <PageHeader contentTitle="Soul" />
 
       {/* ===================== MAIN CONTENT ===================== */}
       <section className="w-full bg-grid-dots relative">
+        <div className="relative max-w-5xl mx-auto px-6 md:px-12 py-20">
 
-        {/* dotted background */}
-        <div className="absolute inset-0 "></div>
+          {/* ===================== TOP SECTION ===================== */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-        <div className="relative max-w-6xl mx-auto px-6 md:px-12 py-16">
+            {/* LEFT TEXT */}
+            <div>
+              <h1 className="text-4xl font-light text-darkBlue-100 mb-8">
+                Activities for the Soul
+              </h1>
 
-          {/* Title */}
-          <h1 className="text-4xl font-light text-[#0E1A47]">
-            Activities for the Soul
-          </h1>
-
-          {/* Description */}
-          <p className="mt-6 text-gray-600 max-w-3xl leading-relaxed">
-           Social-emotional learning programs can boost student academic performance by an average of 8% when implemented for a full academic year, according to a Yale study. Our school also integrates activities helping students develop essential skills like empathy, emotional wellbeing and responsible decision-making, which foster both academic success and personal growth.
-          </p>
-
-    <div className="w-full font-sans">
-
-      {/* 🔹 Top Section */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-2">
-
-          {/* Text */}
-          <p className="text-gray-700 max-w-lg leading-loose text-center md:text-left">
-            Community outreach projects through IDCA International Global Citizens Award, 
-            Kairo develop student's empathy.
-          </p>
-
-          {/* Image */}
- <div className="w-32 h-32 ">
-  <img
-    src="/soul/01.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  />
-</div>
-
-
-
-
-        </div>
-      </div>
-
-      {/* 🔴 Red Dual Column Section */}
-      <div className="bg-red-700 text-white py-14 px-6">
-        <div className="container mx-auto">
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 relative">
-
-            {/* Left Column */}
-            <div className="flex flex-col items-center md:items-center text-center">
-              <p className="max-w-xs mb-6">
-                Sibling Care creates a space of belongingness
+              <p className="text-gray-600 leading-loose max-w-xl">
+                Social-emotional learning programs can boost student academic
+                performance by an average of 8% when implemented for a full
+                academic year, according to a Yale study. Our school also
+                integrates activities helping students develop essential skills
+                like empathy, emotional wellbeing and responsible
+                decision-making, which foster both academic success and personal
+                growth.
               </p>
-              <div className="w-[150px] h-[130px] rounded">
-  <img
-    src="/soul/1.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  />
-</div>
+
+              <p className="mt-12 text-gray-600 leading-loose max-w-md text-center md:text-left">
+                ‘Community outreach projects through IGCA International Global
+                Citizens Award, Kairo develop student’s empathy’
+              </p>
             </div>
 
-            {/* Divider Line (only on desktop) */}
-            <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-white/50"></div>
-
-            {/* Right Column */}
-            <div className="flex flex-col items-center md:items-center text-center">
-              <p className="max-w-xs mb-6">
-                Aayulu, a life skill game with a transformative approach to life education
-              </p>
-              <div className="w-[150px] h-[130px] rounded"> <img
-    src="/soul/2.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  /></div>
+            {/* RIGHT IMAGE */}
+            <div className="flex justify-center md:justify-end">
+              <img
+                src="/soul/01.png"
+                alt="Activities"
+                className="w-[340px] h-auto object-cover"
+              />
             </div>
 
           </div>
+
         </div>
-      </div>
 
-      {/* 🔵 Skills & Values Section */}
-      <div className="py-14">
-        <div className="container mx-auto px-6">
+        {/* ===================== RED DUAL COLUMN ===================== */}
+        <div className="bg-maroon-100 text-white py-20">
+          <div className="max-w-5xl mx-auto px-6">
 
-          {/* Section Title */}
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 relative">
+
+              {/* LEFT */}
+              <div className="text-center">
+                <p className="leading-loose mb-8">
+                  Sibling Care creates a space of belongingness
+                </p>
+                <img
+                  src="/soul/1.png"
+                  alt="Sibling Care"
+                  className="mx-auto w-[350px] h-auto"
+                />
+              </div>
+
+              {/* DIVIDER */}
+              <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-white/50" />
+
+              {/* RIGHT */}
+              <div className="text-center">
+                <p className="leading-loose mb-2">
+                  Aayulu, a life skill game with a transformative approach to
+                  life education
+                </p>
+                <img
+                  src="/soul/2.png"
+                  alt="Aayulu"
+                  className="mx-auto w-[350px] h-auto"
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* ===================== SKILLS & VALUES ===================== */}
+        <div className="max-w-5xl mx-auto px-6 py-20">
+
+          <h2 className="text-3xl font-light text-[#0E1A47] mb-16">
             Skills and values Mapping
           </h2>
 
-          {/* Left Image + Right Text */}
-          <div className="flex flex-col md:flex-row items-start justify-between gap-10">
-            <div className="w-[260px] h-[230px]  rounded">
-               <img
-    src="/soul/5.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  />
-            </div>
+          {/* ROW 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
 
-            <div className="md:max-w-lg">
-              <h3 className="text-xl font-semibold mb-2">Sibling Care</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Sibling Care is a nurturing experience where older students learn 
-                to guide and support younger peers.
+            <img
+              src="/soul/5.png"
+              alt="Group activity"
+              className="w-full"
+            />
+
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Sibling Care</h3>
+              <p className="text-gray-600 leading-loose max-w-md">
+                Sibling Care is a nurturing experience where older students
+                learn to guide and support younger peers.
               </p>
             </div>
+
           </div>
 
-          {/* Skills It Develops + Right Image */}
-          <div className="flex flex-col md:flex-row items-start justify-between mt-14 gap-10">
+          {/* ROW 2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-            <div className="max-w-sm">
-              <h3 className="text-lg font-semibold mb-3">Skills it develops</h3>
-              <p className="text-gray-600">
-                Interpersonal skills, patience, counselling, communication, 
+            <div>
+              <h3 className="text-xl font-semibold mb-4">
+                Skills it develops
+              </h3>
+              <p className="text-gray-600 leading-loose max-w-md">
+                Interpersonal skills, patience, counselling, communication,
                 emotional intelligence.
               </p>
             </div>
 
-            <div className="w-[260px] h-[200px] rounded"> <div className="w-[260px] h-[230px]  rounded">
-               <img
-    src="/soul/4.png"
-    alt="Card image"
-    className="w-full h-full object-contain"
-  />
-            </div>
-</div>
+            <img
+              src="/soul/4.png"
+              alt="Skills"
+              className="w-full "
+            />
 
           </div>
         </div>
-      </div>
 
-    </div>
-  <div className="flex justify-center items-center">
-  <img 
-    src="/endpage.png"
-    alt="Centered"
-    className="w-[500px] h-auto"
-  />
-</div>
-
+        {/* ===================== QUOTE / UNIQUENESS ===================== */}
+        <div className="flex px-2 justify-center py-5">
+          <img
+            src="/endpage.png"
+            alt="Uniqueness"
+            className="w-[720px] h-auto"
+          />
         </div>
-      </section>
 
+      </section>
     </div>
   );
 }
