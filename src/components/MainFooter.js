@@ -89,11 +89,17 @@ export default function MainFooter() {
         <div className="w-full border-t border-white/20 mt-10 pt-4"></div>
 
         {/* BOTTOM SECTION */}
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center text-center text-xs md:text-sm opacity-80">
-          <p>© Queen Mira International School. All Right Reserved</p>
-          <p className="mt-2 md:mt-0">
-            Powered By{" "}
-            <span className="text-blue-400">Sanjay & team</span>
+        <div className="max-w-[1400px] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-center text-xs md:text-sm text-white/80">
+          <p>
+            © {new Date().getFullYear()} Queen Mira International School.
+            <span className="ml-1">All rights reserved.</span>
+          </p>
+
+          <p className="flex flex-wrap items-center justify-center gap-1">
+            <span>Powered by</span>
+            <span className="text-blue-400 font-medium">Bumblebee</span>
+            <span>in association with</span>
+            <span className="text-blue-400 font-medium">Sanjay &amp; Team</span>
           </p>
         </div>
       </footer>

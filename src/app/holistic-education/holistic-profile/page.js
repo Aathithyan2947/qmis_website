@@ -94,7 +94,7 @@ export default function profile() {
           character, creativity, and purpose.
         </p>
 
-        <div className="grid gap-10 md:gap-10 ">
+        <div className="grid gap-10 max-w-5xl mx-auto md:gap-10 ">
           {sections.map(({ title, icon: Icon, items }, idx) => (
             <div
               key={idx}
