@@ -10,7 +10,7 @@ export default function MdLetter() {
       <section className="bg-grid-dots py-16 px-6 md:px-20">
         <div className="max-w-6xl mx-auto space-y-16">
 
-          <h3 className="text-center text-gray-500 max-w-3xl mx-auto">
+          <h3 className="text-left text-gray-500 max-w-4xl mx-auto">
             We are not preparing followers. We are preparing leaders—resilient,
             courageous, and thoughtful.
           </h3>
@@ -66,14 +66,14 @@ export default function MdLetter() {
             <div className="space-y-6 text-gray-500 leading-loose text-sm md:text-base">
 
               <p>
-                Selecting a school is one of the most defining decisions you will
-                make for your child's future. At QMIS, we help you make this
-                choice with clarity and confidence.
-              </p>
-
-              <p>
-                Every child has a personal Ikigai—a deeper purpose that must be
-                discovered, nurtured, and guided.
+                For many years, the Indian education system-shaped by ancient
+practices was holistic, replaced later with the British
+rote-learning model-which left little room for individuality,
+curiosity, or questioning. At QMIS, we believe that every child
+is unique, with a personal Ikigai-a deeper purpose that needs
+to be discovered, nurtured, and guided. Here our focus is on
+identifying each child's strengths, challenges, aspirations,
+and rhythm of learning.
               </p>
             </div>
 

@@ -112,16 +112,17 @@ export default function BoardMembers() {
 
       {/* TOP SECTION - KEPT SAME */}
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 px-6 md:px-10 py-8 md:py-12 max-w-7xl mx-auto">
-        <div className="relative w-full h-[400px] md:h-[500px]">
-          <Image
-            src="/grp_bm.JPG"
-            alt="Group Image"
-            fill
-            className="object-cover rounded-lg"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-          />
-        </div>
+       <div className="relative w-full h-[250px] md:h-[300px]">
+  <Image
+    src="/bg_image.JPG"
+    alt="Group Image"
+    fill
+    className="object-cover rounded-lg"
+    sizes="(max-width: 768px) 100vw, 50vw"
+    priority
+  />
+</div>
+
 
         <div className="space-y-4">
           <p className="text-gray-500 leading-loose text-base md:text-lg">

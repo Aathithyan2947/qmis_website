@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Promises() {
   return (
     <div>
-      <PageHeader contentTitle={'promises'} />
+      <PageHeader contentTitle={'Promises'} />
       {/* ================= SECTION 1 ================= */}
       <section className="bg-grid-dots py-20 px-6 md:px-20">
         <div className="max-w-4xl mx-auto">
@@ -115,9 +115,9 @@ export default function Promises() {
         </div>
 
         {/* BOTTOM NOTE */}
-        <p className="text-center text-gray-600 text-base max-w-4xl mx-auto">
+        <p className="text-left text-gray-600 text-base max-w-3xl mx-auto">
           This is <span className="font-semibold">our open challenge</span> —
-          because we believe in our philosophy and our children that strongly
+          because we believe in our philosophy and our children that strongly.
         </p>
 
       </section>

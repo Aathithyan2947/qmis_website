@@ -121,7 +121,7 @@ export default function LeadershipTeam() {
                 Josephine Anne Sheebha Aruldass
               </h2>
               <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Joint Director | Admin
+   Joint Director - Admin
 </p>
               <p className="text-gray-500 leading-loose text-[16.7px] mb-4">
                 One thing that is most valued in QMIS is the strong "TEAM". Journey of prestigious Council of International School (CIS) Accreditation process has chiseled us through the years and has brought the present glory of being the first ever CBSE school to be Accredited by CIS. This achievement was possible because of the inspirational leadership and the conviction of the employees.
@@ -151,7 +151,7 @@ export default function LeadershipTeam() {
                 Ashrafa Siddika Akbar Ali
               </h2>
 <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Joint Director | Audit
+   Joint Director - Audit
 </p>
               <p className="text-gray-500 leading-loose text-[16.7px]">
                 Our holistic educational approach ensures strong academics, character development, and global exposure—shaping confident, future-ready learners.
