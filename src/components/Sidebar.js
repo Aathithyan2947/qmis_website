@@ -7,6 +7,9 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Particles from "@/components/Particles";
 
+const APPLY_NOW_URL =
+  "https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw";
+
 export default function Sidebar({ isOpen, onClose }) {
   const router = useRouter();
   const [hoverItem, setHoverItem] = useState("");
@@ -62,7 +65,7 @@ export default function Sidebar({ isOpen, onClose }) {
     setHoverItem("");
   };
 
-  const handleParentClick = (itemName, hasSubmenu, route) => {
+  const handleParentClick = (itemName, hasSubmenu, route, externalUrl) => {
     if (hasSubmenu) {
       // Toggle the active item
       if (activeItem === itemName) {
@@ -73,8 +76,14 @@ export default function Sidebar({ isOpen, onClose }) {
       // Close hover state when clicking
       setHoverItem("");
     } else {
-      // Navigate to route if no submenu
-      router.push(route);
+      // Check if it has an external URL
+      if (externalUrl) {
+        // Open external URL in new tab
+        window.open(externalUrl, "_blank", "noopener,noreferrer");
+      } else {
+        // Navigate to internal route
+        router.push(route);
+      }
       onClose();
     }
   };
@@ -153,7 +162,11 @@ export default function Sidebar({ isOpen, onClose }) {
     { name: "Holistic Achievers", route: "/holistic-achievers" },
     { name: "CIS", route: "/cis" },
     { name: "MelBourne", route: "/melbourne" },
-    { name: "Admissions", route: "/admissions" },
+    {
+      name: "Admissions",
+      route: "#",
+      externalUrl: APPLY_NOW_URL
+    },
     { name: "After School Activities", route: "/after-school-activities" },
     { name: "Clubs & Activities", route: "/clubs-and-activities" },
     {
@@ -248,7 +261,7 @@ export default function Sidebar({ isOpen, onClose }) {
                           className="group cursor-pointer flex items-center justify-between pr-4"
                           onMouseEnter={() => handleMouseEnter(item.name, hasSubmenu)}
                           onMouseLeave={handleMouseLeave}
-                          onClick={() => handleParentClick(item.name, hasSubmenu, item.route)}
+                          onClick={() => handleParentClick(item.name, hasSubmenu, item.route, item.externalUrl)}
                         >
                           <span
                             className={`font-semibold transition-colors ${showSubmenu
@@ -359,37 +372,36 @@ export default function Sidebar({ isOpen, onClose }) {
                   <h3 className="text-red-600 font-bold mb-4">CONNECT</h3>
 
                   <div className="flex gap-6 mb-10">
-  <a
-    href="https://www.youtube.com/c/QueenMiraInternationalSchool"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <IconCircle>
-      <Youtube />
-    </IconCircle>
-  </a>
+                    <a
+                      href="https://www.youtube.com/c/QueenMiraInternationalSchool"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <IconCircle>
+                        <Youtube />
+                      </IconCircle>
+                    </a>
 
-  <a
-    href="https://www.instagram.com/qmiscis/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <IconCircle>
-      <Instagram />
-    </IconCircle>
-  </a>
+                    <a
+                      href="https://www.instagram.com/qmiscis/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <IconCircle>
+                        <Instagram />
+                      </IconCircle>
+                    </a>
 
-  <a
-    href="https://www.facebook.com/qmiscis?rdid=KRhgDIdBJb8gUanf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TcQJn8oi%2F#"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <IconCircle>
-      <Facebook />
-    </IconCircle>
-  </a>
-</div>
-
+                    <a
+                      href="https://www.facebook.com/qmiscis?rdid=KRhgDIdBJb8gUanf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TcQJn8oi%2F#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <IconCircle>
+                        <Facebook />
+                      </IconCircle>
+                    </a>
+                  </div>
 
                   <Image
                     src="/Blue_Happy Schooling.png"
