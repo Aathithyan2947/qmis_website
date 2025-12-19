@@ -447,7 +447,7 @@ export default function Home() {
       {/* Fixed Mobile Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 hidden md:flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:p-12 max-h-[90vh] overflow-y-auto">
+          <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:pt-12 md:pb-6 md:px-10 max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
@@ -606,7 +606,7 @@ export default function Home() {
         className="bg-[#B62020] text-white py-12 md:py-16 px-4 md:px-20 overflow-hidden"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
             Curriculum
           </h2>
 

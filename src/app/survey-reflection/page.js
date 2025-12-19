@@ -2,42 +2,41 @@
 
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
-import HTMLFlipBook from 'react-pageflip';
+import HTMLFlipBook from "react-pageflip";
 
-export default function SurvayReflection() {
+export default function SurveyReflection() {
   return (
     <div>
-      <PageHeader contentTitle={"Survey Reflection"} />
+      <PageHeader contentTitle="Survey Reflection" />
 
-      {/* Center the flipbook */}
       <div className="flex justify-center items-center py-10">
         <HTMLFlipBook
           width={400}
           height={600}
           size="fixed"
-          maxShadowOpacity={0.5}
-          showCover={true}
-          drawShadow={true}
+          maxShadowOpacity={0.2}
+          drawShadow={false}
+          showCover
         >
-
           {/* Front Cover */}
-          <div className="bg-transparent flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <Image
               src="/books/front_cover.png"
               width={400}
               height={600}
               alt="Front Cover"
-              className="object-contain"
+              priority
             />
           </div>
 
-          {/* Pages 1–10 */}
+          {/* Pages */}
           {Array.from({ length: 10 }, (_, i) => (
-            <div key={i} className="bg-transparent flex justify-center items-center">
-              <Image
+            <div key={i} className="flex justify-center items-center">
+              <img
                 src={`/books/${i + 1}.png`}
                 width={400}
                 height={600}
+                loading={i < 2 ? "eager" : "lazy"}
                 alt={`Page ${i + 1}`}
                 className="object-contain"
               />
@@ -45,16 +44,14 @@ export default function SurvayReflection() {
           ))}
 
           {/* End Cover */}
-          <div className="bg-transparent flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <Image
               src="/books/end_cover.png"
               width={400}
               height={600}
               alt="End Cover"
-              className="object-contain"
             />
           </div>
-
         </HTMLFlipBook>
       </div>
     </div>
