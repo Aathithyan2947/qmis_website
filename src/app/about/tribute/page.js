@@ -17,7 +17,7 @@ export default function AboutTribute() {
               className="rounded-lg object-cover"
             />
             <p className="text-gray-500 py-3">
-              Peace with patience is the real way to success
+              "Peace with patience is the real way to success"
             </p>
             <p className="text-maroon-100 font-semibold">Sri Aurobindo</p>
           </div>
@@ -31,9 +31,9 @@ export default function AboutTribute() {
               className="rounded-lg object-cover"
             />
             <p className="text-gray-500 py-3">
-              Do not think of what you have been, <br />
+              "Do not think of what you have been, <br />
               think only of what you want to be and <br />
-              you are sure to progress.
+              you are sure to progress."
             </p>
             <p className="text-maroon-100 font-semibold">Mother Mira</p>
           </div>

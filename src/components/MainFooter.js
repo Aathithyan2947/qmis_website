@@ -60,16 +60,34 @@ export default function MainFooter() {
 
             {/* Social Icons */}
             <div className="flex justify-center md:justify-start gap-5 mb-5">
-              <div className="bg-white/10 rounded-full p-3 hover:bg-white/20 transition cursor-pointer">
-                <Facebook className="w-6 h-6" />
-              </div>
-              <div className="bg-white/10 rounded-full p-3 hover:bg-white/20 transition cursor-pointer">
-                <Instagram className="w-6 h-6" />
-              </div>
-              <div className="bg-white/10 rounded-full p-3 hover:bg-white/20 transition cursor-pointer">
-                <Youtube className="w-6 h-6" />
-              </div>
-            </div>
+  <a
+    href="https://www.facebook.com/qmiscis?rdid=KRhgDIdBJb8gUanf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TcQJn8oi%2F#"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white/10 rounded-full p-3 hover:bg-white/20 transition cursor-pointer"
+  >
+    <Facebook className="w-6 h-6" />
+  </a>
+
+  <a
+    href="https://www.instagram.com/qmiscis/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white/10 rounded-full p-3 hover:bg-white/20 transition cursor-pointer"
+  >
+    <Instagram className="w-6 h-6" />
+  </a>
+
+  <a
+    href="https://www.youtube.com/c/QueenMiraInternationalSchool"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white/10 rounded-full p-3 hover:bg-white/20 transition cursor-pointer"
+  >
+    <Youtube className="w-6 h-6" />
+  </a>
+</div>
+
 
             {/* CONTACT NUMBERS */}
             <h3 className="text-red-500 text-xl font-semibold mb-3">

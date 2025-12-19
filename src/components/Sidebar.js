@@ -359,10 +359,37 @@ export default function Sidebar({ isOpen, onClose }) {
                   <h3 className="text-red-600 font-bold mb-4">CONNECT</h3>
 
                   <div className="flex gap-6 mb-10">
-                    <IconCircle><Youtube /></IconCircle>
-                    <IconCircle><Instagram /></IconCircle>
-                    <IconCircle><Facebook /></IconCircle>
-                  </div>
+  <a
+    href="https://www.youtube.com/c/QueenMiraInternationalSchool"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <IconCircle>
+      <Youtube />
+    </IconCircle>
+  </a>
+
+  <a
+    href="https://www.instagram.com/qmiscis/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <IconCircle>
+      <Instagram />
+    </IconCircle>
+  </a>
+
+  <a
+    href="https://www.facebook.com/qmiscis?rdid=KRhgDIdBJb8gUanf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TcQJn8oi%2F#"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <IconCircle>
+      <Facebook />
+    </IconCircle>
+  </a>
+</div>
+
 
                   <Image
                     src="/Blue_Happy Schooling.png"

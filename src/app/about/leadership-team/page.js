@@ -30,9 +30,13 @@ export default function LeadershipTeam() {
             </div>
 
             <div className="order-2 md:order-2">
-              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-3">
-                Dr. C. Chandran
-              </h2>
+              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
+  Dr. C. Chandran
+</h2>
+<p className="text-sm text-darkBlue-100/70">
+  Chairman
+</p>
+
 
               <p className="text-gray-500 leading-loose text-[16.7px]">
                 As an academician, I have always felt that education should be holistic and students should possess the ability to handle challenging situations in global ecosystem. I can confidently state that every student of QMIS will be a change maker. Noble values are inculcated in the young minds. Measures taken for the physical, mental and emotional wellness of students and staff have profound impact on their productivity. At QMIS, the Team is always ready to adapt to the change and has swiftly made the transformation from time to time. The prestigious accreditation from the Council of International Schools (CIS) is a result of the exemplary contribution of our staff, students and parents.
