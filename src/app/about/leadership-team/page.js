@@ -59,7 +59,7 @@ export default function LeadershipTeam() {
             </div>
 
             <div className="order-2 md:order-1">
-              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-3">
+              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
                 Abinath Chandran
               </h2>
               <p className="text-sm mb-4 font-bold text-darkBlue-100">
@@ -86,11 +86,11 @@ export default function LeadershipTeam() {
             </div>
 
             <div className="order-2 md:order-2">
-              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-3">
+              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
                 Sujatha Guptan
               </h2>
                <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Academic Director
+   Director Academics 
 </p>
               <p className="text-gray-500 leading-loose text-[16.7px] mb-4">
                 The process of the learning has no boundaries and the dignity of the men is determined by the greatness of their mind. Holding strong belief in these facts, QMIS imparts an education which focuses on building great minds and operates with the motto of more & beyond. We allow the children to grow in a progressive environment, where their interests and learning are taken more & beyond the walls of the classroom and syllabus. While academic excellence is our major thrust, the school is also devoted to prepare the students for life, groom them to face the challenges of tomorrow and encourage them to be socially relevant.
@@ -117,11 +117,11 @@ export default function LeadershipTeam() {
             </div>
 
             <div className="order-2 md:order-1">
-              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-3">
+              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
                 Josephine Anne Sheebha Aruldass
               </h2>
               <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Joind Director / Admin
+   Joint Director | Admin
 </p>
               <p className="text-gray-500 leading-loose text-[16.7px] mb-4">
                 One thing that is most valued in QMIS is the strong "TEAM". Journey of prestigious Council of International School (CIS) Accreditation process has chiseled us through the years and has brought the present glory of being the first ever CBSE school to be Accredited by CIS. This achievement was possible because of the inspirational leadership and the conviction of the employees.
@@ -147,11 +147,11 @@ export default function LeadershipTeam() {
             </div>
 
             <div className="order-2 md:order-2">
-              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-3">
+              <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
                 Ashrafa Siddika Akbar Ali
               </h2>
 <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Joind Director / Audit
+   Joint Director | Audit
 </p>
               <p className="text-gray-500 leading-loose text-[16.7px]">
                 Our holistic educational approach ensures strong academics, character development, and global exposure—shaping confident, future-ready learners.

@@ -34,8 +34,8 @@ const boardMembers = [
     img: "/4_bm.jpg",
     name: "MS. JENNI THOMPSON",
     desc: [
-      "Early Childhood Expert, Australia Former",
-      "School Support and Evaluation Officer,",
+      "Early Childhood Expert, Australia ",
+      "Former School Support and Evaluation Officer,",
       "Council of International Schools, Leiden,",
       "Netherlands",
     ],
