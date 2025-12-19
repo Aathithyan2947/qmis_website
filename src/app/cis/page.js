@@ -118,8 +118,7 @@ export default function CISPage() {
           </h2>
 
           <p className="text-lg leading leading-loose mb-8">
-            Recognized in Leiden, Netherlands as a model school, QMIS continues to influence
-            international best practices — even prompting CIS to introduce Tamil as a survey language.
+            Recognized in Leiden, Netherlands as a model school, QMIS continues to influence international best practices — prompting CIS to introduce Tamil as one of their survey language in its portal and succeeded in its efforts.
           </p>
 
           <p className="text-lg leading-loose ">

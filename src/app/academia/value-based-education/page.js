@@ -49,7 +49,7 @@ export default function ValueBasedEducation() {
 
             {/* Right Text */}
             <div className="text-center text-gray-500 leading-loose text-lg px-4">
-              Values education is integrated through structured practices such as
+              Value education is integrated through structured practices such as
               Circle Time, promoting reflection and character development.
             </div>
 

@@ -9,7 +9,8 @@ const journeyData = [
     year: "2010",
     title: "The Beginning of a Vision",
     description:
-      "Establishment of Queen Mira International School. A dream takes root — nurturing minds, shaping futures.",
+      "Establishment of Queen Mira International School.",
+      des:"A dream takes root — nurturing minds, shaping futures",
     image: "/journey-of-qmis/1.png",
     position: "bottom",
   },
@@ -41,8 +42,8 @@ const journeyData = [
     year: "2022",
     title: "A Step Towards Fitness",
     description:
-      "BFIT program introduced — first school to introduce daily fitness as holistic education.",
-    image: "/journey-of-qmis/5.png",
+      "BFIT program — first school to introduce daily fitness as holistic education.",
+    image: "/journey-of-qmis/6.png",
     position: "bottom",
   },
   {
@@ -50,14 +51,14 @@ const journeyData = [
     title: "Marksmanship & Leadership",
     description:
       "Inauguration of Rifle Club State Rank Achieved in Grade X & Xll cultivating precision, discipline, and academic excellence side by side. ",
-    image: "/journey-of-qmis/6.png",
+    image: "/journey-of-qmis/5.png",
     position: "top",
   },
   {
     year: "2024",
     title: "Strengthening Skills & Sports",
     description:
-      "Tie-up with Celebrate Sports Foundation and Mentored by Pullela Gopichand for badminton academy. State Achievement in Rifle Expanding horizons through sports and mentorship.",
+      "Tie-up with Celebrate Sports Foundation Mentored by Pullela Gopichand for Badminton. State Achievement in Rifle Expanding horizons through sports and mentorship.",
     image: "/journey-of-qmis/7.png",
     position: "bottom",
   },
@@ -125,6 +126,9 @@ export default function JourneyOfQMIS() {
                     </p>
                     <p className="text-gray-500 mt-3 leading-relaxed">
                       {item.description}
+                    </p>
+                    <p className="text-gray-500 leading-relaxed">
+                      {item.des}
                     </p>
                   </div>
                 </div>

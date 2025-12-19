@@ -13,9 +13,11 @@ export default function ClubsAndActivities() {
         <div className="flex justify-center bg-grid-dots p-5">
           <Image src='/clubs-activities/8.png' height={1000} width={1000} alt="image not found" />
         </div>
-
+       <div className="text-l ml-4 mt-4 text-left leading-loose text-gray-500  "><p>The clubs are instilled at QMIS to cultivate the spirit of volunteerism, and good lifelong habits, and showcase the students’ individuality. The Five distinguished clubs of QMIS give students the practical training required in daily life.</p>
+          </div>
         {/* 2nd section */}
         <section className="w-full bg-white py-16">
+           
           <div className="px-6">
 
             {/* Title */}
@@ -173,7 +175,7 @@ export default function ClubsAndActivities() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="order-2 md:order-1 space-y-6 text-gray-500 leading-loose">
               <p>
-                At a CBSE International school, learning goes beyond textbooks. Art helps students grow
+                At Queen Mira International school, learning goes beyond textbooks. Art helps students grow
                 creatively, emotionally, and intellectually, building a well-balanced and confident mind.
               </p>
 

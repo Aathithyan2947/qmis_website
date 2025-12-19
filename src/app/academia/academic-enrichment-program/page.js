@@ -163,12 +163,12 @@ export default function AcademicEnrichmentProgram() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-semibold text-gray-500">Dr. H. RABI AHAMAD</h2>
-              <p className="font-medium text-gray-600 mt-1">Ph.d (Chemistry)</p>
+              <h2 className="text-3xl font-semibold text-gray-500">MR. THIRUBUVAN</h2>
+              <p className="font-medium text-gray-600 mt-1">M.Sc., MA</p>
               <ul className="list-disc pl-5 mt-5 space-y-2 text-gray-600 leading-loose">
                 <li>Director, Kanavugal Academy PVT.Ltd</li>
                 <li>Devised Programs for NEET, JEE, NDA and CLAT — Placed 30+ Aspirants in NEET</li>
-                <li>Handled Economics, Current Affairs & Indian Polity and Governance for Civil Service Aspirants</li>
+                <li>Handled Economics, Current Affairs & Indian Politics and Governance for Civil Service Aspirants</li>
                 <li>Placed 50+ Students in NEET</li>
                 <li>Placed 80+ Students in JEE, VITEE</li>
               </ul>

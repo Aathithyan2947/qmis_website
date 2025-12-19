@@ -58,14 +58,14 @@ export default function HearFromOurTeam() {
               />
 
               {/* Overlay content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
-                <p className="text-white text-sm md:text-md leading-loose max-w-2xl">
+              <div className="absolute inset-0 flex flex-col  justify-center px-8 ">
+                <p className="text-white text-sm md:text-md leading-loose text-center max-w-2xl">
                   The team is warm and friendly. They know every child by name and their
                   specific needs and what they are capable of doing and create a truly
                   supportive environment.
                 </p>
 
-                <span className="mt-6 text-white text-sm md:text-base tracking-wide">
+                <span className="mt-6 text-right text-white mr-3 text-sm md:text-base tracking-wide">
                   – QMIS Parent
                 </span>
               </div>
@@ -173,7 +173,7 @@ export default function HearFromOurTeam() {
                 Special Educator
               </h2>
 
-              <ul className="list-disc list-inside text-md text-gray-500 leading-loose space-y-2">
+              <ul className=" list-inside text-md text-gray-500 leading-loose space-y-2">
                 <li>
                   QMIS provides an inclusive learning environment where students with special
                   needs receive individual attention.
@@ -203,11 +203,11 @@ export default function HearFromOurTeam() {
             {/* Text */}
             <div className="order-2 md:order-1 space-y-4">
               <h2 className="text-2xl font-semibold text-darkBlue-100">
-                Counsellor
+                Counselor
               </h2>
 
               <p className="text-base text-gray-500 leading-loose">
-                What's unique about my journey is that my career as a counsellor began
+                What's unique about my journey is that my career as a counselor began
                 later in life, but it's been incredibly fulfilling. I've discovered that
                 it's never too late to pursue your passion, and I'm proof that with
                 dedication and hard work, you can achieve your goals and make a meaningful
@@ -232,7 +232,7 @@ export default function HearFromOurTeam() {
               <div className="relative inline-block">
                 <Image
                   src="/inclusions/hear-from-our-team/Pic_4.png"
-                  alt="Counsellor"
+                  alt="Counselor"
                   width={350}
                   height={350}
                   className="object-contain"
@@ -249,12 +249,12 @@ export default function HearFromOurTeam() {
             {/* Text */}
             <div className="order-2 md:order-2 space-y-4">
               <h2 className="text-2xl font-semibold text-darkBlue-100">
-                Counsellor
+                Counselor
               </h2>
 
               <p className="text-md text-gray-500 leading-loose">
                 People usually have unresolved issues within themselves that hinder
-                their productivity. As a counsellor I am interested in analysing such
+                their productivity. As a counselor I am interested in analysing such
                 recurrent patterns in their behaviour which will help them become
                 better versions of themselves.
               </p>

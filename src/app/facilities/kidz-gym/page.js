@@ -24,7 +24,7 @@ export default function KidzGym() {
             <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/BKVkxCQPzE0"
+                src="https://www.youtube.com/embed/fLKl8CDLz6A"
                 title="YouTube Shorts video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"

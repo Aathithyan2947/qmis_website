@@ -129,7 +129,7 @@ export default function BoardAchievements() {
             {/* Right Text */}
             <p className="text-gray-500 leading-loose text-lg max-w-[650px]">
               “As a student transitioning from Grade 9 to Grade 10, Queen Mira has
-              provided exceptional academic support. Monthly and Cumulative
+              provided exceptional academic support. Monthly and Cummulative
               Assessments deepen our understanding and prepare us effectively for
               the board exams. In Grade 10, the schedule is thoughtfully structured
               to avoid overwhelming students, while slip tests and RCTs strengthen

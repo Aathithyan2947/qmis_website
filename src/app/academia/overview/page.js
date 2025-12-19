@@ -35,7 +35,7 @@ export default function AcademicOverview() {
               QMIS upholds strong academic standards alongside a vibrant extracurricular program.
             </p>
             <p className="mb-7 text-center">
-              With no compromise on academics, the school’s consistently outstanding results reflect its
+              With no compromise on academics, the school’s consistent outstanding results reflect its
               commitment to excellence.
             </p>
             <p>
@@ -107,7 +107,7 @@ export default function AcademicOverview() {
                 Your Child's Bright Future Starts Here at QMIS!
               </h2>
               <p className="text-sm md:text-base leading-loose opacity-90">
-                As you embark on the significant journey of choosing the right school for your child, Queen Mira International School (QMIS) stands ready to be your partner in shaping your child's educational and personal growth. We understand the importance of selecting a school that aligns with your aspirations and values for your child's future.
+                As you embark on the significant journey of choosing the right school for your child, Queen Mira International School (QMIS) stands ready to be your partner in shaping your child's educational and personal growth. We understand the importance of selecting a school that aligns with your aspirations and values your child's future.
               </p>
             </div>
 
@@ -133,12 +133,7 @@ export default function AcademicOverview() {
             <h2 className="text-[28px] md:text-[36px] font-bold leading-tight mb-4">
               QMIS is not just a school. It is a way of life.
             </h2>
-            <p className="text-sm md:text-base leading-loose opacity-90 mb-4">
-              We equip our students with qualities that will help them flourish on the global platform and is useful in every aspect of their lives.
-            </p>
-            <p className="text-sm md:text-base leading-loose opacity-90">
-              This is the greatest gift you could give your child.
-            </p>
+           
           </div>
 
           {/* Icons Grid */}

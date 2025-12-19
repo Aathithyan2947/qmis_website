@@ -19,7 +19,7 @@ export default function Veeravanam() {
           <div className="flex justify-center">
             <iframe
               className="rounded-lg w-full max-w-2xl aspect-video"
-              src="https://www.youtube.com/embed/X57vnqWbzPI?si=3Bi_qahsx0RRkY_9"
+              src="https://www.youtube.com/embed/mStoFqbNRsY"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -98,7 +98,7 @@ export default function Veeravanam() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <p className="text-black text-md md:text-lg leading-relaxed font-normal">
             The <span className="font-bold text-2xl">Multi Purpose Hall</span>, designed for Karate, yoga, and martial
-            arts conditioning, provides a spacious, flexible arena for growth.
+            arts performance, provides a spacious, flexible arena for growth.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ export default function Veeravanam() {
             {/* Text Section */}
             <div className="text-center md:text-left text-white order-2 md:order-1">
               <p className="text-md md:text-lg leading-loose font-normal max-w-xl mx-auto md:mx-0">
-                A dedicated <span className="font-bold text-2xl">Classical Studio</span>, with Aathangudi-tiles
+                A dedicated <span className="font-bold text-2xl">Classical Studio</span>, with Athangudi-tiles
                 flooring and stone pillars handcrafted by local artisans, celebrates heritage as students
                 learn classical dance and Carnatic music. Athangudi tiles are a 500-year-old locally
                 made craft known for their eco-friendly, handcrafted beauty.

@@ -33,7 +33,9 @@ export default function AfterSchoolActivites() {
               {/* Red Content Box */}
               <div className="bg-[#a12a2a] text-white text-center p-8">
                 <h3 className="text-xl font-bold">
-                  Pullela Gopichand<br />Badminton Academy
+                  QMBA in collaboration with
+Celebrate Sports Foundation
+mentored by Pullela Gopichand
                 </h3>
 
                 <p className="text-sm mt-4 leading-relaxed">
@@ -89,7 +91,7 @@ export default function AfterSchoolActivites() {
 
               <div className="bg-[#a12a2a] text-white text-center p-8">
                 <h3 className="text-xl font-bold">
-                  Kids’ Gym
+                  Kidz Gym
                 </h3>
 
                 <p className="text-sm mt-4 leading-relaxed">
@@ -136,7 +138,9 @@ export default function AfterSchoolActivites() {
           {/* Right Content */}
           <div className="text-white space-y-6">
             <h3 className="text-2xl font-bold leading-snug">
-              Pullela Gopichand<br />Badminton Academy
+              Queen Mira’s Badminton Academy
+in collaboration with Celebrate Sports
+Foundation mentored by Pullela Gopichand
             </h3>
 
             <p className="font-semibold">
@@ -303,7 +307,7 @@ export default function AfterSchoolActivites() {
             </p>
 
             <p className="text-gray-500 text-md leading-loose">
-              This At QMIS, kindergarteners and students are encouraged to explore beyond Rhymes,
+              At QMIS, kindergarteners and students are encouraged to explore beyond Rhymes,
               Science, and classrooms through extra-curricular activities and sports like Skating,
               Rifle Shooting, Keyboard, Bharathanatyam, Music, Karate, Taekwondo, Yoga, Silambam,
               Swimming, Basketball, Western Dance, and more. These programs are crafted to keep the
@@ -327,7 +331,7 @@ export default function AfterSchoolActivites() {
             <div>
               <h3 className="text-xl font-bold text-red-700 mb-4">Sports</h3>
               <ul className="space-y-2 text-gray-700 text-sm">
-                <li className="list-disc ml-5">Rifle Training</li>
+                <li className="list-disc ml-5">Rifle & Pistol Training</li>
                 <li className="list-disc ml-5">Skating</li>
                 <li className="list-disc ml-5">Basketball</li>
                 <li className="list-disc ml-5">Football</li>
@@ -350,7 +354,7 @@ export default function AfterSchoolActivites() {
                 <li className="list-disc ml-5">Classical Dance</li>
                 <li className="list-disc ml-5">Western Dance</li>
                 <li className="list-disc ml-5">Carnatic Music</li>
-                <li className="list-disc ml-5">Instruments</li>
+                <li className="list-disc ml-5">Instruments - Guitar, Keyboard, Drums</li>
               </ul>
             </div>
 

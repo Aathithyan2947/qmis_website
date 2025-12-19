@@ -89,7 +89,7 @@ export default function Melbourne() {
 
         {/* Section Title */}
         <h2 className="text-center text-3xl md:text-4xl font-semibold text-darkBlue-100 mt-14 mb-12">
-          QMIS' Principal's perspective:
+          QMIS' Principal perspective
         </h2>
 
         {/* Two Column Layout */}
@@ -130,7 +130,7 @@ export default function Melbourne() {
           Our collaboration with the University of Melbourne positions QMIS among fewer than
           60 pioneering schools worldwide transforming how student growth is measured. Only
           2 Indian Schools have collaborated with the University of Melbourne. QMIS is the
-          only CBSE school in the country — to be part of this prestigious global initiative.
+          only CBSE school in the world — to be part of this prestigious global initiative.
         </p>
 
         <p className="text-gray-500 leading-loose mb-16">

@@ -56,12 +56,12 @@ export default function HealthCenter() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
           {/* Image 1 */}
           <div className="rounded-lg overflow-hidden shadow-md">
-            <img src='/facility/HealthCenter/2.png' alt="Nurse attending patient" className="w-full h-full object-cover" />
+            <img src='/facility/HealthCenter/1.jpeg' alt="Nurse attending patient" className="w-full h-full object-cover" />
           </div>
 
           {/* Image 2 */}
           <div className="rounded-lg overflow-hidden shadow-md">
-            <img src='/facility/HealthCenter/1.png' alt="Sick bay bed" className="w-full h-full object-cover" />
+            <img src='/facility/HealthCenter/2.jpeg' alt="Sick bay bed" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

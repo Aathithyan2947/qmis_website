@@ -36,7 +36,7 @@ export default function Infrastructure() {
             <div className="w-full max-w-[560px] aspect-video rounded-lg overflow-hidden shadow-md">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/-r3mlxcxo50?si=mDxh0not_j_mUGbn"
+                src="https://www.youtube.com/embed/5cbMffL8PLw"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -255,7 +255,7 @@ export default function Infrastructure() {
             <p className="text-base md:text-lg leading-relaxed">
               The Cyber Studio is our school’s computer lab – a place for students to
               dive deep into digital learning, explore emerging technologies, and build
-              strong computing skills in a supportive, well-equipped environment.
+              strong computing skills in a safe, supportive and well-equipped environment.
             </p>
           </div>
 

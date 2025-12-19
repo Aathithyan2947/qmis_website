@@ -83,7 +83,7 @@ export default function AcademicProgrammes() {
               className="rounded-lg object-contain"
             />
             <p className="text-gray-500 leading-loose text-md md:text-lg">
-              The Early Childhood Programme (Grades Pre KG1, KG2, KG3) nurtures
+              The Early Childhood Programme (Grades Pre - KG, KG1, KG2) nurtures
               curiosity through activity-based learning and engaging experiences.
             </p>
           </div>

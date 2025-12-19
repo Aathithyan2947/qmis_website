@@ -21,7 +21,7 @@ export default function Badminton() {
         <iframe
           width="660"
           height="415"
-          src="https://www.youtube.com/embed/I-PoveBb9Go?si=SG85mZIIWDkd_SFW"
+          src="https://www.youtube.com/embed/9scNRsBlUJU"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -33,20 +33,21 @@ export default function Badminton() {
       <div className="flex justify-center py-10 px-5">
         <Image src="/facility/Badminton/2.png" height={500} width={500} alt="not found" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-5 px-20 py-10">
-        <Image
-          src="/facility/Badminton/3.png"
-          height={400}
-          width={400}
-          alt="not found"
-        />
-        <Image
-          src="/facility/Badminton/4.png"
-          height={400}
-          width={400}
-          alt="not found"
-        />
-      </div>
+      <div className="flex flex-wrap justify-center gap-10 py-10">
+  <Image
+    src="/facility/Badminton/3.png"
+    height={400}
+    width={400}
+    alt="not found"
+  />
+  <Image
+    src="/facility/Badminton/4.png"
+    height={400}
+    width={400}
+    alt="not found"
+  />
+</div>
+
     </div>
   )
 }
