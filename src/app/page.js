@@ -446,19 +446,19 @@ export default function Home() {
     <>
       {/* Fixed Mobile Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 hidden md:flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:pt-12 md:pb-6 md:px-10 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+          <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:p-8 max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-1 right-1 md:top-4 md:right-4 cursor-pointer hover:scale-110 transition-all duration-200 text-white text-2xl font-bold z-10"
+              className="absolute top-1 right-1 md:top-2 md:right-2 cursor-pointer hover:scale-110 transition-all duration-200 text-white text-2xl font-bold z-10"
               aria-label="Close"
             >
-              <X size={24} className="md:w-8 md:h-8" />
+              <X size={24} className="md:w-6 md:h-6" />
             </button>
 
             <div className="rounded-xl overflow-hidden bg-[#0F1B4C]">
-              <div className="w-full h-48 md:h-80 bg-gray-400 flex items-center justify-center text-white">
+              <div className="w-full h-48 md:h-72 bg-gray-400 flex items-center justify-center text-white">
                 <Image
                   src="/home/qmisad.webp"
                   height={500}
@@ -472,7 +472,7 @@ export default function Home() {
             <div className="flex justify-center mt-4 md:mt-6">
               <button
                 onClick={handleApplyNow}
-                className="bg-maroon-100 cursor-pointer duration-200 text-white px-6 py-3 md:px-8 md:py-3 rounded-lg font-semibold transition w-full md:w-auto"
+                className="bg-maroon-100 cursor-pointer duration-200 text-white px-6 py-2 md:px-8 rounded-lg font-semibold transition w-full md:w-auto"
               >
                 Apply Now
               </button>
