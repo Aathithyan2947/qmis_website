@@ -348,8 +348,8 @@ export default function Sidebar({ isOpen, onClose }) {
                     <a href="tel:+919655777000" className="text-blue-600 block hover:underline">
                       +91 96557 77000
                     </a>
-                    <a href="tel:+919787570746" className="text-blue-600 block hover:underline">
-                      +91 97875 70746
+                    <a href="tel:+919677715429" className="text-blue-600 block hover:underline">
+                      +91 96777 15429
                     </a>
                     <a href="mailto:contact@queenmira.com" className="text-blue-600 block hover:underline">
                       contact@queenmira.com
