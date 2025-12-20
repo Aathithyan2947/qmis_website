@@ -28,7 +28,7 @@ export default function HomePage() {
             <span className="text-[#1B2A5B] hidden md:block">
               Admission process
             </span>
-            <button className="bg-red-600 hover:bg-red-700 transition text-white px-5 py-2 rounded-sm font-medium">
+            <button className="bg-red-800 hover:bg-red-800 transition text-white px-5 py-2 rounded-sm font-medium">
               Apply Now
             </button>
           </div>
