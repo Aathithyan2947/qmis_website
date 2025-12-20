@@ -17,7 +17,7 @@ export default function BodyActivities() {
           {/* Title */}
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-16">
             <div className=" col-span-2">
-              <h1 className="text-4xl font-light text-[#0E1A47]">
+              <h1 className="text-4xl font-bold text-[#0E1A47]">
                 Activities for the Body
               </h1>
 
@@ -34,9 +34,9 @@ export default function BodyActivities() {
             </div>
           </div>
           {/* B-Fit */}
-          <h2 className="mt-10 text-2xl px-2 font-semibold text-[#B82025]">B-Fit</h2>
+          <h2 className="mt-10 text-2xl font-semibold text-[#B82025]">B-Fit</h2>
 
-          <p className="mt-2 text-gray-500 font-medium">
+          <p className="mt-2 text-gray-500 ">
             Everyday B-fit classes using an exclusive curriculum.
           </p>
 
@@ -65,7 +65,7 @@ export default function BodyActivities() {
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-semibold text-[#B82025]">Activities</h2>
 
-              <p className="mt-2 text-gray-500 font-medium">
+              <p className="mt-2 text-gray-500 ">
                 After school activities foster mastery by building confidence in a supportive environment.
               </p>
 
@@ -94,9 +94,9 @@ export default function BodyActivities() {
           {/* Aadukalam Section */}
           <section className="bg-darkBlue-100 text-white py-12 px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-semibold">Aadukalam</h2>
+              <h2 className="text-2xl font-bold">Aadukalam</h2>
 
-              <p className="mt-2 text-white font-medium">
+              <p className="mt-2 text-white ">
                 The Annual Athletic Meet is a fun-filled day where students showcase their talents and skills.
               </p>
 
@@ -127,7 +127,7 @@ export default function BodyActivities() {
             <div className="max-w-5xl mx-auto px-6">
 
               {/* Section Title */}
-              <h2 className="text-4xl font-medium text-center text-[#1c1c50] mb-20">
+              <h2 className="text-4xl font-medium text-[#1c1c50] mb-20">
                 Skills and values Mapping
               </h2>
 
