@@ -40,7 +40,7 @@ export default function SportsPage() {
 
       {/* ======================= INTRO PARAGRAPH ======================= */}
       <div className="px-6 pb-20 flex justify-center">
-        <p className="text-gray-600 max-w-4xl leading-8 text-lg text-center">
+        <p className="text-gray-600 max-w-4xl leading-8 text-lg text-left">
           Sports matter because they shape us far beyond the court or field. They build discipline, strengthen resilience, sharpen focus, and teach us how to grow through pressure. When we train our body, we influence our mind; when our mind strengthens, our spirit follows. That is why sports are more than activity—they are a powerful path to becoming a complete, balanced individual.
         </p>
       </div>
@@ -49,11 +49,11 @@ export default function SportsPage() {
       <div className="bg-darkBlue-100 w-full py-24 px-6 flex justify-center">
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
 
-          <div className="bg-gray-300 w-full md:w-1/2 h-[350px] md:h-[420px] rounded-lg">
+          <div className=" w-full md:w-1/2 h-[350px] md:h-[420px] rounded-lg">
             <img
               src="/sports/1.png"
               alt="Description"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-contain rounded-lg"
             /></div>
 
           <p className="text-white text-xl md:text-2xl font-medium text-center md:text-left leading-relaxed md:w-1/2">
@@ -69,32 +69,74 @@ export default function SportsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 relative">
 
-            <div className="flex flex-col items-center px-6 text-center">
-              <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Body</h2>
-              <p className="text-gray-600 leading-loose">
-                Through training, movement, and discipline, sports build strength, stamina, coordination, and overall physical health. Every practice session pushes the body to grow stronger and more capable.
-              </p>
-            </div>
+  {/* Body */}
+  <div className="flex flex-col items-center px-6 text-center">
+    <div className="flex items-center gap-3 mb-4">
+  <Image
+    src="/sports/01.png"
+    alt="Body Icon"
+    width={64}
+    height={64}
+  />
+  <h2 className="text-3xl font-semibold text-[#0E1A47]">
+    Body
+  </h2>
+</div>
 
-            <div className="hidden md:block absolute left-1/3 top-0 bottom-0 border-r-2 border-gray-300"></div>
+    <p className="text-gray-600 text-left leading-loose">
+      Through training, movement, and discipline, sports build strength,
+      stamina, coordination, and overall physical health. Every practice
+      session pushes the body to grow stronger and more capable.
+    </p>
+  </div>
 
-            <div className="flex flex-col items-center px-6 text-center">
-              <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Mind</h2>
-              <p className="text-gray-600 leading-loose">
-                Through training, movement, and discipline, sports build strength, stamina, coordination, and overall physical health. Every practice session pushes the body to grow stronger and more capable.
-              </p>
-            </div>
+  {/* Divider */}
+  <div className="hidden md:block absolute left-1/3 top-0 bottom-0 border-r-2 border-gray-300"></div>
 
-            <div className="hidden md:block absolute left-2/3 top-0 bottom-0 border-r-2 border-gray-300"></div>
+  {/* Mind */}
+  <div className="flex flex-col items-center px-6 text-center">
+   <div className="flex items-center gap-3 mb-4">
+  <Image
+    src="/sports/02.png"
+    alt="mind Icon"
+    width={64}
+    height={64}
+  />
+  <h2 className="text-3xl font-semibold text-[#0E1A47]">
+    Mind
+  </h2>
+</div>
+    <p className="text-gray-600 text-left leading-loose">
+      Through training, movement, and discipline, sports build strength,
+      stamina, coordination, and overall physical health. Every practice
+      session pushes the body to grow stronger and more capable.
+    </p>
+  </div>
 
-            <div className="flex flex-col items-center px-6 text-center">
-              <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Soul</h2>
-              <p className="text-gray-600 leading-loose">
-                At the soul level, sports ignite passion, purpose, and joy. The thrill of improvement, the spirit of teamwork, and the drive to compete connect athletes deeply to their inner motivation and identity.
-              </p>
-            </div>
+  {/* Divider */}
+  <div className="hidden md:block absolute left-2/3 top-0 bottom-0 border-r-2 border-gray-300"></div>
 
-          </div>
+  {/* Soul */}
+  <div className="flex flex-col items-center px-6 text-center">
+    <div className="flex items-center gap-3 mb-4">
+  <Image
+    src="/sports/03.png"
+    alt="mind Icon"
+    width={64}
+    height={64}
+  />
+  <h2 className="text-3xl font-semibold text-[#0E1A47]">
+    Soul
+  </h2>
+</div>
+    <p className="text-gray-600 text-left leading-loose">
+      At the soul level, sports ignite passion, purpose, and joy. The thrill
+      of improvement, the spirit of teamwork, and the drive to compete connect
+      athletes deeply to their inner motivation and identity.
+    </p>
+  </div>
+
+</div>
 
           <div className="flex flex-col md:flex-row items-start gap-10 mt-16">
             <div className="flex-1">

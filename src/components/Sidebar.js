@@ -177,7 +177,7 @@ export default function Sidebar({ isOpen, onClose }) {
         { label: "Career @QMIS", route: "/careers/career-at-qmis" },
       ],
     },
-    { name: "Alumini", route: "/alumini" },
+    { name: "Alumni", route: "/alumini" },
     {
       name: "Educational Resources",
       route: "/educational-resources",
