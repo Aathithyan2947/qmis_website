@@ -95,11 +95,11 @@ export default function SocialOutreach() {
       {/* ================= ISRO ================= */}
       <section className='w-full py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-6 text-center md:px-12'>
-          <h2 className='text-3xl md:text-4xl font-bold text-blue-900 mb-6'>
+          <h2 className='text-3xl text-left md:text-4xl font-bold text-blue-900 mb-6'>
             Visit to Indian Space Research Organisation
           </h2>
 
-          <p className='text-gray-700 leading-loose text-justify max-w-4xl mx-auto mb-12'>
+          <p className='text-gray-700 text-left leading-loose text-justify max-w-6xl mx-auto mb-12'>
             At QMIS, giving back to the community means inspiring curiosity and
             aspiration — not just charity. Through our student-outreach program,
             we organised a fully funded trip for 187 underprivileged students
@@ -132,7 +132,7 @@ export default function SocialOutreach() {
               </p>
             </div>
           </div>
-          <div className='text-gray-700 mt-8 text-center leading-relaxed'>
+          <div className='text-gray-700 mt-8 text-left leading-relaxed'>
             <p>
               To honour the brilliance and dedication of India’s space heroes,
               QMIS also proudly produced an exclusive anthem dedicated to ISRO
@@ -173,12 +173,12 @@ export default function SocialOutreach() {
       {/* ================= KARKO ================= */}
       <section className='w-full py-16 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
-          <h2 className='text-3xl md:text-4xl text-center font-bold text-blue-900 mb-6'>
+          <h2 className='text-3xl md:text-4xl text-left font-bold text-blue-900 mb-6'>
             KARKO: Learning with Heart
           </h2>
 
-          <p className='max-w-4xl mx-auto text-lg  text-justify leading-relaxed text-center mb-12'>
-            QMIS partners with the Chellamuthu Trust, led by Dr. C.
+          <p className='max-w-6xl mx-auto text-lg  text-justify leading-relaxed text-left mb-12'>
+            QMIS has partnered with Chellamuthu Trust, led by Dr. C.
             Ramasubramanian, to introduce KARKO — a unique program where
             selected QMIS students collaborate with government school students
             to break learning barriers through shared experiences.
@@ -202,7 +202,7 @@ export default function SocialOutreach() {
             </p>
           </div>
 
-          <ul className='max-w-5xl mx-auto list-disc pl-6 space-y-4 text-lg'>
+          <ul className='max-w-6xl mx-auto  pl-6 space-y-4 text-lg'>
             <li>
               School–community partnerships (involving mental health experts,
               organizations, NGOs) are shown to increase student engagement by

@@ -4,7 +4,7 @@ export default function Alumni() {
   return (
     <div className="w-full bg-white bg-grid-dots text-gray-800">
 
-      <PageHeader contentTitle={'Alumini'} />
+      <PageHeader contentTitle={'Alumni'} />
       {/* ===================== SECTION 1 ===================== */}
       <div className="w-full flex justify-center px-4 md:px-10 py-16">
         <div className="max-w-4xl w-full text-center md:text-left">
@@ -23,7 +23,7 @@ export default function Alumni() {
             {/* Text */}
             <div>
               <h1 className="text-3xl font-semibold text-gray-900">
-                Siva Bhagya S. E
+                S. E Siva Bhagya 
                 <span className="block text-gray-500 text-lg mt-1">
                   (Batch of 2022–2023)
                 </span>
@@ -149,7 +149,7 @@ export default function Alumni() {
             {/* Text */}
             <div>
               <h1 className="text-3xl md:text-4xl font-semibold">
-                Dayakant Kevin Rai L
+                L. Dayakant Kevin Rai 
               </h1>
               <p className="text-lg mt-2 opacity-80">(Batch of 2018 – 19)</p>
               <p className="text-lg mt-4 font-medium">
@@ -235,9 +235,9 @@ export default function Alumni() {
               {/* Right: Text */}
               <div>
                 <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">
-                  Dr. Shrijah{" "}
+                  Dr.Shrijah{" "}
                   <span className="block md:inline text-gray-500 text-lg">
-                    (Batch of 2011–2019)
+                    (Batch of 2018–2019)
                   </span>
                 </h1>
 
@@ -288,8 +288,8 @@ export default function Alumni() {
             {/* LEFT — CONTENT (PILL OPENING RIGHT → so rounded-l-full) */}
             <div className="relative w-full md:flex-1 order-2 md:order-1">
               <div className="text-right pr-16 pb-5">
-                <h1 className="text-3xl font-light text-[#1c1c50]">
-                  Sarvesh
+                <h1 className="text-3xl  font-semibold text-gray-900">
+                  N. K. Sarvesh
                   <span className="text-base font-normal ml-1">(Entrepreneur)</span>
                 </h1>
                 <p className="text-gray-600 mt-1 text-lg">(Batch of 2018 – 19)</p>
@@ -343,7 +343,7 @@ export default function Alumni() {
               {/* Right: Text */}
               <div>
                 <h1 className="text-2xl md:text-3xl font-semibold text-gray-900">
-                  Tamil Mozhi .B
+                  B. Tamil Mozhi 
                 </h1>
                 <p className="text-gray-600 text-lg mt-2">
                   (Batch of 2017 - 2018)
