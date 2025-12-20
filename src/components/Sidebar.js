@@ -164,8 +164,7 @@ export default function Sidebar({ isOpen, onClose }) {
     { name: "MelBourne", route: "/melbourne" },
     {
       name: "Admissions",
-      route: "#",
-      externalUrl: APPLY_NOW_URL
+      route: "/admissions",
     },
     { name: "After School Activities", route: "/after-school-activities" },
     { name: "Clubs & Activities", route: "/clubs-and-activities" },
