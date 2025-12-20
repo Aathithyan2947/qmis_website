@@ -69,12 +69,28 @@ export default function SportsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0 relative">
 
+<<<<<<< Updated upstream
             <div className="flex flex-col items-center px-6 text-center">
               <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Body</h2>
               <p className="text-gray-600 leading-loose">
                 Through training, movement, and discipline, sports build strength, stamina, coordination, and overall physical health. Every practice session pushes the body to grow stronger and more capable.
               </p>
             </div>
+=======
+  {/* Body */}
+  <div className="flex flex-col items-center px-6 text-center">
+    <div className="inline-flex items-center gap-4 px-6 py-3 mb-6 bg-white border border-gray-200 rounded-full shadow-md">
+  <Image
+    src="/sports/01.png"
+    alt="Body Icon"
+    width={64}
+    height={64}
+  />
+  <h2 className="text-3xl font-semibold text-[#0E1A47]">
+    Body
+  </h2>
+</div>
+>>>>>>> Stashed changes
 
             <div className="hidden md:block absolute left-1/3 top-0 bottom-0 border-r-2 border-gray-300"></div>
 
@@ -85,7 +101,29 @@ export default function SportsPage() {
               </p>
             </div>
 
+<<<<<<< Updated upstream
             <div className="hidden md:block absolute left-2/3 top-0 bottom-0 border-r-2 border-gray-300"></div>
+=======
+  {/* Mind */}
+  <div className="flex flex-col items-center px-6 text-center">
+   <div className="inline-flex items-center gap-4 px-6 py-3 mb-6 bg-white border border-gray-200 rounded-full shadow-md">
+  <Image
+    src="/sports/02.png"
+    alt="mind Icon"
+    width={64}
+    height={64}
+  />
+  <h2 className="text-3xl font-semibold text-[#0E1A47]">
+    Mind
+  </h2>
+</div>
+    <p className="text-gray-600 text-left leading-loose">
+      Through training, movement, and discipline, sports build strength,
+      stamina, coordination, and overall physical health. Every practice
+      session pushes the body to grow stronger and more capable.
+    </p>
+  </div>
+>>>>>>> Stashed changes
 
             <div className="flex flex-col items-center px-6 text-center">
               <h2 className="text-3xl font-semibold text-[#0E1A47] mb-4">Soul</h2>
@@ -94,7 +132,32 @@ export default function SportsPage() {
               </p>
             </div>
 
+<<<<<<< Updated upstream
           </div>
+=======
+  {/* Soul */}
+  <div className="flex flex-col items-center px-6 text-center">
+   <div className="inline-flex items-center gap-4 px-6 py-3 mb-6 bg-white border border-gray-200 rounded-full shadow-md">
+  <Image
+    src="/sports/03.png"
+    alt="Soul Icon"
+    width={48}
+    height={48}
+  />
+  <h2 className="text-3xl font-semibold text-[#0E1A47]">
+    Soul
+  </h2>
+</div>
+
+    <p className="text-gray-600 text-left leading-loose">
+      At the soul level, sports ignite passion, purpose, and joy. The thrill
+      of improvement, the spirit of teamwork, and the drive to compete connect
+      athletes deeply to their inner motivation and identity.
+    </p>
+  </div>
+
+</div>
+>>>>>>> Stashed changes
 
           <div className="flex flex-col md:flex-row items-start gap-10 mt-16">
             <div className="flex-1">
@@ -166,15 +229,13 @@ export default function SportsPage() {
                 </h3>
 
                 <div className="space-y-6 text-gray-500 text-lg leading-7">
-                  <p className="flex gap-3">
-                    <span className="text-2xl leading-loose">•</span>
+                  <p className="flex gap-3"> 
                     Obesity has become the most common form of malnutrition among
                     school-aged children and adolescents worldwide, surpassing
                     underweight.
                   </p>
 
                   <p className="flex gap-3">
-                    <span className="text-2xl leading-loose">•</span>
                     The prevalence of underweight children has decreased globally,
                     but the prevalence of obesity has tripled since 2000.
                   </p>
@@ -189,8 +250,8 @@ export default function SportsPage() {
           </h3>
 
           <ul className="text-gray-500 text-lg leading-loose">
-            <li>• Obesity is linked to a higher risk of non-communicable diseases such as diabetes, cardiovascular disease, and certain cancers.`</li>
-            <li>• The economic impact of obesity is also substantial, with the global cost projected to exceed $4 trillion annually by 2035</li>
+            <li> Obesity is linked to a higher risk of non-communicable diseases such as diabetes, cardiovascular disease, and certain cancers.`</li>
+            <li> The economic impact of obesity is also substantial, with the global cost projected to exceed $4 trillion annually by 2035</li>
           </ul>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 items-center">
@@ -234,20 +295,13 @@ export default function SportsPage() {
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12">
 
           {/* CAROUSEL */}
-          <div className="w-full md:w-[35vw]">
-            <Swiper spaceBetween={20} slidesPerView={1}>
-              {images.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img
-                    src={img}
-                    onClick={() => setActiveImage(img)}
-                    className="rounded-lg cursor-pointer transition-transform hover:scale-105"
-                    alt="activity"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+           <div className="flex justify-center">
+              <img
+                src="/sports/6.png"
+                alt="Sports activity"
+                className="w-150 max-w-lg h-[320px] object-cover rounded-lg"
+              />
+            </div>
 
           {/* TEXT */}
           <div className="md:w-1/2 text-white text-lg leading-loose">

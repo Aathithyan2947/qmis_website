@@ -137,7 +137,7 @@ export default function LeadershipTeam() {
             <div className="order-1 md:order-1 w-full">
               <div className="w-full h-[400px] md:h-auto overflow-hidden">
                 <Image
-                  src="/leadership-team/Photo_5.png"
+                  src="/001.png"
                   alt="Ashrafa Siddika Akbar Ali"
                   width={600}
                   height={750}

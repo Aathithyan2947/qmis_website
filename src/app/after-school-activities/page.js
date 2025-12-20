@@ -3,8 +3,8 @@ import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 
 export default function AfterSchoolActivites() {
-  const activityImages = Array.from({ length: 11 }, (_, i) =>
-    `/after-school-activities/${i + 5}.webp`
+  const activityImages = Array.from({ length: 6 }, (_, i) =>
+    `/after-school-activities/${i + 10}.png`
   );
 
   return (
