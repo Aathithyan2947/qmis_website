@@ -446,7 +446,7 @@ export default function Home() {
     <>
       {/* Fixed Mobile Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 hidden md:flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:p-8 max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button
