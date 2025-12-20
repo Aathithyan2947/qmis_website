@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { X } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
 
 export default function SocialOutreach() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,13 +29,7 @@ export default function SocialOutreach() {
 
   return (
     <div className='w-full overflow-x-hidden'>
-      {/* ================= HEADER ================= */}
-      <header className='w-full py-20 flex justify-center bg-[#11184C]'>
-        <h1 className='text-white text-3xl md:text-4xl font-semibold'>
-          Social Outreach
-        </h1>
-      </header>
-
+      <PageHeader contentTitle={'Social Outreach'} />
       {/* ================= GLOBAL HONOUR ================= */}
       <section className='w-full py-16'>
         <div className='max-w-7xl mx-auto px-6 md:px-12'>
