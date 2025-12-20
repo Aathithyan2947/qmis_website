@@ -15,7 +15,7 @@ export default function SoulActivities() {
 
             {/* LEFT TEXT */}
             <div>
-              <h1 className="text-4xl font-light text-darkBlue-100 mb-8">
+              <h1 className="text-4xl font-bold text-darkBlue-100 mb-8">
                 Activities for the Soul
               </h1>
 
@@ -30,8 +30,7 @@ export default function SoulActivities() {
               </p>
 
               <p className="mt-12 text-gray-600 leading-loose max-w-md text-center md:text-left">
-                ‘Community outreach projects through IGCA International Global
-                Citizens Award, Kairo develop student’s empathy’
+                Execution of community outreach projects as a part of their International Global Citizen award program, Karko
               </p>
             </div>
 
@@ -71,8 +70,8 @@ export default function SoulActivities() {
 
               {/* RIGHT */}
               <div className="text-center">
-                <p className="leading-loose mb-2">
-                  Aayulu, a life skill game with a transformative approach to
+                <p className="leading-relaxed mb-2">
+                  Aayulu, a life skill game with a transformative <br />approach to
                   life education
                 </p>
                 <img
@@ -89,7 +88,7 @@ export default function SoulActivities() {
         {/* ===================== SKILLS & VALUES ===================== */}
         <div className="max-w-5xl mx-auto px-6 py-20">
 
-          <h2 className="text-3xl font-light text-[#0E1A47] mb-16">
+          <h2 className="text-3xl font-bold text-[#0E1A47] mb-16">
             Skills and values Mapping
           </h2>
 

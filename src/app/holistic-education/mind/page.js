@@ -88,7 +88,7 @@ export default function mindActivities() {
           <div className="max-w-5xl mx-auto px-6">
 
             {/* SECTION TITLE */}
-            <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-16">
               Skills and values Mapping
             </h2>
 
@@ -97,7 +97,7 @@ export default function mindActivities() {
 
               {/* IMAGE */}
               <div className="flex justify-center md:justify-start">
-                <div className="w-[420px] h-[460px] overflow-hidden rounded-sm">
+                <div className="h-80 overflow-hidden rounded-sm">
                   <img
                     src="/mind/4.png"
                     alt="STEAM Activity"
@@ -135,7 +135,7 @@ export default function mindActivities() {
 
               {/* IMAGE */}
               <div className="flex justify-center md:justify-end order-1 md:order-2">
-                <div className="w-[420px] h-[460px] overflow-hidden rounded-sm">
+                <div className="h-80 overflow-hidden rounded-sm">
                   <img
                     src="/mind/5.png"
                     alt="Skills Development"

@@ -23,13 +23,13 @@ export default function HolisticJourney() {
       <div className="max-w-5xl mx-auto px-6 pb-20">
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-light text-darkBlue-100 text-center">
+        <h2 className="text-3xl text-bold md:text-4xl font-light text-darkBlue-100 ">
           Our Holistic Journey
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-6 text-gray-500 text-center max-w-3xl mx-auto leading-loose">
-          Education at Queen Mira does not stop with Academics. Sports, Skill and value
+        <p className="mt-6 text-gray-500 max-w-5xl mx-auto leading-loose">
+          Education at Queen Mira does not stop with Academics. Sports, Academics, Skill and value
           based activities makes us wholesome.
         </p>
 
@@ -63,7 +63,7 @@ export default function HolisticJourney() {
         </div>
 
         {/* Bottom Paragraph */}
-        <p className="mt-12 text-gray-500 text-center max-w-4xl mx-auto leading-loose">
+        <p className="mt-12 text-gray-500 text-center max-w-5xl mx-auto leading-loose">
           These activities mapped to the skills and values are also ensured that
           they reflect our philosophy of “wellbeing of body, mind and soul.”
         </p>
@@ -75,11 +75,11 @@ export default function HolisticJourney() {
 
           {/* Title */}
           <h2 className="text-4xl font-semibold text-left mb-10">
-            Student Life
+            Student Life <span className="text-sm">(Voice of a Student)</span>
           </h2>
 
           {/* Top Description */}
-          <p className="leading-loose text-left max-w-4xl mx-auto mb-16">
+          <p className="leading-loose text-left max-w-5xl mx-auto mb-16">
             Student life at Queen Mira International School (QMIS) has been a
             meaningful journey of growth, responsibility, and confidence for us.
             Our experience begins the moment we walk through the school gate.
@@ -129,7 +129,7 @@ export default function HolisticJourney() {
           </div>
 
           {/* Bottom Description */}
-          <p className="leading-loose text-left max-w-4xl mx-auto">
+          <p className="leading-loose text-left max-w-5xl mx-auto">
             Our classrooms are vibrant and energetic, encouraging us to ask
             questions, explore ideas, and work together. Lunchtime is a moment to
             relax, bond with friends, and reflect on the values shared through
@@ -181,7 +181,7 @@ export default function HolisticJourney() {
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Text Content */}
-          <div className="text-gray-500 leading-loose text-center mb-16">
+          <div className="text-gray-500 leading-loose mb-16">
             <p>
               Our learning continues beyond regular classes through after-school
               clubs, enrichment programs, and Olympiad opportunities. These
