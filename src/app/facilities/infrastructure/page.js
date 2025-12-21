@@ -211,7 +211,7 @@ export default function Infrastructure() {
                 height={240}
                 className="w-full h-auto"
               />
-              <p className="absolute top-[40%] md:top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-semibold text-red-500 px-4">
+              <p className="absolute top-[40%] md:top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-semibold text-maroon-100 px-4">
                 "Where curiosity<br />sparks invention."
               </p>
             </div>
