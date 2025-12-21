@@ -1,4 +1,5 @@
 import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
 
 export default function SoulActivities() {
   return (
@@ -36,9 +37,11 @@ export default function SoulActivities() {
 
             {/* RIGHT IMAGE */}
             <div className="flex justify-center md:justify-end">
-              <img
+              <Image
                 src="/soul/01.png"
-                alt="Activities"
+                alt="Activities for the Soul"
+                width={340}
+                height={340}
                 className="w-[340px] h-auto object-cover"
               />
             </div>
@@ -58,11 +61,15 @@ export default function SoulActivities() {
                 <p className="leading-loose mb-8">
                   Sibling Care creates a space of belongingness
                 </p>
-                <img
-                  src="/soul/1.png"
-                  alt="Sibling Care"
-                  className="mx-auto w-[350px] h-auto"
-                />
+                <div className="mx-auto w-[350px]">
+                  <Image
+                    src="/soul/1.png"
+                    alt="Sibling Care"
+                    width={350}
+                    height={250}
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
 
               {/* DIVIDER */}
@@ -74,11 +81,15 @@ export default function SoulActivities() {
                   Aayulu, a life skill game with a transformative <br />approach to
                   life education
                 </p>
-                <img
-                  src="/soul/2.png"
-                  alt="Aayulu"
-                  className="mx-auto w-[350px] h-auto"
-                />
+                <div className="mx-auto w-[350px]">
+                  <Image
+                    src="/soul/2.png"
+                    alt="Aayulu life skill game"
+                    width={350}
+                    height={250}
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
 
             </div>
@@ -94,12 +105,15 @@ export default function SoulActivities() {
 
           {/* ROW 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
-
-            <img
-              src="/soul/5.png"
-              alt="Group activity"
-              className="w-full"
-            />
+            <div className="w-full">
+              <Image
+                src="/soul/5.png"
+                alt="Group activity"
+                width={500}
+                height={350}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-4">Sibling Care</h3>
@@ -124,22 +138,30 @@ export default function SoulActivities() {
               </p>
             </div>
 
-            <img
-              src="/soul/4.png"
-              alt="Skills"
-              className="w-full "
-            />
+            <div className="w-full">
+              <Image
+                src="/soul/4.png"
+                alt="Skills development"
+                width={500}
+                height={350}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
 
           </div>
         </div>
 
         {/* ===================== QUOTE / UNIQUENESS ===================== */}
         <div className="flex px-2 justify-center py-5">
-          <img
-            src="/endpage.png"
-            alt="Uniqueness"
-            className="w-[720px] h-auto"
-          />
+          <div className="w-[720px]">
+            <Image
+              src="/endpage.png"
+              alt="Uniqueness of our program"
+              width={720}
+              height={200}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
       </section>

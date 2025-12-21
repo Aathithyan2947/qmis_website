@@ -7,7 +7,7 @@ export default function BodyActivities() {
 
       <PageHeader contentTitle={'Body'} />
       {/* ===================== MAIN CONTENT ===================== */}
-      <section className="w-full  relative">
+      <section className="w-full relative">
 
         {/* dotted background */}
         <div className="absolute inset-0 "></div>
@@ -16,7 +16,7 @@ export default function BodyActivities() {
 
           {/* Title */}
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-16">
-            <div className=" col-span-2">
+            <div className="col-span-2">
               <h1 className="text-4xl font-bold text-[#0E1A47]">
                 Activities for the Body
               </h1>
@@ -30,42 +30,52 @@ export default function BodyActivities() {
               </p>
             </div>
             <div className="flex justify-center">
-              <Image src='/body/01.png' height={200} width={200} alt='no image found' />
+              <Image
+                src='/body/01.png'
+                height={200}
+                width={200}
+                alt='Body activities icon'
+                className="w-auto h-auto"
+              />
             </div>
           </div>
+
           {/* B-Fit */}
           <h2 className="mt-10 text-2xl font-semibold text-[#B82025]">B-Fit</h2>
 
-          <p className="mt-2 text-gray-500 ">
+          <p className="mt-2 text-gray-500">
             Everyday B-fit classes using an exclusive curriculum.
           </p>
 
           {/* ===================== CARDS SECTION ===================== */}
-          <div className="mt-12 relative ">
+          <div className="mt-12 relative">
             {/* Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="w-full h-60 rounded-lg overflow-hidden  flex items-center justify-center"
+                  className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center"
                 >
-                  <img
+                  <Image
                     src={`/body/${i}.png`}
-                    alt={`Image ${i}`}
-                    className="max-w-full max-h-full object-contain"
+                    alt={`B-Fit activity ${i}`}
+                    width={400}
+                    height={240}
+                    className="w-full h-full object-contain p-4"
                   />
                 </div>
               ))}
             </div>
           </div>
         </div>
+
         <div className="">
           {/* Activities Section */}
           <section className="py-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto px-6">
               <h2 className="text-2xl font-semibold text-[#B82025]">Activities</h2>
 
-              <p className="mt-2 text-gray-500 ">
+              <p className="mt-2 text-gray-500">
                 After school activities foster mastery by building confidence in a supportive environment.
               </p>
 
@@ -75,14 +85,14 @@ export default function BodyActivities() {
                   {[4, 5, 6].map((i) => (
                     <div
                       key={i}
-                      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center"
+                      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center "
                     >
                       <Image
                         src={`/body/${i}.png`}
                         alt={`Activity ${i}`}
                         width={400}
                         height={240}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain p-4"
                       />
                     </div>
                   ))}
@@ -92,11 +102,11 @@ export default function BodyActivities() {
           </section>
 
           {/* Aadukalam Section */}
-          <section className="bg-darkBlue-100 text-white py-12 px-4">
+          <section className="bg-darkBlue-100 text-white py-12 px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-bold">Aadukalam</h2>
 
-              <p className="mt-2 text-white ">
+              <p className="mt-2 text-white">
                 The Annual Athletic Meet is a fun-filled day where students showcase their talents and skills.
               </p>
 
@@ -107,14 +117,14 @@ export default function BodyActivities() {
                   {[7, 8, 9].map((i) => (
                     <div
                       key={i}
-                      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center"
+                      className="w-full h-60 rounded-lg overflow-hidden flex items-center justify-center "
                     >
                       <Image
                         src={`/body/${i}.png`}
                         alt={`Aadukalam ${i}`}
                         width={400}
                         height={240}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain p-4"
                       />
                     </div>
                   ))}
@@ -123,7 +133,7 @@ export default function BodyActivities() {
             </div>
           </section>
 
-          <section className="py-20 ">
+          <section className="py-20">
             <div className="max-w-5xl mx-auto px-6">
 
               {/* Section Title */}
@@ -136,10 +146,12 @@ export default function BodyActivities() {
 
                 {/* Image */}
                 <div className="flex justify-center">
-                  <img
+                  <Image
                     src="/body/10.png"
                     alt="B-Fit Activity"
-                    className="w-full max-w-md object-cover"
+                    width={500}
+                    height={400}
+                    className="w-full max-w-md object-cover rounded-lg"
                   />
                 </div>
 
@@ -182,6 +194,7 @@ export default function BodyActivities() {
                           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                           allowFullScreen
                           loading="lazy"
+                          title="Instagram video"
                         ></iframe>
                       </div>
                     </div>

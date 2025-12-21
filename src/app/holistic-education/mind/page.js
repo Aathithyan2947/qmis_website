@@ -1,12 +1,13 @@
 import PageHeader from "@/components/PageHeader";
+import Image from "next/image";
 
 export default function mindActivities() {
   return (
-    <div className="w-full  bg-grid-dots">
+    <div className="w-full bg-grid-dots">
 
       <PageHeader contentTitle={'Mind'} />
       {/* ===================== MAIN CONTENT ===================== */}
-      <section className="w-full  relative">
+      <section className="w-full relative">
 
         <div className="relative max-w-5xl mx-auto px-6 md:px-12 py-16">
 
@@ -19,11 +20,8 @@ export default function mindActivities() {
           <p className="mt-6 text-md text-gray-600 leading-loose">
             Academic enrichment programs have been shown to significantly improve student performance. Studies
             · indicate that such programs increase academic achievement scores by up to 20%, enhance critical thinking and
-
             study skills, and boost student's confidence and motivation to learn ..
           </p>
-
-
 
           <p className="mt-10 text-lg text-gray-700 font-bold">
             Academic Enrichment Programs for competitive exams
@@ -37,10 +35,12 @@ export default function mindActivities() {
                   key={i}
                   className="w-full h-80 rounded-lg overflow-hidden flex items-center justify-center"
                 >
-                  <img
+                  <Image
                     src={`/mind/${i}.png`}
-                    alt={`Image ${i}`}
-                    className="max-w-full max-h-full object-contain"
+                    alt={`Academic enrichment program ${i}`}
+                    width={500}
+                    height={320}
+                    className="w-full h-full object-contain p-4"
                   />
                 </div>
               ))}
@@ -49,7 +49,7 @@ export default function mindActivities() {
         </div>
       </section>
 
-      <div className="w-full ">
+      <div className="w-full">
 
         <div className="bg-maroon-100 text-white text-center p-5 text-xl font-bold">
           Student Driven Classes for a refined classroom
@@ -62,16 +62,18 @@ export default function mindActivities() {
               {/* IMAGE */}
               <div className="relative z-10">
                 <div className="w-[360px] h-[380px] rounded-sm overflow-hidden shadow-md">
-                  <img
+                  <Image
                     src="/mind/3.png"
                     alt="Model United Nations"
+                    width={360}
+                    height={380}
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
 
               {/* TEXT PILL */}
-              <div className="ml-[-20px]">
+              <div className="ml-5">
                 <div className="bg-[#0E1A4B] text-white px-10 py-8 rounded-r-[80px] rounded-l-[20px] max-w-xl shadow-lg">
                   <p className="text-lg leading-loose">
                     Model United Nations Session to display our communication and diplomacy
@@ -98,9 +100,11 @@ export default function mindActivities() {
               {/* IMAGE */}
               <div className="flex justify-center md:justify-start">
                 <div className="h-80 overflow-hidden rounded-sm">
-                  <img
+                  <Image
                     src="/mind/4.png"
                     alt="STEAM Activity"
+                    width={500}
+                    height={320}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -136,9 +140,11 @@ export default function mindActivities() {
               {/* IMAGE */}
               <div className="flex justify-center md:justify-end order-1 md:order-2">
                 <div className="h-80 overflow-hidden rounded-sm">
-                  <img
+                  <Image
                     src="/mind/5.png"
                     alt="Skills Development"
+                    width={500}
+                    height={320}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -148,7 +154,6 @@ export default function mindActivities() {
 
           </div>
         </section>
-
 
       </div>
     </div>
