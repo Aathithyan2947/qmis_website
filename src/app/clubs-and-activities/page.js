@@ -3,21 +3,21 @@ import Image from "next/image";
 
 export default function ClubsAndActivities() {
   return (
-    <>
+    <div className="bg-grid-dots">
       <PageHeader contentTitle={'Clubs & Activities'} />
 
       {/* Container for entire content except dark blue section */}
       <div className="max-w-5xl mx-auto">
 
         {/* 1st section */}
-        <div className="flex justify-center bg-grid-dots p-5">
+        <div className="flex justify-center p-5">
           <Image src='/clubs-activities/8.png' height={1000} width={1000} alt="image not found" />
         </div>
-       <div className="text-l ml-4 mt-4 text-left leading-loose text-gray-500  "><p>The clubs are instilled at QMIS to cultivate the spirit of volunteerism, and good lifelong habits, and showcase the students’ individuality. The Five distinguished clubs of QMIS give students the practical training required in daily life.</p>
-          </div>
+        <div className="text-l ml-4 mt-4 text-left leading-loose text-gray-500  "><p>The clubs are instilled at QMIS to cultivate the spirit of volunteerism, and good lifelong habits, and showcase the students’ individuality. The Five distinguished clubs of QMIS give students the practical training required in daily life.</p>
+        </div>
         {/* 2nd section */}
-        <section className="w-full bg-white py-16">
-           
+        <section className="w-full py-16">
+
           <div className="px-6">
 
             {/* Title */}
@@ -132,8 +132,8 @@ export default function ClubsAndActivities() {
         {/* 4th section */}
         <div className="px-6">
           {/* Top text */}
-          <div className="pt-4 text-center">
-            <p className="text-gray-500 leading-loose text-sm md:text-base max-w-4xl mx-auto">
+          <div className="pt-4 ">
+            <p className="text-gray-500 leading-loose text-sm md:text-base max-w-5xl mx-auto">
               Financial literacy must be deeply interwoven with core humane values. Without this balance,
               financial knowledge alone loses its purpose. Our goal is not only to create financially capable
               individuals but also value–driven, thoughtful members of society.
@@ -204,7 +204,7 @@ export default function ClubsAndActivities() {
 
           <div className="flex justify-center mt-10">
             <div>
-              <h3 className="text-2xl md:text-3xl text-center font-medium text-darkBlue-100 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-darkBlue-100 mb-6">
                 The skills learned in art open doors to many future careers:
               </h3>
               <p className="text-gray-500 leading-loose max-w-5xl">
@@ -278,6 +278,6 @@ export default function ClubsAndActivities() {
           </div>
         </section>
       </div> {/* End of second max-w-5xl container */}
-    </>
+    </div>
   );
 }
