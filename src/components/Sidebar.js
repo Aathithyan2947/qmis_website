@@ -33,15 +33,15 @@ export default function Sidebar({ isOpen, onClose }) {
       clearTimeout(hoverTimeoutRef.current);
     }
 
+    setHoverItem(itemName); // Hover any item
+
+    // Only manage activeItem for submenu items
     if (hasSubmenu) {
-      // Close active item if it's different from hovered item
       if (activeItem && activeItem !== itemName) {
         setActiveItem("");
       }
-      setHoverItem(itemName);
     } else {
-      setHoverItem("");
-      // If hovering a non-submenu item, close any active submenu
+      // Close active submenu if hovering a non-submenu item
       if (activeItem) {
         setActiveItem("");
       }
@@ -49,7 +49,6 @@ export default function Sidebar({ isOpen, onClose }) {
   };
 
   const handleMouseLeave = () => {
-    // Add a small delay before closing to allow moving to submenu
     hoverTimeoutRef.current = setTimeout(() => {
       setHoverItem("");
     }, 150);
@@ -73,15 +72,11 @@ export default function Sidebar({ isOpen, onClose }) {
       } else {
         setActiveItem(itemName);
       }
-      // Close hover state when clicking
       setHoverItem("");
     } else {
-      // Check if it has an external URL
       if (externalUrl) {
-        // Open external URL in new tab
         window.open(externalUrl, "_blank", "noopener,noreferrer");
       } else {
-        // Navigate to internal route
         router.push(route);
       }
       onClose();
@@ -165,7 +160,7 @@ export default function Sidebar({ isOpen, onClose }) {
     {
       name: "Admissions",
       route: "#",
-      externalUrl: APPLY_NOW_URL
+      externalUrl: APPLY_NOW_URL,
     },
     { name: "After School Activities", route: "/after-school-activities" },
     { name: "Clubs & Activities", route: "/clubs-and-activities" },
@@ -238,33 +233,45 @@ export default function Sidebar({ isOpen, onClose }) {
                   className="h-16 md:h-18 w-auto"
                 />
               </div>
-              <X className="cursor-pointer h-8 w-8 text-gray-700" onClick={onClose} />
+              <X
+                className="cursor-pointer h-8 w-8 text-gray-700"
+                onClick={onClose}
+              />
             </div>
 
             {/* MAIN CONTENT */}
             <div className="px-8 py-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
                 {/* LEFT MENU */}
-                <div ref={menuRef} className="space-y-6 text-[18px] tracking-wide col-span-1 md:pl-12">
+                <div
+                  ref={menuRef}
+                  className="space-y-6 text-[18px] tracking-wide col-span-1 md:pl-12"
+                >
                   {menu.map((item) => {
                     const hasSubmenu = !!item.submenu;
                     const isActive = activeItem === item.name;
                     const isHovered = hoverItem === item.name;
-                    const showSubmenu = isActive || isHovered;
 
                     return (
                       <div key={item.name} className="relative">
-
                         {/* Parent */}
                         <div
                           className="group cursor-pointer flex items-center justify-between pr-4"
-                          onMouseEnter={() => handleMouseEnter(item.name, hasSubmenu)}
+                          onMouseEnter={() =>
+                            handleMouseEnter(item.name, hasSubmenu)
+                          }
                           onMouseLeave={handleMouseLeave}
-                          onClick={() => handleParentClick(item.name, hasSubmenu, item.route, item.externalUrl)}
+                          onClick={() =>
+                            handleParentClick(
+                              item.name,
+                              hasSubmenu,
+                              item.route,
+                              item.externalUrl
+                            )
+                          }
                         >
                           <span
-                            className={`font-semibold transition-colors ${showSubmenu
+                            className={`font-semibold transition-colors ${isHovered || isActive
                               ? "text-red-600"
                               : "text-[#1a2752]"
                               }`}
@@ -274,7 +281,7 @@ export default function Sidebar({ isOpen, onClose }) {
 
                           {hasSubmenu && (
                             <span
-                              className={`ml-2 transition-colors ${showSubmenu
+                              className={`ml-2 transition-colors ${isHovered || isActive
                                 ? "text-red-600"
                                 : "text-[#1a2752]"
                                 }`}
@@ -312,7 +319,7 @@ export default function Sidebar({ isOpen, onClose }) {
 
                         {/* Desktop Submenu */}
                         <AnimatePresence>
-                          {showSubmenu && hasSubmenu && (
+                          {(isHovered || isActive) && hasSubmenu && (
                             <motion.div
                               initial={{ opacity: 0, x: -20 }}
                               animate={{ opacity: 1, x: 0 }}
@@ -337,7 +344,6 @@ export default function Sidebar({ isOpen, onClose }) {
                             </motion.div>
                           )}
                         </AnimatePresence>
-
                       </div>
                     );
                   })}
@@ -358,13 +364,22 @@ export default function Sidebar({ isOpen, onClose }) {
                   </p>
 
                   <div className="space-y-1 mb-6">
-                    <a href="tel:+919655777000" className="text-blue-600 block hover:underline">
+                    <a
+                      href="tel:+919655777000"
+                      className="text-blue-600 block hover:underline"
+                    >
                       +91 96557 77000
                     </a>
-                    <a href="tel:+919677715429" className="text-blue-600 block hover:underline">
+                    <a
+                      href="tel:+919677715429"
+                      className="text-blue-600 block hover:underline"
+                    >
                       +91 96777 15429
                     </a>
-                    <a href="mailto:contact@queenmira.com" className="text-blue-600 block hover:underline">
+                    <a
+                      href="mailto:contact@queenmira.com"
+                      className="text-blue-600 block hover:underline"
+                    >
                       contact@queenmira.com
                     </a>
                   </div>
@@ -393,7 +408,7 @@ export default function Sidebar({ isOpen, onClose }) {
                     </a>
 
                     <a
-                      href="https://www.facebook.com/qmiscis?rdid=KRhgDIdBJb8gUanf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TcQJn8oi%2F#"
+                      href="https://www.facebook.com/qmiscis"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -410,7 +425,6 @@ export default function Sidebar({ isOpen, onClose }) {
                     alt="Happy Schooling"
                   />
                 </div>
-
               </div>
             </div>
           </div>

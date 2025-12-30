@@ -1,5 +1,364 @@
 export const blogs = [
   {
+    slug: "how-movement-boosts-learning",
+    title: "How Movement Boosts Learning",
+    subtitle: "The science behind active classrooms and how movement enhances learning outcomes.",
+    date: "November 21, 2025",
+    heroImage: "/blog/blog_1/1.png",
+
+    section: `
+<section class="px-6 py-4 text-gray-500 text-lg">
+
+  <h1 class="text-2xl font-bold text-darkBlue-100 mb-4">
+How Movement Boosts Learning:The Science Behind Active Classrooms
+  </h1>
+
+  <p class="mb-6 text-lg text-gray-600 font-semibold leading-loose">
+Movement Makes Minds Grow
+  </p>
+
+  <p class="mb-6 leading-loose">
+Children are not designed to sit still for long hours. Their bodies are built to move, and when they move, their brains become sharper, more focused, & emotionally balanced. 
+  </p>
+
+  <p class="mb-10 leading-loose">
+Did you know? Research shows that movement increases oxygen flow to the brain, improves cognitive function, & supports better learning outcomes.
+ </p>
+
+  <p class="mb-10 leading-loose">
+At Queen Mira international School (QMIS), which is renowned as one of the best schools in Madurai, 
+movement-based learning is not an extracurricular activity but a part of everyday academic life. 
+From KG to Grade 12, lessons come allve with interactive activities, purposeful movement, & engaging experiences.
+ </p>
+
+<div class="bg-darkBlue-100 rounded-2xl p-6 max-w-4xl mx-auto">
+  <h2 class="text-white text-lg font-medium mb-4">
+    Beyond Classroom Learning at the <strong>Best School in Madurai</strong>. Ready to Witness?
+  </h2>
+  
+  <div class="bg-gray-400 rounded-xl p-4 mb-6 flex justify-between items-center">
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">2,300+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Successful Alumni</div>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">100+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Global Universities</div>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">100+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Sports Stars</div>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">20+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Innovative Practises</div>
+    </div>
+  </div>
+  
+  <p class="text-white text-sm mb-4">
+    Click on 'Enquire now' to hear from our academic counsellor.
+  </p>
+  
+  <button class="bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+    Apply Now
+  </button>
+</div>
+
+  <h2 class="text-2xl mt-6 font-bold text-darkBlue-100 mb-4">
+Research Says Movement Matters in Learning. Why?
+  </h2>
+
+<div class="">
+  <div class="flex items-center gap-12">
+    <div class="w-52">
+      <img src="/blog/blog_1/2.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+    <div class="flex-1">
+      <p class="text-gray-500 mb-3 leading-loose">The Brain Learns Better When the Body Moves. When children move, play & explore, something remarkable happens inside the brain:</p>
+    <ul class="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
+    <li>Neurons fire more actively</li>
+    <li>Oxygen levels rise</li>
+    <li>Memory becomes sharper</li>
+    <li>Blood flow increases</li>
+    <li>Focus increases</li>
+    <li>Stress hormones decrease</li>
+  </ul>
+    </div>
+  </div>
+</div>
+
+  <p class="mb-6 text-darkBlue-100 font-semibold text-lg leading-loose">
+So, how does movement help them grow?
+  </p>
+
+  <ul class="list-disc mb-5 space-y-2 leading-relaxed">
+    <li>Stimulates cognitive development</li>
+    <li>Boosts academic performance</li>
+    <li>Improves attention span</li>
+    <li>Strengthens emotional balance</li>
+  </ul>
+
+<p class="my-4 leading-loose text-gray-500">
+Movement-based learning is one of the most effective approaches for holistic development, the main reason parents prefer holistic education schools at Madurai.
+</p>
+
+<p class="my-4 leading-loose text-gray-500">
+Did you know? Active learning improves retention by up to 25% by reducing stress and increasing “happy hormones”
+</p>
+
+  <h2 class="text-2xl mt-6 font-bold text-darkBlue-100 mb-4">
+How QMIS Incorporates Movement in Classrooms?
+  </h2>
+
+<div class="">
+  <div class="flex items-center gap-12">
+    <div class="flex-1">
+      <p class="text-gray-500 leading-loose">QMIS stands out among the other international schools in Madurai for its thoughtfully designed movement-integrated learning approach.</p>
+    </div>
+    <div class="w-52">
+      <img src="/blog/blog_1/3.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+  </div>
+</div>
+
+  <div class="overflow-x-auto mt-5 mb-10">
+    <table class="w-full border border-gray-200 text-md">
+      <thead class=" bg-gray-100">
+        <tr class="text-center">
+          <th class="border px-4 py-2 ">Setting</th>
+          <th class="border px-4 py-2 ">Initiatives at QMIS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">Inside the Classroom</td>
+          <td class="border px-4 py-2">Learning stations, Brain breaks,
+Kinesthetic tools, Activity-based teaching, Rhythmic exercises, Role-play & simulations</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Outside the Classroom</td>
+          <td class="border px-4 py-2">Nature-based learning, Outdoor activity zones,
+Movement-integrated art, Dance & drama sessions, Sports-led discipline learning</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+Social, Emotional & Cognitive Benefits From Movement-Based Learning
+  </h2>
+
+<p class="my-4 leading-loose text-gray-500">
+The best schools in Madurai, channel their expertise & techniques in focusing on more play & movement while learning, because they are well awar that it not only improves learning, but also facilitates the child’s holistic growth.
+</p>
+
+  <div class="overflow-x-auto mt-5 mb-10">
+    <table class="w-full border border-gray-200 text-md">
+      <thead class=" bg-gray-100">
+        <tr class="text-center">
+          <th class="border px-4 py-2 ">Benefit Type</th>
+          <th class="border px-4 py-2 ">How Movement Helps</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">Cognitive</td>
+          <td class="border px-4 py-2">Boosts memory, activates senses, improves critical thinking</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Emotional</td>
+          <td class="border px-4 py-2">Reduces stress, supports emotional regulation</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Social</td>
+          <td class="border px-4 py-2">Builds cooperation, communication, teamwork</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Creative</td>
+          <td class="border px-4 py-2">Inspires imagination, innovative thinking</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Physical</td>
+          <td class="border px-4 py-2">Improves motor skills, posture, coordination</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<p class="my-4 leading-loose text-gray-500">
+Did You Know? Movement can increase brain activity by up to 15% improving a child’s retention ability
+</p>
+
+<div class="">
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+How Do the Top CBSE Schools in Madurai Focus On Movement-Based Learning?
+  </h2>
+  <div class="flex items-center gap-12">
+    <div class="w-52">
+      <img src="/blog/blog_1/4.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+    <div class="flex-1">
+      <p class="text-gray-500 mb-4 leading-loose">Movement while learning is not a one-size-fits-all concept for the students. So, QMIS integrates age-appropriate movement at every stage. This structured approach showcases why QMIS is consistently ranked among the top CBSE schools in Madurai.</p>
+    </div>
+  </div>
+</div>
+
+  <div class="overflow-x-auto mt-5 mb-10">
+    <table class="w-full border border-gray-200 text-md">
+      <thead class=" bg-gray-100">
+        <tr class="text-center">
+          <th class="border px-4 py-2 ">School Stage</th>
+          <th class="border px-4 py-2 ">Movement Activities</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">KG</td>
+          <td class="border px-4 py-2">Sensory play, action songs, story-based movement</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Primary</td>
+          <td class="border px-4 py-2">Activity stations, math-in-motion, spelling games</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Middle</td>
+          <td class="border px-4 py-2">Debates with movement zones, role-play, model-building</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Senior</td>
+          <td class="border px-4 py-2">Collaboration spaces, simulations, stress-relief exercises</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mb-6 text-red-700 underline cursor-pointer leading-loose">
+RELATED: Did You Know How Skill Mapping Shapes Future-Ready Learners
+  </p>
+
+<div class="">
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+Why Do Parents Choose QMIS?
+  </h2>
+  <div class="flex items-center gap-12">
+    <div class="flex-1">
+      <p class="text-gray-500 mb-4 leading-loose">Parents these days look for a school that prepares children for both academic success and real life. QMIS ensures both through:</p>
+    <ul class="list-disc mb-5 ml-4 space-y-2 leading-relaxed">
+    <li>Holistic learning approach</li>
+    <li>Movement-led teaching strategies</li>
+    <li>Digital innovation</li>
+    <li>Empathy-driven culture</li>
+    <li>Strong CBSE curriculum foundation</li>
+    <li>Global exposure</li>
+    <li>Life skills, leadership and emotional resilience programs</li>
+  </ul>
+      <p class="text-gray-500 mb-4 leading-loose">It is for all these reasons that parents searching for holistic education schools at Madurai, trust QMIS for balanced, joyful, & purposeful education.</p>
+    </div>
+    <div class="w-52">
+      <img src="/blog/blog_1/5.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+  </div>
+</div>
+
+<div class="py-4 ">
+  <h1 class="text-2xl font-bold text-darkBlue-100 mb-4">How Well Do You Understand Movement-Based Learning?</h1>
+  <p class="text-gray-500 mb-6">Take this quick quiz to understand movement-based learning in schools better.</p>
+  
+  <div class="space-y-6">
+    <div>
+      <h3 class="font-semibold text-darkBlue-100 mb-3">1. Which part of the brain benefits most from movement during learning?</h3>
+      <div class="space-y-2 text-gray-500 mb-2">
+        <p>a) The part responsible for sleep</p>
+        <p>b) The part responsible for memory & focus</p>
+        <p>c) The part responsible for reflex actions</p>
+      </div>
+      <p class="font-medium text-gray-500">Correct Answer: b</p>
+    </div>
+    
+    <div>
+      <h3 class="font-semibold text-darkBlue-100 mb-3">2. Which of the following is an example of movement-based learning?</h3>
+      <div class="space-y-2 text-gray-500 mb-2">
+        <p>a) Reading a textbook silently</p>
+        <p>b) Solving math problems through jumping steps</p>
+        <p>c) Listening to a lecture for one hour</p>
+      </div>
+      <p class="font-medium text-gray-500">Correct Answer: b</p>
+    </div>
+    
+    <div>
+      <h3 class="font-semibold text-darkBlue-100 mb-3">3. How does movement help in emotional regulation for children?</h3>
+      <div class="space-y-2 text-gray-500 mb-2">
+        <p>a) It makes them distracted</p>
+        <p>b) It increases stress</p>
+        <p>c) It reduces stress and balances mood</p>
+      </div>
+      <p class="font-medium text-gray-500">Correct Answer: c</p>
+    </div>
+    
+    <div>
+      <h3 class="font-semibold text-darkBlue-100 mb-3">4. What kind of activities does QMIS use to integrate movement across grades?</h3>
+      <div class="space-y-2 text-gray-500 mb-2">
+        <p>a) Only sports</p>
+        <p>b) Only classroom lectures</p>
+        <p>c) Learning stations, role-play, brain breaks, simulations</p>
+      </div>
+      <p class="font-medium text-gray-500">Correct Answer: c</p>
+    </div>
+    
+    <div>
+      <h3 class="font-semibold text-darkBlue-100 mb-3">5. Which age group benefits most from movement-based learning?</h3>
+      <div class="space-y-2 text-gray-500 mb-2">
+        <p>a) Only KG</p>
+        <p>b) Only teenagers</p>
+        <p>c) Every age group — KG to Senior</p>
+      </div>
+      <p class="font-medium text-gray-500">Correct Answer: c</p>
+    </div>
+  </div>
+  
+  <div class="mt-8">
+    <p class="text-gray-500 mb-4">So, if your answers are:</p>
+    <div class="space-y-4 text-gray-500 leading-loose">
+      <p><strong>Mostly A's:</strong> You're just starting to explore the power of movement-based learning, keep going; you or your child is learning something valuable!</p>
+      <p><strong>Mostly B's:</strong> You already appreciate interactive, activity-based learning and understand how it benefits your child.</p>
+      <p><strong>Mostly C's:</strong> You deeply value holistic, movement-integrated education; your child will thrive in an environment like QMIS.</p>
+    </div>
+  </div>
+</div>
+
+  <h2 class="text-2xl font-semibold text-darkBlue-100 my-4">
+FAQs
+  </h2>
+
+  <div class="space-y-3">
+    <p class="leading-loose"><strong>1. How does movement help improve a child’s learning ability?</strong><br /> Movement increases focus, memory, emotional balance, and brain activity.</p>
+
+<p class="leading-loose mb-2">
+  <strong>2. What movement-based activities does QMIS include?</strong><br/>
+Role-play, brain breaks, outdoor sessions, hands-on tools, and activity stations.
+</p>
+
+<p class="leading-loose mb-2">
+  <strong>3. Does movement help hyperactive children stay focused?</strong><br/>
+Yes, movement supports attention regulation & reduces restlessness.
+</p>
+
+<p class="leading-loose mb-2">
+  <strong>4. Is movement-based learning scientifically proven?</strong><br/>
+Absolutely. Research shows it enhances cognitive, social, and emotional growth.
+</p>
+
+<p class="leading-loose mb-2">
+  <strong>5. How do international schools in Madurai, like QMIS, integrate active learning?</strong><br/>Through structured movement programs aligned with academic goals, emotional development, and physical wellness.</p>
+
+<p class="leading-loose mb-2">
+Your child deserves an education that moves minds and hearts. <span class="text-red-700 underline cursor-pointer">Visit the Queen Mira website </span> to learn about how the school blends movement, mindfulness, and mastery to build strong, confident learners. You are welcome to book a school visit to explore the unique environment & initiatives of this pioneering school in Madurai
+</p>
+
+</section>
+`
+  },
+  {
     slug: "digital-learning-builds-social-connections",
     title: "How Digital Learning Builds Social Connections",
     subtitle: "Exploring how technology-enabled classrooms strengthen collaboration.",
