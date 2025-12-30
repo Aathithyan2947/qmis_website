@@ -1,5 +1,373 @@
 export const blogs = [
   {
+    slug: "digital-learning-builds-social-connections",
+    title: "How Digital Learning Builds Social Connections",
+    subtitle: "Exploring how technology-enabled classrooms strengthen collaboration.",
+    date: "November 12, 2025",
+    heroImage: "/blog/blog_2/1.png",
+
+    section: `
+<section class="px-6 py-4 text-gray-500 text-lg">
+
+  <h1 class="text-2xl font-bold text-darkBlue-100 mb-4">
+How Do the Best Schools in Madurai Build Stronger Social Connections With Digital Learning?
+  </h1>
+
+  <p class="mb-6 leading-loose">
+For many parents, the concept of “digital learning” raises a significant concern: “Will my child lose his/her potential because of too much screen time?” It is a fair concern and also a common misconception.
+  </p>
+
+  <p class="mb-6 leading-loose">
+At Queen Mira International School (QMIS), digital learning is never a solitary experience. Instead, it becomes a bridge, connecting students, encouraging teamwork, and strengthening communication. That is why parents seeking the best schools in Madurai trust QMIS to provide a balanced, human-centred digital environment.
+  </p>
+
+  <p class="mb-10 leading-loose">
+Before we explore how, let us begin by asking ourselves: Can technology really make children more social, confident, & collaborative?
+At QMIS, the answer is a clear yes.
+  </p>
+
+<div class="bg-darkBlue-100 rounded-2xl p-6 max-w-4xl mx-auto">
+  <h2 class="text-white text-lg font-medium mb-4">
+    Beyond Classroom Learning at the <strong>Best School in Madurai</strong>. Ready to Witness?
+  </h2>
+  
+  <div class="bg-gray-400 rounded-xl p-4 mb-6 flex justify-between items-center">
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">2,300+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Successful Alumni</div>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">100+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Global Universities</div>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">100+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Sports Stars</div>
+    </div>
+    <div class="text-center">
+      <div class="text-2xl font-bold text-white">20+</div>
+      <div class="text-xs text-white uppercase tracking-wider">Innovative Practises</div>
+    </div>
+  </div>
+  
+  <p class="text-white text-sm mb-4">
+    Click on 'Enquire now' to hear from our academic counsellor.
+  </p>
+  
+  <button class="bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+    Apply Now
+  </button>
+</div>
+
+  <h2 class="text-2xl mt-6 font-bold text-darkBlue-100 mb-4">
+How Do The Top CBSE Schools in Madurai Make Digital Learning Social in Modern Classrooms?
+  </h2>
+
+  <p class="mb-6 leading-loose">
+If your idea of “digital learning” is students staring at screens alone, then it is time to update that picture. Because, in today’s world, learning becomes social when children:
+  </p>
+
+  <ul class="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
+    <li>Work together</li>
+    <li>Share ideas</li>
+    <li>Listen to each other</li>
+    <li>Solve problems as a team</li>
+  </ul>
+
+<div class="">
+  <div class="flex items-center gap-12">
+    <div class="flex-1">
+      <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">A Quick Snapshot: How Does 'Social Learning' Look Today?</h2>
+      <p class="text-gray-500">Because digital tools do not replace communication, they amplify it.</p>
+    </div>
+    <div class="w-52">
+      <img src="/blog/blog_2/2.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+  </div>
+</div>
+
+  <div class="overflow-x-auto mt-5 mb-10">
+    <table class="w-full border border-gray-200 text-md">
+      <thead class=" bg-gray-100">
+        <tr class="text-center">
+          <th class="border px-4 py-2 ">Social Skill</th>
+          <th class="border px-4 py-2 ">How Digital Learning Builds It</th>
+          <th class="border px-4 py-2 ">QMIS Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">Communication</td>
+          <td class="border px-4 py-2">Students exchange ideas online & offline</td>
+          <td class="border px-4 py-2">Group brainstorming on smart boards</td>
+        </tr>
+        <tr>
+          <td class="border px-4 py-2">Collaboration</td>
+          <td class="border px-4 py-2">Real-time teamwork on shared projects</td>
+          <td class="border px-4 py-2">Digital storytelling as a team</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="">
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+How Do The Top CBSE Schools in Madurai Make Digital Learning Social in Modern Classrooms?
+  </h2>
+  <div class="flex items-center gap-12">
+    <div class="w-52">
+      <img src="/blog/blog_2/3.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+    <div class="flex-1">
+      <p class="font-bold text-gray-600 mb-4">Most parents ask: “What exactly happens inside a digital interactive classroom?”</p>
+      <p class="text-gray-500">Here is the simplest answer: It becomes a shared playground for thinking, creating, & expressing ideas.</p>
+    </div>
+  </div>
+</div>
+
+  <p class="mb-6 leading-loose">
+Here are a few examples used every day at Queen Mira:
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+1. Smart Boards for Real-Time Group Problem Solving
+  </h2>
+
+  <p class="mb-6 leading-loose">
+Students are encouraged to come together to solve puzzles, annotate stories, work on equations, or brainstorm as a group.
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+2. Collaborative Digital Platforms
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Tools like virtual whiteboards & shared online resources allow students to plan & co-create:
+  </p>
+
+  <ul class="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
+    <li>Science models</li>
+    <li>Social science maps</li>
+    <li>Mathematical diagrams</li>
+    <li>Artwork & storyboards</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+3. Global Virtual Connections
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Students get to interact with the wider world, helping them develop:
+  </p>
+
+  <ul class="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
+    <li>Cultural awareness</li>
+    <li>Empathy</li>
+    <li>Confidence speaking in diverse settings</li>
+  </ul>
+
+<div class="">
+  <h2 class="text-2xl font-bold text-darkBlue-100 mb-4">
+4. Fun & Interactive Simulations
+  </h2>
+  <div class="flex items-center gap-12">
+    <div class="w-52">
+      <img src="/blog/blog_2/4.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+    <div class="flex-1">
+      <p class="text-gray-500">From ecosystems to space exploration, virtual labs let children learn together through discovery & experimentation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="flex items-center gap-12">
+    <div class="flex-1">
+      <p class="text-gray-500">Can The Right Digital Learning & World Class Education Build A Child’s EI?</p>
+    </div>
+    <div class="w-52">
+      <img src="/blog/blog_2/5.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+  </div>
+</div>
+
+
+  <p class="my-6 leading-loose">
+A child’s emotional intelligence often develops & strengthens when children work with their peers. Through digital collaboration, students learn to:
+  </p>
+
+  <ul class="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
+    <li>Listen patiently</li>
+    <li>Consider wider viewpoints</li>
+    <li>Wait for their turn</li>
+    <li>Appreciate peer strengths</li>
+    <li>Acknowledge their weaknesses and</li>
+    <li>Support teammates</li>
+  </ul>
+
+  <p class="mb-6 leading-loose">
+These are core pillars of a world class education, and QMIS integrates them across subjects.
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+Examples from QMIS Classrooms:
+  </h2>
+
+  <p class="mb-3 leading-loose">
+At Queen Mira, technology becomes the medium through which children understand themselves and others better.
+  </p>
+
+  <ul class="list-disc pl-6 mb-5 space-y-2 leading-relaxed">
+    <li>Digital art circles where students share & appreciate each other’s work</li>
+    <li>Group storytelling sessions that encourage imagination & empathy</li>
+    <li>Team-based virtual science labs that nurture curiosity</li>
+    <li>Peer-to-peer feedback systems to build confidence and kindness</li>
+  </ul>
+
+  <p class="mb-3 text-red-700 cursor-pointer underline leading-loose">
+RELATED: Did You Know How Skill Mapping Shapes Future-Ready Learners
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+Real Stories: How QMIS Makes Digital Learning Social & Human
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Here is a glimpse of how our students build meaningful relationships through digital learning:
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+Co-creation in Art & Design
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Students work together on digital murals and animations, blending creativity with teamwork.
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+Virtual Science Labs
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Instead of reading from a textbook, students experiment together using safe, interactive models.
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+Global Classroom Connections
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Students collaborate with international schools on cultural projects, climate studies, & storytelling challenges.
+  </p>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+Discussion-Based Learning
+  </h2>
+
+  <p class="mb-3 leading-loose">
+Every digital task is accompanied by conversations, reflection, and guided group work, making learning deeply social.
+  </p>
+  <p class="mb-3 leading-loose">
+This blend of technology and human connection is what makes parents choose QMIS from among the other international schools in Madurai.
+  </p>
+
+<div class="mt-5">
+  <div class="flex items-start gap-12">
+    <div class="w-52">
+      <img src="/blog/blog_2/6.png" alt="Social Learning Growth Pyramid" class="w-full h-auto">
+    </div>
+    <div class="flex-1">
+      <h2 class="text-2xl font-bold text-darkBlue-100 mb-2">Proven Initiatives of the Top International Schools in Madurai</h2>
+      <p class="text-gray-500 mb-3 leading-loose">Parents searching for the right blend of social, digital, & balanced learning in the best schools in Madurai often ask: “Will my child get both academic excellence and meaningful social interaction?”</p>
+      <p class="text-gray-500 leading-loose">At QMIS, the answer is always yes, because the school’s model is built with holistic development in mind!</p>
+    </div>
+  </div>
+</div>
+
+  <h2 class="text-2xl font-bold text-darkBlue-100 my-6">
+And here is why parents trust QMIS:
+  </h2>
+
+  <p class="text-gray-500 font-bold leading-loose">
+1. A Digital System Designed for Social Growth
+  </p>
+
+  <p class="mb-3 leading-loose">
+Children collaborate, present, debate, explore, and create, never study alone.
+  </p>
+
+  <p class="text-gray-500 font-bold leading-loose">
+2. Holistic, World Class Education
+  </p>
+
+  <p class="mb-3 leading-loose">
+Technology enhances the curriculum, but human connection shapes the learning experience.
+  </p>
+
+  <p class="text-gray-500 font-bold leading-loose">
+3. Strong Focus on Communication Skills
+  </p>
+
+  <p class="mb-3 leading-loose">
+Every lesson encourages speaking, listening, and expressing ideas clearly.
+  </p>
+
+  <p class="text-gray-500 font-bold leading-loose">
+4. Safe, Structured Digital Ecosystem
+  </p>
+
+  <p class="mb-3 leading-loose">
+Digital guidelines, teacher monitoring, and purposeful content ensure healthy usage.
+  </p>
+
+  <p class="text-gray-500 font-bold leading-loose">
+5. A Culture That Values Teamwork
+  </p>
+
+  <p class="mb-3 leading-loose">
+From group assignments to co-hosted events, students learn to work with peers naturally.
+  </p>
+
+  <h2 class="text-2xl font-semibold text-darkBlue-100 my-4">
+FAQs for Curious Parents
+  </h2>
+
+  <div class="space-y-3">
+    <p class="leading-loose"><strong>1. How does QMIS ensure students stay socially connected in digital classrooms?</strong><br />
+By designing each digital activity to involve teamwork, group tasks, and guided interaction.
+</p>
+
+<p class="leading-loose mb-2">
+  <strong>2. What makes the QMIS digital interactive classroom unique?</strong><br/>
+It blends advanced tools with teacher-led collaboration — focusing on social learning rather than screen dependency.
+</p>
+
+<p class="leading-loose mb-2">
+  <strong>3. Why is digital learning important today?</strong><br/>
+Because just academics is no longer enough, children must master skills like communication, creativity, and digital citizenship to thrive in the modern world.
+</p>
+
+<p class="leading-loose mb-2">
+  <strong>4. How does QMIS combine technology and empathy in teaching?</strong><br/>
+Emotional skill-building, reflective discussions, & supportive peer interaction are embedded into all digital tasks.
+</p>
+
+  <h2 class="text-2xl font-semibold text-darkBlue-100 my-4">
+Experience the QMIS Difference
+  </h2>
+
+<p class="leading-loose mb-2">
+Let your child experience a school where technology builds connection, not isolation. Explore how Queen Mira International School blends innovation, empathy, and collaboration to deliver truly world class education in Madurai.
+</p>
+
+<p class="leading-loose">
+<span class="text-red-700 cursor-pointer underline">Come, discover a school that helps your child grow socially, emotionally, & academically, only at QMIS, Madurai.</span> 
+</p>
+
+</section>
+`
+  },
+  {
     slug: "ai-empathy-education",
     title: "AI, Empathy & Education",
     subtitle: "Understanding the new 3Es of modern schooling and future-ready learning.",
