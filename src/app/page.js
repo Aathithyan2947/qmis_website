@@ -543,7 +543,7 @@ export default function Home() {
         initial={{ x: 120, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="bg-grid-dots text-gray-500 py-12 md:py-20 px-4 md:px-20 overflow-hidden"
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -602,7 +602,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="bg-[#B62020] text-white py-12 md:py-16 px-4 md:px-20 overflow-hidden"
       >
         <div className="max-w-6xl mx-auto">
@@ -662,7 +662,7 @@ export default function Home() {
               initial={{ y: 120, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="flex justify-center"
             >
               <div className="relative w-[60vw] h-[60vh] md:w-[70vw] md:h-[80vh] sm:w-[280px]">
@@ -683,7 +683,7 @@ export default function Home() {
       <section className="bg-grid-dots pt-8 md:pt-10 px-4 md:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8 md:mb-12">
-            <h2 className="text-xl md:text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mb-4 md:mb-6">
+            <h2 className="text-xl md:text-2xl sm:text-3xl font-bold text-red-700 mb-4 md:mb-6">
               World-class Facilities and Infrastructure
             </h2>
 
@@ -757,7 +757,7 @@ export default function Home() {
       {/* ================= UNLOCK POTENTIAL ================= */}
       <section className="bg-grid-dots px-4 pb-10 md:pb-16">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Unlock Your Child&apos;s Full Potential With Us
           </h2>
           <p className="text-gray-700 mb-2">Enroll them in the QMIS family.</p>
@@ -777,10 +777,10 @@ export default function Home() {
           className="max-w-6xl mx-auto"
           initial={{ x: 120, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             Education beyond the classroom
           </h2>
 
