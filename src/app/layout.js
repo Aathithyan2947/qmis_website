@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 
         {/* WHATSAPP FLOATING BUTTON */}
         <Link
-          href="https://api.whatsapp.com/send/?phone=919787570746&text=Hello"
+          href="https://api.whatsapp.com/send/?phone=919655777000&text=Hello"
           target="_blank"
           className="fixed bottom-5 right-5 flex items-center justify-center"
         >
@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
             alt="WhatsApp"
             width={60}
             height={60}
+            className="w-12 h-12 md:w-[60px] md:h-[60px]"
           />
         </Link>
 
