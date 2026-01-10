@@ -446,50 +446,55 @@ export default function Home() {
     <>
       {/* Fixed Mobile Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 hidden md:flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="relative bg-[#1B235A] rounded-2xl md:max-w-xl shadow-2xl p-2 md:p-8 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="relative bg-[#1B235A] rounded-2xl shadow-2xl p-4 md:p-6 w-fit max-w-[90vw]">
+
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-1 right-1 md:top-2 md:right-2 cursor-pointer hover:scale-110 transition-all duration-200 text-white text-2xl font-bold z-10"
+              className="absolute top-2 right-2 cursor-pointer hover:scale-110 transition text-white z-10"
               aria-label="Close"
             >
-              <X size={24} className="md:w-6 md:h-6" />
+              <X size={20} />
             </button>
 
-            <div className="rounded-xl overflow-hidden bg-[#0F1B4C]">
-              <div className="w-full h-48 md:h-72 bg-gray-400 flex items-center justify-center text-white">
+            {/* Image */}
+            <div className="rounded-xl flex justify-center p-3">
+              <div className="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[580px]">
                 <Image
                   src="/home/qmisad.webp"
-                  height={500}
                   width={800}
+                  height={500}
                   alt="Apply Now"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
+                  priority
                 />
               </div>
             </div>
 
-            <div className="flex justify-center mt-4 md:mt-6">
+            {/* Button */}
+            <div className="flex justify-center mt-4">
               <button
                 onClick={handleApplyNow}
-                className="bg-maroon-100 cursor-pointer duration-200 text-white px-6 py-2 md:px-8 rounded-lg font-semibold transition w-full md:w-auto"
+                className="bg-maroon-100 text-white px-6 py-3 rounded-lg font-semibold transition hover:bg-maroon-90 active:scale-95"
               >
                 Apply Now
               </button>
             </div>
+
           </div>
         </div>
       )}
 
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-[#0A0F3D] text-white px-4 md:px-20 py-12 md:py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 items-center gap-8 md:gap-0">
-          <div className="md:col-span-1">
-            <h1 className="text-2xl md:text-4xl font-bold leading-snug">
+      <section className="bg-darkBlue-100 text-white px-4 md:px-20 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-4 items-center gap-8 md:gap-12">
+          <div className="md:col-span-2">
+            <h1 className="text-2xl md:text-3xl font-bold leading-snug">
               Looking for a school that has a 360-degree approach to education?
             </h1>
 
-            <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-300 leading-relaxed">
+            <p className="mt-4 md:mt-6 text-base md:text-xl text-gray-300 leading-relaxed">
               At Queen Mira, we don&apos;t create toppers. We create leaders who will
               take the world into a brighter future.
             </p>
@@ -510,7 +515,7 @@ export default function Home() {
 
           <div className="md:col-span-2 flex justify-center items-end">
             <motion.div
-              className="relative w-full h-64 md:w-[50vw] md:h-[60vh]"
+              className="relative w-full h-64 md:h-[25vh] xl:h-[60vh] max-w-2xl mx-auto"
               onMouseMove={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -539,40 +544,46 @@ export default function Home() {
       </section>
 
       {/* ================= WELCOME TO QMIS ================= */}
-      <motion.section
-        initial={{ x: 120, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="bg-grid-dots text-gray-500 py-12 md:py-20 px-4 md:px-20 overflow-hidden"
-      >
+      <section className="bg-grid-dots text-gray-500 py-12 md:py-20 px-4 md:px-20 overflow-hidden">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+
+          {/* Images */}
           <div className="grid grid-cols-2 gap-4 md:gap-6 order-2 md:order-1">
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
-              <Image src="/home/Pic_2.webp" height={500} width={600} alt="image not found" />
-            </div>
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
-              <Image src="/home/Pic_3.webp" height={500} width={600} alt="image not found" />
-            </div>
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
-              <Image src="/home/Pic_4.webp" height={500} width={600} alt="image not found" />
-            </div>
-            <div className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32">
-              <Image src="/home/Pic_5.webp" height={500} width={600} alt="image not found" />
-            </div>
+            {[
+              "/home/Pic_2.webp",
+              "/home/Pic_3.webp",
+              "/home/Pic_4.webp",
+              "/home/Pic_5.webp",
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="bg-gray-100 backdrop-blur rounded-lg p-4 md:p-6 flex justify-center items-center h-24 md:h-32"
+              >
+                <Image
+                  src={src}
+                  width={600}
+                  height={500}
+                  alt="QMIS"
+                  className="object-contain"
+                />
+              </div>
+            ))}
           </div>
 
+          {/* Text */}
           <div className="text-center font-semibold order-1 md:order-2">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-black">Welcome to QMIS</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-black">
+              Welcome to QMIS
+            </h2>
 
             <div className="space-y-2 mb-6 md:mb-10">
-              <p className="leading-relaxed">
+              <p>
                 Queen Mira International School is one of Tamil Nadu&apos;s leading CBSE schools.
               </p>
-              <p className="leading-relaxed">
+              <p>
                 The first CBSE school to be accredited by The Council of International Schools.
               </p>
-              <p className="leading-relaxed">
+              <p>
                 QMIS aims to redefine education and produce responsible global citizens who won&apos;t
                 forget their roots.
               </p>
@@ -594,8 +605,10 @@ export default function Home() {
               <li>• Special needs–friendly curricula</li>
             </ul>
           </div>
+
         </div>
-      </motion.section>
+      </section>
+
 
       {/* ================= CURRICULUM SECTION ================= */}
       <motion.section
