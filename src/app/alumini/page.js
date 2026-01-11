@@ -279,50 +279,99 @@ export default function Alumni() {
 
 
       <div className="w-full py-10 px-6 md:px-16">
-        {/* Name + Title */}
 
-        {/* Testimonial Layout */}
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center">
+  {/* ================= MOBILE + TABLET (IMAGE ABOVE CONTENT) ================= */}
+  <div className="block lg:hidden max-w-6xl mx-auto flex flex-col items-center gap-6">
 
-            {/* LEFT — CONTENT (PILL OPENING RIGHT → so rounded-l-full) */}
-            <div className="relative w-full md:flex-1 order-2 md:order-1">
-              <div className="text-right pr-16 pb-5">
-                <h1 className="text-3xl  font-semibold text-gray-900">
-                  N. K. Sarvesh
-                  <span className="text-base font-normal ml-1">(Entrepreneur)</span>
-                </h1>
-                <p className="text-gray-600 mt-1 text-lg">(Batch of 2018 – 19)</p>
-              </div>
-              <div className="bg-[#b82025] text-white py-14 px-10 md:pl-16 md:pr-16 rounded-md md:rounded-l-full">
-                <p className="mb-8 leading-loose text-base md:text-lg">
-                  My journey at QMIS continues to remain one of the most meaningful
-                  chapters of my life. QMIS has never been just a place of learning
-                  for me—it has been a foundation where my character was shaped and
-                  my ambitions were encouraged.
-                </p>
+    {/* IMAGE ON TOP */}
+    <div className="w-full">
+      <img
+        src="/alumini/4.png"
+        alt="Sarvesh"
+        className="w-full h-auto object-cover rounded-md shadow-lg"
+      />
+    </div>
 
-                <p className="leading-loose text-base md:text-lg">
-                  What makes my school truly special is the long-lasting bond it
-                  creates with its students. Even today, I feel welcomed,
-                  remembered, and valued whenever I visit. That feeling of
-                  belonging speaks volumes about the culture and heart of QMIS.
-                </p>
-              </div>
-            </div>
+    {/* CONTENT BELOW IMAGE */}
+    <div className="w-full flex flex-col items-center text-center">
 
-            {/* RIGHT — IMAGE */}
-            <div className="w-full md:w-auto shrink-0 order-1 md:order-2 mb-10 md:mb-0">
-              <img
-                src="/alumini/4.png"
-                alt="Sarvesh"
-                className="w-full md:w-[350px] h-auto rounded-xl shadow-lg object-cover"
-              />
-            </div>
+      {/* Name / Title / Batch */}
+      <div className="mb-4">
+        <h1 className="text-2xl font-semibold text-gray-900">
+          N. K. Sarvesh
+          <span className="block text-sm font-normal">(Entrepreneur)</span>
+        </h1>
+        <p className="text-gray-600">(Batch of 2018 – 19)</p>
+      </div>
 
+      {/* Card with testimonial text only */}
+      <div className="bg-[#b82025] text-white p-6 rounded-md w-full">
+        <p className="mb-4 leading-relaxed text-base">
+          My journey at QMIS continues to remain one of the most meaningful
+          chapters of my life. QMIS has never been just a place of learning
+          for me—it has been a foundation where my character was shaped and
+          my ambitions were encouraged.
+        </p>
+
+        <p className="leading-relaxed text-base">
+          What makes my school truly special is the long-lasting bond it
+          creates with its students. Even today, I feel welcomed,
+          remembered, and valued whenever I visit. That feeling of
+          belonging speaks volumes about the culture and heart of QMIS.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  {/* ================= DESKTOP (UNCHANGED) ================= */}
+  <div className="hidden lg:block">
+
+    <div className="max-w-6xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center">
+
+        {/* LEFT — CONTENT */}
+        <div className="relative w-full md:flex-1 order-2 md:order-1">
+          <div className="text-right pr-16 pb-5">
+            <h1 className="text-3xl font-semibold text-gray-900">
+              N. K. Sarvesh
+              <span className="text-base font-normal ml-1">(Entrepreneur)</span>
+            </h1>
+            <p className="text-gray-600 mt-1 text-lg">(Batch of 2018 – 19)</p>
+          </div>
+
+          <div className="bg-[#b82025] text-white py-14 px-10 md:pl-16 md:pr-16 rounded-md md:rounded-l-full">
+            <p className="mb-8 leading-loose text-base md:text-lg">
+              My journey at QMIS continues to remain one of the most meaningful
+              chapters of my life. QMIS has never been just a place of learning
+              for me—it has been a foundation where my character was shaped and
+              my ambitions were encouraged.
+            </p>
+
+            <p className="leading-loose text-base md:text-lg">
+              What makes my school truly special is the long-lasting bond it
+              creates with its students. Even today, I feel welcomed,
+              remembered, and valued whenever I visit. That feeling of
+              belonging speaks volumes about the culture and heart of QMIS.
+            </p>
           </div>
         </div>
+
+        {/* RIGHT — IMAGE */}
+        <div className="w-full md:w-auto shrink-0 order-1 md:order-2 mb-10 md:mb-0">
+          <img
+            src="/alumini/4.png"
+            alt="Sarvesh"
+            className="w-full md:w-[350px] h-auto rounded-xl shadow-lg object-cover"
+          />
+        </div>
+
       </div>
+    </div>
+
+  </div>
+</div>
+
       <div className="w-full text-gray-800 font-sans">
         {/* ===================== MAIN CONTENT ===================== */}
         <div className="w-full flex justify-center px-4 md:px-10 py-16">
