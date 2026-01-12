@@ -59,11 +59,11 @@ export default function Disclosure() {
 
       <div className="bg-grid-dots mx-auto w-full md:max-w-6xl px-10 py-10 text-gray-700">
 
-        {/* <div className="bg-yellow-200 p-3 mb-4 rounded"> */}
-        {/*   <p className="text-yellow-900 text-md"> */}
-        {/*     Note: This page is currently under development. */}
-        {/*   </p> */}
-        {/* </div> */}
+        <div className="bg-yellow-200 p-3 mb-4 rounded">
+          <p className="text-yellow-900 text-md">
+            Note: This page is currently under development.
+          </p>
+        </div>
 
         {sections.map((section, index) => (
           <div key={index} className="mb-12">
