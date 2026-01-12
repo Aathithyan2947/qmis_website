@@ -178,7 +178,7 @@ function FacilitiesGrid() {
             onMouseLeave={() => setHoveredIndex(null)}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.2, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
             {/* Image Container */}
@@ -234,21 +234,23 @@ function FacilitiesGrid() {
 function CardsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const [itemsPerPage, setItemsPerPage] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const autoSlideIntervalRef = useRef(null);
   const containerRef = useRef(null);
 
-  // Calculate visible items based on screen size
+  // Calculate visible items based on screen size with proper responsive breakpoints
   useEffect(() => {
     const updateItemsPerPage = () => {
-      if (window.innerWidth >= 1024) {
+      const width = window.innerWidth;
+
+      if (width >= 1280) { // Desktop
         setItemsPerPage(4);
-      } else if (window.innerWidth >= 768) {
+      } else if (width >= 1024) { // Laptop
         setItemsPerPage(3);
-      } else if (window.innerWidth >= 640) {
+      } else if (width >= 768) { // Tablet
         setItemsPerPage(2);
-      } else {
+      } else { // Mobile
         setItemsPerPage(1);
       }
     };
@@ -262,7 +264,7 @@ function CardsCarousel() {
     };
   }, []);
 
-  // Auto-slide functionality
+  // Auto-slide functionality - changed to 1 second
   useEffect(() => {
     if (isAutoPlaying) {
       startAutoSlide();
@@ -273,13 +275,13 @@ function CardsCarousel() {
     return () => {
       stopAutoSlide();
     };
-  }, [isAutoPlaying, currentIndex]);
+  }, [isAutoPlaying, currentIndex, itemsPerPage]);
 
   const startAutoSlide = () => {
     stopAutoSlide();
     autoSlideIntervalRef.current = setInterval(() => {
       handleNext();
-    }, 2000); // Changed to 2 seconds
+    }, 1000); // Auto-slide every 1 second
   };
 
   const stopAutoSlide = () => {
@@ -289,12 +291,33 @@ function CardsCarousel() {
     }
   };
 
-  // Calculate total items needed for infinite scroll
   const totalItems = cards.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  // Create an extended array for smooth infinite scrolling
-  const extendedCards = [...cards, ...cards, ...cards];
+  // Handle next slide with proper boundary
+  const handleNext = () => {
+    if (isAnimating) return;
+
+    setIsAutoPlaying(false);
+    setIsAnimating(true);
+
+    setCurrentIndex((prev) => {
+      let newIndex = prev + itemsPerPage;
+
+      // If we're at or beyond the last page, loop back to start
+      if (newIndex >= totalItems) {
+        // For smooth infinite effect, we'll go to the next logical position
+        // but in the render we'll handle the transition differently
+        return 0;
+      }
+      return newIndex;
+    });
+
+    setTimeout(() => {
+      setIsAnimating(false);
+      setIsAutoPlaying(true);
+    }, 500);
+  };
 
   const handlePrev = () => {
     if (isAnimating) return;
@@ -303,25 +326,21 @@ function CardsCarousel() {
     setIsAnimating(true);
 
     setCurrentIndex((prev) => {
-      const newIndex = prev - 1;
-      return newIndex < 0 ? totalItems - itemsPerPage : newIndex;
+      let newIndex = prev - itemsPerPage;
+
+      // If we're at the beginning, loop to the end
+      if (newIndex < 0) {
+        // Find the last possible starting position
+        const lastStartIndex = totalItems - (totalItems % itemsPerPage || itemsPerPage);
+        return lastStartIndex;
+      }
+      return newIndex;
     });
 
-    setTimeout(() => setIsAnimating(false), 500);
-  };
-
-  const handleNext = () => {
-    if (isAnimating) return;
-
-    setIsAutoPlaying(false);
-    setIsAnimating(true);
-
-    setCurrentIndex((prev) => {
-      const newIndex = prev + 1;
-      return newIndex > totalItems - itemsPerPage ? 0 : newIndex;
-    });
-
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => {
+      setIsAnimating(false);
+      setIsAutoPlaying(true);
+    }, 500);
   };
 
   const handleMouseEnter = () => {
@@ -332,88 +351,123 @@ function CardsCarousel() {
     setIsAutoPlaying(true);
   };
 
-  // Calculate which cards to show
+  // Get visible cards with responsive styling
   const getVisibleCards = () => {
-    const startIndex = currentIndex;
-    const endIndex = startIndex + itemsPerPage;
-    return extendedCards.slice(startIndex, startIndex + itemsPerPage * 2).slice(0, itemsPerPage);
+    // Create extended array for smooth looping
+    const extendedCards = [...cards, ...cards];
+
+    // Calculate which cards to show
+    const startIndex = currentIndex % totalItems;
+    const visibleCards = [];
+
+    for (let i = 0; i < itemsPerPage; i++) {
+      const cardIndex = (startIndex + i) % totalItems;
+      visibleCards.push({
+        ...cards[cardIndex],
+        uniqueKey: `${cards[cardIndex].id}-${startIndex + i}`
+      });
+    }
+
+    return visibleCards;
   };
 
   const visibleCards = getVisibleCards();
 
   return (
     <div
-      className="relative"
+      className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Left Arrow */}
+      {/* Navigation Arrows - Responsive positioning */}
       <button
         onClick={handlePrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-14 z-10
-                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100 backdrop-blur-sm
-                   border border-darkBlue-100 flex items-center justify-center
+        className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-10
+                   w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100/90 backdrop-blur-sm
+                   border border-darkBlue-200 flex items-center justify-center
                    hover:bg-darkBlue-100 hover:scale-110 transition-all duration-300
                    focus:outline-none focus:ring-2 focus:ring-white/50
-                   disabled:opacity-50 disabled:cursor-not-allowed"
+                   disabled:opacity-50 disabled:cursor-not-allowed
+                   shadow-lg"
         aria-label="Previous policies"
         disabled={isAnimating}
       >
-        <ChevronLeft size={24} className="text-white" />
+        <ChevronLeft size={20} className="sm:w-6 sm:h-6 text-white" />
       </button>
 
       {/* Cards Container */}
-      <div className="overflow-hidden px-8" ref={containerRef}>
-        <div
-          className={`flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out ${isAnimating ? 'transition-all duration-500' : ''
-            }`}
-          style={{
-            transform: `translateX(-${(currentIndex % totalItems) * (100 / itemsPerPage)}%)`,
-          }}
-        >
-          {extendedCards.map((card, idx) => (
-            <div
-              key={`${card.id}-${idx}`}
-              onClick={() => window.open(card.pdf, '_blank')}
-              className="bg-darkBlue-100 h-56 w-72 p-6 sm:p-8 rounded-lg text-white cursor-pointer 
-                       hover:bg-red-500 transition-all duration-300 
-                       flex flex-col justify-between transform hover:-translate-y-1
-                       min-w-[250px] flex-shrink-0"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white 
-                            flex items-center justify-center mb-4 sm:mb-6">
-                <FileText size={18} className="sm:text-lg" />
+      <div
+        className="overflow-hidden px-10 sm:px-12 md:px-14 lg:px-16"
+        ref={containerRef}
+      >
+        <div className="flex justify-center items-center">
+          <div className={`flex gap-3 sm:gap-4 md:gap-6 transition-transform duration-500 ease-in-out ${isAnimating ? 'transition-all duration-500' : ''}`}>
+            {visibleCards.map((card) => (
+              <div
+                key={card.uniqueKey}
+                onClick={() => window.open(card.pdf, '_blank')}
+                className="bg-darkBlue-100 h-48 sm:h-56 md:h-64 p-4 sm:p-6 md:p-8 rounded-lg text-white cursor-pointer 
+                         hover:bg-red-500 transition-all duration-300 
+                         flex flex-col justify-between transform hover:-translate-y-1
+                         min-w-[calc(100vw-8rem)] sm:min-w-[calc(50vw-6rem)] md:min-w-[calc(33.333vw-8rem)] lg:min-w-[calc(25vw-8rem)]
+                         max-w-[calc(100vw-8rem)] sm:max-w-[calc(50vw-6rem)] md:max-w-[calc(33.333vw-8rem)] lg:max-w-[calc(25vw-8rem)]
+                         flex-shrink-0 shadow-lg hover:shadow-xl"
+              >
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border border-white 
+                              flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
+                  <FileText size={16} className="sm:text-lg" />
+                </div>
+
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold leading-tight sm:leading-snug line-clamp-2">
+                  {card.title}
+                </h3>
+
+                <span className="w-6 sm:w-8 md:w-12 h-[2px] bg-white my-2 sm:my-3 md:my-4 block" />
+
+                <p className="text-xs sm:text-sm text-gray-300 flex items-center">
+                  View now
+                  <ChevronRight size={12} className="sm:w-3 sm:h-3 md:w-4 md:h-4 ml-1" />
+                </p>
               </div>
-
-              <h3 className="text-base sm:text-lg font-semibold leading-snug">
-                {card.title}
-              </h3>
-
-              <span className="w-8 sm:w-12 h-[2px] bg-white my-3 sm:my-4 block" />
-
-              <p className="text-xs sm:text-sm text-gray-300 flex items-center">
-                View now
-                <ChevronRight size={14} className="sm:w-4 sm:h-4 ml-1" />
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Right Arrow */}
       <button
         onClick={handleNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-14 z-10
-                   w-10 h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100 backdrop-blur-sm
-                   border border-darkBlue-100 flex items-center justify-center
+        className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-10
+                   w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100/90 backdrop-blur-sm
+                   border border-darkBlue-200 flex items-center justify-center
                    hover:bg-darkBlue-100 hover:scale-110 transition-all duration-300
                    focus:outline-none focus:ring-2 focus:ring-white/50
-                   disabled:opacity-50 disabled:cursor-not-allowed"
+                   disabled:opacity-50 disabled:cursor-not-allowed
+                   shadow-lg"
         aria-label="Next policies"
         disabled={isAnimating}
       >
-        <ChevronRight size={24} className="text-white" />
+        <ChevronRight size={20} className="sm:w-6 sm:h-6 text-white" />
       </button>
+
+      {/* Dots Indicator - Responsive */}
+      <div className="flex justify-center items-center mt-6 sm:mt-8 space-x-2">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setIsAutoPlaying(false);
+              setCurrentIndex(index * itemsPerPage);
+              setTimeout(() => setIsAutoPlaying(true), 1000);
+            }}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${Math.floor(currentIndex / itemsPerPage) === index
+              ? 'bg-white scale-125'
+              : 'bg-white/40'
+              }`}
+            aria-label={`Go to page ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -447,8 +501,10 @@ export default function Home() {
       {/* Fixed Mobile Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-          <div className="relative bg-[#1B235A] rounded-2xl shadow-2xl p-4 md:p-6 w-fit max-w-[90vw]">
-
+          <div
+            className="relative bg-[#1B235A] rounded-2xl shadow-2xl p-4 md:p-6
+                 w-[90vw] max-w-[580px]"
+          >
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
@@ -458,22 +514,19 @@ export default function Home() {
               <X size={20} />
             </button>
 
-            {/* Image */}
-            <div className="rounded-xl flex justify-center p-3">
-              <div className="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[580px]">
-                <Image
-                  src="/home/qmisad.webp"
-                  width={800}
-                  height={500}
-                  alt="Apply Now"
-                  className="w-full h-auto object-contain"
-                  priority
-                />
-              </div>
+            {/* Image Wrapper (FIXED SIZE → no flicker) */}
+            <div className="relative w-full h-[260px] md:h-80 lg:h-[360px] rounded-xl overflow-hidden">
+              <Image
+                src="/home/qmisad.webp"
+                alt="Apply Now"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
 
             {/* Button */}
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center md:mt-5">
               <button
                 onClick={handleApplyNow}
                 className="bg-maroon-100 text-white px-6 py-3 rounded-lg font-semibold transition hover:bg-maroon-90 active:scale-95"
@@ -481,7 +534,6 @@ export default function Home() {
                 Apply Now
               </button>
             </div>
-
           </div>
         </div>
       )}
@@ -544,7 +596,12 @@ export default function Home() {
       </section>
 
       {/* ================= WELCOME TO QMIS ================= */}
-      <section className="bg-grid-dots text-gray-500 py-12 md:py-20 px-4 md:px-20 overflow-hidden">
+      <motion.section
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="bg-grid-dots text-gray-500 py-12 md:py-20 px-4 md:px-20 overflow-hidden">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
 
           {/* Images */}
@@ -607,15 +664,15 @@ export default function Home() {
           </div>
 
         </div>
-      </section>
+      </motion.section>
 
 
       {/* ================= CURRICULUM SECTION ================= */}
       <motion.section
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="bg-[#B62020] text-white py-12 md:py-16 px-4 md:px-20 overflow-hidden"
       >
         <div className="max-w-6xl mx-auto">
@@ -674,8 +731,8 @@ export default function Home() {
             <motion.div
               initial={{ y: 120, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex justify-center"
             >
               <div className="relative w-[60vw] h-[60vh] md:w-[70vw] md:h-[80vh] sm:w-[280px]">
@@ -790,8 +847,8 @@ export default function Home() {
           className="max-w-6xl mx-auto"
           initial={{ x: 120, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             Education beyond the classroom
