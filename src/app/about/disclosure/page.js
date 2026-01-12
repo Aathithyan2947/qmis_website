@@ -28,7 +28,7 @@ const sections = [
     items: [
       { label: "Fee Structure of the School", href: "#" },
       { label: "Annual Academic Calendar", href: "https://drive.google.com/file/d/1trXX17D2VCPKNpFNOuI9k6QK9ZApWlmK/view" },
-      { label: "List of SMC", href: "https://drive.google.com/file/d/1trXX17D2VCPKNpFNOuI9k6QK9ZApWlmK/view" },
+      { label: "List of SMC", href: "https://drive.google.com/file/d/1Bz7ePUNaDf-jUdoXk2a00YIiE0GGV3oC/view" },
       { label: "Last 3 Years Result of Board Examination", href: "https://drive.google.com/file/d/1_9tMWZdpjril0TR3SJ-Cvuz7h4tWFu6j/view" },
     ]
   },
@@ -59,11 +59,11 @@ export default function Disclosure() {
 
       <div className="bg-grid-dots mx-auto w-full md:max-w-6xl px-10 py-10 text-gray-700">
 
-        <div className="bg-yellow-200 p-3 mb-4 rounded">
-          <p className="text-yellow-900 text-md">
-            Note: This page is currently under development.
-          </p>
-        </div>
+        {/* <div className="bg-yellow-200 p-3 mb-4 rounded"> */}
+        {/*   <p className="text-yellow-900 text-md"> */}
+        {/*     Note: This page is currently under development. */}
+        {/*   </p> */}
+        {/* </div> */}
 
         {sections.map((section, index) => (
           <div key={index} className="mb-12">
