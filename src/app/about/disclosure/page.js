@@ -28,7 +28,7 @@ const sections = [
     items: [
       { label: "Fee Structure of the School", href: "#" },
       { label: "Annual Academic Calendar", href: "https://drive.google.com/file/d/1trXX17D2VCPKNpFNOuI9k6QK9ZApWlmK/view" },
-      { label: "List of SMC", href: "https://drive.google.com/file/d/1Bz7ePUNaDf-jUdoXk2a00YIiE0GGV3oC/view" },
+      { label: "List of SMC", href: "https://drive.google.com/file/d/1YentJX3xL6fq1-UUiS66BlSyz_537pmr/view" },
       { label: "Last 3 Years Result of Board Examination", href: "https://drive.google.com/file/d/1_9tMWZdpjril0TR3SJ-Cvuz7h4tWFu6j/view" },
     ]
   },
