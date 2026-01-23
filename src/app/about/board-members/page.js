@@ -15,12 +15,13 @@ const boardMembers = [
   },
   {
     img: "/2_bm.jpg",
-    name: "THIRU. D.R. KAARTHIKEYAN",
+    name: "THIRU.D.R.KAARTHIKEYAN",
     desc: [
-      "Former Indian Police Officer (IPS) Former",
-      "Director of the Central Bureau of",
+      "Former Indian Police Officer (IPS)",
+      "Former Director of the Central Bureau",
+      "of Investigation (CBI)",
       "Investigation (CBI) Former Director General",
-      "of National Human Rights Commission",
+      "National Human Rights Commission",
     ],
   },
   {
