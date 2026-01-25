@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Bot, X, Send } from 'lucide-react';
+import { Bot, X, Send, ChevronUp, ChevronDown } from 'lucide-react';
 import { faqData } from '@/lib/faqData';
 
 export default function ChatBot() {
@@ -16,6 +16,7 @@ export default function ChatBot() {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [suggestedQuestions, setSuggestedQuestions] = useState([]);
+  const [isAccordionOpen, setIsAccordionOpen] = useState(true);
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
 
@@ -83,6 +84,61 @@ export default function ChatBot() {
     return highestScore > 0 ? bestMatch : null;
   };
 
+  // Function to render text with clickable links - SIMPLIFIED VERSION
+  const renderTextWithLinks = (text, isBot) => {
+    if (!text) return text;
+
+    // Simple regex that catches more patterns
+    const urlRegex = /(\S+\.\S+\.\S+|www\.\S+\.\S+|\S+@\S+\.\S+)/gi;
+
+    // Split by common separators to get words
+    const words = text.split(/(\s+)/);
+
+    return words.map((word, index) => {
+      // Check if the word looks like a URL or email
+      if (urlRegex.test(word.trim())) {
+        let url = word.trim();
+
+        // Handle email addresses
+        if (url.includes('@')) {
+          return (
+            <a
+              key={index}
+              href={`mailto:${url}`}
+              className={`underline hover:opacity-80 transition-opacity ${
+                isBot ? 'text-blue-600' : 'text-blue-200'
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {url}
+            </a>
+          );
+        }
+
+        // Handle website URLs
+        if (!url.startsWith('http')) {
+          url = 'https://' + url;
+        }
+
+        return (
+          <a
+            key={index}
+            href={url}
+            target='_blank'
+            rel='noopener noreferrer'
+            className={`underline hover:opacity-80 transition-opacity ${
+              isBot ? 'text-blue-600' : 'text-blue-200'
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {word}
+          </a>
+        );
+      }
+      return word;
+    });
+  };
+
   const typeMessage = async (text, messageId) => {
     const words = text.split(' ');
 
@@ -138,7 +194,7 @@ export default function ChatBot() {
       };
       setMessages((prev) => [...prev, botMessage]);
       await typeMessage(
-        "I'm sorry, I couldn't find an answer to that question. 😔 Please try asking about admissions, fees, activities, or contact information. You can also reach us at contact@queenmira.com or visit www.qmis.edu.in!",
+        "I'm sorry, I couldn't find an answer to that question. Please try asking about admissions, fees, activities, or contact information. You can also reach us at contact@queenmira.com or visit www.qmis.edu.in!",
         botMessageId,
       );
     }
@@ -178,8 +234,8 @@ export default function ChatBot() {
             ref={chatContainerRef}
             className='bg-white rounded-xl sm:rounded-2xl shadow-2xl w-[calc(100vw-2rem)] max-w-[420px] h-[calc(100vh-8rem)] sm:h-[550px] flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300'
             style={{
-              maxHeight: 'calc(var(--vh, 1vh) * 85)',
-              margin: '0 1rem',
+              maxHeight: 'calc(var(--vh, 1vh) * 75)',
+              //   margin: '0 0.25rem',
             }}
           >
             {/* Header with dark blue theme */}
@@ -252,7 +308,7 @@ export default function ChatBot() {
                         !message.isBot ? 'text-white' : 'text-gray-800'
                       }`}
                     >
-                      {message.text}
+                      {renderTextWithLinks(message.text, message.isBot)}
                       {message.isTyping && (
                         <span
                           className='inline-block w-0.5 h-3 sm:w-1 sm:h-4 ml-0.5 sm:ml-1 animate-pulse'
@@ -270,33 +326,56 @@ export default function ChatBot() {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Suggested questions */}
+            {/* Suggested questions accordion */}
             {suggestedQuestions.length > 0 && (
-              <div className='p-2 sm:p-3 bg-white border-t border-gray-200 shrink-0'>
-                <p className='text-xs font-semibold text-gray-600 mb-1.5 sm:mb-2'>
-                  Quick Questions:
-                </p>
-                <div className='flex flex-wrap gap-1.5 sm:gap-2'>
-                  {suggestedQuestions.map((faq) => (
-                    <button
-                      key={faq.id}
-                      onClick={() => handleSuggestedQuestion(faq.question)}
-                      style={{
-                        backgroundColor: `${themeColors.primary}10`,
-                        color: themeColors.primary,
-                        borderColor: `${themeColors.primary}30`,
-                      }}
-                      className='text-xs hover:bg-opacity-20 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-full transition-colors border hover:border-opacity-50 whitespace-nowrap overflow-hidden text-ellipsis max-w-full'
-                    >
-                      {faq.question.length > (window.innerWidth < 640 ? 25 : 40)
-                        ? faq.question.substring(
-                            0,
-                            window.innerWidth < 640 ? 25 : 40,
-                          ) + '...'
-                        : faq.question}
-                    </button>
-                  ))}
-                </div>
+              <div className='border-t border-gray-200 shrink-0'>
+                {/* Accordion header */}
+                <button
+                  onClick={() => setIsAccordionOpen(!isAccordionOpen)}
+                  className='w-full p-3 bg-white hover:bg-gray-50 transition-colors flex items-center justify-between'
+                  aria-label={
+                    isAccordionOpen
+                      ? 'Collapse quick questions'
+                      : 'Expand quick questions'
+                  }
+                >
+                  <span className='text-xs font-semibold text-gray-600'>
+                    Quick Questions
+                  </span>
+                  {isAccordionOpen ? (
+                    <ChevronUp className='w-4 h-4 text-gray-500' />
+                  ) : (
+                    <ChevronDown className='w-4 h-4 text-gray-500' />
+                  )}
+                </button>
+
+                {/* Accordion content */}
+                {isAccordionOpen && (
+                  <div className='p-2 sm:p-3 bg-white border-t border-gray-100'>
+                    <div className='flex flex-wrap gap-1.5 sm:gap-2'>
+                      {suggestedQuestions.map((faq) => (
+                        <button
+                          key={faq.id}
+                          onClick={() => handleSuggestedQuestion(faq.question)}
+                          style={{
+                            backgroundColor: `${themeColors.primary}10`,
+                            color: themeColors.primary,
+                            borderColor: `${themeColors.primary}30`,
+                          }}
+                          className='text-xs hover:bg-opacity-20 px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-full transition-colors border hover:border-opacity-50 whitespace-nowrap overflow-hidden text-ellipsis max-w-full'
+                        >
+                          {faq.question.length >
+                          (window.innerWidth < 640 ? 25 : 40)
+                            ? faq.question.substring(
+                                0,
+                                window.innerWidth < 640 ? 25 : 40,
+                              ) + '...'
+                            : faq.question}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
@@ -314,10 +393,7 @@ export default function ChatBot() {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder='Type your question...'
-                  className='flex-1 px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 text-sm min-w-0'
-                  style={{
-                    focusRingColor: themeColors.primary,
-                  }}
+                  className='flex-1 px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm min-w-0'
                 />
                 <button
                   type='submit'
