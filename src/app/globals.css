@@ -1,11 +1,11 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-maroon-100: #af2025;
-  --color-darkBlue-100: #0A0F3D;
+  --color-darkBlue-100: #0a0f3d;
 }
 
 @theme inline {
@@ -131,4 +131,45 @@
     background-size: 24px 24px;
     background-position: center;
   }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Mobile-first responsive design */
+  @media (max-width: 640px) {
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+
+    .p-3 {
+      padding: 0.75rem;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+  }
+}
+
+/* Smooth animations */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.slide-in-from-bottom-5 {
+  animation-name: slideInFromBottom;
 }
