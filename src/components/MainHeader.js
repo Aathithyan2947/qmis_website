@@ -54,7 +54,7 @@ export default function MainHeader() {
         {/* Desktop Buttons */}
         <div className="hidden md:flex gap-4 lg:gap-8 items-center">
           <Button onClick={handleApplyNow}>Apply Now</Button>
-          <Button>Download School Brochure</Button>
+          {/* <Button>Download School Brochure</Button> */}
           <Menu
             className="cursor-pointer"
             onClick={() => setOpenMenu(true)}
@@ -73,7 +73,7 @@ export default function MainHeader() {
       {/* Second Row - Mobile Buttons */}
       <div className="flex md:hidden flex-row justify-around gap-3 mt-4">
         <Button onClick={handleApplyNow}>Apply Now</Button>
-        <Button>Download School Brochure</Button>
+        {/*<Button>Download School Brochure</Button> */}
       </div>
     </div>
   );
