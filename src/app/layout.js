@@ -5,6 +5,7 @@ import MainFooter from '@/components/MainFooter';
 import Image from 'next/image';
 import Link from 'next/link';
 import ChatBot from '@/components/ChatBot';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} font-sans antialiased`}>
         <MainHeader />
         {children}
+        <Toaster />
         <ChatBot />
         {/* WHATSAPP FLOATING BUTTON */}
         <Link
