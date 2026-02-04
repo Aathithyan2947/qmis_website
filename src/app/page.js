@@ -633,7 +633,7 @@ export default function Home() {
               Welcome to QMIS
             </h2>
 
-            <div className="space-y-2 mb-6 md:mb-10">
+            <div className="text-left space-y-2 mb-6 md:mb-10">
               <p>
                 Queen Mira International School is one of Tamil Nadu&apos;s leading CBSE schools.
               </p>
@@ -646,7 +646,7 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="my-6 md:my-10">
+            <p className="text-left my-6 md:my-10">
               This is the greatest gift you could give your child.
             </p>
 

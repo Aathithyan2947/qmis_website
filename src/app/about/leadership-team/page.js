@@ -10,7 +10,7 @@ export default function LeadershipTeam() {
         <div className="max-w-6xl mx-auto px-6 md:px-10 space-y-20">
 
           {/* INTRO */}
-          <p className="text-gray-500 leading-relaxed text-[17px] max-w-4xl">
+          <p className="text-gray-500 font-bold leading-relaxed text-[17px] max-w-4xl">
             A vision driven Senior Leadership Team that serves as the steward of the
             school's Philosophy, Vision, Mission and Core values.
           </p>
@@ -31,11 +31,11 @@ export default function LeadershipTeam() {
 
             <div className="order-2  md:order-2">
               <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
-  Dr. C. Chandran
-</h2>
-<p className="text-sm mb-4 font-bold text-darkBlue-100">
-  Chairman
-</p>
+                Dr. C. Chandran
+              </h2>
+              <p className="text-sm mb-4 font-bold text-darkBlue-100">
+                Chairman
+              </p>
 
 
               <p className="text-gray-500 leading-loose text-[16.7px]">
@@ -63,8 +63,8 @@ export default function LeadershipTeam() {
                 Abinath Chandran
               </h2>
               <p className="text-sm mb-4 font-bold text-darkBlue-100">
-  Managing Director
-</p>
+                Managing Director
+              </p>
               <p className="text-gray-500 leading-loose text-[16.7px]">
                 QMIS' philosophy, which ensures the wellbeing of every individual by nurturing their body, mind and soul, holds the key to build an educational eco-system of facilitating children to bloom into purposeful citizens. I strongly advocate our BFIT, a significant tool to bring all the three into an alignment. An hour a day in the ground allows the children to develop a robust body that leads to shaping a strong mind. The strong-minded individuals develop a positive attitude and radiate good vibes into the environment. I am thankful to the Almighty and my late mother for the blessings and I am grateful to my mentors - my father Dr.C.Chandran and Padmashree Kaviperarasu Vairamuthu Ayya for their trust in me. Privileged with a dedicated team, QMIS has become the only CBSE School to have made its mark in the global arena with an international accreditation from the Council of International Schools (CIS), Leidens, Netherlands.
               </p>
@@ -89,9 +89,9 @@ export default function LeadershipTeam() {
               <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
                 Sujatha Guptan
               </h2>
-               <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Director Academics 
-</p>
+              <p className="text-sm mb-4 font-bold text-darkBlue-100">
+                Director Academics
+              </p>
               <p className="text-gray-500 leading-loose text-[16.7px] mb-4">
                 The process of the learning has no boundaries and the dignity of the men is determined by the greatness of their mind. Holding strong belief in these facts, QMIS imparts an education which focuses on building great minds and operates with the motto of more & beyond. We allow the children to grow in a progressive environment, where their interests and learning are taken more & beyond the walls of the classroom and syllabus. While academic excellence is our major thrust, the school is also devoted to prepare the students for life, groom them to face the challenges of tomorrow and encourage them to be socially relevant.
               </p>
@@ -121,8 +121,8 @@ export default function LeadershipTeam() {
                 Josephine Anne Sheebha Aruldass
               </h2>
               <p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Joint Director - Admin
-</p>
+                Joint Director - Admin
+              </p>
               <p className="text-gray-500 leading-loose text-[16.7px] mb-4">
                 One thing that is most valued in QMIS is the strong "TEAM". Journey of prestigious Council of International School (CIS) Accreditation process has chiseled us through the years and has brought the present glory of being the first ever CBSE school to be Accredited by CIS. This achievement was possible because of the inspirational leadership and the conviction of the employees.
               </p>
@@ -150,9 +150,9 @@ export default function LeadershipTeam() {
               <h2 className="text-[26px] font-semibold text-darkBlue-100 mb-1">
                 Ashrafa Siddika Akbar Ali
               </h2>
-<p className="text-sm mb-4 font-bold text-darkBlue-100">
-   Joint Director - Audit
-</p>
+              <p className="text-sm mb-4 font-bold text-darkBlue-100">
+                Joint Director - Audit
+              </p>
               <p className="text-gray-500 leading-loose text-[16.7px]">
                 Our holistic educational approach ensures strong academics, character development, and global exposure—shaping confident, future-ready learners.
               </p>

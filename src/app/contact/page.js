@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 import { Loader2 } from "lucide-react";
 
 export default function ContactPage() {
+  const APPLY_NOW_URL =
+    "https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw";
   // API configuration
   const API_BASE_URL = process.env.NODE_ENV === 'production'
     ? 'https://qmis-dashboard.vercel.app/api'
@@ -40,6 +42,10 @@ export default function ContactPage() {
         [name]: ''
       }));
     }
+  };
+
+  const handleApplyNow = () => {
+    window.open(APPLY_NOW_URL, "_blank", "noopener,noreferrer");
   };
 
   // Validate form
@@ -177,13 +183,6 @@ export default function ContactPage() {
     }
   };
 
-  // Apply Now button handler
-  const handleApplyNow = () => {
-    // Navigate to application form or show modal
-    toast.success("Redirecting to application form...");
-    // You can replace this with actual navigation
-    // router.push('/apply');
-  };
 
   // Format phone number for display
   const formatPhoneNumber = (phone) => {

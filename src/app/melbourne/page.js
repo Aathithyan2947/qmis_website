@@ -30,7 +30,7 @@ export default function Melbourne() {
               src="/melbourne/1.png"
               alt="Global studies skill gap visualization"
               fill
-              className="object-cover blur-md scale-105"
+              className="object-cover scale-105"
               sizes="100vw"
             />
 
