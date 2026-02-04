@@ -48,7 +48,7 @@ export default function AboutQmis() {
 
         <div className="mx-auto max-w-6xl mt-16 flex justify-center">
           <Image
-            src="/about-qmis/new.png"
+            src="/about-qmis/content_teacher.png"
             alt="not found"
             width={900}
             height={600}

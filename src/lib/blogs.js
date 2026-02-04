@@ -59,7 +59,8 @@ From KG to Grade 12, lessons come allve with interactive activities, purposeful 
     Click on 'Enquire now' to hear from our academic counsellor.
   </p>
   
-  <button class="bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+  <button onclick="window.open('https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw', '_blank', 'noopener,noreferrer')"
+class="apply-now bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
     Apply Now
   </button>
 </div>
@@ -413,7 +414,9 @@ At QMIS, the answer is a clear yes.
     Click on 'Enquire now' to hear from our academic counsellor.
   </p>
   
-  <button class="bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+  <button 
+onclick="window.open('https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw', '_blank', 'noopener,noreferrer')"
+class="apply-now bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
     Apply Now
   </button>
 </div>
@@ -1047,7 +1050,9 @@ RELATED: Between Play School & Pre-School Which is Best For Your Child?
     Click on 'Enquire now' to hear from our academic counsellor.
   </p>
   
-  <button class="bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+  <button 
+onclick="window.open('https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw', '_blank', 'noopener,noreferrer')"
+class="apply-now bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
     Apply Now
   </button>
 </div>
@@ -1296,7 +1301,9 @@ RELATED: Between Play School & Pre-School Which is Best For Your Child?
     Click on 'Enquire now' to hear from our academic counsellor.
   </p>
   
-  <button class="bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+  <button 
+onclick="window.open('https://admissions.qmis.edu.in/?utm_source=Website&utm_medium=popup_form&utm_campaign=BBC&_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw', '_blank', 'noopener,noreferrer')"
+class="apply-now bg-white text-red-600 text-sm px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
     Apply Now
   </button>
 </div>
