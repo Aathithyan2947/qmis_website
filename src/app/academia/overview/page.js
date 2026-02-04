@@ -3,6 +3,7 @@ import Image from "next/image";
 import CardSwap, { Card } from '@/components/CardSwap'; // Adjust path if needed
 import PageHeader from "@/components/PageHeader";
 import HoverExpandGallery from "@/components/HoverExpandGallery";
+import { useRouter } from "next/navigation";
 
 export default function AcademicOverview() {
   const academicImages = [
@@ -15,6 +16,8 @@ export default function AcademicOverview() {
     { length: 3 },
     (_, i) => `/academic-overview/Pic_${i + 8}.webp`
   );
+
+  const router = useRouter()
   return (
     <>
       <PageHeader contentTitle="Academic Overview" />
@@ -133,7 +136,7 @@ export default function AcademicOverview() {
             <h2 className="text-[28px] md:text-[36px] font-bold leading-tight mb-4">
               QMIS is not just a school. It is a way of life.
             </h2>
-           
+
           </div>
 
           {/* Icons Grid */}
@@ -239,7 +242,9 @@ export default function AcademicOverview() {
               <p className="text-sm md:text-base leading-loose text-gray-500">
                 This is the greatest gift you could give your child.
               </p>
-              <button className="bg-red-700 hover:bg-red-800 text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
+              <button
+                onClick={() => router.push('/educational-resources/blog/how-movement-boosts-learning')}
+                className="bg-red-700 hover:bg-red-800 text-white font-medium py-2 px-6 rounded-md transition-colors duration-300">
                 KNOW MORE
               </button>
             </div>

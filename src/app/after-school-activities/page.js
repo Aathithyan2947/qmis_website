@@ -1,11 +1,23 @@
+"use client";
+
 import ActivitiesCarousel from "@/components/ActivitiesCarousel";
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
+import { useState } from "react";
+import EnquiryDialog from "./enquiryDialog";
 
 export default function AfterSchoolActivites() {
   const activityImages = Array.from({ length: 6 }, (_, i) =>
     `/after-school-activities/${i + 10}.png`
   );
+
+  const [openDialog, setOpenDialog] = useState(false);
+  const [enquiryFor, setEnquiryFor] = useState(undefined);
+
+  const handleApplyNow = (type) => {
+    setEnquiryFor(type);
+    setOpenDialog(true);
+  };
 
   return (
     <>
@@ -34,8 +46,8 @@ export default function AfterSchoolActivites() {
               <div className="bg-[#a12a2a] text-white text-center p-8">
                 <h3 className="text-xl font-bold">
                   QMBA in collaboration with
-Celebrate Sports Foundation
-mentored by Pullela Gopichand
+                  Celebrate Sports Foundation
+                  mentored by Pullela Gopichand
                 </h3>
 
                 <p className="text-sm mt-4 leading-relaxed">
@@ -43,7 +55,9 @@ mentored by Pullela Gopichand
                   Training & Guidance!
                 </p>
 
-                <button className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
+                <button
+                  onClick={() => handleApplyNow("badminton")}
+                  className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
                   Apply Now &gt;
                 </button>
               </div>
@@ -71,7 +85,9 @@ mentored by Pullela Gopichand
                   Intellects through After-school Activities!
                 </p>
 
-                <button className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
+                <button
+                  onClick={() => handleApplyNow("kidz-gym")}
+                  className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
                   Apply Now &gt;
                 </button>
               </div>
@@ -99,7 +115,9 @@ mentored by Pullela Gopichand
                   Mental Well-being from a Tender Age!
                 </p>
 
-                <button className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
+                <button
+                  onClick={() => handleApplyNow("school-activities")}
+                  className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
                   Apply Now &gt;
                 </button>
               </div>
@@ -139,8 +157,8 @@ mentored by Pullela Gopichand
           <div className="text-white space-y-6">
             <h3 className="text-2xl font-bold leading-snug">
               Queen Mira’s Badminton Academy
-in collaboration with Celebrate Sports
-Foundation mentored by Pullela Gopichand
+              in collaboration with Celebrate Sports
+              Foundation mentored by Pullela Gopichand
             </h3>
 
             <p className="font-semibold">
@@ -155,7 +173,9 @@ Foundation mentored by Pullela Gopichand
               Saina Nehwal, and other top International Players.
             </p>
 
-            <button className="text-red-500 font-semibold hover:underline">
+            <button
+              onClick={() => handleApplyNow("badminton")}
+              className="text-red-500 font-semibold hover:underline">
               Apply Now &gt;
             </button>
           </div>
@@ -183,7 +203,9 @@ Foundation mentored by Pullela Gopichand
               strength, flexibility, and agility during early development.
             </p>
 
-            <button className="text-maroon-100 font-semibold hover:underline">
+            <button
+              onClick={() => handleApplyNow("kidz-gym")}
+              className="text-maroon-100 font-semibold hover:underline">
               Apply Now &gt;
             </button>
           </div>
@@ -315,7 +337,9 @@ Foundation mentored by Pullela Gopichand
               germinating stage.
             </p>
 
-            <button className="text-maroon-100 font-semibold hover:underline text-sm">
+            <button
+              onClick={() => handleApplyNow("school-activities")}
+              className="text-maroon-100 font-semibold hover:underline text-sm">
               Apply Now &gt;
             </button>
           </div>
@@ -393,6 +417,11 @@ Foundation mentored by Pullela Gopichand
       </div>
       {/* last section */}
       <ActivitiesCarousel images={activityImages} />
+      <EnquiryDialog
+        open={openDialog}
+        onClose={() => setOpenDialog(false)}
+        enquiryFor={enquiryFor}
+      />
     </>
   )
 }

@@ -5,13 +5,32 @@ import PageHeader from "@/components/PageHeader";
 import { IoChevronDown } from "react-icons/io5";
 
 export default function FAQ() {
+  const handleSeeMore = () => {
+    window.open('https://drive.google.com/file/d/1aS3LJPtUXzaRi6kv6pyTesZR1HkS7m17/view', "_blank", "noopener,noreferrer");
+  };
+
+  const handleAdmissionUpdate = () => {
+    window.open('https://admissions.qmis.edu.in/?_gl=1%2A11hbug0%2A_ga%2AMTIyNDc1NDU3Ni4xNzY1MDQ3MzAx%2A_ga_K5HD0P2MHT%2AczE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDYwNTEkajYwJGwwJGgw', "_blank", "noopener,noreferrer")
+  }
+
+  const handleAdmissionKindergarten = () => {
+    window.open('https://www.qmis.edu.in/educational-resources/blog/first-five-years', "_blank", "noopener,noreferrer")
+  }
+
   const faqData = [
     {
       question: "What is the admission process at Queen Mira International School?",
       answer: (
         <>
           Here’s how to get started with our admissions process:<br />
-          ✔️ Step 1: Create your account by clicking ‘Start Application’ on our portal – Apply here<br />
+          ✔️ Step 1: Create your account by clicking ‘Start Application’ on our portal –
+          <a
+            href=" https://portal.qmis.edu.in/client/enquiry-form?source=Website&sub_source=applynow_button&campaign=BBC&_gl=1*1t4oqfi*_ga*MTIyNDc1NDU3Ni4xNzY1MDQ3MzAx*_ga_K5HD0P2MHT*czE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDQ5OTEkajI4JGwwJGgw"
+            className="font-semibold pl-2 text-red-600 hover:text-red-700 underline underline-offset-2"
+          >
+            Apply here
+          </a>
+          <br />
           ✔️ Step 2: Complete your family profile with parent and child information<br />
           ✔️ Step 3: Pay & Submit your application<br />
           ✔️ Step 4: View our comprehensive fee structure and available resources<br />
@@ -25,7 +44,11 @@ export default function FAQ() {
       answer: (
         <>
           Applications for the 2025–26 academic year are already open. Parents are encouraged to apply early, especially for Play Home and Kindergarten, where seats are in high demand.<br />
-          Check admission updates
+          <span
+            className="font-semibold pl-2 text-red-600 hover:text-red-700 underline underline-offset-2"
+            onClick={() => handleAdmissionUpdate()}>
+            Check admission updates
+          </span>
         </>
       ),
     },
@@ -39,7 +62,12 @@ export default function FAQ() {
           KG-1: born on or before May 31, 2021<br />
           KG-2: born on or before May 31, 2020<br />
           Grade 1: born on or before May 31, 2019<br />
-          Explore kindergarten eligibility
+          <span
+            onClick={() => handleAdmissionKindergarten()}
+            className="font-semibold pl-2 text-red-600 hover:text-red-700 underline underline-offset-2"
+          >
+            Explore kindergarten eligibility
+          </span>
         </>
       ),
     },
@@ -57,7 +85,11 @@ export default function FAQ() {
       answer: (
         <>
           Parents pay a ₹299 application fee to access detailed fee information, brochures, and guides. The structure includes tuition, infrastructure, lab, and activity fees. Optional charges apply for services such as transportation and uniforms.<br />
-          See fee details
+          <span
+            onClick={() => handleSeeMore()}
+            className="font-semibold pl-2 text-red-600 hover:text-red-700 underline underline-offset-2">
+            See fee details
+          </span>
         </>
       ),
     },
