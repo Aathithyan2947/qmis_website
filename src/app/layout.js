@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ChatBot from '@/components/ChatBot';
 import { Toaster } from 'react-hot-toast';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,13 +19,34 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const isProd = process.env.NODE_ENV === 'production';
+
   return (
     <html lang='en'>
+      <head>
+        {isProd && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-LR1958EW81"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-LR1958EW81');
+              `}
+            </Script>
+          </>
+        )}
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <MainHeader />
         {children}
         <Toaster />
         <ChatBot />
+
         {/* WHATSAPP FLOATING BUTTON */}
         <Link
           href='https://api.whatsapp.com/send/?phone=919677715429&text=Hello'
@@ -39,6 +61,7 @@ export default function RootLayout({ children }) {
             className='w-14 h-14 md:w-[60px] md:h-[60px]'
           />
         </Link>
+
         <MainFooter />
       </body>
     </html>
