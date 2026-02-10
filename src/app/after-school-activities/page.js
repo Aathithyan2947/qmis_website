@@ -86,7 +86,7 @@ export default function AfterSchoolActivites() {
                 </p>
 
                 <button
-                  onClick={() => handleApplyNow("kidz-gym")}
+                  onClick={() => handleApplyNow("school-activities")}
                   className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
                   Apply Now &gt;
                 </button>
@@ -116,7 +116,7 @@ export default function AfterSchoolActivites() {
                 </p>
 
                 <button
-                  onClick={() => handleApplyNow("school-activities")}
+                  onClick={() => handleApplyNow("kidz-gym")}
                   className="mt-6 text-sm font-semibold underline underline-offset-4 hover:opacity-80">
                   Apply Now &gt;
                 </button>
