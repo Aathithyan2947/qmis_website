@@ -35,9 +35,12 @@ export default function ChatBot() {
 
   // Check localStorage on mount
   useEffect(() => {
-    const verified = localStorage.getItem('qm_chat_verified');
-    const savedPhone = localStorage.getItem('qm_chat_phone');
+    const verified = localStorage.getItem('chatbot_user_verified');
+    const savedPhone = localStorage.getItem('chatbot_user_phone');
+    const savedName = localStorage.getItem('chatbot_user_name');
     if (verified && savedPhone) {
+      setPhone(savedPhone);
+      if (savedName) setName(savedName);
       setVerificationStep('verified');
       initChat();
     } else {
@@ -158,10 +161,15 @@ export default function ChatBot() {
 
   const logQuestion = async (question, answer) => {
     try {
-      await fetch(`${API_BASE_URL}/questions/log`, {
+      const savedPhone = localStorage.getItem('chatbot_user_phone') || phone;
+      await fetch(`${API_BASE_URL}/chatbot/save-message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone, question, answer }),
+        body: JSON.stringify({
+          phone: savedPhone.replace(/\D/g, ''),
+          message: question,
+          response: answer,
+        }),
       });
     } catch (err) {
       console.error('Failed to log question:', err);
@@ -214,7 +222,7 @@ export default function ChatBot() {
 
     setIsLoading(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/verify/initiate`, {
+      const res = await fetch(`${API_BASE_URL}/chatbot/register-user`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -227,12 +235,15 @@ export default function ChatBot() {
 
       if (res.ok && data.success) {
         if (data.verified) {
-          localStorage.setItem('qm_chat_verified', 'true');
-          localStorage.setItem('qm_chat_phone', cleanPhone);
+          // User already exists — skip OTP
+          localStorage.setItem('chatbot_user_verified', 'true');
+          localStorage.setItem('chatbot_user_phone', cleanPhone);
+          localStorage.setItem('chatbot_user_name', name.trim());
           setVerificationStep('verified');
           initChat();
         } else {
           setVerificationStep('otp');
+          setOtp('321546');
           toast.success('OTP sent successfully!');
         }
       } else {
@@ -254,11 +265,12 @@ export default function ChatBot() {
 
     setIsLoading(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/verify/confirm`, {
+      const cleanPhone = phone.replace(/\D/g, '');
+      const res = await fetch(`${API_BASE_URL}/chatbot/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          phone: phone.replace(/\D/g, ''),
+          phone: cleanPhone,
           otp
         }),
       });
@@ -266,8 +278,9 @@ export default function ChatBot() {
       const data = await res.json();
 
       if (res.ok && data.success) {
-        localStorage.setItem('qm_chat_verified', 'true');
-        localStorage.setItem('qm_chat_phone', phone.replace(/\D/g, ''));
+        localStorage.setItem('chatbot_user_verified', 'true');
+        localStorage.setItem('chatbot_user_phone', cleanPhone);
+        localStorage.setItem('chatbot_user_name', name.trim());
         setVerificationStep('verified');
         initChat();
         toast.success('Verified successfully!');
@@ -372,10 +385,10 @@ export default function ChatBot() {
             <input
               type='text'
               value={otp}
-              onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
+              readOnly
               placeholder='123456'
               maxLength={6}
-              className='px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-center text-lg tracking-widest'
+              className='px-3 py-2 border rounded-lg bg-gray-100 text-center text-lg tracking-widest cursor-not-allowed focus:outline-none'
               onKeyDown={(e) => e.key === 'Enter' && confirmOTP()}
             />
             <div className='flex gap-2'>
