@@ -28,7 +28,7 @@ const sections = [
       { label: "Annual Academic Calendar", href: "https://drive.google.com/file/d/1fY0-YZn2NbnAXler5U3IM1XYRmUonSEg/view?usp=drive_link" },
       { label: "List of SMC", href: "https://drive.google.com/file/d/1DzkxiAcfEB0TFTl5S_bLtN90mOZE59fn/view?usp=drive_link" },
       { label: "List of Parents Teachers Association (PTA) Members", href: "https://drive.google.com/file/d/1xTXWn4Sf3ZWtZvIivHSQ8sIxrghefF1Z/view?usp=drive_link" },
-      { label: "Last 3 Years Result of Board Examination", href: "https://drive.google.com/file/d/1xUsTyzDpbvbahl88wUJY2Uk7uGvt2gDy/view?usp=sharing" },
+      { label: "Last 3 Years Result of Board Examination", href: "https://drive.google.com/file/d/1HOCqaeEMnADQI93WsrM3nOYITJnzdSeT/view?usp=drive_link" },
     ]
   },
   {
