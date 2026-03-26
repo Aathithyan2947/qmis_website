@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
+        <link rel="canonical" href="https://www.qmis.edu.in" />
         {isProd && (
           <>
             <Script
