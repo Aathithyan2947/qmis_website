@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata = {
   title: 'Best CBSE School in Madurai | CIS Accredited International School',
-  description: 'Looking for the best CBSE school in Madurai? Queen Mira International School is a CIS accredited school in India offering quality education, modern facilities, and overall student development',
+  description: 'Queen Mira International School is one of the best CBSE schools in Madurai. We provide quality education, good facilities, and overall development for students',
   keywords : 'best CBSE school in Madurai, international school Madurai, CIS accredited school India, Queen Mira Madurai, top schools in Madurai, Montessori Play School, Best residential school, Primary Secondary School Admission, Primary School Education, Pre Primary Education',
   
 };
