@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://www.qmis.edu.in" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Queen Mira School" />
-        <meta name="publisher" content="firebee technoservices" />
+        <meta name="publisher" content="Queen Mira Schools" />
         {isProd && (
           <>
             <Script
