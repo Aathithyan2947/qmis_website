@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary or sensitive paths
+Disallow: /admin/
+Disallow: /https://admissions.qmis.edu.in/
+
+
+# Allow CSS & JS for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Crawl delay (optional for server load)
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://www.qmis.edu.in/sitemap.xml

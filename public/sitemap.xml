@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.qmis.edu.in/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url><loc>https://www.qmis.edu.in/about/tribute</loc></url>
+  <url><loc>https://www.qmis.edu.in/about/WhyHowWhat</loc></url>
+  <url><loc>https://www.qmis.edu.in/about/leadership-team</loc></url>
+  <url><loc>https://www.qmis.edu.in/about/board-members</loc></url>
+  <url><loc>https://www.qmis.edu.in/about/about-qmis</loc></url>
+  <url><loc>https://www.qmis.edu.in/about/disclosure</loc></url>
+
+  <!-- MD Message -->
+  <url><loc>https://www.qmis.edu.in/message-from-md/md-letter</loc></url>
+  <url><loc>https://www.qmis.edu.in/message-from-md/qmis-strategy</loc></url>
+  <url><loc>https://www.qmis.edu.in/message-from-md/promises</loc></url>
+
+  <!-- Journey -->
+  <url><loc>https://www.qmis.edu.in/journey-of-qmis</loc></url>
+
+  <!-- Facilities -->
+  <url><loc>https://www.qmis.edu.in/facilities/infrastructure</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/badminton</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/veeravanam</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/rifle-club</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/kidz-gym</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/sports-complex</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/vehicles</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/health-center</loc></url>
+  <url><loc>https://www.qmis.edu.in/facilities/safety-and-security</loc></url>
+
+  <!-- Academia -->
+  <url><loc>https://www.qmis.edu.in/academia/overview</loc></url>
+  <url><loc>https://www.qmis.edu.in/academia/academic-programmes</loc></url>
+  <url><loc>https://www.qmis.edu.in/academia/board-achievements</loc></url>
+  <url><loc>https://www.qmis.edu.in/academia/academic-enrichment-program</loc></url>
+  <url><loc>https://www.qmis.edu.in/academia/value-based-education</loc></url>
+  <url><loc>https://www.qmis.edu.in/academia/faculty-resource-team</loc></url>
+
+  <!-- Inclusions -->
+  <url><loc>https://www.qmis.edu.in/inclusions/inclusion-at-qmis</loc></url>
+  <url><loc>https://www.qmis.edu.in/inclusions/hear-from-our-team</loc></url>
+
+  <!-- Sports -->
+  <url><loc>https://www.qmis.edu.in/sports</loc></url>
+
+  <!-- Holistic Education -->
+  <url><loc>https://www.qmis.edu.in/holistic-education/holistic-journey</loc></url>
+  <url><loc>https://www.qmis.edu.in/holistic-education/body</loc></url>
+  <url><loc>https://www.qmis.edu.in/holistic-education/mind</loc></url>
+  <url><loc>https://www.qmis.edu.in/holistic-education/soul</loc></url>
+  <url><loc>https://www.qmis.edu.in/holistic-education/holistic-profile</loc></url>
+
+  <!-- Others -->
+  <url><loc>https://www.qmis.edu.in/holistic-achievers</loc></url>
+  <url><loc>https://www.qmis.edu.in/cis</loc></url>
+
+  <!-- Admissions (Cleaned URL) -->
+  <url>
+    <loc>https://admissions.qmis.edu.in/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url><loc>https://www.qmis.edu.in/after-school-activities</loc></url>
+  <url><loc>https://www.qmis.edu.in/clubs-and-activities</loc></url>
+
+  <!-- Careers -->
+  <url><loc>https://www.qmis.edu.in/careers/career-guidance</loc></url>
+  <url><loc>https://www.qmis.edu.in/careers/career-at-qmis</loc></url>
+
+  <!-- Alumni -->
+  <url><loc>https://www.qmis.edu.in/alumini</loc></url>
+
+  <!-- Resources -->
+  <url><loc>https://www.qmis.edu.in/educational-resources/blog</loc></url>
+  <url><loc>https://www.qmis.edu.in/educational-resources/faq</loc></url>
+
+  <!-- Outreach -->
+  <url><loc>https://www.qmis.edu.in/social-outreach</loc></url>
+
+  <!-- Survey -->
+  <url><loc>https://www.qmis.edu.in/survey-reflection</loc></url>
+
+  <!-- Contact -->
+  <url><loc>https://www.qmis.edu.in/contact</loc></url>
+
+</urlset>
