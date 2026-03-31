@@ -54,7 +54,8 @@ export default function RootLayout({ children }) {
       <head>
         {/* Basic SEO */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="Queen Mira School" />
+        <meta name="author" content="Queen Mira International School" />
+        <meta name="publisher" content="Queen Mira International School" />
 
         {/* Geo Tags */}
         <meta name="geo.region" content="IN-TN" />
