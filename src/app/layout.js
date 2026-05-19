@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
         <MainHeader />
         {children}
         <Toaster />
-        <ChatBot />
+        {/* <ChatBot /> */}
 
         {/* WhatsApp Floating Button */}
         <Link
