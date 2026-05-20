@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Best CBSE School in Madurai | Queen Mira International School',
+  title: 'Best CBSE SCHOOL - Madurai | Queen Mira International School',
   description:
     'Queen Mira International School is one of the best CBSE schools in Madurai offering quality education, modern facilities, and overall student development.',
   keywords: [
