@@ -173,7 +173,7 @@ function FacilitiesGrid() {
         {facilities.map((facility, index) => (
           <motion.div
             key={index}
-            className="relative h-64 overflow-hidden cursor-pointer group"
+            className="relative aspect-square overflow-hidden cursor-pointer group"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
             initial={{ opacity: 0, y: 20 }}
@@ -515,7 +515,7 @@ export default function Home() {
             </button>
 
             {/* Image Wrapper (FIXED SIZE → no flicker) */}
-            <div className="relative w-full h-[260px] md:h-80 lg:h-[360px] rounded-xl overflow-hidden">
+            <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden">
               <Image
                 src="/home/qmisad.webp"
                 alt="Apply Now"
@@ -567,7 +567,7 @@ export default function Home() {
 
           <div className="md:col-span-2 flex justify-center items-end">
             <motion.div
-              className="relative w-full h-64 md:h-[25vh] xl:h-[60vh] max-w-2xl mx-auto"
+              className="relative w-full aspect-[2/1] max-w-2xl mx-auto"
               onMouseMove={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -735,7 +735,7 @@ export default function Home() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex justify-center"
             >
-              <div className="relative w-[60vw] h-[60vh] md:w-[70vw] md:h-[80vh] sm:w-[280px]">
+              <div className="relative w-[60vw] md:w-[70vw] sm:w-[280px] aspect-[402/877]">
                 <Image
                   src="/home/Pic_6.webp"
                   alt="Standing student"
@@ -863,7 +863,7 @@ export default function Home() {
             {images.map((src, index) => (
               <motion.div
                 key={index}
-                className="relative h-48 md:h-64 rounded-lg overflow-hidden"
+                className="relative aspect-[453/355] rounded-lg overflow-hidden"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
