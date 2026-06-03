@@ -369,8 +369,8 @@ export default function ContactPage() {
           <div className="flex justify-center text-3xl mb-4">
             <PhoneCall />
           </div>
-          <a href="tel:+919655777000" className="text-lg font-semibold">+91 96557 77000</a>
-          <a href="tel:+919787570746" className="text-lg font-semibold mb-6">+91 97875 70746</a>
+          <p className="text-lg font-semibold">+91 96557 77000</p>
+          <p className="text-lg font-semibold mb-6">+91 97875 70746</p>
 
           <p className="text-sm">
             <span className="font-bold">Address</span> Sholavandhan Road,
