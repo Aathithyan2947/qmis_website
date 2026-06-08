@@ -11,62 +11,62 @@ const APPLY_NOW_URL =
 // Updated facilities data to match your screenshot
 const facilities = [
   {
-    image: '/home/1.png',
+    image: '/home/1.webp',
     title: 'LIBRARY',
     description: 'Where learning goes beyond the clasroom.',
   },
   {
-    image: '/home/2.png',
+    image: '/home/2.webp',
     title: 'MUSIC ROOM',
     description: 'For Unleashing the budding musician in you!',
   },
   {
-    image: '/home/3.png',
+    image: '/home/3.webp',
     title: 'DANCE STUDIO',
     description: 'To stay on the better side of the health.',
   },
   {
-    image: '/home/4.png',
+    image: '/home/4.webp',
     title: 'CLASS ROOMS',
     description: 'A state-of-the-art place for holistic learning & discovery',
   },
   {
-    image: '/home/5.png',
+    image: '/home/5.webp',
     title: 'FOOTBALL FIELD',
     description: 'For building muscle and promoting team work from a young age.',
   },
   {
-    image: '/home/6.png',
+    image: '/home/6.webp',
     title: 'ATHLETICS TRACK',
     description: 'For a healthy balance between body and mind',
   },
   {
-    image: '/home/7.png',
+    image: '/home/7.webp',
     title: 'OUTDOOR GYM',
     description: 'For improved energy levels and focus!',
   },
   {
-    image: '/home/8.png',
+    image: '/home/8.webp',
     title: 'INDOOR BASKETBALL COURT',
     description: 'A secure and safe place area for a healthy and active lifestyle.',
   },
   {
-    image: '/home/9.png',
+    image: '/home/9.webp',
     title: 'COMPUTER LAB',
     description: 'To prepare mind for a world dominated by technology.',
   },
   {
-    image: '/home/10.png',
+    image: '/home/10.webp',
     title: 'RIFLE ZONE',
     description: 'The area that guarantees enhanced vision and stamina.',
   },
   {
-    image: '/home/11.png',
+    image: '/home/11.webp',
     title: 'BFIT CLASSES',
     description: 'A wellness program to keep both students and teachers active.',
   },
   {
-    image: '/home/12.png',
+    image: '/home/12.webp',
     title: 'ENHANCED SAFETY',
     description: 'To mitigate potential risks and overcome emergency situation.',
   },
@@ -230,244 +230,101 @@ function FacilitiesGrid() {
   );
 }
 
-// Carousel Component
+// School Policies marquee — native scroll-snap carousel with auto-advance
+// (pauses on hover, respects reduced-motion), maroon prev/next buttons, and
+// native swipe on touch. Cards are real links for a11y + safe target="_blank".
 function CardsCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [itemsPerPage, setItemsPerPage] = useState(1);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const autoSlideIntervalRef = useRef(null);
-  const containerRef = useRef(null);
+  const scrollerRef = useRef(null);
+  const [paused, setPaused] = useState(false);
 
-  // Calculate visible items based on screen size with proper responsive breakpoints
+  const stepWidth = () => {
+    const el = scrollerRef.current;
+    if (!el) return 300;
+    const card = el.querySelector("[data-policy-card]");
+    return card ? card.offsetWidth + 20 : 300; // card width + gap
+  };
+
+  const nudge = (dir) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+    const atStart = el.scrollLeft <= 4;
+    if (dir > 0 && atEnd) el.scrollTo({ left: 0, behavior: "smooth" });
+    else if (dir < 0 && atStart) el.scrollTo({ left: el.scrollWidth, behavior: "smooth" });
+    else el.scrollBy({ left: dir * stepWidth(), behavior: "smooth" });
+  };
+
   useEffect(() => {
-    const updateItemsPerPage = () => {
-      const width = window.innerWidth;
-
-      if (width >= 1280) { // Desktop
-        setItemsPerPage(4);
-      } else if (width >= 1024) { // Laptop
-        setItemsPerPage(3);
-      } else if (width >= 768) { // Tablet
-        setItemsPerPage(2);
-      } else { // Mobile
-        setItemsPerPage(1);
-      }
-    };
-
-    updateItemsPerPage();
-    window.addEventListener('resize', updateItemsPerPage);
-
-    return () => {
-      window.removeEventListener('resize', updateItemsPerPage);
-      stopAutoSlide();
-    };
-  }, []);
-
-  // Auto-slide functionality - changed to 1 second
-  useEffect(() => {
-    if (isAutoPlaying) {
-      startAutoSlide();
-    } else {
-      stopAutoSlide();
-    }
-
-    return () => {
-      stopAutoSlide();
-    };
-  }, [isAutoPlaying, currentIndex, itemsPerPage]);
-
-  const startAutoSlide = () => {
-    stopAutoSlide();
-    autoSlideIntervalRef.current = setInterval(() => {
-      handleNext();
-    }, 1000); // Auto-slide every 1 second
-  };
-
-  const stopAutoSlide = () => {
-    if (autoSlideIntervalRef.current) {
-      clearInterval(autoSlideIntervalRef.current);
-      autoSlideIntervalRef.current = null;
-    }
-  };
-
-  const totalItems = cards.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-  // Handle next slide with proper boundary
-  const handleNext = () => {
-    if (isAnimating) return;
-
-    setIsAutoPlaying(false);
-    setIsAnimating(true);
-
-    setCurrentIndex((prev) => {
-      let newIndex = prev + itemsPerPage;
-
-      // If we're at or beyond the last page, loop back to start
-      if (newIndex >= totalItems) {
-        // For smooth infinite effect, we'll go to the next logical position
-        // but in the render we'll handle the transition differently
-        return 0;
-      }
-      return newIndex;
-    });
-
-    setTimeout(() => {
-      setIsAnimating(false);
-      setIsAutoPlaying(true);
-    }, 500);
-  };
-
-  const handlePrev = () => {
-    if (isAnimating) return;
-
-    setIsAutoPlaying(false);
-    setIsAnimating(true);
-
-    setCurrentIndex((prev) => {
-      let newIndex = prev - itemsPerPage;
-
-      // If we're at the beginning, loop to the end
-      if (newIndex < 0) {
-        // Find the last possible starting position
-        const lastStartIndex = totalItems - (totalItems % itemsPerPage || itemsPerPage);
-        return lastStartIndex;
-      }
-      return newIndex;
-    });
-
-    setTimeout(() => {
-      setIsAnimating(false);
-      setIsAutoPlaying(true);
-    }, 500);
-  };
-
-  const handleMouseEnter = () => {
-    setIsAutoPlaying(false);
-  };
-
-  const handleMouseLeave = () => {
-    setIsAutoPlaying(true);
-  };
-
-  // Get visible cards with responsive styling
-  const getVisibleCards = () => {
-    // Create extended array for smooth looping
-    const extendedCards = [...cards, ...cards];
-
-    // Calculate which cards to show
-    const startIndex = currentIndex % totalItems;
-    const visibleCards = [];
-
-    for (let i = 0; i < itemsPerPage; i++) {
-      const cardIndex = (startIndex + i) % totalItems;
-      visibleCards.push({
-        ...cards[cardIndex],
-        uniqueKey: `${cards[cardIndex].id}-${startIndex + i}`
-      });
-    }
-
-    return visibleCards;
-  };
-
-  const visibleCards = getVisibleCards();
+    if (paused) return;
+    if (typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = setInterval(() => nudge(1), 3200);
+    return () => clearInterval(id);
+  }, [paused]);
 
   return (
     <div
-      className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="group relative mx-auto max-w-[1400px]"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
-      {/* Navigation Arrows - Responsive positioning */}
       <button
-        onClick={handlePrev}
-        className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-10
-                   w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100/90 backdrop-blur-sm
-                   border border-darkBlue-200 flex items-center justify-center
-                   hover:bg-darkBlue-100 hover:scale-110 transition-all duration-300
-                   focus:outline-none focus:ring-2 focus:ring-white/50
-                   disabled:opacity-50 disabled:cursor-not-allowed
-                   shadow-lg"
+        type="button"
+        onClick={() => nudge(-1)}
         aria-label="Previous policies"
-        disabled={isAnimating}
+        className="absolute left-2 md:left-4 top-1/2 z-20 hidden sm:grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-maroon-100 text-white shadow-lg ring-1 ring-black/5 transition-all duration-200 hover:scale-110 hover:bg-maroon-100/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maroon-100 focus-visible:ring-offset-2"
       >
-        <ChevronLeft size={20} className="sm:w-6 sm:h-6 text-white" />
+        <ChevronLeft size={22} />
       </button>
 
-      {/* Cards Container */}
-      <div
-        className="overflow-hidden px-10 sm:px-12 md:px-14 lg:px-16"
-        ref={containerRef}
+      <ul
+        ref={scrollerRef}
+        className="policy-viewport flex items-stretch gap-5 px-4 sm:px-16 py-8 scroll-pl-4 sm:scroll-pl-16"
       >
-        <div className="flex justify-center items-center">
-          <div className={`flex gap-3 sm:gap-4 md:gap-6 transition-transform duration-500 ease-in-out ${isAnimating ? 'transition-all duration-500' : ''}`}>
-            {visibleCards.map((card) => (
-              <div
-                key={card.uniqueKey}
-                onClick={() => window.open(card.pdf, '_blank')}
-                className="bg-darkBlue-100 h-48 sm:h-56 md:h-64 p-4 sm:p-6 md:p-8 rounded-lg text-white cursor-pointer 
-                         hover:bg-red-500 transition-all duration-300 
-                         flex flex-col justify-between transform hover:-translate-y-1
-                         min-w-[calc(100vw-8rem)] sm:min-w-[calc(50vw-6rem)] md:min-w-[calc(33.333vw-8rem)] lg:min-w-[calc(25vw-8rem)]
-                         max-w-[calc(100vw-8rem)] sm:max-w-[calc(50vw-6rem)] md:max-w-[calc(33.333vw-8rem)] lg:max-w-[calc(25vw-8rem)]
-                         flex-shrink-0 shadow-lg hover:shadow-xl"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border border-white 
-                              flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
-                  <FileText size={16} className="sm:text-lg" />
-                </div>
+        {cards.map((card, i) => (
+          <li key={card.title + "-" + i} data-policy-card className="shrink-0 snap-start">
+            <a
+              href={card.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/card relative flex h-[200px] w-[256px] sm:w-[284px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-darkBlue-100 p-6 text-white shadow-[0_14px_34px_-18px_rgba(11,31,58,0.7)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-maroon-100/60 hover:shadow-[0_26px_46px_-20px_rgba(11,31,58,0.85)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maroon-100 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            >
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.08] to-transparent" />
+              <span className="pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-gradient-to-r from-maroon-100 via-red-500 to-maroon-100 transition-transform duration-300 ease-out group-hover/card:scale-x-100" />
 
-                <h3 className="text-sm sm:text-base md:text-lg font-semibold leading-tight sm:leading-snug line-clamp-2">
-                  {card.title}
-                </h3>
+              <span className="relative flex items-center justify-between">
+                <span className="grid h-12 w-12 place-items-center rounded-xl bg-white/10 ring-1 ring-white/15 transition-colors duration-300 group-hover/card:bg-maroon-100 group-hover/card:text-white">
+                  <FileText size={20} />
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
+                  Policy
+                </span>
+              </span>
 
-                <span className="w-6 sm:w-8 md:w-12 h-[2px] bg-white my-2 sm:my-3 md:my-4 block" />
+              <h3 className="relative text-[15px] font-semibold leading-snug">
+                {card.title}
+              </h3>
 
-                <p className="text-xs sm:text-sm text-gray-300 flex items-center">
-                  View now
-                  <ChevronRight size={12} className="sm:w-3 sm:h-3 md:w-4 md:h-4 ml-1" />
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Right Arrow */}
-      <button
-        onClick={handleNext}
-        className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-10
-                   w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-darkBlue-100/90 backdrop-blur-sm
-                   border border-darkBlue-200 flex items-center justify-center
-                   hover:bg-darkBlue-100 hover:scale-110 transition-all duration-300
-                   focus:outline-none focus:ring-2 focus:ring-white/50
-                   disabled:opacity-50 disabled:cursor-not-allowed
-                   shadow-lg"
-        aria-label="Next policies"
-        disabled={isAnimating}
-      >
-        <ChevronRight size={20} className="sm:w-6 sm:h-6 text-white" />
-      </button>
-
-      {/* Dots Indicator - Responsive */}
-      <div className="flex justify-center items-center mt-6 sm:mt-8 space-x-2">
-        {Array.from({ length: totalPages }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              setIsAutoPlaying(false);
-              setCurrentIndex(index * itemsPerPage);
-              setTimeout(() => setIsAutoPlaying(true), 1000);
-            }}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${Math.floor(currentIndex / itemsPerPage) === index
-              ? 'bg-white scale-125'
-              : 'bg-white/40'
-              }`}
-            aria-label={`Go to page ${index + 1}`}
-          />
+              <span className="relative inline-flex items-center gap-1.5 text-sm font-semibold text-red-400">
+                View PDF
+                <ChevronRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover/card:translate-x-1"
+                />
+              </span>
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
+
+      <button
+        type="button"
+        onClick={() => nudge(1)}
+        aria-label="Next policies"
+        className="absolute right-2 md:right-4 top-1/2 z-20 hidden sm:grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-maroon-100 text-white shadow-lg ring-1 ring-black/5 transition-all duration-200 hover:scale-110 hover:bg-maroon-100/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maroon-100 focus-visible:ring-offset-2"
+      >
+        <ChevronRight size={22} />
+      </button>
     </div>
   );
 }
@@ -584,7 +441,7 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 150, damping: 15 }}
             >
               <Image
-                src="/home/Pic_1.png"
+                src="/home/Pic_1.webp"
                 alt="Students"
                 fill
                 className="object-cover"
@@ -735,7 +592,7 @@ export default function Home() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex justify-center"
             >
-              <div className="relative w-[60vw] md:w-[70vw] sm:w-[280px] aspect-[402/877]">
+              <div className="relative w-[60vw] sm:w-[45vw] max-w-[300px] aspect-[402/877]">
                 <Image
                   src="/home/Pic_6.webp"
                   alt="Standing student"
@@ -921,16 +778,23 @@ export default function Home() {
         </div>
       </section >
 
-      {/* ================= FOOTER CARDS WITH CAROUSEL ================= */}
-      < section className="py-12 md:py-20 px-4 md:px-20 overflow-hidden" >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl md:text-3xl font-bold text-center text-darkBlue-100 mb-8 md:mb-12">
-            School Policies & Information
-          </h2>
-
-          <CardsCarousel />
+      {/* ================= SCHOOL POLICIES MARQUEE ================= */}
+      <section className="py-14 md:py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-20">
+          <div className="mb-10 md:mb-14 text-center">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-maroon-100">
+              Transparency &amp; Care
+            </p>
+            <h2 className="mt-2 text-2xl md:text-4xl font-bold text-darkBlue-100">
+              School Policies &amp; Information
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-gray-500">
+              The frameworks that keep our students safe, included and supported &mdash; open for every parent to read.
+            </p>
+          </div>
         </div>
-      </section >
+        <CardsCarousel />
+      </section>
     </>
   );
 }

@@ -226,9 +226,9 @@ export default function Sidebar({ isOpen, onClose }) {
                   className="h-16 w-16 md:h-14 md:w-14 lg:h-18 lg:w-18"
                 />
                 <Image
-                  src="/QMIS_Logo.png"
-                  width={180}
-                  height={80}
+                  src="/QMIS_Logo.webp"
+                  width={256}
+                  height={121}
                   alt="Menu Logo"
                   className="h-16 md:h-18 w-auto"
                 />

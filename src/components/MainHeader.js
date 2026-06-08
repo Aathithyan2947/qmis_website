@@ -42,9 +42,9 @@ export default function MainHeader() {
           <div onClick={() => router.push('/')
           }>
             <Image
-              src="/QMIS_Logo.png"
-              height={80}
-              width={170}
+              src="/QMIS_Logo.webp"
+              height={121}
+              width={256}
               alt="QMIS Logo"
               className="h-12 cursor-pointer hover:scale-105 duration-150 w-auto md:h-16 md:w-auto lg:h-20 lg:w-auto"
             />

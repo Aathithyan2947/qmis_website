@@ -115,6 +115,7 @@ export default function RootLayout({ children }) {
         <Link
           href="https://api.whatsapp.com/send/?phone=919677715429&text=Hello"
           target="_blank"
+          rel="noopener noreferrer"
           className="fixed bottom-5 right-5 flex items-center justify-center"
         >
           <Image

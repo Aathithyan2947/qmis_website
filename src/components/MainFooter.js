@@ -2,8 +2,16 @@
 
 import Image from "next/image";
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function MainFooter() {
+  // Reveal the address client-side so it never appears as plain text in the
+  // server-rendered HTML (protects it from email-harvesting bots).
+  const [email, setEmail] = useState(null);
+  useEffect(() => {
+    setEmail(["contact", "queenmira.com"].join("@"));
+  }, []);
+
   return (
     <>
       <footer className="bg-darkBlue-100 text-white mt-0.5 pt-10 pb-4 px-6 md:px-16">
@@ -16,7 +24,7 @@ export default function MainFooter() {
               src="/QMIS_White_Logo.png"
               alt="Queen Mira International School"
               width={180} // smaller
-              height={100}
+              height={85} // matches the logo's true 2822×1334 aspect ratio (prevents layout shift)
               className="mb-3"
             />
 
@@ -27,7 +35,13 @@ export default function MainFooter() {
             <p className="mt-1 text-sm md:text-base leading-relaxed opacity-90">
               Sholavandhan Road, Melakkal Rd, Kochadai,<br />
               Madurai, Tamil Nadu 625019<br />
-              contact@queenmira.com
+              {email ? (
+                <a href={`mailto:${email}`} className="hover:text-red-400 transition">
+                  {email}
+                </a>
+              ) : (
+                <span aria-hidden="true">contact [at] queenmira [dot] com</span>
+              )}
             </p>
 
             <a
