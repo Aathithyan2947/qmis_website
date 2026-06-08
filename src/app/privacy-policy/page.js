@@ -139,8 +139,8 @@ export default function PrivacyPolicy() {
         </p>
 
         <p className="text-lg mb-5">
-          Email: info@qmis.edu.in <br />
-          Phone: +91 78978 93938
+          Email: <a href="mailto:info@qmis.edu.in" className="text-maroon-100 underline">info@qmis.edu.in</a> <br />
+          Phone: <a href="tel:+917897893938" className="text-maroon-100 underline">+91 78978 93938</a>
         </p>
 
         <p className="text-lg">

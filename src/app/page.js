@@ -592,7 +592,7 @@ export default function Home() {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="flex justify-center"
             >
-              <div className="relative w-[60vw] sm:w-[45vw] max-w-[300px] aspect-[402/877]">
+              <div className="relative w-full max-w-[300px] sm:max-w-[340px] aspect-[402/877]">
                 <Image
                   src="/home/Pic_6.webp"
                   alt="Standing student"
@@ -623,13 +623,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div className="flex justify-center md:justify-start items-end">
-              <div className="relative z-10 w-[70vw] md:w-[60vw]">
+              <div className="relative z-10 w-full max-w-[380px] md:max-w-[460px]">
                 <Image
                   src="/home/Pic_7.webp"
                   alt="Child exploring"
-                  width={500}
-                  height={600}
-                  className="object-contain"
+                  width={640}
+                  height={562}
+                  className="w-full h-auto object-contain"
                   priority
                 />
               </div>

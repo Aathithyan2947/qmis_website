@@ -47,14 +47,14 @@ export default function ActivitiesCarousel({ images }) {
         </Swiper>
 
         {/* Custom Prev Button - Moved further left */}
-        <button className="swiper-button-prev-custom absolute -left-10 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover:shadow-xl transition-shadow">
+        <button className="swiper-button-prev-custom absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover:shadow-xl transition-shadow">
           <svg width="28" height="28" viewBox="0 0 24 24" className="fill-red-600">
             <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
 
         {/* Custom Next Button - Moved further right */}
-        <button className="swiper-button-next-custom absolute -right-10 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover:shadow-xl transition-shadow">
+        <button className="swiper-button-next-custom absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg p-3 rounded-full hover:shadow-xl transition-shadow">
           <svg width="28" height="28" viewBox="0 0 24 24" className="fill-red-600">
             <path d="M9 6l6 6-6 6" />
           </svg>

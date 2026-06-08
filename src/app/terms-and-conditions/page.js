@@ -122,8 +122,8 @@ export default function TermsAndConditions() {
         <SectionHeading title="Contact Information" />
         <p className="text-base">
           Queen Mira International School <br />
-          +91 96557 77000 <br />
-          contact@queenmira.com <br />
+          <a href="tel:+919655777000" className="text-maroon-100 underline">+91 96557 77000</a> <br />
+          <a href="mailto:contact@queenmira.com" className="text-maroon-100 underline">contact@queenmira.com</a> <br />
           Sholavandhan Road, Melakkal Rd, Kochadai, <br />
           Madurai, Tamil Nadu 625019.
         </p>

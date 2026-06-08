@@ -19,7 +19,8 @@ export default function Cancellationrefund() {
         <h3 className="text-lg font-bold mt-6 mb-1">QUESTIONS</h3>
         <p className="mb-3">
           If you have any questions concerning our return or cancellation policy,
-          please contact us at: <strong>contact@queenmira.com</strong>
+          please contact us at:{" "}
+          <a href="mailto:contact@queenmira.com" className="text-maroon-100 underline font-bold">contact@queenmira.com</a>
         </p>
 
       </div>

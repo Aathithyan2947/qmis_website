@@ -2,16 +2,8 @@
 
 import Image from "next/image";
 import { Facebook, Instagram, Youtube } from "lucide-react";
-import { useState, useEffect } from "react";
 
 export default function MainFooter() {
-  // Reveal the address client-side so it never appears as plain text in the
-  // server-rendered HTML (protects it from email-harvesting bots).
-  const [email, setEmail] = useState(null);
-  useEffect(() => {
-    setEmail(["contact", "queenmira.com"].join("@"));
-  }, []);
-
   return (
     <>
       <footer className="bg-darkBlue-100 text-white mt-0.5 pt-10 pb-4 px-6 md:px-16">
@@ -35,13 +27,9 @@ export default function MainFooter() {
             <p className="mt-1 text-sm md:text-base leading-relaxed opacity-90">
               Sholavandhan Road, Melakkal Rd, Kochadai,<br />
               Madurai, Tamil Nadu 625019<br />
-              {email ? (
-                <a href={`mailto:${email}`} className="hover:text-red-400 transition">
-                  {email}
-                </a>
-              ) : (
-                <span aria-hidden="true">contact [at] queenmira [dot] com</span>
-              )}
+              <a href="mailto:contact@queenmira.com" className="hover:text-red-400 transition">
+                contact@queenmira.com
+              </a>
             </p>
 
             <a
@@ -107,8 +95,12 @@ export default function MainFooter() {
             <h3 className="text-red-500 text-xl font-semibold mb-3">
               Contact
             </h3>
-            <p className="text-sm md:text-base">+91 96557 77000</p>
-            <p className="text-sm md:text-base">+91 96777 15429</p>
+            <p className="text-sm md:text-base">
+              <a href="tel:+919655777000" className="hover:text-red-400 transition">+91 96557 77000</a>
+            </p>
+            <p className="text-sm md:text-base">
+              <a href="tel:+919677715429" className="hover:text-red-400 transition">+91 96777 15429</a>
+            </p>
 
             {/* QUICK LINKS */}
             {/* <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-lg mt-5 text-sm md:text-base transition"> */}

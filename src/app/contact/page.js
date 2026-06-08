@@ -369,16 +369,22 @@ export default function ContactPage() {
           <div className="flex justify-center text-3xl mb-4">
             <PhoneCall />
           </div>
-          <p className="text-lg font-semibold">+91 96557 77000</p>
-          <p className="text-lg font-semibold mb-6">+91 97875 70746</p>
+          <p className="text-lg font-semibold">
+            <a href="tel:+919655777000" className="hover:text-red-400 transition">+91 96557 77000</a>
+          </p>
+          <p className="text-lg font-semibold mb-6">
+            <a href="tel:+919787570746" className="hover:text-red-400 transition">+91 97875 70746</a>
+          </p>
 
           <p className="text-sm">
             <span className="font-bold">Address</span> Sholavandhan Road,
             Melakkal Road kochadai, Madurai, Tamil Nadu, 625019
           </p>
 
-          <a className="text-sm mt-2">
-            <span href="mailto:contact@queenmira.com" className="font-bold">Email</span> contact@queenmira.com</a>
+          <p className="text-sm mt-2">
+            <span className="font-bold">Email</span>{" "}
+            <a href="mailto:contact@queenmira.com" className="hover:text-red-400 transition">contact@queenmira.com</a>
+          </p>
         </div>
       </div>
 
