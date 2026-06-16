@@ -3,7 +3,7 @@ export const blogs = [
     slug: "how-movement-boosts-learning",
     title: "How Movement Boosts Learning",
     subtitle: "The science behind active classrooms and how movement enhances learning outcomes.",
-    date: "May 15, 2025",
+    date: "May 15, 2026",
     heroImage: "/blog/blog_1/1.png",
 
     section: `
@@ -363,7 +363,7 @@ Your child deserves an education that moves minds and hearts. <span class="text
     slug: "digital-learning-builds-social-connections",
     title: "How Digital Learning Builds Social Connections",
     subtitle: "Exploring how technology-enabled classrooms strengthen collaboration.",
-    date: "April 22, 2025",
+    date: "April 22, 2026",
     heroImage: "/blog/blog_2/1.png",
 
     section: `
