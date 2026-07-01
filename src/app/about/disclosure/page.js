@@ -5,42 +5,42 @@ const sections = [
   {
     title: "General Information",
     items: [
-      { label: "General Information", href: "https://drive.google.com/file/d/1lmFhm91rSgdD_NYBdXSi95YZkS5_yIc7/view" }
+      { label: "General Information", href: "https://drive.google.com/file/d/1YNQsRREOh3Uef48btRxYgKIc3KSz7t0_/view?usp=drive_link" }
     ]
   },
   {
     title: "Documents and Information",
     items: [
-      { label: "Copies of Affiliation Upgradation and Extension", href: "https://drive.google.com/file/d/1CEHTzBFXM6teLJW2LTlhgrpdhUv7PjF7/view?usp=drive_link" },
-      { label: "Copies of Societies Trust Company Registration", href: "https://drive.google.com/file/d/1ErgYcyNEPLQA579-NsmdGmKq4RrnFZBx/view?usp=drive_link" },
-      { label: "NOC", href: "https://drive.google.com/file/d/1MLbwc1Vv2X8KNS4-LX_UWYjHto1nXe-V/view?usp=drive_link" },
-      { label: "Recognition Certificate", href: "https://drive.google.com/file/d/1CjtRDvS9rE5CDUYLYc7on9uW3WAzj0hb/view?usp=drive_link" },
-      { label: "Valid Building Safety Certificate", href: "https://drive.google.com/file/d/1NZGdOiINvAHm4n4fNGsl853xbPWnux7w/view?usp=drive_link" },
-      { label: "Valid Fire Safety Certificate", href: "https://drive.google.com/file/d/1qYNkzf-TRYmllSSKq3tNN79HdGO22-sx/view?usp=drive_link" },
-      { label: "DEO Certificate", href: "https://drive.google.com/file/d/1fyj8CHWFkHXww3LYzXsjIJI0AGDIf8Ln/view?usp=drive_link" },
-      { label: "Valid Water Health and Sanitation Certificate", href: "https://drive.google.com/file/d/1Ir0xkdUJJT0WFZbNog8LV3raO2PZcDMo/view?usp=drive_link" },
+      { label: "Copies of Affiliation Upgradation and Extension", href: "https://drive.google.com/file/d/1b1L6HEb6ZZTgGrNO_WbG7-vuCRqIkIzC/view?usp=drive_link" },
+      { label: "Copies of Societies Trust Company Registration", href: "https://drive.google.com/file/d/1FG-cDHhjD-LcmAF48sXOrlaHy052R6Yk/view?usp=drive_link" },
+      { label: "NOC", href: "https://drive.google.com/file/d/1UqnnRVl0-9jTP5nFUqMoCAEdKu2qWoFW/view?usp=drive_link" },
+      { label: "Recognition Certificate", href: "https://drive.google.com/file/d/1kt1B_0TcC_n4CdmndBuYnHDW2evhJmg2/view?usp=drive_link" },
+      { label: "Valid Building Safety Certificate", href: "https://drive.google.com/file/d/1acd96rki3M6-BYafgHnwQzM6aohX7O2o/view?usp=drive_link" },
+      { label: "Valid Fire Safety Certificate", href: "https://drive.google.com/file/d/1c_quTtZE6HU5F9zTeJFoWktyUKFmT39R/view?usp=drive_link" },
+      { label: "DEO Certificate", href: "https://drive.google.com/file/d/143BQcdTE-7eLZLU2P1iLkErzrTY538-H/view?usp=drive_link" },
+      { label: "Valid Water Health and Sanitation Certificate", href: "https://drive.google.com/file/d/1amUIzIGE_OKPqhIUurEpUIv1loKBYpp_/view?usp=drive_link" },
     ]
   },
   {
     title: "Result and Academics",
     items: [
-      { label: "Fee Structure of the School", href: "https://drive.google.com/file/d/1aS3LJPtUXzaRi6kv6pyTesZR1HkS7m17/view?usp=drive_link" },
-      { label: "Annual Academic Calendar", href: "https://drive.google.com/file/d/1fY0-YZn2NbnAXler5U3IM1XYRmUonSEg/view?usp=drive_link" },
-      { label: "List of SMC", href: "https://drive.google.com/file/d/1DzkxiAcfEB0TFTl5S_bLtN90mOZE59fn/view?usp=drive_link" },
+      { label: "Fee Structure of the School", href: "https://drive.google.com/file/d/1dWKLx5CEgX2bdP1TCdlE8J-g9A32jYdu/view?usp=drive_link" },
+      { label: "Annual Academic Calendar", href: "https://drive.google.com/file/d/1JDqQjxaJ2nwIYWpn2NLhTTwWFWd2QiSe/view?usp=drive_link" },
+      { label: "List of SMC", href: "https://drive.google.com/file/d/1zycWO00RusmasfW5NNonOE8t1jWzC4am/view?usp=drive_link" },
       { label: "List of Parents Teachers Association (PTA) Members", href: "https://drive.google.com/file/d/1xTXWn4Sf3ZWtZvIivHSQ8sIxrghefF1Z/view?usp=drive_link" },
-      { label: "Last 3 Years Result of Board Examination", href: "https://drive.google.com/file/d/1HOCqaeEMnADQI93WsrM3nOYITJnzdSeT/view?usp=drive_link" },
+      { label: "Last 3 Years Result of Board Examination", href: "https://drive.google.com/file/d/1ro54Uv8f-DFDdkFVF-uwY_pjOhgfyYun/view?usp=drive_link" },
     ]
   },
   {
     title: "Staff Details",
     items: [
-      { label: "Staff Details", href: "https://drive.google.com/file/d/1KvZoAf1A5dmy3_z0yZ7uViedWG2twvfa/view?usp=drive_link" }
+      { label: "Staff Details", href: "https://drive.google.com/file/d/1od5_GC_ojgyW2TYBSk9AQXaKnzPgaGli/view?usp=drive_link" }
     ]
   },
   {
     title: "School Infrastructure",
     items: [
-      { label: "School Infrastructure", href: "https://drive.google.com/file/d/1HcO8E64pfHGG_0I_MxaVIjTucfF6mK4t/view?usp=drive_link" }
+      { label: "School Infrastructure", href: "https://drive.google.com/file/d/1kW3LwHMXPNVR_yZMb4PtHn40Fr0NdfxF/view?usp=drive_link" }
     ]
   },
 ];
