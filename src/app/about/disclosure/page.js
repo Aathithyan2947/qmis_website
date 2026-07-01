@@ -12,7 +12,7 @@ const sections = [
     title: "Documents and Information",
     items: [
       { label: "Copies of Affiliation Upgradation and Extension", href: "https://drive.google.com/file/d/1b1L6HEb6ZZTgGrNO_WbG7-vuCRqIkIzC/view?usp=drive_link" },
-      { label: "Copies of Societies Trust Company Registration", href: "https://drive.google.com/file/d/1FG-cDHhjD-LcmAF48sXOrlaHy052R6Yk/view?usp=drive_link" },
+      { label: "Copies of Societies Trust Company Registration", href: "https://drive.google.com/file/d/1PZW7Tj5ruTz_jVLyDmGmuvZ6V47jUSII/view?usp=drive_link" },
       { label: "NOC", href: "https://drive.google.com/file/d/1UqnnRVl0-9jTP5nFUqMoCAEdKu2qWoFW/view?usp=drive_link" },
       { label: "Recognition Certificate", href: "https://drive.google.com/file/d/1kt1B_0TcC_n4CdmndBuYnHDW2evhJmg2/view?usp=drive_link" },
       { label: "Valid Building Safety Certificate", href: "https://drive.google.com/file/d/1acd96rki3M6-BYafgHnwQzM6aohX7O2o/view?usp=drive_link" },
