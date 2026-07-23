@@ -218,13 +218,13 @@ export default function Sidebar({ isOpen, onClose }) {
             {/* HEADER SECTION */}
             <div className="flex justify-between items-center px-8 py-6">
               <div className="flex gap-5 items-center">
-                <Image
-                  src="/Mebourne.png"
-                  height={60}
-                  width={60}
-                  alt="Melbourne Logo"
-                  className="h-16 w-16 md:h-14 md:w-14 lg:h-18 lg:w-18"
-                />
+                {/* <Image */}
+                {/*   src="/Mebourne.png" */}
+                {/*   height={60} */}
+                {/*   width={60} */}
+                {/*   alt="Melbourne Logo" */}
+                {/*   className="h-16 w-16 md:h-14 md:w-14 lg:h-18 lg:w-18" */}
+                {/* /> */}
                 <Image
                   src="/QMIS_Logo.webp"
                   width={256}

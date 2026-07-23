@@ -28,17 +28,17 @@ export default function MainHeader() {
       <div className="flex flex-row justify-between md:justify-around items-center mb-4 md:mb-0">
         {/* Logos */}
         <div className="flex flex-row gap-3 md:gap-8 items-center">
-          <Link href="https://www.unimelb.edu.au/"
-            target="_blank"
-            rel="noopener noreferrer">
-            <Image
-              src="/Mebourne.png"
-              height={80}
-              width={80}
-              alt="Melbourne Logo"
-              className="cursor-pointer hover:scale-105 duration-150 h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20"
-            />
-          </Link>
+          {/* <Link href="https://www.unimelb.edu.au/" */}
+          {/*   target="_blank" */}
+          {/*   rel="noopener noreferrer"> */}
+          {/*   <Image */}
+          {/*     src="/Mebourne.png" */}
+          {/*     height={80} */}
+          {/*     width={80} */}
+          {/*     alt="Melbourne Logo" */}
+          {/*     className="cursor-pointer hover:scale-105 duration-150 h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20" */}
+          {/*   /> */}
+          {/* </Link> */}
           <div onClick={() => router.push('/')
           }>
             <Image
