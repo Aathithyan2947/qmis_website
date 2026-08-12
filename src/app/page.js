@@ -118,48 +118,88 @@ const homeFaqData = [
 
 const cards = [
   {
+    title: 'Accessible Usage policy',
+    pdf: 'https://drive.google.com/file/d/1KIyNndtZXDICNsUjMEf89A4SDbXJdLk3/view?usp=drive_link',
+  },
+  {
+    title: 'Admission Policy',
+    pdf: 'https://drive.google.com/file/d/1OPhucnfShT6upEfXclD8Ik-pTGeH7cxq/view?usp=drive_link',
+  },
+  {
     title: 'Anti Bullying Policy',
-    pdf: 'https://drive.google.com/file/u/1/d/1P6xaVe1v58PLwPLQwc0mqDWjkJ_VlFID/view?usp=drive_open',
-  },
-  {
-    title: 'Accessible Usage Policy',
-    pdf: 'https://drive.google.com/file/d/1u0aBWaqnXihiXUuK9svL0kE3kumXhYeO/view',
-  },
-  {
-    title: 'Cyber Safety Policy',
-    pdf: 'https://drive.google.com/file/d/1kqig-xqzL_PX1vpBndv1uVXt2gFzVd_t/view',
+    pdf: 'https://drive.google.com/file/d/1OzahpNmnOXgFVL1SXKlaMr7V7sOjjwLE/view?usp=drive_link',
   },
   {
     title: 'Anti-Discrimination Policy',
-    pdf: 'https://drive.google.com/file/d/16PjC83B3yesiziEMdVyaUi3gFcgbFRLb/view',
+    pdf: 'https://drive.google.com/file/d/16XERt7kwEaEzKifPa0NkXg7eFY8BmWdn/view?usp=drive_link',
   },
-  {
-    title: 'Child Protection Policy',
-    pdf: 'https://drive.google.com/file/d/1vQor05ub646uC4SPTrIYngarzZf6pl8h/view',
+    {
+    title: 'Assessment Policy Grade 1-8',
+    pdf: 'https://drive.google.com/file/d/1aifqgp-bHecmfc-A7BgDmdsLQuWuK_-c/view?usp=drive_link',
   },
-  {
-    title: 'Digital Citizenship Policy',
-    pdf: 'https://drive.google.com/file/d/1KScOHFenZ6DloNpjmQGqYeTwlIpmiPDh/view',
-  },
-  {
-    title: 'Gender Sensitization Staff Policy',
-    pdf: 'https://drive.google.com/file/d/16CyegbkabtQwZfx9VL_hexXHPUxl3MEo/view',
-  },
-  {
-    title: 'Health and Safety Policy',
-    pdf: 'https://drive.google.com/file/d/1ust3uLGkya_C_BBLbmdaMBUkY5a_snb_/view',
-  },
-  {
-    title: 'Anti Bullying Policy',
-    pdf: 'https://drive.google.com/file/d/1AuIYf11IVDyhIQIFDyILO_VxV2DMZ5vT/view',
-  },
-  {
-    title: 'Accessible Usage Policy',
-    pdf: 'https://drive.google.com/file/d/1QTW3SzwJEdO8htA5wrT8gGqtkrGltlpj/view',
+    {
+    title: 'Assessment Policy Grade 9-12',
+    pdf: 'https://drive.google.com/file/d/1e9WDgOAFixIHpqCS_bwYfFzvNzbjZO0s/view?usp=drive_link',
   },
   {
     title: 'Cyber Safety Policy',
-    pdf: 'https://drive.google.com/file/d/1nA9nrKudtWITptxLLn24fwUrGfIqusF8/view',
+    pdf: 'https://drive.google.com/file/d/1YTkqQ-hpcvfPuUknKV8Y-Pgg7J0vmU6l/view?usp=drive_link',
+  },
+  {
+    title: 'Child Protection Policy',
+    pdf: 'https://drive.google.com/file/d/1EOmiysGpC_vh_JUg4vKmqlYwW_4w5cUH/view?usp=drive_link',
+  },
+  {
+    title: 'Digital Citizenship Policy',
+    pdf: 'https://drive.google.com/file/d/1pOz8ns4F0JavpNuo-nbZEAyamvJiwrxG/view?usp=drive_link',
+  },
+  {
+    title: 'Data Protection Policy',
+    pdf: 'https://drive.google.com/file/d/15eIO_wfQJmITUv9DftbVEWH1Ifp_JmpL/view?usp=drive_link',
+  },
+  {
+    title: 'Disabilities Eating (Home Stay) Policy',
+    pdf: 'https://drive.google.com/file/d/1YLssT4V8NaUlvbanun2K81OXbjuLyBsF/view?usp=drive_link',
+  },
+  {
+    title: 'Discipline Policy',
+    pdf: 'https://drive.google.com/file/d/1NmHD4XdRKKJg61e3_xC5QRYLaIzILVXf/view?usp=drive_link',
+  },
+  {
+    title: 'Gender Sensitization Staff Policy',
+    pdf: 'https://drive.google.com/file/d/1ObSNPs0rISeUvR33xTEfiu3i2cB-Ln2E/view?usp=drive_link',
+  },
+  {
+    title: 'Health and Safety Policy',
+    pdf: 'https://drive.google.com/file/d/10BdxcrZjFbg_QKknF9j0M1VqIsw0p7IG/view?usp=drive_linkw',
+  },
+   {
+    title: 'HR Policy - Welfare, Leave, Grooming',
+    pdf: 'https://drive.google.com/file/d/1HqUS0BSZTb_GoJBgUoz4_nn-06ehz_t4/view?usp=drive_link',
+  },
+   {
+    title: 'Inclusive Education Policy',
+    pdf: 'https://drive.google.com/file/d/1n7NEkWT6ALxLv6ZPyWz24kM2O1cu5qPN/view?usp=drive_link',
+  },
+   {
+    title: 'Language Policy',
+    pdf: 'https://drive.google.com/file/d/1ekrzzPAMJN5boLCoWFMWEqXLkJYlxdst/view?usp=drive_link',
+  },
+   {
+    title: 'Missing Students Policy',
+    pdf: 'https://drive.google.com/file/d/1Uei3g82G0CUXlRCPMcl3rwnENM2A_-N0/view?usp=drive_link',
+  },
+   {
+    title: 'SOP Academics.pdf',
+    pdf: 'https://drive.google.com/file/d/1EwDyVqFujbrCmPWtc5-oI1by7tdHHhDb/view?usp=drive_link',
+  },
+   {
+    title: 'SOP Homestay Arrangement For Students',
+    pdf: 'https://drive.google.com/file/d/1OiFcunNrBcbr5Uv4BggZ5IurMl3q-adj/view?usp=drive_link',
+  },
+   {
+    title: 'Whistle Blowing Policy',
+    pdf: 'https://drive.google.com/file/d/1M2xMcdtSemjGElwkV0h2wWNNAsEmpj2o/view?usp=drive_link',
   },
 ];
 
