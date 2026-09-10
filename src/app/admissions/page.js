@@ -28,9 +28,9 @@ export default function HomePage() {
             <span className="text-[#1B2A5B] hidden md:block">
               Admission process
             </span>
-            <button className="bg-red-800 hover:bg-red-800 transition text-white px-5 py-2 rounded-sm font-medium">
+            <a href="/redirect?url=/client/enquiry-form" className="bg-red-800 hover:bg-red-800 transition text-white px-5 py-2 rounded-sm font-medium inline-block">
               Apply Now
-            </button>
+            </a>
           </div>
 
         </div>
@@ -58,9 +58,9 @@ export default function HomePage() {
               Montessori Techniques | Beyond Books Learning | Happy Schooling
             </p>
 
-            <button className="bg-red-600 hover:bg-red-700 transition px-6 py-3 font-semibold mb-8">
+            <a href="/redirect?url=/client/enquiry-form" className="bg-red-600 hover:bg-red-700 transition px-6 py-3 font-semibold mb-8 inline-block">
               Apply before Oct 12, 2025
-            </button>
+            </a>
 
             <div className="mt-8">
               <p className="text-sm text-white/70 mb-2">
