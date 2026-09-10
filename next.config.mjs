@@ -12,7 +12,7 @@ const nextConfig = {
           {
             type: "header",
             key: "referer",
-            value: ".*/client/enquiry-form(?:\\?.*)?$",
+            value: "(?:https?://[^/]+)?/client/enquiry-form(?:\\?.*)?$",
           },
         ],
         destination: "https://qmis-admission.vercel.app/:path*",
