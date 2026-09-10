@@ -3,6 +3,7 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, FileText } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { IoChevronDown } from "react-icons/io5";
 
 const APPLY_NOW_URL =
@@ -372,6 +373,7 @@ function CardsCarousel() {
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const router = useRouter();
 
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -386,7 +388,7 @@ export default function Home() {
   }, []);
 
   const handleApplyNow = () => {
-    window.open(APPLY_NOW_URL, "_blank", "noopener,noreferrer");
+    router.push('/admissions');
   };
 
   const handleFaqToggle = (index) => {

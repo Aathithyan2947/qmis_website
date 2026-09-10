@@ -16,7 +16,7 @@ export default function MainHeader() {
   const router = useRouter()
 
   const handleApplyNow = () => {
-    window.open(APPLY_NOW_URL, "_blank", "noopener,noreferrer");
+    router.push('/admissions');
   };
 
   return (
