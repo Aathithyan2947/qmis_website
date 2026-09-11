@@ -14,7 +14,7 @@ export default function RedirectPage() {
     if (countdown <= 0) {
       if (!hasRedirected.current) {
         hasRedirected.current = true;
-        router.push(redirectUrl);
+        router.push('https://admissions.qmis.edu.in/');
       }
       return;
     }
