@@ -6,14 +6,19 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const APPLY_NOW_URL =
   "https://portal.qmis.edu.in/client/enquiry-form?source=Website&sub_source=applynow_button&campaign=BBC&_gl=1*1t4oqfi*_ga*MTIyNDc1NDU3Ni4xNzY1MDQ3MzAx*_ga_K5HD0P2MHT*czE3NjU2NDQ5NTkkbzkkZzEkdDE3NjU2NDQ5OTEkajI4JGwwJGgw";
 
 export default function MainHeader() {
   const [openMenu, setOpenMenu] = useState(false);
+  const pathname = usePathname();
   const router = useRouter()
+
+  if (pathname === "/admissions") {
+    return null;
+  }
 
   const handleApplyNow = () => {
     router.push('/admissions');

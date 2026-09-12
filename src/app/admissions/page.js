@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -11,7 +12,7 @@ export default function HomePage() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/QMIS_Logo.webp"
               alt="Queen Mira International School"
               width={48}
               height={48}
@@ -25,9 +26,9 @@ export default function HomePage() {
 
           {/* Right */}
           <div className="flex items-center gap-6">
-            <span className="text-[#1B2A5B] hidden md:block">
-              Admission process
-            </span>
+            <Link href="/" className="text-[#1B2A5B] hidden md:block">
+              Home
+            </Link>
             <a href="/redirect?url=/client/enquiry-form" className="bg-red-800 hover:bg-red-800 transition text-white px-5 py-2 rounded-sm font-medium inline-block">
               Apply Now
             </a>
@@ -59,12 +60,12 @@ export default function HomePage() {
             </p>
 
             <a href="/redirect?url=/client/enquiry-form" className="bg-red-600 hover:bg-red-700 transition px-6 py-3 font-semibold mb-8 inline-block">
-              Apply before Oct 12, 2025
+              Apply before Oct 20, 2026
             </a>
 
             <div className="mt-8">
               <p className="text-sm text-white/70 mb-2">
-                Vijayadasami 2025 Admissions now open for
+                Vijayadasami 2026 Admissions now open for
               </p>
               <p className="font-semibold">
                 Play home | Pre-KG | KG 1 | KG 2
@@ -146,16 +147,16 @@ export default function HomePage() {
     }}
   >
     <span className="mx-10">
-      VIJAYADASAMI – 2025 ADMISSIONS OPEN ✦
+      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
     </span>
     <span className="mx-10">
-      VIJAYADASAMI – 2025 ADMISSIONS OPEN ✦
+      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
     </span>
     <span className="mx-10">
-      VIJAYADASAMI – 2025 ADMISSIONS OPEN ✦
+      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
     </span>
     <span className="mx-10">
-      VIJAYADASAMI – 2025 ADMISSIONS OPEN ✦
+      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
     </span>
   </div>
 

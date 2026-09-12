@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function MainFooter() {
+  const pathname = usePathname();
+
   return (
     <>
       <footer className="bg-darkBlue-100 text-white mt-0.5 pt-10 pb-4 px-6 md:px-16">
@@ -127,9 +130,7 @@ export default function MainFooter() {
           </p>
         </div>
       </footer>
-      <div className="bg-white h-14">
-
-      </div>
+      {pathname !== "/admissions" && <div className="bg-white h-14"></div>}
     </>
   );
 }
