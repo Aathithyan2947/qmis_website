@@ -241,15 +241,22 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 py-16 items-center">
         
         {/* Image */}
-       <div className="w-full max-w-4xl mx-auto aspect-video">
+       <div className="w-full max-w-4xl mx-auto aspect-video relative">
   <iframe
-    className="w-full h-full rounded-lg shadow-lg"
+    className="w-full h-full rounded-lg shadow-lg pointer-events-none"
     src="https://www.youtube.com/embed/-r3mlxcxo50i"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
   ></iframe>
+  <a
+    href="https://youtu.be/5cbMffL8PLw?si=OIAWoqHIbN2Z2gXK"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Open admissions video on YouTube"
+    className="absolute inset-0 z-10"
+  ></a>
 </div>
 
         {/* Content */}
