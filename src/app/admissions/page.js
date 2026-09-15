@@ -27,7 +27,7 @@ export default function HomePage() {
           {/* Right */}
           <div className="flex items-center gap-6">
             <Link href="/" className="text-[#1B2A5B] hidden md:block">
-              Home
+              Main Website
             </Link>
             <a href="/redirect?url=/client/enquiry-form" className="bg-red-800 hover:bg-red-800 transition text-white px-5 py-2 rounded-sm font-medium inline-block">
               Apply Now
@@ -141,23 +141,40 @@ export default function HomePage() {
       {/* ================= MARQUEE ================= */}
 <div className="w-full overflow-hidden bg-red-600 py-3">
   <div
-    className="flex whitespace-nowrap text-white font-semibold tracking-wide text-sm md:text-base"
+    className="flex w-max whitespace-nowrap text-white font-semibold tracking-wide text-sm md:text-base"
     style={{
       animation: "marquee 18s linear infinite",
+      animationDelay: "-9s",
     }}
   >
-    <span className="mx-10">
-      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
-    </span>
-    <span className="mx-10">
-      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
-    </span>
-    <span className="mx-10">
-      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
-    </span>
-    <span className="mx-10">
-      VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
-    </span>
+    <div className="flex shrink-0">
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+    </div>
+    <div className="flex shrink-0">
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+      <span className="mx-10 shrink-0">
+        VIJAYADASAMI – 2026 ADMISSIONS OPEN ✦
+      </span>
+    </div>
   </div>
 
   {/* Keyframes */}
